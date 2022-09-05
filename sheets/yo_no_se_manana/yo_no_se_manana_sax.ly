@@ -334,7 +334,7 @@ Sax = \new Voice
 }
 
 \score {
-  \new Staff \with {
+  \compressMMRests \new Staff \with {
     \consists "Volta_engraver"
   }
   {

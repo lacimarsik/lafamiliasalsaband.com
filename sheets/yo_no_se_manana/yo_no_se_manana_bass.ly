@@ -329,7 +329,7 @@ Chords = \chords {
 \score {
   <<
     \Chords
-    \new Staff \with {
+    \compressMMRests \new Staff \with {
       \consists "Volta_engraver"
     }
     {
@@ -342,7 +342,6 @@ Chords = \chords {
       \remove "Volta_engraver"
     }
   }
-
 }
 
 \paper {

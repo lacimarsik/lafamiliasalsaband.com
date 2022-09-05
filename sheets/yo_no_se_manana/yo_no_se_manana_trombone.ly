@@ -324,7 +324,7 @@ Trombone = \new Voice \relative c {
 }
 
 \score {
-  \new Staff \with {
+  \compressMMRests \new Staff \with {
     \consists "Volta_engraver"
   }
   {
