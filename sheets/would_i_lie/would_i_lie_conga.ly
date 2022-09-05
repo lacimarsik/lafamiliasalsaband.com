@@ -4,12 +4,13 @@
 
 \header {
   title = "Would I Lie"
-  instrument = "bass"
+  instrument = "conga"
   composer = "by Cubaneros"
   arranger = "arr. Ladislav Maršík"
   opus = "version 7.9.2022"
   copyright = "© La Familia Salsa Band"
 }
+
 
 inst =
 #(define-music-function
@@ -164,301 +165,135 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Bass = \new Voice \relative c {
-  \set Staff.instrumentName = \markup {
-    \center-align { "Bass" }
+Congas = \new DrumVoice \drummode {
+  
+  \set DrumStaff.instrumentName = \markup {
+    \center-align { "Conga" }
   }
-  \set Staff.midiInstrument = "acoustic bass"
-  \set Staff.midiMaximumVolume = #1.5
 
-  \clef bass
-  \key c \minor
   \time 4/4
   \tempo "Fast Salsa" 4 = 210
   
-  \set Score.skipBars = ##t R1*14 ^\markup { "A Capella" }
+  R1*14 ^\markup { "A Capella" }    
   
-  \tuplet 3/2 { c4 c c } \tuplet 3/2 { es es es } | 
-  g4 r4 es4 \glissando c4 |
+  \tuplet 3/2 { cgh4 cgh cgh } \tuplet 3/2 { cgh cgh cgh } | 
+  cgh r8 cgh8 cgh4 r |
   
   \inst "A"
-  \repeat volta 2 {
-    as4. ^\markup { "Chorus" } es'4. as4 ~ |
-    as4. es4. as,4 |
-    \ottava #-1
-    f4. c'4. f4 ~ |
-    f4. f,4. c4 |
-    c4. g'4. c4 ~ |
-    c4. c,4. g'4 |
-  }
-  \alternative {{
-    es4. bes'4. es4 ~ |
-    es4. bes4. es,8 es |
-                }{      
-                  es4. bes'4. es4 ~ |
-                  es4. es,4. f4 ~ |
-                }
+  \repeat percent 8 {
+    bol8 ^\markup { "Chorus (tumbao 3/2)" } bolm ssh cglo cglo bolm cgho cgho |
+    bolm bolm ssh bolm bolm bolm cgho cgho |
   }
   
   \inst "B"
-  f1 ^\markup { "Verse 1" }  ~ |
-  f |
+  \repeat percent 8 {
+    bolm8 ^\markup { "Verse 1 (tumbao + maracas)" } bolm ssh cglo cglo bolm cgho cgho |
+    bolm bolm ssh bolm bolm bolm cgho cgho |
+  }
+  
+  cgh8 ^\markup { "(tumbao + martillo + cascara 2-3)" } bolm ssh bolm cgh bolm cglo bolm |
+  cgh bolm ssh bolm cgh bolm cglo bolm |
+  
+  cgh bolm ssh bolm cgh bolm cglo bolm |
+  cgh bolm ssh bolm cgh bolm cglo bolm |
+  
+  cgh bolm ssh bolm cgh bolm cglo bolm |
+  
+  cgh bolm ssh bolm cgh bolm r4 |
   R1 |
-  
-  \ottava #0
-  r4 b8 ( c4 ) r8 f4 ~ |
-  f1 |
-  
-  \set Score.skipBars = ##t R1*6
-  
-  r4 b,8 ( c4 ) r8 f4 ~ |
-  f1 |
-  \set Score.skipBars = ##t R1*3
-  \repeat percent 7 { \makePercent s1 }
-  \makePercent s2 as8 -> as -> r4 |
+  R1 |
   
   \inst "C"
-  as,4. ^\markup { "Chorus" } es'4. as4 ~ |
-  as4. es4. as,4 |
-  \ottava #-1
-  f4. c'4. f4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. bes4. es,8 es |
-  
-  as4. es'4. as4 ~ |
-  as4. es4. as,4 |
-  f4. c4. f'4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. es,4. f4 ~ |
+  \repeat percent 8 {
+    cgh8 ^\markup { "Chorus (tumbao 3/2)" } bolm ssh cglo cglo cgh cgho cgho |
+    cgh bolm ssh bolm cgh bolm cgho cgho |
+  }
   
   \inst "D"
-  f1 ^\markup { "Verse 2" }  ~ |
-  f |
-  R1 |
-  
-  \ottava #0
-  r4 b8 ( c4 ) r8 f4 ~ |
-  f1 |
-  
-  \set Score.skipBars = ##t R1*6
-  
-  r4 b,8 ( c4 ) r8 f4 ~ |
-  f1 |  
-  \set Score.skipBars = ##t R1*3
+  \repeat percent 8 {
+    bolm8 ^\markup { "Verse 2 (tumbao + maracas)" } bolm ssh cglo cglo bolm cgho cgho |
+    bolm bolm ssh bolm bolm bolm cgho cgho |
+  }
   
   \inst "E"
-  bes,4 ^\markup { "Swing!" } c d f |
-  bes c d g, |
-  f a bes b | \break
-  c f, fis g |
-  d c b g |
-  fis f d as' ~ |
-  as1 ~ |
-  as2 \bendAfter #-5 r4 as \accent |
+  cgh8 ^\markup { "Swing!" } bolm ssh bolm cgh bolm cglo bolm |
+  cgh bolm ssh bolm cgh bolm cglo bolm |
   
-  as4. ^\markup { "Chorus" } es'4. as4 ~ |
-  as4. es4. as,4 |
-  \ottava #-1
-  f4. c'4. f4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. bes4. es,8 es |
+  cgh bolm ssh bolm cgh bolm cglo bolm |
+  cgh bolm ssh bolm cgh bolm cglo bolm |
   
-  as4. es'4. as4 ~ |
-  as4. es4. as,4 |
-  f4. c4. f'4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. es,4. r4 |
+  cgh bolm ssh bolm cgh bolm cglo bolm |
+  
+  cgh bolm ssh bolm cgh bolm r4 |
+  R1 |
+  R1 |
+  
+  \repeat percent 8 {
+    bol8 ^\markup { "Chorus (tumbao 3/2)" } bolm ssh cglo cglo bolm cgho cgho |
+    bolm bolm ssh bolm bolm bolm cgho cgho |
+  }
   
   \inst "F"
-  \ottava #0
-  as4. ^\markup { "Trombone solo" } es'4. as4 ~ |
-  as4. es4. as,4 |
-  \ottava #-1
-  f4. c'4. f4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. bes4. es,8 es |
+  \repeat percent 8 {
+    bol8 ^\markup { "Trombone solo (tumbao 3/2)" } bolm ssh cglo cglo bolm cgho cgho |
+    bolm bolm ssh bolm bolm bolm cgho cgho |
+  }
   
-  as4. es'4. as4 ~ |
-  as4. es4. as,4 |
-  f4. c4. f'4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. es,4. r4 |
-  f'4 ^\markup { "Would I lie to you" } -> r2. |
-  \ottava #0
+  \repeat percent 6 {
+    bol8 ^\markup { "Would I lie to you (conga tumbao slaps + guiro)" } bolm ssh r r bolm cgho cgho |
+    bolm bolm ssh r r bolm cgho cgho |
+  }
   
-  \set Score.skipBars = ##t R1*15
+  ssh -> r r2. |
+  \set Score.skipBars = ##t R1*3
   
   \inst "G"
-  s1*0 ^\markup { "Te digo" }
-  bes,4 bes bes bes | bes4 bes bes bes |
-  a a a a | a a a g |
-  g g g g | g g g as |
-  as as as as | as as as as
+  \repeat percent 4 {
+    cglo8 ^\markup { "Te digo" } r cglo r cglo r cglo r |
+    cglo r cglo r cglo r cglo r |
+  }
+  cgho cgho cglo r cgho cgho cglo r |
+  \tuplet 3/2 { cgho4 cgho cgho } cgho8 cglo r4 |
   
-  as8 -> as -> r4 as8 -> as -> r4 |
-  \tuplet 3/2 { as4 -> as -> as -> } as8 -> r4. |
-  
-  \ottava #0
-  as4. ^\markup { "Chorus" } es'4. as4 ~ |
-  as4. es4. as,4 |
-  \ottava #-1
-  f4. c'4. f4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. bes4. es,8 es |
-  
-  as4. es'4. as4 ~ |
-  as4. es4. as,4 |
-  f4. c4. f'4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. \ottava #0 f'4 ~ |
-  f1 ~ |
-  f2 es'4 \glissando f, |
+  \repeat percent 8 {
+    cgh8 ^\markup { "Chorus (tumbao 3/2)" } bolm ssh cglo cglo cgh cgho cgho |
+    cgh bolm ssh bolm cgh bolm cgho cgho |
+  }
   
   \inst "H"
-  \ottava #-1
-  as,4. ^\markup { "Montuno - Petas" } es'4. as4 ~ |
-  as4. as,8 ~ as es' f fis |
-  g4. d4. g,4 ~ |
-  g4. g8 ~ g c c, c |
-  c4. g'4. c4 ~ |
-  c4. c,8 ~ c g' f f |
-  f4. c'4. f4 ~ |
-  f4. c8 ~ c f, as as |
+  \repeat percent 8 {
+    cgh8 ^\markup { "Montuno - Petas (tumbao 3/2)" } bolm ssh cglo cglo cgh cgho cgho |
+    cgh bolm ssh bolm cgh bolm cgho cgho |
+  }
   
   \inst "I"
-  as4. ^\markup { "Coro Pregón" } es'4. as4 ~ |
-  as4. es4. f4 |
-  g4. d4. r4 |
-  g,4. d'4. r4 |
-  c,4. d4. r4 |
-  es4. e4. r4 |
-  f4. c'4. f4 ~ |
-  f4. c8 ~ c f, as as |
+  \repeat percent 16 {
+    cgh8 ^\markup { "Coro Pregón (tumbao 3/2)" } bolm ssh cglo cglo cgh cgho cgho |
+    cgh bolm ssh bolm cgh bolm cgho cgho |
+  }
   
-  as1 ^\markup { "Fade out" } |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
+  \repeat percent 4 {
+    cgh8 ^\markup { "Fade out (tumbao 3/2)" } bolm ssh cglo cglo cgh cgho cgho |
+    cgh bolm ssh bolm cgh bolm cgho cgho |
+  }
   
-  as1 ^\markup { "A Capella" }  ~ |
-  as1 |
-  g1 ~ |
-  g1 |
-  c,1 ~ |
-  c1 |
-  f,1 ~ |
-  f1 |
+  R1*8 ^\markup { "A Capella" } 
   
   \label #'lastPage
-  \bar "|."  
-}
-
-Chords = \chords {
-  R1*16
-  \repeat volta 2 {
-    as1 | as | f:m | f:m |
-    c:m | c:m
-  }
-  \alternative {
-    {
-      es | es
-    }
-    {      
-      es | es
-    }
-  }
-  
-  f | f | f | f |
-  f | f | f | f |
-  f | f | f | f |
-  f | f | f | f |
-  bes | bes | f | f |
-  g | g | as | as |
-  
-  as | as | f:m | f:m |
-  c:m | c:m | es | es |
-  as | as | f:m | f:m |
-  c:m | c:m | es | es |
-  
-  f | f | f | f |
-  f | f | f | f |
-  f | f | f | f |
-  f | f | f | f |
-  bes | bes | f | f |
-  g | g | as | as |
-  
-  as | as | f:m | f:m |
-  c:m | c:m | es | es |
-  as | as | f:m | f:m |
-  c:m | c:m | es | es |
-  
-  as | as | f:m | f:m |
-  c:m | c:m | es | es |
-  as | as | f:m | f:m |
-  c:m | c:m | es | es |
-  
-  f | r1*7 | r1*8
-  
-  bes1 | bes | f/a | f/a |
-  g | g | as | as |
-  as | as |
-  
-  as | as | f:m | f:m |
-  c:m | c:m | es | es |
-  as | as | f:m | f:m |
-  c:m | c:m | f | f |
-  
-  \set Score.repeatCommands = #(list(list 'volta) 'start-repeat)
-  as | as | g | g |
-  c:m | c:m | f | f |
-  \set Score.repeatCommands = #'((volta #f) end-repeat)
-  
-  \set Score.repeatCommands = #(list(list 'volta "1.-4.") 'start-repeat)
-  as | as | g | g |
-  c:m | c:m | f | f |  
-  \set Score.repeatCommands = #'((volta #f) end-repeat)
-  
-  as | as | g | g |
-  c:m | c:m | f | f |
-  as | as | g | g |
-  c:m | c:m | f | f |
+  \bar "|."
 }
 
 \score {
-  <<
-    \Chords
-    \compressMMRests \new Staff \with {
+  \compressMMRests \new StaffGroup <<
+    \new DrumStaff \with {
+      drumStyleTable = #congas-style
+      \override StaffSymbol.line-count = #2
+      \override BarLine.bar-extent = #'(-1 . 1)
       \consists "Volta_engraver"
     }
-    {
-      \Bass
-    }
+    <<
+      \Congas
+    >>
   >>
   \layout {
     \context {
