@@ -649,7 +649,6 @@ lower = \new Voice \relative c {
     \bar "|."  
 }
 
-
 Chords = \chords {
   R1*16
 
@@ -701,22 +700,17 @@ Chords = \chords {
   as | as | f:m | f:m |
   c:m | c:m | f | f |
   
-  \set Score.repeatCommands = #(list(list 'volta) 'start-repeat)
   as | as | g | g |
   c:m | c:m | f | f |
-  \set Score.repeatCommands = #'((volta #f) end-repeat)
-  
-  \set Score.repeatCommands = #(list(list 'volta "1.-4.") 'start-repeat)
   as | as | g | g |
   c:m | c:m | f | f |  
-  \set Score.repeatCommands = #'((volta #f) end-repeat)
   
   as | as | g | g |
   c:m | c:m | f | f |
   as | as | g | g |
   c:m | c:m | f | f |
   
-    as | as | g | g |
+  as | as | g | g |
   c:m | c:m | f | f |
   as | as | g | g |
   c:m | c:m | f | f |

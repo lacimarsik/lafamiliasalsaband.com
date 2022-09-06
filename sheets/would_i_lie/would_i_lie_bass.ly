@@ -338,24 +338,31 @@ Bass = \new Voice \relative c {
   
   \inst "H"
   \ottava #-1
-  as,4. ^\markup { "Montuno - Petas" } es'4. as4 ~ |
-  as4. as,8 ~ as es' f fis |
-  g4. d4. g,4 ~ |
-  g4. g8 ~ g c c, c |
-  c4. g'4. c4 ~ |
-  c4. c,8 ~ c g' f f |
-  f4. c'4. f4 ~ |
-  f4. c8 ~ c f, as as |
+  \repeat volta 2 {
+    as,4. ^\markup { "Montuno - Petas" } es'4. as4 ~ |
+    as4. as,8 ~ as es' f fis |
+    g4. d4. g,4 ~ |
+    g4. g8 ~ g c c, c |
+    c4. g'4. c4 ~ |
+    c4. c,8 ~ c g' f f |
+    f4. c'4. f4 ~ |
+    f4. c8 ~ c f, as as |
+  }
   
   \inst "I"
-  as4. ^\markup { "Coro Pregón" } es'4. as4 ~ |
-  as4. es4. f4 |
-  g4. d4. r4 |
-  g,4. d'4. r4 |
-  c,4. d4. r4 |
-  es4. e4. r4 |
-  f4. c'4. f4 ~ |
-  f4. c8 ~ c f, as as |
+  s1*0 ^\markup { "Coro Pregón" }
+  \repeat volta 4 {
+    \repeatBracket 4 {
+      as4. es'4. as4 ~ |
+      as4. es4. f4 |
+      g4. d4. r4 |
+      g,4. d'4. r4 |
+      c,4. d4. r4 |
+      es4. e4. r4 |
+      f4. c'4. f4 ~ |
+      f4. c8 ~ c f, as as |
+    }
+  }
   
   as1 ^\markup { "Fade out" } |
   R1 |
@@ -434,16 +441,14 @@ Chords = \chords {
   as | as | f:m | f:m |
   c:m | c:m | f | f |
   
-  \set Score.repeatCommands = #(list(list 'volta) 'start-repeat)
-  as | as | g | g |
-  c:m | c:m | f | f |
-  \set Score.repeatCommands = #'((volta #f) end-repeat)
-  
-  \set Score.repeatCommands = #(list(list 'volta "1.-4.") 'start-repeat)
-  as | as | g | g |
-  c:m | c:m | f | f |  
-  \set Score.repeatCommands = #'((volta #f) end-repeat)
-  
+  \repeat volta 2 {
+    as | as | g | g |
+    c:m | c:m | f | f |
+  }
+  \repeat volta 4 {
+    as | as | g | g |
+    c:m | c:m | f | f |  
+  }
   as | as | g | g |
   c:m | c:m | f | f |
   as | as | g | g |

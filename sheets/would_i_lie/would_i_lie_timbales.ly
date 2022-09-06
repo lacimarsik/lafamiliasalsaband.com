@@ -179,8 +179,9 @@ Timbales = \new DrumVoice \drummode {
   timh r8 timl8 timl4 cymc -^ |
   
   \inst "A"
+  s1*0 ^\markup { "Chorus (campana 3/2)" }
   \repeat percent 8 {
-    r8 ^\markup { "Chorus (campana 3/2)" } cb cb cb cb r cb cb |
+    r8 cb cb cb cb r cb cb |
     cb r cb r cb cb cb cb |
   }
   
@@ -201,8 +202,9 @@ Timbales = \new DrumVoice \drummode {
   r timh timl timl cb -^ cb -^ r4 |
   
   \inst "C"
+  s1*0 ^\markup { "Chorus (campana 3/2)" } 
   \repeat percent 8 {
-    r8 ^\markup { "Chorus (campana 3/2)" } cb cb cb cb r cb cb |
+    r8 cb cb cb cb r cb cb |
     cb r cb r cb cb cb cb |
   }
   
@@ -222,17 +224,18 @@ Timbales = \new DrumVoice \drummode {
   hhc8-. hhp hhc-. hhp hhc-. hhc-. hhp hhc-. |
   timh timl r timl r timl cymc4 -^ |
   
+  s1*0 ^\markup { "Chorus (campana 3/2)" }
   \repeat percent 8 {
-    r8 ^\markup { "Chorus (campana 3/2)" } cb cb cb cb r cb cb |
+    r8 cb cb cb cb r cb cb |
     cb r cb r cb cb cb cb |
   }
   
   \inst "F"
+  s1*0 ^\markup { "Trombone solo (campana 3/2)" }
   \repeat percent 8 {
-    r8 ^\markup { "Trombone solo (campana 3/2)" } cb cb cb cb r cb cb |
+    r8 cb cb cb cb r cb cb |
     cb r cb r cb cb cb cb |
   }
-  
   
   rb8 -. ^\markup { "Would I lie to you (camp. + contrac.)" } ^\markup { "Timbal Solo" } cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
   <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
@@ -263,8 +266,9 @@ Timbales = \new DrumVoice \drummode {
   timl timl cymc -^ r timl timl cymc -^ r |
   \tuplet 3/2 { timl4 timl timl } timl8 cymc -^ r4 |
   
+  s1*0 ^\markup { "Chorus (camp. + contrac.)" }
   \repeat percent 6 {
-    rb8 -. ^\markup { "Chorus (camp. + contrac.)" } cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
+    rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
     <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
   }
   rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |

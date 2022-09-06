@@ -175,7 +175,7 @@ Trumpet = \new Voice
 
   \key c \minor
   \time 4/4
-  \tempo "Allegro" 4 = 180
+  \tempo "Fast Salsa" 4 = 210
   
   R1*14 ^\markup { "A Capella" }
   
