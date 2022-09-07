@@ -178,83 +178,94 @@ Timbales = \new DrumVoice \drummode {
   \tuplet 3/2 { cb4 cb cb } \tuplet 3/2 { cb cb cb} | 
   timh r8 timl8 timl4 cymc -^ |
   
+  \break
+  s1*0
+  ^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Chorus (campana 3/2)" }
   \inst "A"
-  s1*0 ^\markup { "Chorus (campana 3/2)" }
-  \repeat percent 8 {
-    r8 cb cb cb cb r cb cb |
-    cb r cb r cb cb cb cb |
+  \repeat volta 8 {
+    \makePercent s1*2 
   }
   
   \inst "B"
   R1*16 ^\markup { "Verse 1 (tumbao + maracas)" } 
   
   
-  hhc8-. ^\markup { "(tumbao + martillo + cascara 2-3)" } hhp hhc-. hhp hhc-. hhc-. hhp hhc-. |
-  hhc-. hhp hhc-. hhc-. hhp hhc-. hhp hhc-. |
-  
-  hhc-. hhp hhc-. hhp hhc-. hhc-. hhp hhc-. |
-  hhc-. hhp hhc-. hhc-. hhp hhc-. cymc4 -^ |
-  
-  hhc8-. -. hhp hhc-. hhp hhc-. hhc-. hhp hhc-. |
-  hhc-. hhp hhc-. hhc-. hhp hhc-. cymc4 -^ |
+  s1*0
+    ^\markup { \bold { \fontsize #2 "2x" } }
+  ^\markup { "(tumbao + martillo + cascara 2-3)" }
+    \repeat volta 2 {
+    \makePercent s1*2 
+  }
+    \makePercent s1
+  \makePercent s2. cymc4 -^ |
   
   r2 timh8 timh r timh |
   r timh timl timl cb -^ cb -^ r4 |
-  
+   \break
+  s1*0
+  ^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Chorus (campana 3/2)" }
   \inst "C"
-  s1*0 ^\markup { "Chorus (campana 3/2)" } 
-  \repeat percent 8 {
-    r8 cb cb cb cb r cb cb |
-    cb r cb r cb cb cb cb |
+  \repeat volta 8 {
+    \makePercent s1*2
   }
   
   \inst "D"
   R1*16 ^\markup { "Verse 2 (tumbao + maracas)" } 
   
+  s1*0
+  ^\markup { \bold { \fontsize #2 "4x" } }
+  ^\markup { "Swing!" }
   \inst "E"
-  hhc8-. ^\markup { "Swing!" } hhp hhc-. hhp hhc-. hhc-. hhp hhc-. |
-  hhc-. hhp hhc-. hhc-. hhp hhc-. hhp hhc-. |
-  
-  hhc-. hhp hhc-. hhp hhc-. hhc-. hhp hhc-. |
-  hhc-. hhp hhc-. hhc-. hhp hhc-. cymc4 -^ |
-  
-  hhc8-. -. hhp hhc-. hhp hhc-. hhc-. hhp hhc-. |
-  hhc-. hhp hhc-. hhc-. hhp hhc-. cymc4 -^ |
-  
-  hhc8-. hhp hhc-. hhp hhc-. hhc-. hhp hhc-. |
-  timh timl r timl r timl cymc4 -^ |
-  
-  s1*0 ^\markup { "Chorus (campana 3/2)" }
-  \repeat percent 8 {
-    r8 cb cb cb cb r cb cb |
-    cb r cb r cb cb cb cb |
+  \repeat volta 3 {
+    \makePercent s1*2
   }
   
+  \makePercent s1 |
+  timh8 timl r timl r timl cymc4 -^ |
+  
+\break
+  s1*0
+  ^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Chorus (campana 3/2)" }
+  \repeat volta 8 {
+    \makePercent s1*2
+  }
+  
+  s1*0
+  ^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Trombone solo (campana 3/2)" }
   \inst "F"
-  s1*0 ^\markup { "Trombone solo (campana 3/2)" }
-  \repeat percent 8 {
-    r8 cb cb cb cb r cb cb |
-    cb r cb r cb cb cb cb |
+  \repeat volta 8 {
+    \makePercent s1*2
   }
+  \break
   
-  rb8 -. ^\markup { "Would I lie to you (camp. + contrac.)" } ^\markup { "Timbal Solo" } cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho cymc -^ r cymc -^ r |
-  cymc -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho cymc -^ r cymc -^ r |
-  cymc -^ ^\markup { "Timbal Solo" } cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho cymc -^ r cymc -^ r |
-  cymc -^ r r2. |
+  s1*0 ^\markup { "Would I lie to you (camp. + contrac.)" }
+  \makePercent s1 |
+  s1*0 ^\markup { "Improvisation 3 bars" } |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  s1*0 ^\markup { "Improvisation 3 bars" } |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  
+ 
+  cymc8 -^ r r2. |
   
   \set Score.skipBars = ##t R1*3
   
   \inst "G"
-  hh8 ^\markup { "Te digo (hh / cymbal)" } r hh r hh r hh r |
+  s1*0 ^\markup { "Te digo (hh / cymbal)" }
+  hh8 r hh r hh r hh r |
   hh r hh r hh r hh r |
   hh r hh r hh r hh r |
   hh r hh r hh r cymc -^ r |
@@ -265,82 +276,72 @@ Timbales = \new DrumVoice \drummode {
   
   timl timl cymc -^ r timl timl cymc -^ r |
   \tuplet 3/2 { timl4 timl timl } timl8 cymc -^ r4 |
-  
-  s1*0 ^\markup { "Chorus (camp. + contrac.)" }
-  \repeat percent 6 {
-    rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-    <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
+  \break
+  s1*0
+  ^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Chorus (camp. + contrac.)" }
+  \repeat volta 6 {
+    \makePercent s1*2
   }
-  rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb cymc4 -^ |
-  rb8 -. cb <<cb hhho>> timl timh timh r timl |
+  \makePercent s1 |
+  \makePercent s2. cymc4 -^ |
+  rb8 -. cb cb timl timh timh r timl |
   r timh r timh r2 |
   
-  \inst "H"
-  cymc8 -^ ^\markup { "Montuno - Petas (camp. + contrac.)" } cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  
-  \repeat percent 3 {
-    rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-    <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
+  \break
+  s1*0 ^\markup { "Montuno - Petas (camp. + contrac.)" }
+    \inst "H"
+  cymc4 -^\makePercent s2. |
+  \makePercent s1 |
+    s1*0
+    ^\markup { \bold { \fontsize #2 "3x" } }
+  \repeat volta 3 {
+    \makePercent s1*2
   }
   
-  rb8 -. cb cymc -^ cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  
-  \repeat percent 2 {
-    rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-    <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
+  r4 cymc -^ \makePercent s2 |
+  \repeat percent 5 {
+    \makePercent s1
   }
   
-  rb8 -. cb <<cb hhho>> cb rb -. timh timh timh | 
+  \makePercent s2 rb8 -. timh timh timh | 
   timh timh r4 r2 |
   
+\break
+  s1*0
+  ^\markup { \bold { \fontsize #2 "3x" } }
+  ^\markup { "Coro Pregón (camp. + contrac.)" }
   \inst "I"
-  cymc8 -^ ^\markup { "Coro Pregón (camp. + contrac.)" } cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
+  \repeat volta 3 {
+  cymc4 -^ \makePercent s2. |
+  \makePercent s1 |
+  cymc4 -^ \makePercent s2. |
+  \makePercent s1 |
+  cymc4 -^ \makePercent s2. |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  }
   
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  timl timl cymc -^ r timl timl cymc -^ r |
+  cymc4 -^ \makePercent s2. |
+  \makePercent s1 |
+  cymc4 -^ \makePercent s2. |
+  \makePercent s1 |
+  cymc4 -^ \makePercent s2. |
+  \makePercent s1 |
+  timl8 timl cymc -^ r timl timl cymc -^ r |
   timl timl cymc -^ r timl timh timh r |
   
-  cymc8 -^ ^\markup { "Fade out (camp. + contrac.)" } cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -.  cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -.  cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
+  
+  s1*0
+  ^\markup { "Fade out (camp. + contrac.)" }
+  cymc4 -^ \makePercent s2. |
+  \makePercent s1 |
+    s1*0
+     ^\markup { \bold { \fontsize #2 "3x" } }
+  \repeat volta 3 {
+    \makePercent s1*2
+  }
   
   R1*8 ^\markup { "A Capella" }    
   
@@ -370,7 +371,7 @@ Timbales = \new DrumVoice \drummode {
 
 \paper {
   system-system-spacing =
-  #'((basic-distance . 15)
+  #'((basic-distance . 14)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))

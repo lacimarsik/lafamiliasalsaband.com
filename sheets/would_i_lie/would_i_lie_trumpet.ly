@@ -281,9 +281,9 @@ Trumpet = \new Voice
   bes4 \bendAfter #-2 g2 \p ) \bendAfter #-4 r4 |
   
   r8 g, \f as c es es c as |
-  g r as c r es r f |
+  g as r c r es r f |
   r g, as c f f c as |
-  g r as c r f r g ~ |
+  g as r c r f r g ~ |
   g2 \bendAfter #-3 r2 |
   
   \set Score.skipBars = ##t R1*3 \break

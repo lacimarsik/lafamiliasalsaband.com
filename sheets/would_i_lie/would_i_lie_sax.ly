@@ -280,9 +280,9 @@ Sax = \new Voice
   g4 \bendAfter #-2 es2 \p ) \bendAfter #-4 r4 |
   
   r8 b \f c es as as es c |
-  b r c es r as r as |
+  b c r es r as r as |
   r b, c f as as f c |
-  b r c f r as r c ~ |
+  b c r f r as r c ~ |
   c2 \bendAfter #-3 r2 |
   
   \set Score.skipBars = ##t R1*3

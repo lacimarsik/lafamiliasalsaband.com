@@ -218,24 +218,10 @@ Bass = \new Voice \relative c {
   \makePercent s2 as8 -> as -> r4 |
   
   \inst "C"
-  as,4. ^\markup { "Chorus" } es'4. as4 ~ |
-  as4. es4. as,4 |
-  \ottava #-1
-  f4. c'4. f4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. bes4. es,8 es |
-  
-  as4. es'4. as4 ~ |
-  as4. es4. as,4 |
-  f4. c4. f'4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. es,4. f4 ~ |
+  s1*0 ^\markup { "Chorus" }
+  \repeat volta 7 { \repeatBracket 7 { \makePercent s1*2 } }
+  \makePercent s1 |
+    \makePercent s2. f4 ~ |
   
   \inst "D"
   f1 ^\markup { "Verse 2" }  ~ |
@@ -243,7 +229,7 @@ Bass = \new Voice \relative c {
   R1 |
   
   \ottava #0
-  r4 b8 ( c4 ) r8 f4 ~ |
+  r4 b,8 ( c4 ) r8 f4 ~ |
   f1 |
   
   \set Score.skipBars = ##t R1*6
@@ -262,45 +248,12 @@ Bass = \new Voice \relative c {
   as1 ~ |
   as2 \bendAfter #-5 r4 as \accent |
   
-  as4. ^\markup { "Chorus" } es'4. as4 ~ |
-  as4. es4. as,4 |
-  \ottava #-1
-  f4. c'4. f4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. bes4. es,8 es |
-  
-  as4. es'4. as4 ~ |
-  as4. es4. as,4 |
-  f4. c4. f'4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. es,4. r4 |
+  s1*0 ^\markup { "Chorus" }
+  \repeat volta 8 { \repeatBracket 8 { \makePercent s1*2 } }
   
   \inst "F"
-  \ottava #0
-  as4. ^\markup { "Trombone solo" } es'4. as4 ~ |
-  as4. es4. as,4 |
-  \ottava #-1
-  f4. c'4. f4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. bes4. es,8 es |
-  
-  as4. es'4. as4 ~ |
-  as4. es4. as,4 |
-  f4. c4. f'4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. es,4. r4 |
+    s1*0 ^\markup { "Trombone Solo" }
+  \repeat volta 8 { \repeatBracket 8 { \makePercent s1*2 } }
   f'4 ^\markup { "Would I lie to you" } -> r2. |
   \ottava #0
   
@@ -316,23 +269,11 @@ Bass = \new Voice \relative c {
   as8 -> as -> r4 as8 -> as -> r4 |
   \tuplet 3/2 { as4 -> as -> as -> } as8 -> r4. |
   
-  \ottava #0
-  as4. ^\markup { "Chorus" } es'4. as4 ~ |
-  as4. es4. as,4 |
-  \ottava #-1
-  f4. c'4. f4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. bes4. es,8 es |
+    s1*0 ^\markup { "Chorus" }
+  \repeat volta 4 { \repeatBracket 4 { \makePercent s1*2 } }
   
-  as4. es'4. as4 ~ |
-  as4. es4. as,4 |
-  f4. c4. f'4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. \ottava #0 f'4 ~ |
+  \repeat percent 5 { \makePercent s1 }
+  \makePercent s2. f4 -> ~ |
   f1 ~ |
   f2 es'4 \glissando f, |
   
@@ -373,7 +314,7 @@ Bass = \new Voice \relative c {
   R1 |
   R1 |
   
-  as1 ^\markup { "A Capella" }  ~ |
+  as'1 ^\markup { "A Capella" }  ~ |
   as1 |
   g1 ~ |
   g1 |
@@ -408,10 +349,8 @@ Chords = \chords {
   bes | bes | f | f |
   g | g | as | as |
   
-  as | as | f:m | f:m |
-  c:m | c:m | es | es |
-  as | as | f:m | f:m |
-  c:m | c:m | es | es |
+  \repeat volta 7 {\makePercent s1 | \makePercent s1 }
+  | es | es |
   
   f | f | f | f |
   f | f | f | f |
@@ -420,15 +359,9 @@ Chords = \chords {
   bes | bes | f | f |
   g | g | as | as |
   
-  as | as | f:m | f:m |
-  c:m | c:m | es | es |
-  as | as | f:m | f:m |
-  c:m | c:m | es | es |
+  \repeat volta 8 { \makePercent s1 | \makePercent s1 } 
   
-  as | as | f:m | f:m |
-  c:m | c:m | es | es |
-  as | as | f:m | f:m |
-  c:m | c:m | es | es |
+  \repeat volta 8 { \makePercent s1 | \makePercent s1 } 
   
   f | r1*7 | r1*8
   
@@ -436,8 +369,8 @@ Chords = \chords {
   g | g | as | as |
   as | as |
   
-  as | as | f:m | f:m |
-  c:m | c:m | es | es |
+  \repeat volta 4 { \makePercent s1 | \makePercent s1 } 
+  
   as | as | f:m | f:m |
   c:m | c:m | f | f |
   
@@ -449,9 +382,8 @@ Chords = \chords {
     as | as | g | g |
     c:m | c:m | f | f |  
   }
-  as | as | g | g |
-  c:m | c:m | f | f |
-  as | as | g | g |
+  as | r1*7 
+  as1 | as | g | g |
   c:m | c:m | f | f |
 }
 

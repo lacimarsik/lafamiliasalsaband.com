@@ -4,6 +4,7 @@
 
 % for score rendering
 % - comment \repeatBracket command
+% - comment markups that denote percussion repeats, e.g. ^\markup { \bold { \fontsize #2 "8x" } }
 % - use simple page counter, only: \fromproperty #'page:page-number-string
 
 \header {
@@ -286,9 +287,9 @@ Trumpet = \new Voice
   bes4 \bendAfter #-2 g2 \p ) \bendAfter #-4 r4 |
   
   r8 g, \f as c es es c as |
-  g r as c r es r f |
+  g as r c r es r f |
   r g, as c f f c as |
-  g r as c r f r g ~ |
+  g as r c r f r g ~ |
   g2 \bendAfter #-3 r2 |
   
   \set Score.skipBars = ##t R1*3 \break
@@ -512,9 +513,9 @@ Sax = \new Voice
   g4 \bendAfter #-2 es2 \p ) \bendAfter #-4 r4 |
   
   r8 b \f c es as as es c |
-  b r c es r as r as |
+  b c r es r as r as |
   r b, c f as as f c |
-  b r c f r as r c ~ |
+  b c r f r as r c ~ |
   c2 \bendAfter #-3 r2 |
   
   \set Score.skipBars = ##t R1*3
@@ -855,487 +856,301 @@ Trombone = \new Voice \relative c {
 }
 
 upper = \new Voice \relative c'' {
-    \set PianoStaff.instrumentName = \markup {
-      \center-align { "Piano" }
-    }
-    \set Staff.midiInstrument = "piano"
-    \set Staff.midiMaximumVolume = #0.7
+  \set PianoStaff.instrumentName = \markup {
+    \center-align { "Piano" }
+  }
+  \set Staff.midiInstrument = "piano"
+  \set Staff.midiMaximumVolume = #0.7
 
-    \clef treble
-    \key c \minor
-    \time 4/4
+  \clef treble
+  \key c \minor
+  \time 4/4
   \tempo "Fast Salsa" 4 = 210
-    
-    \set Score.skipBars = ##t R1*14 ^\markup { "A Capella" }
-    
-    \tuplet 3/2 { <c, c'>4 <c c'> <c c'> } \tuplet 3/2 { <es es'> <es es'> <es es'> } | 
-    <g g'> r8 <c c'>8 <c c'>4 r |
-    
-      \inst "A"
-    <es es'>8 ^\markup { "Chorus" } as c <c, c'> ~ <c c'> es as r |
-    <es es'> as c <c, c'> ~ <c c'> <es es'> ~ <es es'> <e e'> |
-    \ottava #1
-    <f f'> as c <c, c'> ~ <c c'> f as r |
-    <f f'> as c <c, c'> ~ <c c'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <c es> ~ <c es> <es, es'> ~ <es es'> <g c> ~ <g c> r |
-    <g g'>4 <c es>8 <es, es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <bes es> ~ <bes es> <es, es'> ~ <es es'> <g bes> ~ <g bes> r |
-    <g g'> <bes es> <f f'> <f f'> ~ <f f'> <es es'> ~ <es es'> <es es'> |
-    
-    <es es'>8 as c <c, c'> ~ <c c'> es as r |
-    <es es'> as c <c, c'> ~ <c c'> <es es'> ~ <es es'> <e e'> |
-    <f f'> as c <c, c'> ~ <c c'> f as r |
-    <f f'> as c <c, c'> ~ <c c'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <c es> ~ <c es> <es, es'> ~ <es es'> <g c> ~ <g c> r |
-    <g g'>4 <c es>8 <es, es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <bes es> ~ <bes es> <f f'> ~ <f f'> <g bes> <f f'>4 |
-    <bes, bes'> <es es'> ~ <es es'> \ottava #0 <c, f a> ~ |
-    
-      \inst "B"
-    <c f a>1 ^\markup { "Verse 1" }  ~ |
-    <c f a> |
-    \makePercent s1
-    
-    <g'' bes es>4 <g bes d>4. r8 <f a c>4 ~ |
-    <f a c>1 |
-     \makePercent s1
-     
-     s1*0 ^\markup { "Improvisation" }
-      \repeat percent 2 { \makePercent s1 }
-          \repeat percent 3 { \makePercent s1 }
-    
-    <g, bes es>4 <g bes d>4. r8 <f a c>4 ~ |
-    <f a c>1 |
-    \makePercent s1
-         s1*0 ^\markup { "Improvisation" }
+  
+  \set Score.skipBars = ##t R1*14 ^\markup { "A Capella" }
+  
+  \tuplet 3/2 { <c, c'>4 <c c'> <c c'> } \tuplet 3/2 { <es es'> <es es'> <es es'> } | 
+  <g g'> r8 <c c'>8 <c c'>4 r |
+  
+  \inst "A"
+  <es es'>8 ^\markup { "Chorus" } as c <c, c'> ~ <c c'> es as r |
+  <es es'> as c <c, c'> ~ <c c'> <es es'> ~ <es es'> <e e'> |
+  \ottava #1
+  <f f'> as c <c, c'> ~ <c c'> f as r |
+  <f f'> as c <c, c'> ~ <c c'> <f f'> ~ <f f'> <fis fis'> |
+  <g g'> <c es> ~ <c es> <es, es'> ~ <es es'> <g c> ~ <g c> r |
+  <g g'>4 <c es>8 <es, es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
+  <g g'> <bes es> ~ <bes es> <es, es'> ~ <es es'> <g bes> ~ <g bes> r |
+  <g g'> <bes es> <f f'> <f f'> ~ <f f'> <es es'> ~ <es es'> <es es'> |
+  
+  <es es'>8 as c <c, c'> ~ <c c'> es as r |
+  <es es'> as c <c, c'> ~ <c c'> <es es'> ~ <es es'> <e e'> |
+  <f f'> as c <c, c'> ~ <c c'> f as r |
+  <f f'> as c <c, c'> ~ <c c'> <f f'> ~ <f f'> <fis fis'> |
+  <g g'> <c es> ~ <c es> <es, es'> ~ <es es'> <g c> ~ <g c> r |
+  <g g'>4 <c es>8 <es, es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
+  <g g'> <bes es> ~ <bes es> <f f'> ~ <f f'> <g bes> <f f'>4 |
+  <bes, bes'> <es es'> ~ <es es'> \ottava #0 <c, f a> ~ |
+  
+  \inst "B"
+  <c f a>1 ^\markup { "Verse 1" }  ~ |
+  <c f a> |
+  \makePercent s1
+  
+  <g'' bes es>4 <g bes d>4. r8 <f a c>4 ~ |
+  <f a c>1 |
+  \makePercent s1
+  
+  s1*0 ^\markup { "Improvisation" }
+  \repeat percent 2 { \makePercent s1 }
+  \repeat percent 3 { \makePercent s1 }
+  
+  <g, bes es>4 <g bes d>4. r8 <f a c>4 ~ |
+  <f a c>1 |
+  \makePercent s1
+  s1*0 ^\markup { "Improvisation" }
   \repeat percent 2 { \makePercent s1 }
   \repeat percent 7 { \makePercent s1 }
-    r2 <bes' bes'>8 -> <bes bes'> -> r4 |
-    
-      \inst "C"
-    <es, es'>8 ^\markup { "Chorus" } as c <c, c'> ~ <c c'> es as r |
-    <es es'> as c <c, c'> ~ <c c'> <es es'> ~ <es es'> <e e'> |
-    \ottava #1
-    <f f'> as c <c, c'> ~ <c c'> f as r |
-    <f f'> as c <c, c'> ~ <c c'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <c es> ~ <c es> <es, es'> ~ <es es'> <g c> ~ <g c> r |
-    <g g'>4 <c es>8 <es, es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <bes es> ~ <bes es> <es, es'> ~ <es es'> <g bes> ~ <g bes> r |
-    <g g'> <bes es> <f f'> <f f'> ~ <f f'> <es es'> ~ <es es'> <es es'> |
-    
-    <es es'>8 as c <c, c'> ~ <c c'> es as r |
-    <es es'> as c <c, c'> ~ <c c'> <es es'> ~ <es es'> <e e'> |
-    <f f'> as c <c, c'> ~ <c c'> f as r |
-    <f f'> as c <c, c'> ~ <c c'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <c es> ~ <c es> <es, es'> ~ <es es'> <g c> ~ <g c> r |
-    <g g'>4 <c es>8 <es, es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <bes es> ~ <bes es> <f f'> ~ <f f'> <g bes> <f f'>4 |
-    <bes, bes'> <es es'> ~ <es es'> \ottava #0 <c, f a> ~ |
-    
-      \inst "D"
-    <c f a>1 ^\markup { "Verse 2" }  ~ |
-    <c f a> |
-    \makePercent s1
-    
-    <g'' bes es>4 <g bes d>4. r8 <f a c>4 ~ |
-    <f a c>1 |
-    \makePercent s1
-    s1*0 ^\markup { "Improvisation" }
-      \repeat percent 2 { \makePercent s1 }
-            \repeat percent 3 { \makePercent s1 }
-    
-    <g, bes es>4 <g bes d>4. r8 <f a c>4 ~ |
-    <f a c>1 |
-      \repeat percent 3 { \makePercent s1 }
-        \inst "E"
-        s1*0 ^\markup { "Swing!" }
-      \repeat percent 8 { \makePercent s1 }
-    
-    
-    <es' es'>8 ^\markup { "Chorus" } as c <c, c'> ~ <c c'> es as r |
-    <es es'> as c <c, c'> ~ <c c'> <es es'> ~ <es es'> <e e'> |
-    \ottava #1
-    <f f'> as c <c, c'> ~ <c c'> f as r |
-    <f f'> as c <c, c'> ~ <c c'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <c es> ~ <c es> <es, es'> ~ <es es'> <g c> ~ <g c> r |
-    <g g'>4 <c es>8 <es, es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <bes es> ~ <bes es> <es, es'> ~ <es es'> <g bes> ~ <g bes> r |
-    <g g'> <bes es> <f f'> <f f'> ~ <f f'> <es es'> ~ <es es'> <es es'> |
-    
-    <es es'>8 as c <c, c'> ~ <c c'> es as r |
-    <es es'> as c <c, c'> ~ <c c'> <es es'> ~ <es es'> <e e'> |
-    <f f'> as c <c, c'> ~ <c c'> f as r |
-    <f f'> as c <c, c'> ~ <c c'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <c es> ~ <c es> <es, es'> ~ <es es'> <g c> ~ <g c> r |
-    <g g'>4 <c es>8 <es, es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <bes es> ~ <bes es> <f f'> ~ <f f'> <g bes> <f f'>4 |
-    <bes, bes'> <es es'> ~ <es es'> r4 |
-    
-      \inst "F"
-    \ottava #0
-    <es es'>8 ^\markup { "Trombone solo" } as c <c, c'> ~ <c c'> es as r |
-    <es es'> as c <c, c'> ~ <c c'> <es es'> ~ <es es'> <e e'> |
-    \ottava #1
-    <f f'> as c <c, c'> ~ <c c'> f as r |
-    <f f'> as c <c, c'> ~ <c c'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <c es> ~ <c es> <es, es'> ~ <es es'> <g c> ~ <g c> r |
-    <g g'>4 <c es>8 <es, es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <bes es> ~ <bes es> <es, es'> ~ <es es'> <g bes> ~ <g bes> r |
-    <g g'> <bes es> <f f'> <f f'> ~ <f f'> <es es'> ~ <es es'> <es es'> |
-    
-    <es es'>8 as c <c, c'> ~ <c c'> es as r |
-    <es es'> as c <c, c'> ~ <c c'> <es es'> ~ <es es'> <e e'> |
-    <f f'> as c <c, c'> ~ <c c'> f as r |
-    <f f'> as c <c, c'> ~ <c c'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <c es> ~ <c es> <es, es'> ~ <es es'> <g c> ~ <g c> r |
-    <g g'>4 <c es>8 <es, es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <bes es> ~ <bes es> <f f'> ~ <f f'> <g bes> <f f'>4 |
-    <bes, bes'> <es es'> ~ <es es'> r4 |
-    
-    f'4 ^\markup { "Would I lie to you" } -> r2. |
-    \ottava #0
-    
-    \set Score.skipBars = ##t R1*15
-    
-      \inst "G"
-    s1*0 ^\markup { "Te digo" }
-          \repeat percent 8 { \makePercent s1 }
-    \ottava #1
-    <as, as'>8 -> <as as'> -> r4 <as as'>8 -> <as as'> -> r4 |
-    \tuplet 3/2 { <as as'>4 -> <as as'> -> <as as'> -> } <as as'>8 -> r4. |
-    
-    \ottava #0
-    <es es'>8 ^\markup { "Chorus" } as c <c, c'> ~ <c c'> es as r |
-    <es es'> as c <c, c'> ~ <c c'> <es es'> ~ <es es'> <e e'> |
-    \ottava #1
-    <f f'> as c <c, c'> ~ <c c'> f as r |
-    <f f'> as c <c, c'> ~ <c c'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <c es> ~ <c es> <es, es'> ~ <es es'> <g c> ~ <g c> r |
-    <g g'>4 <c es>8 <es, es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <bes es> ~ <bes es> <es, es'> ~ <es es'> <g bes> ~ <g bes> r |
-    <g g'> <bes es> <f f'> <f f'> ~ <f f'> <es es'> ~ <es es'> <es es'> |
-    
-    <es es'>8 as c <c, c'> ~ <c c'> es as r |
-    <es es'> as c <c, c'> ~ <c c'> <es es'> ~ <es es'> <e e'> |
-    <f f'> as c <c, c'> ~ <c c'> f as r |
-    <f f'> as c <c, c'> ~ <c c'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <c es> ~ <c es> <es, es'> ~ <es es'> <g c> ~ <g c> r |
-    <g g'>4 <c es>8 <es, es'> ~ <es es'> <f f'> <f f'>4 -> ~ |
-    <f f'>1 ~ |
-    <f f'>2 r2 |
-    
-      \inst "H"
-    \ottava #0
-    r4 ^\markup { "Montuno - Petas" } <c c'>8 <es es'> ~ <es es'> <e e'> <as c> <f f'> |
-    <f f'>4 <c c'>8 <es es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <d d'> ~ <d d'> <f f'> ~ <f f'> <fis fis'> <b d> <g g'> |
-    <g g'>4 <d d'>8 <f f'> ~ <f f'> <g g'> ~ <g g'> <bes bes'> |
-    \ottava #1
-    <c c'>8 <es g>8 ~ <es g> <bes bes'> <b b'> ~ <b b'> <es es'>4 |
-    <c c'>4 <es g>8 <bes bes'> ~ <bes bes'> <es es'> ~ <es es'> <c c'> ~ |
-    <c c'>8 <f a>8 ~ <f a> <bes, bes'> <b b'> ~ <b b'> <es es'>4 |
-    <c c'>4 <f a>8 <bes, bes'> ~ <bes bes'> <b b'> ~ <b b'> <c c'> |
-    
-    \ottava #0
-    r4 <c, c'>8 <es es'> ~ <es es'> <e e'> <as c> <f f'> |
-    <f f'>4 <c c'>8 <es es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <d d'> ~ <d d'> <f f'> ~ <f f'> <fis fis'> <b d> <g g'> |
-    <g g'>4 <d d'>8 <f f'> ~ <f f'> <g g'> ~ <g g'> <bes bes'> |
-    \ottava #1
-    <c c'>8 <es g>8 ~ <es g> <bes bes'> <b b'> ~ <b b'> <es es'>4 |
-    <c c'>4 <es g>8 <bes bes'> ~ <bes bes'> <es es'> ~ <es es'> <c c'> ~ |
-    <c c'>8 <f a>8 ~ <f a> <bes, bes'> <b b'> ~ <b b'> <es es'>4 |
-    <c c'>4 <f a>8 <bes, bes'> ~ <bes bes'> <b b'> ~ <b b'> <c c'> |
-    
-          \inst "I"
-    \ottava #0
-    r4 ^\markup { "Coro Pregón" } <c, c'>8 <es es'> ~ <es es'> <e e'> <as c> <f f'> |
-    <f f'>4 <c c'>8 <es es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <d d'> ~ <d d'> <f f'> ~ <f f'> <fis fis'> <b d> <g g'> |
-    <g g'>4 <d d'>8 <f f'> ~ <f f'> <g g'> ~ <g g'> <bes bes'> |
-    \ottava #1
-    <c c'>8 <es g>8 ~ <es g> <bes bes'> <b b'> ~ <b b'> <es es'>4 |
-    <c c'>4 <es g>8 <bes bes'> ~ <bes bes'> <es es'> ~ <es es'> <c c'> ~ |
-    <c c'>8 <f a>8 ~ <f a> <bes, bes'> <b b'> ~ <b b'> <es es'>4 |
-    <c c'>4 <f a>8 <bes, bes'> ~ <bes bes'> <b b'> ~ <b b'> <c c'> |
-    
-    \ottava #0
-    r4 <c, c'>8 <es es'> ~ <es es'> <e e'> <as c> <f f'> |
-    <f f'>4 <c c'>8 <es es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <d d'> ~ <d d'> <f f'> ~ <f f'> <fis fis'> <b d> <g g'> |
-    <g g'>4 <d d'>8 <f f'> ~ <f f'> <g g'> ~ <g g'> <bes bes'> |
-    \ottava #1
-    <c c'>8 <es g>8 ~ <es g> <bes bes'> <b b'> ~ <b b'> <es es'>4 |
-    <c c'>4 <es g>8 <bes bes'> ~ <bes bes'> <es es'> ~ <es es'> <c c'> ~ |
-    <c c'>8 <f a>8 ~ <f a> <bes, bes'> <b b'> ~ <b b'> <es es'>4 |
-    <c c'>4 <f a>8 <bes, bes'> ~ <bes bes'> <b b'> ~ <b b'> <c c'> |
-    
-    \ottava #0
-    r4 <c, c'>8 <es es'> ~ <es es'> <e e'> <as c> <f f'> |
-    <f f'>4 <c c'>8 <es es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <d d'> ~ <d d'> <f f'> ~ <f f'> <fis fis'> <b d> <g g'> |
-    <g g'>4 <d d'>8 <f f'> ~ <f f'> <g g'> ~ <g g'> <bes bes'> |
-    \ottava #1
-    <c c'>8 <es g>8 ~ <es g> <bes bes'> <b b'> ~ <b b'> <es es'>4 |
-    <c c'>4 <es g>8 <bes bes'> ~ <bes bes'> <es es'> ~ <es es'> <c c'> ~ |
-    <c c'>8 <f a>8 ~ <f a> <bes, bes'> <b b'> ~ <b b'> <es es'>4 |
-    <c c'>4 <f a>8 <bes, bes'> ~ <bes bes'> <b b'> ~ <b b'> <c c'> |
-    
-    \ottava #0
-    r4 <c, c'>8 <es es'> ~ <es es'> <e e'> <as c> <f f'> |
-    <f f'>4 <c c'>8 <es es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
-    <g g'> <d d'> ~ <d d'> <f f'> ~ <f f'> <fis fis'> <b d> <g g'> |
-    <g g'>4 <d d'>8 <f f'> ~ <f f'> <g g'> ~ <g g'> <bes bes'> |
-    \ottava #1
-    <c c'>8 <es g>8 ~ <es g> <bes bes'> <b b'> ~ <b b'> <es es'>4 |
-    <c c'>4 <es g>8 <bes bes'> ~ <bes bes'> <es es'> ~ <es es'> <c c'> ~ |
-    <c c'>8 <f a>8 ~ <f a> <bes, bes'> <b b'> ~ <b b'> <es es'>4 |
-    <c c'>4 <f a>8 <bes, bes'> ~ <bes bes'> <b b'> ~ <b b'> <c c'> |
-    
-    R1 ^\markup { "Fade out" } |
-    R1 |
-    R1 |
-    R1 |
-    R1 |
-    R1 |
-    R1 |
-    R1 |
-    
-    \set Score.skipBars = ##t R1*8 ^\markup { "A Capella" }
-      
-    \bar "|."  
+  r2 <bes' bes'>8 -> <bes bes'> -> r4 |
+  
+  \inst "C"    
+  s1*0 ^\markup { "Chorus" }
+  \repeat volta 7 { %\repeatBracket 7 { 
+    \makePercent s1*2 } %}
+  \makePercent s1 |
+  \makePercent s2. \ottava #0 <c, f a>4 ~ |
+  
+  \inst "D"
+  <c f a>1 ^\markup { "Verse 2" }  ~ |
+  <c f a> |
+  \makePercent s1
+  
+  <g' bes es>4 <g bes d>4. r8 <f a c>4 ~ |
+  <f a c>1 |
+  \makePercent s1
+  s1*0 ^\markup { "Improvisation" }
+  \repeat percent 2 { \makePercent s1 }
+  \repeat percent 3 { \makePercent s1 }
+  
+  <g, bes es>4 <g bes d>4. r8 <f a c>4 ~ |
+  <f a c>1 |
+  \repeat percent 3 { \makePercent s1 }
+  \inst "E"
+  s1*0 ^\markup { "Swing!" }
+  \repeat percent 3 { \makePercent s1*2 } 
+  <as c es>1 |
+  R1 |
+  
+  s1*0 ^\markup { "Chorus" }
+  \repeat volta 8 { %\repeatBracket 8 { 
+    \makePercent s1*2 } %}
+  
+  \inst "F"
+  \ottava #0
+  s1*0  ^\markup { "Trombone solo" }
+  \repeat volta 8 { %\repeatBracket 8 { 
+    \makePercent s1*2 } %}
+  
+  f'4 ^\markup { "Would I lie to you" } -> r2. |
+  \ottava #0
+  
+  \set Score.skipBars = ##t R1*15
+  
+  \inst "G"
+  s1*0 ^\markup { "Te digo" }
+  <bes, bes'>8 r <bes bes'> r <bes bes'> r <bes bes'> r |
+  <bes bes'>8 r <bes bes'> r <bes bes'> r <bes bes'> r |
+  \repeat percent 6 { \makePercent s1 }
+  \ottava #1
+  <as' as'>8 -> <as as'> -> r4 <as as'>8 -> <as as'> -> r4 |
+  \tuplet 3/2 { <as as'>4 -> <as as'> -> <as as'> -> } <as as'>8 -> r4. |
+  
+  \ottava #0
+  s1*0 ^\markup { "Chorus" } |
+  \repeat volta 4 {% \repeatBracket 4 { 
+    \makePercent s1*2 } %}
+  
+  \repeat percent 5 { \makePercent s1 }
+  \makePercent s2. <f f'>4 -> ~ |
+  <f f'>1 ~ |
+  <f f'>2 r2 |
+  
+  \inst "H"
+  \ottava #0
+  r4 ^\markup { "Montuno - Petas" } <c c'>8 <es es'> ~ <es es'> <e e'> <as c> <f f'> |
+  <f f'>4 <c c'>8 <es es'> ~ <es es'> <f f'> ~ <f f'> <fis fis'> |
+  <g g'> <d d'> ~ <d d'> <f f'> ~ <f f'> <fis fis'> <b d> <g g'> |
+  <g g'>4 <d d'>8 <f f'> ~ <f f'> <g g'> ~ <g g'> <bes bes'> |
+  \ottava #1
+  <c c'>8 <es g>8 ~ <es g> <bes bes'> <b b'> ~ <b b'> <es es'>4 |
+  <c c'>4 <es g>8 <bes bes'> ~ <bes bes'> <es es'> ~ <es es'> <c c'> ~ |
+  <c c'>8 <f a>8 ~ <f a> <bes, bes'> <b b'> ~ <b b'> <es es'>4 |
+  <c c'>4 <f a>8 <bes, bes'> ~ <bes bes'> <b b'> ~ <b b'> <c c'> |
+  
+  \ottava #0
+  \repeat percent 8 { \makePercent s1 } 
+  
+  \inst "I"
+  \ottava #0
+  s1*0 ^\markup { "Coro Pregón" }
+  
+  \repeat volta 16 { %\repeatBracket 16 { 
+    \makePercent s1*2 } %}
+  
+  R1 ^\markup { "Fade out" } |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  
+  \set Score.skipBars = ##t R1*8 ^\markup { "A Capella" }
+  
+  
+  \bar "|."  
 }
 
 lower = \new Voice \relative c {
-    \set PianoStaff.instrumentName = \markup {
-      \center-align { "Piano" }
-    }
-    \set Staff.midiInstrument = "piano"
-    \set Staff.midiMaximumVolume = #0.7
+  \set PianoStaff.instrumentName = \markup {
+    \center-align { "Piano" }
+  }
+  \set Staff.midiInstrument = "piano"
+  \set Staff.midiMaximumVolume = #0.7
 
-    \clef bass
-    \key c \minor
-    \time 4/4
-    
-    \set Score.skipBars = ##t R1*14
-    
-    \tuplet 3/2 { c4 c c } \tuplet 3/2 { es es es} | 
-    g r8 c8 c4 r |
-    
-    \clef treble
-    
-    es8 as c c, ~ c es as r |
-    es as c c, ~ c es ~ es e |
-    f as c c, ~ c f as r |
-    f as c c, ~ c f ~ f fis |
-    g <c es> ~ <c es> es, ~ es <g c> ~ <g c> r |
-    g4 <c es>8 es, ~ es f ~ f fis |
-    g <bes es> ~ <bes es> es, ~ es <g bes> ~ <g bes> r |
-    g <bes es> f f ~ f es ~ es es |
-    
-    es8 as c c, ~ c es as r |
-    es as c c, ~ c es ~ es e |
-    f as c c, ~ c f as r |
-    f as c c, ~ c f ~ f fis |
-    g <c es> ~ <c es> es, ~ es <g c> ~ <g c> r |
-    g4 <c es>8 es, ~ es f ~ f fis |
-    g <bes es> ~ <bes es> f ~ f <g bes> f4 |
-    bes, es ~ es f4 ~ |
-    
-    f1 ~ |
-    f1 |
-    
-   \makePercent s1
-    
-    g4 g4. r8 f4 ~ |
-    f1 |
-    
-      \repeat percent 6 { \makePercent s1 }
-    
-    \clef bass
-    g,4 g4. r8 f4 ~ |
-    f1 |
-      \repeat percent 10 { \makePercent s1 }
-    r2 bes8 -> bes -> r4 |
-    
-    \clef treble
-    es8 as c c, ~ c es as r |
-    es as c c, ~ c es ~ es e |
-    f as c c, ~ c f as r |
-    f as c c, ~ c f ~ f fis |
-    g <c es> ~ <c es> es, ~ es <g c> ~ <g c> r |
-    g4 <c es>8 es, ~ es f ~ f fis |
-    g <bes es> ~ <bes es> es, ~ es <g bes> ~ <g bes> r |
-    g <bes es> f f ~ f es ~ es es |
-    
-    es8 as c c, ~ c es as r |
-    es as c c, ~ c es ~ es e |
-    f as c c, ~ c f as r |
-    f as c c, ~ c f ~ f fis |
-    g <c es> ~ <c es> es, ~ es <g c> ~ <g c> r |
-    g4 <c es>8 es, ~ es f ~ f fis |
-    g <bes es> ~ <bes es> f ~ f <g bes> f4 |
-    bes, es ~ es f4 ~ |
-    
-    f1 ~ |
-    f1 |
-    
-    \makePercent s1
-    
-    g4 g4. r8 f4 ~ |
-    f1 |
-    
-      \repeat percent 6 { \makePercent s1 }
-    
-    \clef bass
-    g,4 g4. r8 f4 ~ |
-    f1 |
-      \repeat percent 3 { \makePercent s1 }
-          \repeat percent 8 { \makePercent s1 }
-    
-    \clef treble
-    es'8 as c c, ~ c es as r |
-    es as c c, ~ c es ~ es e |
-    f as c c, ~ c f as r |
-    f as c c, ~ c f ~ f fis |
-    g <c es> ~ <c es> es, ~ es <g c> ~ <g c> r |
-    g4 <c es>8 es, ~ es f ~ f fis |
-    g <bes es> ~ <bes es> es, ~ es <g bes> ~ <g bes> r |
-    g <bes es> f f ~ f es ~ es es |
-    
-    es8 as c c, ~ c es as r |
-    es as c c, ~ c es ~ es e |
-    f as c c, ~ c f as r |
-    f as c c, ~ c f ~ f fis |
-    g <c es> ~ <c es> es, ~ es <g c> ~ <g c> r |
-    g4 <c es>8 es, ~ es f ~ f fis |
-    g <bes es> ~ <bes es> f ~ f <g bes> f4 |
-    bes, es ~ es r4 |
+  \clef bass
+  \key c \minor
+  \time 4/4
+  
+  \set Score.skipBars = ##t R1*14
+  
+  \tuplet 3/2 { c4 c c } \tuplet 3/2 { es es es} | 
+  g r8 c8 c4 r |
+  
+  \clef treble
+  
+  es8 as c c, ~ c es as r |
+  es as c c, ~ c es ~ es e |
+  f as c c, ~ c f as r |
+  f as c c, ~ c f ~ f fis |
+  g <c es> ~ <c es> es, ~ es <g c> ~ <g c> r |
+  g4 <c es>8 es, ~ es f ~ f fis |
+  g <bes es> ~ <bes es> es, ~ es <g bes> ~ <g bes> r |
+  g <bes es> f f ~ f es ~ es es |
+  
+  es8 as c c, ~ c es as r |
+  es as c c, ~ c es ~ es e |
+  f as c c, ~ c f as r |
+  f as c c, ~ c f ~ f fis |
+  g <c es> ~ <c es> es, ~ es <g c> ~ <g c> r |
+  g4 <c es>8 es, ~ es f ~ f fis |
+  g <bes es> ~ <bes es> f ~ f <g bes> f4 |
+  bes, es ~ es f4 ~ |
+  
+  f1 ~ |
+  f1 |
+  
+  \makePercent s1
+  
+  g4 g4. r8 f4 ~ |
+  f1 |
+  
+  \repeat percent 6 { \makePercent s1 }
+  
+  \clef bass
+  g,4 g4. r8 f4 ~ |
+  f1 |
+  \repeat percent 10 { \makePercent s1 }
+  r2 bes8 -> bes -> r4 |
+  
+  \clef treble
+  \repeat volta 7 { \makePercent s1*2 }
+ 
+  \makePercent s1 |
+  \makePercent s2. f'4 ~ |
+  f1 ~ |
+  f1 |
+  
+  \makePercent s1
+  
+  g4 g4. r8 f4 ~ |
+  f1 |
+  
+  \repeat percent 6 { \makePercent s1 }
+  
+  \clef bass
+  g,4 g4. r8 f4 ~ |
+  f1 |
+  \repeat percent 3 { \makePercent s1 }
+  \repeat percent 3 { \makePercent s1*2 }
+  as1 |
+  R1 |
+  
+  \clef treble
+  \repeat volta 8 { \makePercent s1*2 }
 
-    es8 as c c, ~ c es as r |
-    es as c c, ~ c es ~ es e |
-    f as c c, ~ c f as r |
-    f as c c, ~ c f ~ f fis |
-    g <c es> ~ <c es> es, ~ es <g c> ~ <g c> r |
-    g4 <c es>8 es, ~ es f ~ f fis |
-    g <bes es> ~ <bes es> es, ~ es <g bes> ~ <g bes> r |
-    g <bes es> f f ~ f es ~ es es |
-    
-    es8 as c c, ~ c es as r |
-    es as c c, ~ c es ~ es e |
-    f as c c, ~ c f as r |
-    f as c c, ~ c f ~ f fis |
-    g <c es> ~ <c es> es, ~ es <g c> ~ <g c> r |
-    g4 <c es>8 es, ~ es f ~ f fis |
-    g <bes es> ~ <bes es> f ~ f <g bes> f4 |
-    bes, es ~ es r4 |
+  \repeat volta 8 { \makePercent s1*2 }
 
 
-    f4 -> r2. |
-    
-    \set Score.skipBars = ##t R1*15
-    
-    s1*0
-          \repeat percent 8 { \makePercent s1 }
-    
-    as8 -> as -> r4 as8 -> as -> r4 |
-    \tuplet 3/2 { as4 -> as -> as -> } as8 -> r4. |
-    
-    es8 as c c, ~ c es as r |
-    es as c c, ~ c es ~ es e |
-    f as c c, ~ c f as r |
-    f as c c, ~ c f ~ f fis |
-    g <c es> ~ <c es> es, ~ es <g c> ~ <g c> r |
-    g4 <c es>8 es, ~ es f ~ f fis |
-    g <bes es> ~ <bes es> es, ~ es <g bes> ~ <g bes> r |
-    g <bes es> f f ~ f es ~ es es |
-    
-    es8 as c c, ~ c es as r |
-    es as c c, ~ c es ~ es e |
-    f as c c, ~ c f as r |
-    f as c c, ~ c f ~ f fis |
-    g <c es> ~ <c es> es, ~ es <g c> ~ <g c> r |
-    g4 <c es>8 es, ~ es f f4 -> ~ |
-    f1 ~ |
-    f2 r2 |
-    
-    \clef bass
-    <es, as c>1 ~ |
-    <es as c> |
-    <b' d g> ~ |
-    <b d g> |
-    <c, es g bes> ~ |
-    <c es g bes>2 <f a bes c> |
-    <f a bes c>1 ~ |
-    <f a bes c> |
-    
-    <es as c>1 ~ |
-    <es as c> |
-    <b' d g> ~ |
-    <b d g> |
-    <c, es g bes> ~ |
-    <c es g bes>2 <f a bes c>4 \tenuto <f a bes c> \tenuto |
-    <f a bes c>1 ~ |
-    <f a bes c> |
-    
-    <es as c>1 ~ |
-    <es as c> |
-    <b' d g> ~ |
-    <b d g> |
-    <c, es g bes> ~ |
-    <c es g bes>2 <f a bes c> |
-    <f a bes c>1 ~ |
-    <f a bes c> |
-    
-    <es as c>1 ~ |
-    <es as c> |
-    <b' d g> ~ |
-    <b d g> |
-    <c, es g bes> ~ |
-    <c es g bes>2 <f a bes c> |
-    <f a bes c>1 ~ |
-    <f a bes c> |
-    
-    <es as c>1 ~ |
-    <es as c> |
-    <b' d g> ~ |
-    <b d g> |
-    <c, es g bes> ~ |
-    <c es g bes>2 <f a bes c> |
-    <f a bes c>1 ~ |
-    <f a bes c> |
-    
-    <es as c>1 ~ |
-    <es as c> |
-    <b' d g> ~ |
-    <b d g> |
-    <c, es g bes> ~ |
-    <c es g bes>2 <f a bes c> |
-    <f a bes c>1 ~ |
-    <f a bes c> |
-    
-    <es as c>1 ~ |
-    <es as c> |
-    <b' d g> ~ |
-    <b d g> |
-    <c, es g bes> ~ |
-    <c es g bes>1 |
-    <f a bes c>1 ~ |
-    <f a bes c> |
-    
-    \clef treble 
-    <c' es f as>1 ~ |
-    <c es f as> |
-    <d f g> ~ |
-    <d f g> |
-    \clef bass
-    <g, as c es> ~ |
-    <g as c es> |
-    <f a bes c>1 ~ |
-    <f a bes c> |
-    
-    \label #'lastPage
-    \bar "|."  
+  f'4 -> r2. |
+  
+  \set Score.skipBars = ##t R1*15
+  
+  bes8 r bes r bes r bes r |
+  
+  bes8 r bes r bes r bes r |
+  \repeat percent 6 { \makePercent s1 }
+  
+  as8 -> as -> r4 as8 -> as -> r4 |
+  \tuplet 3/2 { as4 -> as -> as -> } as8 -> r4. |
+  
+  \repeat volta 4 { \makePercent s1*2 }
+  
+  \repeat percent 5 { \makePercent s1 }
+  \makePercent s2. f4 -> ~ |
+  f1 ~ |
+  f2 r2 |
+  
+  \clef bass
+  <es, as c>1 ~ |
+  <es as c> |
+  <b' d g> ~ |
+  <b d g> |
+  <c, es g bes> ~ |
+  <c es g bes>2 <f a bes c> |
+  <f a bes c>1 ~ |
+  <f a bes c> |
+  
+  \repeat percent 5 { \makePercent s1 }
+  \makePercent s2 <f a bes c>4 \tenuto <f a bes c> \tenuto |
+  <f a bes c>1 ~ |
+  <f a bes c> |
+  
+  \repeat volta 16 { \makePercent s1*2 }
+  
+  <es as c>1 ~ |
+  <es as c> |
+  <b' d g> ~ |
+  <b d g> |
+  <c, es g bes> ~ |
+  <c es g bes>1 |
+  <f a bes c>1 ~ |
+  <f a bes c> |
+  
+  \clef treble 
+  <c' es f as>1 ~ |
+  <c es f as> |
+  <d f g> ~ |
+  <d f g> |
+  \clef bass
+  <g, as c es> ~ |
+  <g as c es> |
+  <f a bes c>1 ~ |
+  <f a bes c> |
+  
+  \label #'lastPage
+  \bar "|."  
 }
 
 Bass = \new Voice \relative c {
@@ -1392,24 +1207,11 @@ Bass = \new Voice \relative c {
   \makePercent s2 as8 -> as -> r4 |
   
   \inst "C"
-  as,4. ^\markup { "Chorus" } es'4. as4 ~ |
-  as4. es4. as,4 |
-  \ottava #-1
-  f4. c'4. f4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. bes4. es,8 es |
-  
-  as4. es'4. as4 ~ |
-  as4. es4. as,4 |
-  f4. c4. f'4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. es,4. f4 ~ |
+  s1*0 ^\markup { "Chorus" }
+  \repeat volta 7 { %\repeatBracket 7 {
+    \makePercent s1*2 }% }
+  \makePercent s1 |
+    \makePercent s2. f4 ~ |
   
   \inst "D"
   f1 ^\markup { "Verse 2" }  ~ |
@@ -1417,7 +1219,7 @@ Bass = \new Voice \relative c {
   R1 |
   
   \ottava #0
-  r4 b8 ( c4 ) r8 f4 ~ |
+  r4 b,8 ( c4 ) r8 f4 ~ |
   f1 |
   
   \set Score.skipBars = ##t R1*6
@@ -1436,45 +1238,14 @@ Bass = \new Voice \relative c {
   as1 ~ |
   as2 \bendAfter #-5 r4 as \accent |
   
-  as4. ^\markup { "Chorus" } es'4. as4 ~ |
-  as4. es4. as,4 |
-  \ottava #-1
-  f4. c'4. f4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. bes4. es,8 es |
-  
-  as4. es'4. as4 ~ |
-  as4. es4. as,4 |
-  f4. c4. f'4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. es,4. r4 |
+  s1*0 ^\markup { "Chorus" }
+  \repeat volta 8 { %\repeatBracket 8 {
+    \makePercent s1*2 } %}
   
   \inst "F"
-  \ottava #0
-  as4. ^\markup { "Trombone solo" } es'4. as4 ~ |
-  as4. es4. as,4 |
-  \ottava #-1
-  f4. c'4. f4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. bes4. es,8 es |
-  
-  as4. es'4. as4 ~ |
-  as4. es4. as,4 |
-  f4. c4. f'4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. es,4. r4 |
+    s1*0 ^\markup { "Trombone Solo" }
+  \repeat volta 8 { %\repeatBracket 8 { 
+    \makePercent s1*2 } %}
   f'4 ^\markup { "Would I lie to you" } -> r2. |
   \ottava #0
   
@@ -1490,23 +1261,12 @@ Bass = \new Voice \relative c {
   as8 -> as -> r4 as8 -> as -> r4 |
   \tuplet 3/2 { as4 -> as -> as -> } as8 -> r4. |
   
-  \ottava #0
-  as4. ^\markup { "Chorus" } es'4. as4 ~ |
-  as4. es4. as,4 |
-  \ottava #-1
-  f4. c'4. f4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. g'4 |
-  es4. bes'4. es4 ~ |
-  es4. bes4. es,8 es |
+    s1*0 ^\markup { "Chorus" }
+  \repeat volta 4 { %\repeatBracket 4 {
+    \makePercent s1*2 } %}
   
-  as4. es'4. as4 ~ |
-  as4. es4. as,4 |
-  f4. c4. f'4 ~ |
-  f4. f,4. c4 |
-  c4. g'4. c4 ~ |
-  c4. c,4. \ottava #0 f'4 ~ |
+  \repeat percent 5 { \makePercent s1 }
+  \makePercent s2. f4 -> ~ |
   f1 ~ |
   f2 es'4 \glissando f, |
   
@@ -1524,7 +1284,7 @@ Bass = \new Voice \relative c {
   }
   
   \inst "I"
-  s1*0 ^\markup { "Coro Pregón" } 
+  s1*0 ^\markup { "Coro Pregón" }
   \repeat volta 4 {
     %\repeatBracket 4 {
       as4. es'4. as4 ~ |
@@ -1535,7 +1295,7 @@ Bass = \new Voice \relative c {
       es4. e4. r4 |
       f4. c'4. f4 ~ |
       f4. c8 ~ c f, as as |
-    %}
+   % }
   }
   
   as1 ^\markup { "Fade out" } |
@@ -1547,7 +1307,7 @@ Bass = \new Voice \relative c {
   R1 |
   R1 |
   
-  as1 ^\markup { "A Capella" }  ~ |
+  as'1 ^\markup { "A Capella" }  ~ |
   as1 |
   g1 ~ |
   g1 |
@@ -1573,75 +1333,73 @@ Congas = \new DrumVoice \drummode {
   
   \tuplet 3/2 { cgh4 cgh cgh } \tuplet 3/2 { cgh cgh cgh } | 
   cgh r8 cgh8 cgh4 r |
-  
+  \break
+  s1*0
+  %^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Chorus (tumbao 3/2)" }
   \inst "A"
-  s1*0 ^\markup { "Chorus (tumbao 3/2)" }
-  \repeat percent 8 {
-    bol8 bolm ssh cglo cglo bolm cgho cgho |
-    bolm bolm ssh bolm bolm bolm cgho cgho |
+  \repeat volta 8 {
+    \makePercent s1*2 
   }
-  
+  s1*0
+  %^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Verse 1 (tumbao + maracas)" }
   \inst "B"
-  s1*0 ^\markup { "Verse 1 (tumbao + maracas)" }
-  \repeat percent 8 {
-    bolm8 bolm ssh cglo cglo bolm cgho cgho |
-    bolm bolm ssh bolm bolm bolm cgho cgho |
+  \repeat volta 8 {
+    \makePercent s1*2
   }
   
-  cgh8 ^\markup { "(tumbao + martillo + cascara 2-3)" } bolm ssh bolm cgh bolm cglo bolm |
-  cgh bolm ssh bolm cgh bolm cglo bolm |
-  
-  cgh bolm ssh bolm cgh bolm cglo bolm |
-  cgh bolm ssh bolm cgh bolm cglo bolm |
-  
-  cgh bolm ssh bolm cgh bolm cglo bolm |
-  
-  cgh bolm ssh bolm cgh bolm r4 |
-  R1 |
-  R1 |
-  
+  s1*0
+  %^\markup { \bold { \fontsize #2 "4x" } }
+  ^\markup { "(tumbao + martillo + cascara 2-3)" }
+  \repeat volta 4 {
+    \makePercent s1*2
+  }
+  \break
+  s1*0
+  %^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Chorus (tumbao 3/2)" }
   \inst "C"
-  s1*0 ^\markup { "Chorus (tumbao 3/2)" }
-  \repeat percent 8 {
-    cgh8 bolm ssh cglo cglo cgh cgho cgho |
-    cgh bolm ssh bolm cgh bolm cgho cgho |
+  \repeat volta 8 {
+    \makePercent s1*2
   }
   
+  s1*0
+  %^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Verse 2 (tumbao + maracas)" }
   \inst "D"
-  s1*0 ^\markup { "Verse 2 (tumbao + maracas)" }
-  \repeat percent 8 {
-    bolm8 bolm ssh cglo cglo bolm cgho cgho |
-    bolm bolm ssh bolm bolm bolm cgho cgho |
+  \repeat volta 8 {
+    \makePercent s1*2
   }
   
+  s1*0
+  %^\markup { \bold { \fontsize #2 "4x" } }
+  ^\markup { "Swing!" }
   \inst "E"
-  cgh8 ^\markup { "Swing!" } bolm ssh bolm cgh bolm cglo bolm |
-  cgh bolm ssh bolm cgh bolm cglo bolm |
-  
-  cgh bolm ssh bolm cgh bolm cglo bolm |
-  cgh bolm ssh bolm cgh bolm cglo bolm |
-  
-  cgh bolm ssh bolm cgh bolm cglo bolm |
-  
-  cgh bolm ssh bolm cgh bolm r4 |
-  R1 |
-  R1 |
-  
-  s1*0 ^\markup { "Chorus (tumbao 3/2)" }
-  \repeat percent 8 {
-    bol8 bolm ssh cglo cglo bolm cgho cgho |
-    bolm bolm ssh bolm bolm bolm cgho cgho |
+  \repeat volta 4 {
+    \makePercent s1*2
+  }
+  \break
+  s1*0
+  %^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Chorus (tumbao 3/2)" }
+  \repeat volta 8 {
+    \makePercent s1*2
   }
   
+  s1*0
+  %^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Trombone solo (tumbao 3/2)" }
   \inst "F"
-  s1*0 ^\markup { "Trombone solo (tumbao 3/2)" }
-  \repeat percent 8 {
-    bol8 bolm ssh cglo cglo bolm cgho cgho |
-    bolm bolm ssh bolm bolm bolm cgho cgho |
+  \repeat volta 8 {
+    \makePercent s1*2
   }
   
-  s1*0 ^\markup { "Would I lie to you (conga tumbao slaps + guiro)" }
-  \repeat percent 6 {
+  \break
+  s1*0
+  %^\markup { \bold { \fontsize #2 "6x" } }
+  ^\markup { "Would I lie to you (conga tumbao slaps + guiro)" }
+  \repeat volta 6 {
     bol8 bolm ssh r r bolm cgho cgho |
     bolm bolm ssh r r bolm cgho cgho |
   }
@@ -1649,39 +1407,50 @@ Congas = \new DrumVoice \drummode {
   ssh -> r r2. |
   \set Score.skipBars = ##t R1*3
   
+  \break
+  s1*0
+  %^\markup { \bold { \fontsize #2 "4x" } }
+  ^\markup { "Te digo" }
   \inst "G"
-  s1*0 ^\markup { "Te digo" }
-  \repeat percent 4 {
+  \repeat volta 4 {
     cglo8 r cglo r cglo r cglo r |
     cglo r cglo r cglo r cglo r |
   }
   cgho cgho cglo r cgho cgho cglo r |
   \tuplet 3/2 { cgho4 cgho cgho } cgho8 cglo r4 |
   
-  s1*0 ^\markup { "Chorus (tumbao 3/2)" }
-  \repeat percent 8 {
-    cgh8 bolm ssh cglo cglo cgh cgho cgho |
-    cgh bolm ssh bolm cgh bolm cgho cgho |
+  \break
+  
+  s1*0
+  %^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Chorus (tumbao 3/2)" }
+  \repeat volta 8 {
+    \makePercent s1*2
   }
   
+  \break
+  s1*0
+  %^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Montuno - Petas (tumbao 3/2)" } 
   \inst "H"
-  s1*0 ^\markup { "Montuno - Petas (tumbao 3/2)" } 
-  \repeat percent 8 {
-    cgh8 bolm ssh cglo cglo cgh cgho cgho |
-    cgh bolm ssh bolm cgh bolm cgho cgho |
+  \repeat volta 8 {
+    \makePercent s1*2
   }
-  
+  \break
+  s1*0
+  %^\markup { \bold { \fontsize #2 "16x" } }
+  ^\markup { "Coro Pregón (tumbao 3/2)" }
   \inst "I"
-  s1*0 ^\markup { "Coro Pregón (tumbao 3/2)" }
-  \repeat percent 16 {
-    cgh8 bolm ssh cglo cglo cgh cgho cgho |
-    cgh bolm ssh bolm cgh bolm cgho cgho |
+  \repeat volta 16 {
+    \makePercent s1*2
   }
   
-  s1*0 ^\markup { "Fade out (tumbao 3/2)" }
-  \repeat percent 4 {
-    cgh8 bolm ssh cglo cglo cgh cgho cgho |
-    cgh bolm ssh bolm cgh bolm cgho cgho |
+  \break
+  s1*0
+  %^\markup { \bold { \fontsize #2 "4x" } }
+  ^\markup { "Fade out (tumbao 3/2)" }
+  \repeat volta 4 {
+    \makePercent s1*2
   }
   
   R1*8 ^\markup { "A Capella" } 
@@ -1703,83 +1472,94 @@ Timbales = \new DrumVoice \drummode {
   \tuplet 3/2 { cb4 cb cb } \tuplet 3/2 { cb cb cb} | 
   timh r8 timl8 timl4 cymc -^ |
   
+  \break
+  s1*0
+  %^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Chorus (campana 3/2)" }
   \inst "A"
-  s1*0 ^\markup { "Chorus (campana 3/2)" }
-  \repeat percent 8 {
-    r8 cb cb cb cb r cb cb |
-    cb r cb r cb cb cb cb |
+  \repeat volta 8 {
+    \makePercent s1*2 
   }
   
   \inst "B"
   R1*16 ^\markup { "Verse 1 (tumbao + maracas)" } 
   
   
-  hhc8-. ^\markup { "(tumbao + martillo + cascara 2-3)" } hhp hhc-. hhp hhc-. hhc-. hhp hhc-. |
-  hhc-. hhp hhc-. hhc-. hhp hhc-. hhp hhc-. |
-  
-  hhc-. hhp hhc-. hhp hhc-. hhc-. hhp hhc-. |
-  hhc-. hhp hhc-. hhc-. hhp hhc-. cymc4 -^ |
-  
-  hhc8-. -. hhp hhc-. hhp hhc-. hhc-. hhp hhc-. |
-  hhc-. hhp hhc-. hhc-. hhp hhc-. cymc4 -^ |
+  s1*0
+    %^\markup { \bold { \fontsize #2 "2x" } }
+  ^\markup { "(tumbao + martillo + cascara 2-3)" }
+    \repeat volta 2 {
+    \makePercent s1*2 
+  }
+    \makePercent s1
+  \makePercent s2. cymc4 -^ |
   
   r2 timh8 timh r timh |
   r timh timl timl cb -^ cb -^ r4 |
-  
+   \break
+  s1*0
+  %^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Chorus (campana 3/2)" }
   \inst "C"
-  s1*0 ^\markup { "Chorus (campana 3/2)" } 
-  \repeat percent 8 {
-    r8 cb cb cb cb r cb cb |
-    cb r cb r cb cb cb cb |
+  \repeat volta 8 {
+    \makePercent s1*2
   }
   
   \inst "D"
   R1*16 ^\markup { "Verse 2 (tumbao + maracas)" } 
   
+  s1*0
+  %^\markup { \bold { \fontsize #2 "4x" } }
+  ^\markup { "Swing!" }
   \inst "E"
-  hhc8-. ^\markup { "Swing!" } hhp hhc-. hhp hhc-. hhc-. hhp hhc-. |
-  hhc-. hhp hhc-. hhc-. hhp hhc-. hhp hhc-. |
-  
-  hhc-. hhp hhc-. hhp hhc-. hhc-. hhp hhc-. |
-  hhc-. hhp hhc-. hhc-. hhp hhc-. cymc4 -^ |
-  
-  hhc8-. -. hhp hhc-. hhp hhc-. hhc-. hhp hhc-. |
-  hhc-. hhp hhc-. hhc-. hhp hhc-. cymc4 -^ |
-  
-  hhc8-. hhp hhc-. hhp hhc-. hhc-. hhp hhc-. |
-  timh timl r timl r timl cymc4 -^ |
-  
-  s1*0 ^\markup { "Chorus (campana 3/2)" }
-  \repeat percent 8 {
-    r8 cb cb cb cb r cb cb |
-    cb r cb r cb cb cb cb |
+  \repeat volta 3 {
+    \makePercent s1*2
   }
   
+  \makePercent s1 |
+  timh8 timl r timl r timl cymc4 -^ |
+  
+\break
+  s1*0
+  %^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Chorus (campana 3/2)" }
+  \repeat volta 8 {
+    \makePercent s1*2
+  }
+  
+  s1*0
+  %^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Trombone solo (campana 3/2)" }
   \inst "F"
-  s1*0 ^\markup { "Trombone solo (campana 3/2)" }
-  \repeat percent 8 {
-    r8 cb cb cb cb r cb cb |
-    cb r cb r cb cb cb cb |
+  \repeat volta 8 {
+    \makePercent s1*2
   }
+  \break
   
-  rb8 -. ^\markup { "Would I lie to you (camp. + contrac.)" } ^\markup { "Timbal Solo" } cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho cymc -^ r cymc -^ r |
-  cymc -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho cymc -^ r cymc -^ r |
-  cymc -^ ^\markup { "Timbal Solo" } cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho cymc -^ r cymc -^ r |
-  cymc -^ r r2. |
+  s1*0 ^\markup { "Would I lie to you (camp. + contrac.)" }
+  \makePercent s1 |
+  s1*0 ^\markup { "Improvisation 3 bars" } |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  s1*0 ^\markup { "Improvisation 3 bars" } |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  
+ 
+  cymc8 -^ r r2. |
   
   \set Score.skipBars = ##t R1*3
   
   \inst "G"
-  hh8 ^\markup { "Te digo (hh / cymbal)" } r hh r hh r hh r |
+  s1*0 ^\markup { "Te digo (hh / cymbal)" }
+  hh8 r hh r hh r hh r |
   hh r hh r hh r hh r |
   hh r hh r hh r hh r |
   hh r hh r hh r cymc -^ r |
@@ -1790,89 +1570,78 @@ Timbales = \new DrumVoice \drummode {
   
   timl timl cymc -^ r timl timl cymc -^ r |
   \tuplet 3/2 { timl4 timl timl } timl8 cymc -^ r4 |
-  
-  s1*0 ^\markup { "Chorus (camp. + contrac.)" }
-  \repeat percent 6 {
-    rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-    <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
+  \break
+  s1*0
+  %^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Chorus (camp. + contrac.)" }
+  \repeat volta 6 {
+    \makePercent s1*2
   }
-  rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb cymc4 -^ |
-  rb8 -. cb <<cb hhho>> timl timh timh r timl |
+  \makePercent s1 |
+  \makePercent s2. cymc4 -^ |
+  rb8 -. cb cb timl timh timh r timl |
   r timh r timh r2 |
   
-  \inst "H"
-  cymc8 -^ ^\markup { "Montuno - Petas (camp. + contrac.)" } cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  
-  \repeat percent 3 {
-    rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-    <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
+  \break
+  s1*0 ^\markup { "Montuno - Petas (camp. + contrac.)" }
+    \inst "H"
+  cymc4 -^\makePercent s2. |
+  \makePercent s1 |
+    s1*0
+    %^\markup { \bold { \fontsize #2 "3x" } }
+  \repeat volta 3 {
+    \makePercent s1*2
   }
   
-  rb8 -. cb cymc -^ cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  
-  \repeat percent 2 {
-    rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-    <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
+  r4 cymc -^ \makePercent s2 |
+  \repeat percent 5 {
+    \makePercent s1
   }
   
-  rb8 -. cb <<cb hhho>> cb rb -. timh timh timh | 
+  \makePercent s2 rb8 -. timh timh timh | 
   timh timh r4 r2 |
   
+\break
+  s1*0
+  %^\markup { \bold { \fontsize #2 "3x" } }
+  ^\markup { "Coro Pregón (camp. + contrac.)" }
   \inst "I"
-  cymc8 -^ ^\markup { "Coro Pregón (camp. + contrac.)" } cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
+  \repeat volta 3 {
+  cymc4 -^ \makePercent s2. |
+  \makePercent s1 |
+  cymc4 -^ \makePercent s2. |
+  \makePercent s1 |
+  cymc4 -^ \makePercent s2. |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  }
   
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  cymc8 -^ cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  timl timl cymc -^ r timl timl cymc -^ r |
+  cymc4 -^ \makePercent s2. |
+  \makePercent s1 |
+  cymc4 -^ \makePercent s2. |
+  \makePercent s1 |
+  cymc4 -^ \makePercent s2. |
+  \makePercent s1 |
+  timl8 timl cymc -^ r timl timl cymc -^ r |
   timl timl cymc -^ r timl timh timh r |
   
-  cymc8 -^ ^\markup { "Fade out (camp. + contrac.)" } cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -.  cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -.  cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
-  rb8 -. cb <<cb hhho>> cb rb -. r <<cb hhho>> <<cb hhho>> |
-  <<cb rb -.>> r <<cb hhho>> hhho rb -. cb <<cb hhho>> <<cb hhho>> |
+  
+  s1*0
+  ^\markup { "Fade out (camp. + contrac.)" }
+  cymc4 -^ \makePercent s2. |
+  \makePercent s1 |
+    s1*0
+     %^\markup { \bold { \fontsize #2 "3x" } }
+  \repeat volta 3 {
+    \makePercent s1*2
+  }
   
   R1*8 ^\markup { "A Capella" }    
   
   \label #'lastPage
   \bar "|."
 }
-
 Chords = \chords {
   R1*16
   \repeat volta 2 {

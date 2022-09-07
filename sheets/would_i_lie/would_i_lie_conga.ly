@@ -178,75 +178,73 @@ Congas = \new DrumVoice \drummode {
   
   \tuplet 3/2 { cgh4 cgh cgh } \tuplet 3/2 { cgh cgh cgh } | 
   cgh r8 cgh8 cgh4 r |
-  
+  \break
+  s1*0
+  ^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Chorus (tumbao 3/2)" }
   \inst "A"
-  s1*0 ^\markup { "Chorus (tumbao 3/2)" }
-  \repeat percent 8 {
-    bol8 bolm ssh cglo cglo bolm cgho cgho |
-    bolm bolm ssh bolm bolm bolm cgho cgho |
+  \repeat volta 8 {
+    \makePercent s1*2 
   }
-  
+  s1*0
+  ^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Verse 1 (tumbao + maracas)" }
   \inst "B"
-  s1*0 ^\markup { "Verse 1 (tumbao + maracas)" }
-  \repeat percent 8 {
-    bolm8 bolm ssh cglo cglo bolm cgho cgho |
-    bolm bolm ssh bolm bolm bolm cgho cgho |
+  \repeat volta 8 {
+    \makePercent s1*2
   }
   
-  cgh8 ^\markup { "(tumbao + martillo + cascara 2-3)" } bolm ssh bolm cgh bolm cglo bolm |
-  cgh bolm ssh bolm cgh bolm cglo bolm |
-  
-  cgh bolm ssh bolm cgh bolm cglo bolm |
-  cgh bolm ssh bolm cgh bolm cglo bolm |
-  
-  cgh bolm ssh bolm cgh bolm cglo bolm |
-  
-  cgh bolm ssh bolm cgh bolm r4 |
-  R1 |
-  R1 |
-  
+  s1*0
+  ^\markup { \bold { \fontsize #2 "4x" } }
+  ^\markup { "(tumbao + martillo + cascara 2-3)" }
+  \repeat volta 4 {
+    \makePercent s1*2
+  }
+  \break
+  s1*0
+  ^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Chorus (tumbao 3/2)" }
   \inst "C"
-  s1*0 ^\markup { "Chorus (tumbao 3/2)" }
-  \repeat percent 8 {
-    cgh8 bolm ssh cglo cglo cgh cgho cgho |
-    cgh bolm ssh bolm cgh bolm cgho cgho |
+  \repeat volta 8 {
+    \makePercent s1*2
   }
   
+  s1*0
+  ^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Verse 2 (tumbao + maracas)" }
   \inst "D"
-  s1*0 ^\markup { "Verse 2 (tumbao + maracas)" }
-  \repeat percent 8 {
-    bolm8 bolm ssh cglo cglo bolm cgho cgho |
-    bolm bolm ssh bolm bolm bolm cgho cgho |
+  \repeat volta 8 {
+    \makePercent s1*2
   }
   
+  s1*0
+  ^\markup { \bold { \fontsize #2 "4x" } }
+  ^\markup { "Swing!" }
   \inst "E"
-  cgh8 ^\markup { "Swing!" } bolm ssh bolm cgh bolm cglo bolm |
-  cgh bolm ssh bolm cgh bolm cglo bolm |
-  
-  cgh bolm ssh bolm cgh bolm cglo bolm |
-  cgh bolm ssh bolm cgh bolm cglo bolm |
-  
-  cgh bolm ssh bolm cgh bolm cglo bolm |
-  
-  cgh bolm ssh bolm cgh bolm r4 |
-  R1 |
-  R1 |
-  
-  s1*0 ^\markup { "Chorus (tumbao 3/2)" }
-  \repeat percent 8 {
-    bol8 bolm ssh cglo cglo bolm cgho cgho |
-    bolm bolm ssh bolm bolm bolm cgho cgho |
+  \repeat volta 4 {
+    \makePercent s1*2
+  }
+  \break
+  s1*0
+  ^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Chorus (tumbao 3/2)" }
+  \repeat volta 8 {
+    \makePercent s1*2
   }
   
+  s1*0
+  ^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Trombone solo (tumbao 3/2)" }
   \inst "F"
-  s1*0 ^\markup { "Trombone solo (tumbao 3/2)" }
-  \repeat percent 8 {
-    bol8 bolm ssh cglo cglo bolm cgho cgho |
-    bolm bolm ssh bolm bolm bolm cgho cgho |
+  \repeat volta 8 {
+    \makePercent s1*2
   }
   
-  s1*0 ^\markup { "Would I lie to you (conga tumbao slaps + guiro)" }
-  \repeat percent 6 {
+  \break
+  s1*0
+  ^\markup { \bold { \fontsize #2 "6x" } }
+  ^\markup { "Would I lie to you (conga tumbao slaps + guiro)" }
+  \repeat volta 6 {
     bol8 bolm ssh r r bolm cgho cgho |
     bolm bolm ssh r r bolm cgho cgho |
   }
@@ -254,39 +252,50 @@ Congas = \new DrumVoice \drummode {
   ssh -> r r2. |
   \set Score.skipBars = ##t R1*3
   
+  \break
+  s1*0
+  ^\markup { \bold { \fontsize #2 "4x" } }
+  ^\markup { "Te digo" }
   \inst "G"
-  s1*0 ^\markup { "Te digo" }
-  \repeat percent 4 {
+  \repeat volta 4 {
     cglo8 r cglo r cglo r cglo r |
     cglo r cglo r cglo r cglo r |
   }
   cgho cgho cglo r cgho cgho cglo r |
   \tuplet 3/2 { cgho4 cgho cgho } cgho8 cglo r4 |
   
-  s1*0 ^\markup { "Chorus (tumbao 3/2)" }
-  \repeat percent 8 {
-    cgh8 bolm ssh cglo cglo cgh cgho cgho |
-    cgh bolm ssh bolm cgh bolm cgho cgho |
+  \break
+  
+  s1*0
+  ^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Chorus (tumbao 3/2)" }
+  \repeat volta 8 {
+    \makePercent s1*2
   }
   
+  \break
+  s1*0
+  ^\markup { \bold { \fontsize #2 "8x" } }
+  ^\markup { "Montuno - Petas (tumbao 3/2)" } 
   \inst "H"
-  s1*0 ^\markup { "Montuno - Petas (tumbao 3/2)" } 
-  \repeat percent 8 {
-    cgh8 bolm ssh cglo cglo cgh cgho cgho |
-    cgh bolm ssh bolm cgh bolm cgho cgho |
+  \repeat volta 8 {
+    \makePercent s1*2
   }
-  
+  \break
+  s1*0
+  ^\markup { \bold { \fontsize #2 "16x" } }
+  ^\markup { "Coro Pregón (tumbao 3/2)" }
   \inst "I"
-  s1*0 ^\markup { "Coro Pregón (tumbao 3/2)" }
-  \repeat percent 16 {
-    cgh8 bolm ssh cglo cglo cgh cgho cgho |
-    cgh bolm ssh bolm cgh bolm cgho cgho |
+  \repeat volta 16 {
+    \makePercent s1*2
   }
   
-  s1*0 ^\markup { "Fade out (tumbao 3/2)" }
-  \repeat percent 4 {
-    cgh8 bolm ssh cglo cglo cgh cgho cgho |
-    cgh bolm ssh bolm cgh bolm cgho cgho |
+  \break
+  s1*0
+  ^\markup { \bold { \fontsize #2 "4x" } }
+  ^\markup { "Fade out (tumbao 3/2)" }
+  \repeat volta 4 {
+    \makePercent s1*2
   }
   
   R1*8 ^\markup { "A Capella" } 
@@ -317,7 +326,7 @@ Congas = \new DrumVoice \drummode {
 
 \paper {
   system-system-spacing =
-  #'((basic-distance . 15)
+  #'((basic-distance . 14)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))
