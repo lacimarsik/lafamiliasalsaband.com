@@ -5,7 +5,7 @@
 \header {
   title = "Hello"
   instrument = "bass"
-  composer = "by Cubaneros"
+  composer = "by Mandinga"
   arranger = "arr. Ladislav Maršík"
   opus = "version 16.11.2022"
   copyright = "© La Familia Salsa Band"
