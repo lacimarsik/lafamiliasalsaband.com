@@ -4,7 +4,7 @@
 
 \header {
   title = "Hello"
-  instrument = "trumpet"
+  instrument = "piano"
   composer = "by Mandinga"
   arranger = "arr. Ladislav Maršík"
   opus = "version 16.11.2022"
@@ -164,45 +164,59 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trumpet = \new Voice
-\transpose c d
-\relative c' {
-  \set Staff.instrumentName = \markup {
-    \center-align { "Tr. in Bb" }
+upper = \new Voice \relative c'' {
+  \set PianoStaff.instrumentName = \markup {
+    \center-align { "Piano" }
   }
-  \set Staff.midiInstrument = "trumpet"
-  \set Staff.midiMaximumVolume = #1.0
+  \set Staff.midiInstrument = "piano"
+  \set Staff.midiMaximumVolume = #0.7
 
+  \clef treble
   \key f \minor
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
   
   \inst "A"
+  c
+  
+  \bar "|."  
+}
 
-  R1*8 ^\markup { "Piano" }
-  
-  R1*8 ^\markup { "Verse" }
-  
-  R1*6 ^\markup { "+ Bass & Percussions" }
-  
-  es4 -. es -.  es -. as \tenuto \fp \< ~ |
-  as2.  r4  \! \f |
-  R1 |
-  r8 es -. r bes ~ bes2 |
-  bes2 as8 bes c4 ~ |
-  c2. r4 |
+lower = \new Voice \relative c {
+  \set PianoStaff.instrumentName = \markup {
+    \center-align { "Piano" }
+  }
+  \set Staff.midiInstrument = "piano"
+  \set Staff.midiMaximumVolume = #0.7
 
+  \clef bass
+  \key f \minor
+  \time 4/4
+  c
+  
   \label #'lastPage
-  \bar "|."
+  \bar "|."  
+}
+
+Chords = \chords {
+
+  f:m
+  
 }
 
 \score {
-  \compressMMRests \new Staff \with {
-    \consists "Volta_engraver"
-  }
-  {
-    \Trumpet
-  }
+  <<
+    \Chords
+    \compressMMRests \new PianoStaff \with {
+      \consists "Volta_engraver"
+    }
+    {
+      <<
+        \new Staff = "upper" \upper
+        \new Staff = "lower" \lower
+      >>
+    }
+  >>
   \layout {
     \context {
       \Score
@@ -213,7 +227,7 @@ Trumpet = \new Voice
 
 \paper {
   system-system-spacing =
-  #'((basic-distance . 14)
+  #'((basic-distance . 15)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))

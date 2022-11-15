@@ -4,12 +4,13 @@
 
 \header {
   title = "Hello"
-  instrument = "trumpet"
+  instrument = "conga"
   composer = "by Mandinga"
   arranger = "arr. Ladislav Maršík"
   opus = "version 16.11.2022"
   copyright = "© La Familia Salsa Band"
 }
+
 
 inst =
 #(define-music-function
@@ -164,45 +165,34 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trumpet = \new Voice
-\transpose c d
-\relative c' {
-  \set Staff.instrumentName = \markup {
-    \center-align { "Tr. in Bb" }
+Congas = \new DrumVoice \drummode {
+  
+  \set DrumStaff.instrumentName = \markup {
+    \center-align { "Conga" }
   }
-  \set Staff.midiInstrument = "trumpet"
-  \set Staff.midiMaximumVolume = #1.0
 
-  \key f \minor
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
-  
-  \inst "A"
 
-  R1*8 ^\markup { "Piano" }
-  
-  R1*8 ^\markup { "Verse" }
-  
-  R1*6 ^\markup { "+ Bass & Percussions" }
-  
-  es4 -. es -.  es -. as \tenuto \fp \< ~ |
-  as2.  r4  \! \f |
-  R1 |
-  r8 es -. r bes ~ bes2 |
-  bes2 as8 bes c4 ~ |
-  c2. r4 |
+  \inst "A"
+  cgh
 
   \label #'lastPage
   \bar "|."
 }
 
 \score {
-  \compressMMRests \new Staff \with {
-    \consists "Volta_engraver"
-  }
-  {
-    \Trumpet
-  }
+  \compressMMRests \new StaffGroup <<
+    \new DrumStaff \with {
+      drumStyleTable = #congas-style
+      \override StaffSymbol.line-count = #2
+      \override BarLine.bar-extent = #'(-1 . 1)
+      \consists "Volta_engraver"
+    }
+    <<
+      \Congas
+    >>
+  >>
   \layout {
     \context {
       \Score

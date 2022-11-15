@@ -4,7 +4,7 @@
 
 \header {
   title = "Hello"
-  instrument = "trumpet"
+  instrument = "trombone"
   composer = "by Mandinga"
   arranger = "arr. Ladislav Maršík"
   opus = "version 16.11.2022"
@@ -164,36 +164,24 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trumpet = \new Voice
-\transpose c d
-\relative c' {
+Trombone = \new Voice \relative c {
   \set Staff.instrumentName = \markup {
-    \center-align { "Tr. in Bb" }
+    \center-align { "Trombone" }
   }
-  \set Staff.midiInstrument = "trumpet"
+  \set Staff.midiInstrument = "trombone"
   \set Staff.midiMaximumVolume = #1.0
 
+  \clef bass
   \key f \minor
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
   
   \inst "A"
-
-  R1*8 ^\markup { "Piano" }
   
-  R1*8 ^\markup { "Verse" }
+  c
   
-  R1*6 ^\markup { "+ Bass & Percussions" }
-  
-  es4 -. es -.  es -. as \tenuto \fp \< ~ |
-  as2.  r4  \! \f |
-  R1 |
-  r8 es -. r bes ~ bes2 |
-  bes2 as8 bes c4 ~ |
-  c2. r4 |
-
   \label #'lastPage
-  \bar "|."
+  \bar "|."  
 }
 
 \score {
@@ -201,7 +189,7 @@ Trumpet = \new Voice
     \consists "Volta_engraver"
   }
   {
-    \Trumpet
+    \Trombone
   }
   \layout {
     \context {

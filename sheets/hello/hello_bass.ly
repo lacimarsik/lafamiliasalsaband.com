@@ -4,8 +4,8 @@
 
 \header {
   title = "Hello"
-  instrument = "trumpet"
-  composer = "by Mandinga"
+  instrument = "bass"
+  composer = "by Cubaneros"
   arranger = "arr. Ladislav Maršík"
   opus = "version 16.11.2022"
   copyright = "© La Familia Salsa Band"
@@ -164,45 +164,40 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trumpet = \new Voice
-\transpose c d
-\relative c' {
+Bass = \new Voice \relative c {
   \set Staff.instrumentName = \markup {
-    \center-align { "Tr. in Bb" }
+    \center-align { "Bass" }
   }
-  \set Staff.midiInstrument = "trumpet"
-  \set Staff.midiMaximumVolume = #1.0
+  \set Staff.midiInstrument = "acoustic bass"
+  \set Staff.midiMaximumVolume = #1.5
 
+  \clef bass
   \key f \minor
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
   
   \inst "A"
-
-  R1*8 ^\markup { "Piano" }
+    R1*8 ^\markup { "Piano" }
+    c1
   
-  R1*8 ^\markup { "Verse" }
-  
-  R1*6 ^\markup { "+ Bass & Percussions" }
-  
-  es4 -. es -.  es -. as \tenuto \fp \< ~ |
-  as2.  r4  \! \f |
-  R1 |
-  r8 es -. r bes ~ bes2 |
-  bes2 as8 bes c4 ~ |
-  c2. r4 |
-
   \label #'lastPage
-  \bar "|."
+  \bar "|."  
+}
+
+Chords = \chords {
+  f:m 
 }
 
 \score {
-  \compressMMRests \new Staff \with {
-    \consists "Volta_engraver"
-  }
-  {
-    \Trumpet
-  }
+  <<
+    \Chords
+    \compressMMRests \new Staff \with {
+      \consists "Volta_engraver"
+    }
+    {
+      \Bass
+    }
+  >>
   \layout {
     \context {
       \Score
@@ -213,7 +208,7 @@ Trumpet = \new Voice
 
 \paper {
   system-system-spacing =
-  #'((basic-distance . 14)
+  #'((basic-distance . 15)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))
