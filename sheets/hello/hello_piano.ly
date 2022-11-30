@@ -177,7 +177,10 @@ upper = \new Voice \relative c'' {
   \tempo "Medium Fast Salsa" 4 = 190
   
   \inst "A"
-  c
+  <f as>2 \mf \tenuto bes8 c <es, bes'>4 \tenuto ~ |
+  <es bes'>2 g2\tenuto |
+  <bes, as'>4. \tenuto <bes as'>4. \tenuto <bes as'>4 ~ \tenuto |
+  <bes as'>4
   
   \bar "|."  
 }
@@ -189,10 +192,12 @@ lower = \new Voice \relative c {
   \set Staff.midiInstrument = "piano"
   \set Staff.midiMaximumVolume = #0.7
 
-  \clef bass
+  \clef treble
   \key f \minor
   \time 4/4
-  c
+  f'4 \accent c'2 c,4 \accent ~ |
+  c4 c2. |
+  bes1 \accent | 
   
   \label #'lastPage
   \bar "|."  
@@ -200,7 +205,9 @@ lower = \new Voice \relative c {
 
 Chords = \chords {
 
-  f:m
+  f2.:m c4:min7 |
+  R1 |
+  bes1:min7 |
   
 }
 
