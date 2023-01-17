@@ -175,12 +175,29 @@ upper = \new Voice \relative c'' {
   \key f \minor
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
-  
-  \inst "A"
-  <f as>2 \mf \tenuto bes8 c <es, bes'>4 \tenuto ~ |
+
+  s1*0 ^\markup { "Intro Piano" }
+  <as' es>4 \mf c, \tenuto bes'8 c <es, bes'>4 \tenuto ~ |
   <es bes'>2 g2\tenuto |
-  <bes, as'>4. \tenuto <bes as'>4. \tenuto <bes as'>4 ~ \tenuto |
-  <bes as'>4
+  <des as'>4. \tenuto <des as'>4. \tenuto <des as'>4 ~ \tenuto |
+  <des as'>4 bes8 c des bes4 es8 | \break
+  <as es>8 c, es <es bes'> ~ <es bes'> c' <es, bes'>4 \tenuto ~ |
+  <es bes'>2 r8 <c g'>8 g c |
+  <des as'>4. \tenuto <des as'>4. \tenuto <des as'>4 ~ \tenuto |
+  <des as'>8 \tenuto <des as'>8 ~ <des as'>4 \tenuto <as f'>2 \tenuto | \break
+  
+   \inst "A"
+   s1*0 ^\markup { "Verse 1" }
+  <as' es>4 \mf c, \tenuto bes'8 c <es, bes'>4 \tenuto ~ |
+  <es bes'>2 g2\tenuto |
+  <des as'>4. \tenuto <des as'>4. \tenuto <des as'>4 ~ \tenuto |
+  <des as'>4 bes8 c des bes4 es8 | \break
+  <as es>8 c, es <es bes'> ~ <es bes'> c' <es, bes'>4 \tenuto ~ |
+  <es bes'>2 r8 <c g'>8 g c |
+  <des as'>4. \tenuto <des as'>4. \tenuto <des as'>4 ~ \tenuto |
+  <des as'>8 \tenuto <des as'>8 ~ <des as'>4 \tenuto <as f'>2 \tenuto | \break
+  
+  
   
   \bar "|."  
 }
@@ -195,9 +212,23 @@ lower = \new Voice \relative c {
   \clef treble
   \key f \minor
   \time 4/4
-  f'4 \accent c'2 c,4 \accent ~ |
+  f'2. \accent c4 \accent ~ |
   c4 c2. |
-  bes1 \accent | 
+  bes1 \accent ~ |
+  bes1 |
+  f'2. \accent c4 \accent ~ |
+  c4 c2. |
+  bes1 \accent ~ |
+  bes1 |
+  
+  f'2. \accent c4 \accent ~ |
+  c4 c2. |
+  bes1 \accent ~ |
+  bes1 |
+  f'2. \accent c4 \accent ~ |
+  c4 c2. |
+  bes1 \accent ~ |
+  bes1 |
   
   \label #'lastPage
   \bar "|."  
@@ -207,6 +238,20 @@ Chords = \chords {
 
   f2.:m c4:min7 |
   R1 |
+  bes1:min7 |
+  bes1:min7 |
+  f2.:m c4:min7 |
+  R1 |
+  bes1:min7 |
+  bes1:min7 |
+  
+  f2.:m c4:min7 |
+  R1 |
+  bes1:min7 |
+  bes1:min7 |
+  f2.:m c4:min7 |
+  R1 |
+  bes1:min7 |
   bes1:min7 |
   
 }
