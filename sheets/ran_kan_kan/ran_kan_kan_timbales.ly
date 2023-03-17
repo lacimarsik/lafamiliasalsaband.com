@@ -1,13 +1,13 @@
-\version "2.24.0"
+\version "2.22.2"
 
 % Sheet revision 2022_09
 
 \header {
-  title = "Template"
-  instrument = "trumpet"
-  composer = "by Interpret"
+  title = "Ran Kan Kan"
+  instrument = "timbales"
+  composer = "by Croma Latina"
   arranger = "arr. Ladislav Maršík"
-  opus = "version XX.XX.XXXX"
+  opus = "version 17.1.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,33 +164,33 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trumpet = \new Voice
-\transpose c d
-\relative c' {
+Timbales = \new DrumVoice \drummode {
   \set Staff.instrumentName = \markup {
-    \center-align { "Tr. in Bb" }
+    \center-align { "Timbales" }
   }
-  \set Staff.midiInstrument = "trumpet"
-  \set Staff.midiMaximumVolume = #1.0
 
-  \key c \major
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
-  
-  \inst "A"
-  c
 
+  \inst "A"
+  cb
+  
   \label #'lastPage
   \bar "|."
 }
 
 \score {
-  \compressMMRests \new Staff \with {
-    \consists "Volta_engraver"
-  }
-  {
-    \Trumpet
-  }
+  \compressMMRests \new StaffGroup <<
+    \new DrumStaff \with {
+      drumStyleTable = #timbales-style
+      \override StaffSymbol.line-count = #2
+      \override BarLine.bar-extent = #'(-1 . 1)
+      \consists "Volta_engraver"
+    }
+    <<
+      \Timbales
+    >>
+  >>
   \layout {
     \context {
       \Score
@@ -198,13 +198,6 @@ Trumpet = \new Voice
     }
   }
 }
-
-\score {
-  \unfoldRepeats {
-      \transpose d c  \Trumpet 
-  }
-  \midi { } 
-} 
 
 \paper {
   system-system-spacing =
@@ -222,6 +215,7 @@ Trumpet = \new Voice
   oddFooterMarkup = \markup {
     \fill-line {
       \bold \fontsize #2
+      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
 
       \fontsize #-1
@@ -234,6 +228,7 @@ Trumpet = \new Voice
       \concat { \fromproperty #'header:title " - " \fromproperty #'header:instrument ", " \fromproperty #'header:opus ", " \fromproperty #'header:copyright }
 
       \bold \fontsize #2
+      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
     }
   }

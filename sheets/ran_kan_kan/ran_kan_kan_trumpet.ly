@@ -3,11 +3,11 @@
 % Sheet revision 2022_09
 
 \header {
-  title = "Template"
+  title = "Ran Kan Kan"
   instrument = "trumpet"
-  composer = "by Interpret"
-  arranger = "arr. Ladislav Maršík"
-  opus = "version XX.XX.XXXX"
+  composer = "by Croma Latina"
+  arranger = "arr. Ladislav Maršík, Luca Colella"
+  opus = "version 17.1.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -166,19 +166,142 @@ repeatBracket = #(define-music-function
 
 Trumpet = \new Voice
 \transpose c d
-\relative c' {
+\relative c'' {
   \set Staff.instrumentName = \markup {
     \center-align { "Tr. in Bb" }
   }
   \set Staff.midiInstrument = "trumpet"
   \set Staff.midiMaximumVolume = #1.0
 
-  \key c \major
+  \key d \major
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
   
   \inst "A"
-  c
+  s1*0 ^\markup { "Intro" }
+  d4 \f -> r d -> r |
+  d -> r8 c r e r c |
+  d4 -> r8 c r e r c |
+  d4 -> d -> d -> r |
+  R1 |
+  d4 -> d -> d -> r8 d -> |
+  r d -> r2. | \break
+  s1*0 ^\markup { "Trumpets" }
+  \repeat volta 2 {
+    d4 ( d c e -. ) |
+    d4. \tenuto -> a8 ~ a \tenuto r4. |
+    d4 -> d -> d -> r8 d -> |
+    r d -> r2. | \break 
+  }
+  d4 ( d c e -. ) |
+  d4. \tenuto -> a8 ~ a \tenuto r4. | \break
+
+  \inst "B"
+  s1*0 ^\markup { "Verso" }
+  \set Score.skipBars = ##t R1*16 |
+
+  d4 -> d -> d -> r | 
+  r4. d8 -. \f r d e -. r | \break
+    
+  \inst "C"
+  \repeat volta 2 {
+    a4 -> a -> a8 a -. r4 |
+    r4. d,8 -. r d e -. r | 
+    a4 \tenuto -> ( a8 a ) g a -. r8 a8 -> \bendAfter #-4 |
+    r4. d,8 -. \f r d e -. r | \break
+  }
+
+  \inst "D"
+  s1*0 ^\markup { "Ran Kan Kan" }
+  a2 \tenuto -> r2 |
+  \set Score.skipBars = ##t R1*15 |
+  
+  \inst "E"
+  s1*0 ^\markup { "Puente" }
+  \repeat volta 2 {
+    \set Score.skipBars = ##t R1*4 |
+    a,8 -> \mp ( b fis a ~ a c d e \< -> \sp ~ |
+    e2 ) r2 \! \mf |
+  }
+  
+  \alternative {
+    { 
+      fis8 -> \mf g e fis ~ fis g a gis ->  ~ |
+      gis4 r8 gis -> \f ~ gis4 ( a4 -. ) | 
+    }
+    {
+      fis8 -> \mf g e fis ~ fis g a gis ->  ~ |
+      gis4 a8 -> \f a -> a -> a -> r4 |
+    } 
+  } \break
+  
+  \set Score.skipBars = ##t R1*4 |
+  
+  e8 ( \mp \< c e g ~ g e g a ~ |
+  a1 ) \f -> | \break
+  
+  \inst "F"
+  s1*0 ^\markup { "Reaggaeton" }
+  \set Score.skipBars = ##t R1*24 |  \break
+  
+  \inst "G"
+  s1*0 ^\markup { "Petas" }
+  \repeat volta 2 {
+    a2 \f -> fis8 ( \> d a  b \sp \< ) ~ |
+    b1 |
+    r2. \! r8 gis8 -> \mf ~ |
+    gis2. \sp \< r4 \f |
+  }
+  R1 |
+  r4. a8 -. \f r4 d4 \ff -> ~ | \break
+  \inst "H"
+  s1*0 ^\markup { "Coro Pregón 1 " }
+  d4 r2. |
+  \set Score.skipBars = ##t R1*9 |  \break
+  a4 \f -> r8 a8 a4 -> r |
+  r8 b8 -> \bendAfter #-4 r2. |
+  r2 a8 -> a -. r a8 -. |
+  r4. b8 -> r b8 -> \bendAfter #-4 r4 | 
+  R1 | \break
+  \repeat volta 2 {
+    d,8 \mf \tenuto \< d \tenuto fis \tenuto a \tenuto c -> \f ( b ais a \tenuto ) \sp \< ~  |
+    a1 |
+    R1 \! |
+    R1 |
+  }
+  b4 \f -> r a -> r |
+  g -> r4 r8 f -> r e8 -> |
+  R1 | \break
+  \inst "I"
+  s1*0 ^\markup { "Coro Pregón 2 " }
+  a1 \tenuto -> ~ |
+  a1 \trill |
+  \set Score.skipBars = ##t R1*8
+  
+  d4 \f -> d -> d -> r | \break
+
+  \inst "J = C"
+  \repeat volta 2 {
+    r4. d8 -. \f r d e -. r |
+    a4 -> a -> a8 a -. r4 |
+    r4. d,8 -. r d e -. r | 
+    a4 \tenuto -> ( a8 a ) g a -. r8 a8 -> \bendAfter #-4 | \break
+  }
+  r4. d,8 -. \f r d e -. r |
+  
+  \inst "K"
+  s1*0 ^\markup { "Verso + Pregón" }
+  a2 \tenuto -> r2 |
+  \set Score.skipBars = ##t R1*15
+  
+  \inst "L"
+  s1*0 ^\markup { "Coda" }
+  \set Score.skipBars = ##t R1*2
+  a4 \f -> a -> a -> a -> |
+  s1*0 ^\markup { "Triplets" }
+  R1 |
+  d,1 |
+  a'4 \ff -> r2. |
 
   \label #'lastPage
   \bar "|."
@@ -197,7 +320,7 @@ Trumpet = \new Voice
       \remove "Volta_engraver"
     }
   }
-}
+} 
 
 \score {
   \unfoldRepeats {

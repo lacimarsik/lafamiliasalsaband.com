@@ -1,13 +1,13 @@
-\version "2.24.0"
+\version "2.22.2"
 
 % Sheet revision 2022_09
 
 \header {
-  title = "Template"
-  instrument = "trumpet"
-  composer = "by Interpret"
+  title = "Lonely Boy"
+  instrument = "timbales"
+  composer = "by Williamsburg Salsa Orchestra"
   arranger = "arr. Ladislav Maršík"
-  opus = "version XX.XX.XXXX"
+  opus = "version 8.12.2022"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,33 +164,144 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trumpet = \new Voice
-\transpose c d
-\relative c' {
+Timbales = \new DrumVoice \drummode {
   \set Staff.instrumentName = \markup {
-    \center-align { "Tr. in Bb" }
+    \center-align { "Timbales" }
   }
-  \set Staff.midiInstrument = "trumpet"
-  \set Staff.midiMaximumVolume = #1.0
 
-  \key c \major
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
+
+  s1*0 ^\markup { \box { A } } ^\markup { "(clave before) Piano + Bass" }
   
-  \inst "A"
-  c
+  \set Score.skipBars = ##t R1*3
+  timh8 \mordent timh timh timh r4 cb4 -^  |
+  
+  s1 *0 
+  ^\markup { \bold { \fontsize #2 "3x clave" } }
+  ^\markup { "Intro 1 (cascara)" }
+  \repeat volta 3 {
+    \makePercent s1*2
+  }
+  \makePercent s1 |
+  cb8 cb cb cb cb cb cb cb |
+  \break
+
+  s1* 0
+  ^\markup { "Intro 2 (camp. + contrac.)" }
+  cb4 -^ \makePercent s2. |
+  \makePercent s1 |
+  
+  s1 *0 
+  ^\markup { \bold { \fontsize #2 "3x clave" } }
+  \repeat volta 3 {
+    \makePercent s1*2
+  }
+  \break
+  
+  s1*0 ^\markup { \box { B } } ^\markup { "Verse 1" } 
+  \repeat volta 2 {
+    \repeat percent 8 { \makePercent s1 } 
+  }
+  
+  R1 |
+  R1 | \break
+  
+  s1*0 ^\markup { \box { C } } ^\markup { "Chorus" } 
+  \repeat volta 2 {
+    \repeat percent 7 { \makePercent s1 } 
+  }
+  \alternative {
+    {
+      \makePercent s1
+    }
+    {   
+      R1 |
+    }
+  }
+  \repeat volta 2 {
+    R1|
+    R1|
+    R1| 
+    R1| \break
+  }
+  
+  s1*0 ^\markup { "Verse 2" } 
+  \repeat volta 2 {
+    \repeat percent 8 { \makePercent s1 } 
+  }
+  
+  R1 |
+  R1 | \break
+
+  s1*0 ^\markup { "Chorus" } 
+  \repeat volta 2 {
+    \repeat percent 8 { \makePercent s1 } \break
+  }
+  
+  \repeat volta 2 {
+    R1 |
+    R1 | 
+  }
+  \alternative {
+    {
+      R1 |
+      R1 | 
+    }
+    {
+      R1 |
+      R1 |
+    }
+  }
+  
+  r2 ^\markup { "Don't keep me waiting" } \makePercent s2 |
+  \makePercent s1
+  \makePercent s1
+  \makePercent s1
+  
+  %\set Score.repeatCommands = #(list(list 'volta "1.-3.") 'start-repeat)
+  \repeat percent 4 { \makePercent s1 } | \break
+  %\set Score.repeatCommands = #'((volta #f) end-repeat)
+  
+  s1*0 ^\markup { "Sax solo" } 
+  \repeat volta 2 {
+    \repeat percent 4 { \makePercent s1 }
+  }
+  
+  cb8 ^\markup { "Build up" }  [ cb cb cb ] cb [ cb cb cb ] |
+  cb8 [ cb cb cb ] cb [ cb cb ] cb \accent |
+  R1 | \break
+  
+  s1*0 ^\markup { \box { G } } ^\markup { "Tengo un amor" } 
+  %\set Score.repeatCommands = #(list(list 'volta "1.-4.") 'start-repeat)
+  \repeat percent 4 { \makePercent s1 } | \break
+  %\set Score.repeatCommands = #'((volta #f) end-repeat)
+  
+  s1*0 ^\markup { "Montuno" } 
+  %\set Score.repeatCommands = #(list(list 'volta "1.-4.") 'start-repeat)
+  \repeat percent 4 { \makePercent s1 } | \break
+  %\set Score.repeatCommands = #'((volta #f) end-repeat)
+  
+  \repeat percent 2 { \makePercent s1 }
+  
+  
 
   \label #'lastPage
   \bar "|."
 }
 
 \score {
-  \compressMMRests \new Staff \with {
-    \consists "Volta_engraver"
-  }
-  {
-    \Trumpet
-  }
+  \compressMMRests \new StaffGroup <<
+    \new DrumStaff \with {
+      drumStyleTable = #timbales-style
+      \override StaffSymbol.line-count = #2
+      \override BarLine.bar-extent = #'(-1 . 1)
+      \consists "Volta_engraver"
+    }
+    <<
+      \Timbales
+    >>
+  >>
   \layout {
     \context {
       \Score
@@ -198,13 +309,6 @@ Trumpet = \new Voice
     }
   }
 }
-
-\score {
-  \unfoldRepeats {
-      \transpose d c  \Trumpet 
-  }
-  \midi { } 
-} 
 
 \paper {
   system-system-spacing =
@@ -222,6 +326,7 @@ Trumpet = \new Voice
   oddFooterMarkup = \markup {
     \fill-line {
       \bold \fontsize #2
+      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
 
       \fontsize #-1
@@ -234,6 +339,7 @@ Trumpet = \new Voice
       \concat { \fromproperty #'header:title " - " \fromproperty #'header:instrument ", " \fromproperty #'header:opus ", " \fromproperty #'header:copyright }
 
       \bold \fontsize #2
+      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
     }
   }

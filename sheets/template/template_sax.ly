@@ -1,4 +1,4 @@
-\version "2.22.2"
+\version "2.24.0"
 
 % Sheet revision 2022_09
 
@@ -199,10 +199,16 @@ Sax = \new Voice
   }
 }
 
+\score {
+  \unfoldRepeats {
+      \transpose a c,  \Sax
+  }
+  \midi { } 
+} 
 
 \paper {
   system-system-spacing =
-  #'((basic-distance . 14)
+  #'((basic-distance . 15)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))
@@ -216,7 +222,6 @@ Sax = \new Voice
   oddFooterMarkup = \markup {
     \fill-line {
       \bold \fontsize #2
-      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
 
       \fontsize #-1
@@ -229,7 +234,6 @@ Sax = \new Voice
       \concat { \fromproperty #'header:title " - " \fromproperty #'header:instrument ", " \fromproperty #'header:opus ", " \fromproperty #'header:copyright }
 
       \bold \fontsize #2
-      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
     }
   }

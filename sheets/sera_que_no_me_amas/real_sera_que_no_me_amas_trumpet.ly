@@ -1,13 +1,11 @@
 \version "2.24.0"
 
-% Sheet revision 2022_09
-
 \header {
-  title = "Template"
+  title = "Real Sera Que No Me Amas"
   instrument = "trumpet"
-  composer = "by Interpret"
+  composer = "by Tony Succar feat. Michael Stuart"
   arranger = "arr. Ladislav Maršík"
-  opus = "version XX.XX.XXXX"
+  opus = "version 15.2.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -166,7 +164,7 @@ repeatBracket = #(define-music-function
 
 Trumpet = \new Voice
 \transpose c d
-\relative c' {
+\relative c'' {
   \set Staff.instrumentName = \markup {
     \center-align { "Tr. in Bb" }
   }
@@ -177,9 +175,124 @@ Trumpet = \new Voice
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
   
+  s1*0 ^\markup { "Intro" }
   \inst "A"
-  c
+  \set Score.skipBars = ##t R1*8
+  \set Score.skipBars = ##t R1*2
+  r4 a4 -. \mf r2 |
+  R1 | \break
+  
+  r4. c8 -. \accent \f r2 |
+  r4. c,8  \mf \accent ~ c4 \bendAfter #-4 r4 |
+  r8 c'8  \tenuto g \tenuto gis \tenuto  a \tenuto c \tenuto a \tenuto f' -. \accent  |
+  r2 r8 g,8 \f  \tenuto ~ g4 | \break
+  \mark \markup { \musicglyph "scripts.segno" }
 
+  s1*0 ^\markup { "Verse 1 & 3" }
+  \inst "B"
+  a4 \accent  \bendAfter #-4  r2. | 
+  \set Score.skipBars = ##t R1*2
+  r8 c8 -. \accent \f r2. |
+  \set Score.skipBars = ##t R1*2
+  f,2 \mf r4 c' \accent ~ |
+  c2 r2 | \break
+
+  s1*0 ^\markup { "Salsa" }
+  R1 |
+  r8 a ( g e g a -. ) r4  |
+  \set Score.skipBars = ##t R1*2
+  r4. f8 -. \accent \f r2 |
+  r4. a8\tenuto \accent ~a8 \bendAfter #-4 r4. |
+  r4. g8 ( g e g c -. ) \accent |
+  r8 b -. \accent r2. | \break
+
+  s1*0 ^\markup { "Chorus 1 & 3" }
+  \inst "C"
+  r2 r8 g a -. r | 
+  c \f \tenuto \accent c \tenuto \accent r2. |
+  r4. \mf es,8 r f r bes | 
+  r g ~ g r f f f  r  | \break
+  r2. f'8 -. \accent \f r |
+  r8 f8 -. \accent r2. |
+  r4. g,8 \mf r a ~ a4 |
+  r8 g a -. r g a \tenuto ~ a r | \break
+  r2  r8 g a -. r | 
+  r  c \f \tenuto \accent ~ c4 r2 |
+  r4. \mf es,8 r f r bes | 
+  r g ~ g r f f f  r  | \break
+  r2. f'8 -. \accent \f r |
+  r8 f8 -. \accent r2. |
+  r8 g,8 \mf  \tenuto d \tenuto dis \tenuto  e \tenuto g \tenuto e \tenuto a -. \accent  |
+
+  R1| \break
+  a2 ^\markup { "Verse" } \accent  \bendAfter #-4  r2 | 
+  \set Score.skipBars = ##t R1*2
+  r8 c8 -. \accent \f r2. |
+  \set Score.skipBars = ##t R1*2
+  f,2 \mf r4 c' \accent ~ |
+  c2 r2 | \break
+  R1 |
+  r8 a ( g e g a -. ) r4  |
+  \set Score.skipBars = ##t R1*2
+  r4. f8 -. \accent \f r2 |
+  r4. a8\tenuto \accent ~a8 \bendAfter #-4 r4. |
+  r4. g8 ( g e g c -. ) \accent |
+  r8 b -. \accent r2. | \break
+  
+  r2 ^\markup { "Chorus " }  r8 g a -. r | 
+  c \f \tenuto \accent c \tenuto \accent r2. |
+  r4. \mf es,8 r f r bes | 
+  r g ~ g r f f f  r  | \break
+  r2. f'8 -. \accent \f r |
+  r8 f8 -. \accent r2. |
+  r4. g,8 \mf r a ~ a4 |
+  r8 g a -. r g a \tenuto ~ a r | \break
+  r2  r8 g a -. r | 
+  r  c \f \tenuto \accent ~ c4 r2 |
+  r4. es,8 \mf r f r bes | 
+  r g ~ g r f f f  r  | \break
+  r2. f'8 -. \accent \f r |
+  r8 f8 -. \accent r2. |
+  r4. c,8  \mf r g' r a | 
+  r g ~ g r e d e  r  | \break
+  \set Score.skipBars = ##t R1*8 ^\markup { "Ya No Se" }
+  
+  r2 r8 c'8 ~-. \accent \f c4 |
+  r2 r8 c,8  \mf \accent ~ c4 |
+  r4. a'8 \f -. r a g g \accent -. |
+  R1 | \break
+  
+  r2 r8 c8 ~-. \accent \f c4 |
+  R1 |
+  c4 \mf ~ c8  \tenuto d8 ~ d4 ~ d8 \tenuto  es ~ |
+  es4 ~ es8  f \f  g f g r | \break
+  \mark \markup { \musicglyph "scripts.coda" } 
+  a8 ^\markup { "Chorus" }  -. \accent  r4. r8 g, a -. r | 
+  c \f \tenuto \accent c \tenuto \accent r2. |
+  r4. \mf es,8 r f r bes | 
+  r g8 ~ g r8 f f bes,8 r  | \break
+  r2. f'8 ^\markup { "Sax D" }  -. \accent \f r |
+  r8 f8 -. \accent r2. |
+  r4. g8 \mf r a ~ a4 |
+  r8 g a -. r g a \tenuto ~ a r | \break
+  r2r8 g a r | 
+  r c \tenuto \accent ~ c4 r2 |
+  r4. c,8 g' g f g |
+  es f g r r2 |
+  r4 g8 r r bes r4 |
+  r8 g r es' r es d c |
+  d c ~ c2 ~ c8 bes | 
+  R1 | \break
+
+  r8 e, e e g g r fis |
+  r fis r a r a g4 ~ |
+  g8 f r d a'4. g8 ~ |
+  g2. r4 |
+  r2. r8 a | 
+  r e r g r e f g |
+  d e f r r2 |
+  r8 b r4 b8 r4. | \break
+  
   \label #'lastPage
   \bar "|."
 }

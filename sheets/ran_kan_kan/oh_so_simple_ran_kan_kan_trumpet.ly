@@ -3,11 +3,11 @@
 % Sheet revision 2022_09
 
 \header {
-  title = "Template"
+  title = "Oh So Simple Simple Ran Kan Kan"
   instrument = "trumpet"
-  composer = "by Interpret"
-  arranger = "arr. Ladislav Maršík"
-  opus = "version XX.XX.XXXX"
+  composer = "by Croma Latina"
+  arranger = "arr. Ladislav Maršík, Luca Colella"
+  opus = "version 17.1.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -166,19 +166,113 @@ repeatBracket = #(define-music-function
 
 Trumpet = \new Voice
 \transpose c d
-\relative c' {
+\relative c'' {
   \set Staff.instrumentName = \markup {
     \center-align { "Tr. in Bb" }
   }
   \set Staff.midiInstrument = "trumpet"
   \set Staff.midiMaximumVolume = #1.0
 
-  \key c \major
+  \key d \major
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
   
   \inst "A"
-  c
+  s1*0 ^\markup { "Intro" }
+  d4 \f -> r d -> r |
+  d -> r8 c r e r c |
+  d4 -> r8 c r e r c |
+  d4 -> d -> d -> r |
+  R1 |
+  d4 -> d -> d -> r8 d -> |
+  r d -> r2. | \break
+
+  \inst "B"
+  s1*0 ^\markup { "Brass" }
+  \repeat volta 2 {
+    d4 \f ( d c e -. ) |
+    d4. \tenuto -> a8 ~ a \tenuto r4. |
+    d4 -> d -> d -> r8 d -> |
+    r d -> r2. | \break 
+  }
+  d4 ( d c e -. ) |
+  d4. \tenuto -> a8 ~ a \tenuto r4. | \break
+
+  \inst "C"
+  s1*0 ^\markup { "Verso" }
+  \set Score.skipBars = ##t R1*16 |
+
+  d4 \f -> d -> d -> r | 
+  r4. d8 -. r d e -. r | \break
+    
+  \inst "D"
+  s1*0 ^\markup { "Brass 2" }
+  \repeat volta 2 {
+    a4 \f -> a -> a -> \bendAfter #-4 r4 |
+    r4. d,8 -. r d e -. r | 
+    a4 \tenuto -> ( a8 a ) g a -. r8 a8 -> \bendAfter #-4 |
+    r4. d,8 -. \f r d e -. r | \break
+  }
+
+  \inst "E"
+  s1*0 ^\markup { "Ran Kan Kan" }
+  a2 \tenuto -> r2 |
+  \set Score.skipBars = ##t R1*15 |
+  
+  \inst "F"
+  s1*0 ^\markup { "Puente" }
+  \repeat volta 2 {
+    \set Score.skipBars = ##t R1*4 |
+    a,8 -> \mp ( b fis a ~ a c d e \< -> \sp ~ |
+    e2 ) r2 \! \mf |
+  }
+  
+  \alternative {
+    { 
+      fis8 -> \mf g e fis ~ fis g a gis ->  ~ |
+      gis4 r8 gis -> \f ~ gis4 ( a4 -. ) | 
+    }
+    {
+      fis8 -> \mf g e fis ~ fis g a gis ->  ~ |
+      gis4 a8 -> \f a -> a -> a -> r4 |
+    } 
+  } \break
+  
+  \set Score.skipBars = ##t R1*2 |
+  
+  e8 ( \mp \< c e g ~ g e g a ~ |
+  a1 ) \f -> | \break
+  
+  \inst "G"
+  s1*0 ^\markup { "Reggaeton" }
+  \set Score.skipBars = ##t R1*16 |  \break
+  
+  d,4 -> d -> d -> r8 d -> |
+  r d -> r2. | \break
+  
+  \inst "H = B"
+  s1*0 ^\markup { "Brass" }
+  \repeat volta 2 {
+    d4 \f ( d c e -. ) |
+    d4. \tenuto -> a8 ~ a \tenuto r4. |
+    d4 -> d -> d -> r8 d -> |
+    r d -> r2. | \break 
+  }
+  d4 ( d c e -. ) |
+  d4. \tenuto -> a8 ~ a \tenuto r4. | \break
+
+  \inst "I = C"
+  s1*0 ^\markup { "Verso" }
+  \set Score.skipBars = ##t R1*16 |
+
+  \inst "J"
+  s1*0 ^\markup { "Coda" }
+  \set Score.skipBars = ##t R1*2
+  a'4 \f -> a -> a -> a -> |
+  a4 \ff -> \bendAfter #-8 r2. ^\markup { "Timbales + snare" } |
+  r2 \fermata b,2 \mf \tenuto ( \< ~ _\markup { "sub. rit." } |
+  b1 \tenuto |
+  d4 ) ^\markup { "On signal" } \ff -> r2. |
 
   \label #'lastPage
   \bar "|."
@@ -197,14 +291,14 @@ Trumpet = \new Voice
       \remove "Volta_engraver"
     }
   }
-}
+} 
 
 \score {
   \unfoldRepeats {
       \transpose d c  \Trumpet 
   }
   \midi { } 
-} 
+}
 
 \paper {
   system-system-spacing =

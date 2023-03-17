@@ -1,13 +1,13 @@
-\version "2.24.0"
+\version "2.22.2"
 
 % Sheet revision 2022_09
 
 \header {
-  title = "Template"
-  instrument = "trumpet"
-  composer = "by Interpret"
+  title = "Ran Kan Kan"
+  instrument = "bass"
+  composer = "by Croma Latina"
   arranger = "arr. Ladislav Maršík"
-  opus = "version XX.XX.XXXX"
+  opus = "version 17.1.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,33 +164,39 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trumpet = \new Voice
-\transpose c d
-\relative c' {
+Bass = \new Voice \relative c {
   \set Staff.instrumentName = \markup {
-    \center-align { "Tr. in Bb" }
+    \center-align { "Bass" }
   }
-  \set Staff.midiInstrument = "trumpet"
-  \set Staff.midiMaximumVolume = #1.0
+  \set Staff.midiInstrument = "acoustic bass"
+  \set Staff.midiMaximumVolume = #1.5
 
+  \clef bass
   \key c \major
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
   
   \inst "A"
   c
-
+  
   \label #'lastPage
-  \bar "|."
+  \bar "|."  
+}
+
+Chords = \chords {
+  c 
 }
 
 \score {
-  \compressMMRests \new Staff \with {
-    \consists "Volta_engraver"
-  }
-  {
-    \Trumpet
-  }
+  <<
+    \Chords
+    \compressMMRests \new Staff \with {
+      \consists "Volta_engraver"
+    }
+    {
+      \Bass
+    }
+  >>
   \layout {
     \context {
       \Score
@@ -199,16 +205,9 @@ Trumpet = \new Voice
   }
 }
 
-\score {
-  \unfoldRepeats {
-      \transpose d c  \Trumpet 
-  }
-  \midi { } 
-} 
-
 \paper {
   system-system-spacing =
-  #'((basic-distance . 14)
+  #'((basic-distance . 15)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))
@@ -222,6 +221,7 @@ Trumpet = \new Voice
   oddFooterMarkup = \markup {
     \fill-line {
       \bold \fontsize #2
+      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
 
       \fontsize #-1
@@ -234,6 +234,7 @@ Trumpet = \new Voice
       \concat { \fromproperty #'header:title " - " \fromproperty #'header:instrument ", " \fromproperty #'header:opus ", " \fromproperty #'header:copyright }
 
       \bold \fontsize #2
+      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
     }
   }

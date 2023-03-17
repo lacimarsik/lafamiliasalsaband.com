@@ -10,6 +10,9 @@ do
 		echo "[Deploy PDFs] Copying: $num PDF files to PDFs/$d"
 		mkdir -p ../PDFs/$d
 		cp *.pdf ../PDFs/$d
+		echo "[Deploy PDFs] HTML for web:"
+		for f in *.pdf; do echo "<a target="_blank" href="http://www.lafamiliasalsaband.com/wp-content/uploads/pdfs/$d/$f">$f</a>" ; done
+		
 	else
 		echo "[Deploy PDFs] Copying: Nothing to copy"
 	fi
