@@ -3,11 +3,11 @@
 % Sheet revision 2022_09
 
 \header {
-  title =  "La Sabrosa"
-  instrument = "trumpet"
+  title = "La Sabrosa"
+  instrument = "sax"
   composer = "by Fernando Sosa & Massimo Scalici"
   arranger = "arr. Luca Colella"
-  opus = "version 15.3.2023"
+  opus = "version 22.2.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,205 +164,203 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trumpet = \new Voice
-\transpose bes, c
+Sax = \new Voice
 \relative c' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Tr. in Bb" }
+    \center-align { "Sax in Eb" }
   }
-  \set Staff.midiInstrument = "trumpet"
-  \set Staff.midiMaximumVolume = #1.0
-   
+  \set Staff.midiInstrument = "alto sax"
+  \set Staff.midiMaximumVolume = #0.9
 
-  \key c \minor
+  \key a \minor
   \time 4/4
   \tempo "Slower Salsa" 4 = 180
-  
+ 
   s1*0 \set Score.skipBars = ##t R1*18 ^\markup { "Intro piano" } \fermata
   \inst "A"
-  
+ 
   s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Piano montuno" }
   s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Salsa" }
   s1*0 
   ^\markup { "Brass" }
-  
+ 
   \break
-  
   \inst "B"
-  r8 \stemUp c8 [ \stemUp b8 \stemUp c8 \stemUp es8
-  \stemUp c8 \stemUp es8 \stemUp d8 ] | % 2
-  r8 \stemUp f8 r2 r4 | % 3
-  r8 \stemUp c8 [ \stemUp b8 \stemUp c8 \stemUp es8 \stemUp c8
-  \stemUp es8 \stemUp d8 ] | % 4
-  r8 \stemUp b8 r2 r4 | % 5
-  r8 \stemUp c8 [ \stemUp b8 \stemUp c8 \stemUp es8 \stemUp c8
-  \stemUp es8 \stemUp d8 ] | % 6
-  r8 \stemUp f8 r2 r4 | % 7
-  r8 \stemUp c8 [ \stemUp b8 \stemUp c8 \stemUp es8 \stemUp c8
-  \stemUp es8 \stemUp d8 ] | % 8
-  r8 \stemUp b8 r2 r4 | \break  % 9
-    \inst "C"
-  \stemUp es8 [ ^ "Trumpets" \stemUp d8 \stemUp es8 \stemUp g8 ] r8
-  \stemUp es8 r8 \stemUp f8 | 
-  r8 \stemUp d2 r8 r4 | % 11
-  r8 \stemUp g8 r8 \stemUp as8 [ \stemUp g8 \stemUp f8 ] r8 \stemUp es8
-  | % 12
-  r8 \stemUp g8 r8 \stemDown c4. r4 | % 13
-  r8 \stemUp f,8 r8 \stemDown g8 [ \stemDown as8 \stemDown c8 ] r8
-  \stemDown bes8 ~ | % 14
-  \stemDown bes4. r8 r2 | % 15
-  \stemDown d8 r8 \stemUp g,8 r8 \stemDown b4. \stemDown c8 | % 16
-  r4. \stemDown c4 r8 r4 | \break % 17
-  
-    \inst "D"
-  R1 ^ "Coro 1" | % 18
-  r4 r8 \stemUp as8 [ \stemUp g8 \stemUp f8 ] \stemUp g4 | % 19
-  R1 | 
-  r2 r8 \stemDown es'8 [ \stemDown f8 \stemDown g8 ] | % 21
-  r8 \stemDown es8 r8 \stemDown d8 r8 \stemDown c8 r8 \stemDown bes8 ~ | % 22
-  \stemDown bes4 r2 r4 | % 23
-  R1 | % 24
-  \stemDown c8 r8 \stemDown c8 [ \stemDown c8 ] r2 | \break % 25
-      \inst "E"
-  R1 ^ "Solo Cantante 1" | % 26
-  r2 r8 \stemDown b8 [ \stemDown c8 \stemDown d8 ] | % 27
-  r8 \stemDown b8 r2 s4 | % 28
-  R1 | % 29
-  R1 | 
-  R1 | % 31
-  r2 r4 r8 \stemDown es8 | % 32
-  r8 \stemDown f8 r8 \stemDown g8 r4 \stemDown es4 ~ | \break % 33
+  R1 |
+  r8 fis gis a b c d e |
+  r c r2 r4 |
+  r8 gis g gis b gis b a |
+  r8 c r2 r4 |
+  r8 fis, gis a b c d e |
+  r c8 r2 r4 |
+  r8 gis g gis b gis b a | \break
+ 
+  \inst "C"
+  c8 ^ "Trumpets" b c e r c r d | 
+  r8 c8 b8 a8 gis8 b8 
+  d4 ~ |
+  d4 r4 r2 |
+  r2 r8 c8  d8 r8 |
+  e4. d4. r4 |
+  d4. c4. r4 |
+  b'8 r8 e,8 r8 gis4. a8 |
+  r4. a4 r8 r4 | \break
+ 
+  \inst "D"
+  r2 ^ "Coro 1" r4 r8 d,8 |
+  r8 b8 r8 f'8 e8 d8  e4 |
+  r8 d8  cis8 d8 f8 d8
+  f8 e8 | 
+  r8 c8 r4 r8 c8  d8 e8 |
+  e4. d4. r4 |
+  d4. c4. r4 |
+  R1 |
+  c8 r8 c8  c8 r2 | \break
 
-  \stemDown es4  r4 r2 | % 34
-  r2 r8 \stemDown b8 [ \stemDown c8 \stemDown d8 ] | % 35
-  r8 \stemDown b8 r8 \stemDown g'2 r8 | % 36
-  r8 r4 \stemDown g8 r8 \stemDown g4 r8 | % 37
-  R1 | % 38
-  R1 | % 39
+  \inst "E"
+  r2 ^ "Solo Cantante 1" r4 r8 b8 |
+  r8 b8 r8 c8  d8 b8 c8
+  d8 |
+  r8 b8 r2 r4 |
+  r8 c8  d8 e8 r8 c4 r8 |
+  e4. d4. r4 | 
+  d4. c4. r4 |
+  r8 e8  d8 c8 d8 e8 r8
+  c8 | 
+  r8 d8 r8 e8 r4 a4 ~ | 
+  a4 r4 r2 |
+  r8 b,8 r8 c8  d8 b8 c8
+  d8 |
+  r8 b8 r8 b2 r8 |
+  r8 c8  d8 e8 r8 c4 r8 |
+  e4. d4. r4 |
+  d4. c4. r4 |
+  r8 e8  d8 c8 d8 e8 r4 |
+  e8 r8 e8  e8 r4 e4 ~ | \break
+  \inst "F"
+  e4 ^ "Coro 2" r4 r2 |
+  r4 r8 c8 b8 a8 b4 |
+  r8 gis8  g8 gis8
+  b8 gis8 b8 a8 |
+  r8 c4 r4 c8  d8 e8 |
+  e4. d4. r4 |
+  d4. c4. r4 |
+  R1 |
+  c8 r8 c8  c8 r2 | \break
+ 
+  \inst "G"
+  R1 ^ "Solo Cantante 2" | 
+  r8 b8 r8 c8  d8 b8 c8
+  d8 |
+  r8 b8 r2 r4 |
+  r8 c8  d8 e8 r8
+  c4 r8 |
+  e4. d4. r4 |
+  d4. c4. r4 |
+  r8 e8  d8 c8  d8 e8 r4 |
+  c8 r8 d8  e8 r4 c4 ~ | 
+  c4 r2 r4 |
+  r8 b8 r8 d8  b8 c8 d8 s8
+  | % 59
+  r8 b8 r8 b2 r8 |
+  r8 c8  d8 e8 r8 r4 r8 |
+  e4. d4. r4 | 
+  d4. c4. r4 |
+  r8 e8  d8 c8 d8 e8 r4 |
+  e8 r8 e8  e8 r4 e4 ~ | \break
+
+  \inst "H"
+  e4 ^ "Coro y Pregón" r4 r2 |
+  r2 r8 b8  c8 d8 |
+  r8 b4 r8 r2 | 
+  r2 r8 e8 r8 e8 ~ | 
+  e2. r4 | 
+  R1 |
   R1 | 
-  \stemDown c,8 r8 \stemDown c8 [ \stemDown c8 ] r4 \stemDown g'4 ~ | \break % 41
-        \inst "F"
-  \stemDown g4 ^ "Coro 2" r4 r2 | % 42
-  r4 r8 \stemUp as,8 [ \stemUp g8 \stemUp f8 ] \stemUp g4 | % 43
-  R1 | % 44
-  r2 r8 \stemDown es'8 [ \stemDown f8 \stemDown g8 ] | % 45
-  r8 \stemDown es8 r8 \stemDown d8 r8 \stemDown c8 r8 \stemDown bes8 ~ | % 46
-  \stemDown bes4 r2 r4 | % 47
-  R1 | % 48
-  \stemDown c8 r8 \stemDown c8 [ \stemDown c8 ] r2 | \break % 49
-  
-        \inst "G"
-  
-  R1 ^ "Solo Cantante 2" | % 26 |
-  r2 r8 \stemDown b8 [ \stemDown c8 \stemDown d8 ] | % 51
-  r8 \stemDown b8 r2 r4 | % 52
-  R1 | % 53
-  R1 | % 54
-  R1 | % 55
-  R1 | % 56
-  \stemUp es,8 r8 \stemUp f8 [ \stemUp g8 ] r4 \stemDown c4 ~ | % 57
-  \stemDown c4 r2 r4 | % 58
-  r2 r8 \stemUp b,8 [ \stemUp c8 \stemUp d8 ] | % 59
-  r8 \stemUp b8 r8 \stemUp g'2 r8 | 
-  r8 r4 \stemDown g'8 r8 \stemDown g4 r8 | % 61
-  R1 | % 62
-  R1 | % 63
-  R1 | % 64
-  \stemDown c,8 r8 \stemDown c8 [ \stemDown c8 ] r4 \stemDown g'4 ~ | \break % 65
-          \inst "H"
-  
-  \stemDown g4 ^ "Coro y Pregón" r4 r2 | % 66
-  r2 r8 \stemDown d8 [ \stemDown es8 \stemDown f8 ] | % 67
-  r8 \stemDown d4 r8 r2 | % 68
-  r2 r8 \stemUp es,8 r8 \stemUp es8 ~ | % 69
-  \stemUp es2. r4 |    
-  R1 | % 71
-  R1 | % 72
-  R1 | % 73
-  R1 | % 74
-  r2 r8 \stemDown d'8 [ \stemDown es8 \stemDown f8 ] | % 75
-  r8 \stemDown d4 r8 r2 | % 76
-  r2 r8 \stemDown es8 [ \stemDown f8 \stemDown g8 ~ ] | % 77
-  \stemDown g4 r4 r2 | % 78
-  R1 | % 79
   R1 | 
-  R1 | % 81
-  R1 | % 82
-  r2 r4 r8 \stemDown d8 | % 83
-  r8 \stemDown f8 r4 r2 | % 84
-  r2 r8 \stemDown as,8 r8 \stemUp g8 ~ | % 85
-  \stemUp g2. r4 | % 86
-  R1 | % 87
-  R1 | % 88
-  R1 | % 89
+  R1 |
+  r2 r8 b8  c8 d8 | 
+  r8 b4 r8 r2 | 
+  r2 r8 a8  b8 c8 ~ | 
+  c4 r4 r2 | 
   R1 | 
-  r4 r8 \stemUp as8 [ \stemUp g8 \stemUp f8 ] \stemUp g4 | % 91
-  R1 | % 92
-  r2 r8 \stemDown es'8 [ \stemDown f8 \stemDown g8 ] | % 93
-  r8 \stemDown es8 r8 \stemDown d8 r8 \stemDown c8 r8 \stemDown bes8 ~ | % 94
-  \stemDown bes4 r2 r4 | % 95
-  R1 | % 96
-  \stemDown c8 r8 \stemDown c8 [ \stemDown c8 ] r2 |\break % 97 
-  
-    \inst "I"
+  R1 | 
+  R1 | 
+  R1 | 
+  r2 r4 r8 b8 |
+  r8 d8 r4 r2 | 
+  r2 r8 b8 r8 a8 ~ | 
+  a2. r4 | 
+  R1 |
+  R1 | 
+  R1 | 
+  R1 | 
+  r4 r8 c8  b8 a8  b4 | 
+  r8 gis8  g8 gis8 b8 gis8
+  b8 a8 | 
+  r8 c4 r4 c8  d8 e8 | 
+  e4. d4. r4 | 
+  d4. c4. r4 | 
+  R1 |
+  c8 r8 c8  c8 r2 | \break
+  \inst "I"
   s1*0 \set Score.skipBars = ##t R1*8 ^\markup { "Piano solo introduction" }
   s1*0 \set Score.skipBars = ##t R1*32 ^\markup { "Piano solo" }
   s1*0 \set Score.skipBars = ##t R1*16 ^\markup { "Conga solo" } \break
-  
+ 
   \inst "J"
-  r8 ^ "Brass + Solos" \stemUp c,8 [ \stemUp b8 \stemUp c8 \stemUp es8
-  \stemUp c8 \stemUp es8 \stemUp d8 ] | % 2
-  r8 \stemUp f8 r2 r4 | % 3
-  r8 \stemUp c8 [ \stemUp b8 \stemUp c8 \stemUp es8 \stemUp c8
-  \stemUp es8 \stemUp d8 ] | % 4
-  r8 \stemUp b8 r2 r4 | % 5
-  
+  R1 ^ "Brass + Solos" |
+  r8   fis,8  gis8 a8 b8 c8
+  d8 e8 |
+  r8 c8 r2 r4 |
+  r8 gis8  g8 gis8 b8 gis8
+  b8 a8 |
+ 
   s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Solo Trombono" } \break
-  
-  r8 \stemUp c8 [ \stemUp b8 \stemUp c8 \stemUp es8
-  \stemUp c8 \stemUp es8 \stemUp d8 ] | % 2
-  r8 \stemUp f8 r2 r4 | % 3
-  r8 \stemUp c8 [ \stemUp b8 \stemUp c8 \stemUp es8 \stemUp c8
-  \stemUp es8 \stemUp d8 ] | % 4
-  r8 \stemUp b8 r2 r4 | % 5
-  
+
+  R1 | 
+  r8 fis8  gis8 a8 b8 c8
+  d8 e8 | 
+  r8 c8 r2 r4 |
+  r8 gis8  g8 gis8 b8 gis8
+  b8 a8 |
+ 
   s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Solo Trumpet" } \break
-  
-    \inst "K"
-  R1  ^ "Coda (Coro y Pregón)" | % 66
-  r2 r8 \stemDown d'8 [ \stemDown es8 \stemDown f8 ] | % 67
-  r8 \stemDown d4 r8 r2 | % 68
-  r2 r8 \stemUp es,8 r8 \stemUp es8 ~ | % 69
-  \stemUp es2. r4 |    
-  R1 | % 71
-  R1 | % 72
-  R1 | % 73
-  R1 | % 74
-  r2 r8 \stemDown d'8 [ \stemDown es8 \stemDown f8 ] | % 75
-  r8 \stemDown d4 r8 r2 | % 76
-  r2 r8 \stemDown es8 [ \stemDown f8 \stemDown g8 ~ ] | % 77
-  \stemDown g4 r4 r2 | % 78
-  R1 | % 79
+ 
+  \inst "K"
+  R1 ^ "Coda (Coro y Pregón)" | 
+  r2 r8 b8  c8 d8 | 
+  r8 b4 r8 r2 | 
+  r2 r8 e8 r8 e8 ~ | 
+  e2. r4 | 
   R1 | 
-  R1 | % 81
-  R1 | % 82
-  r2 r4 r8 \stemDown d8 | % 83
-  r8 \stemDown f8 r4 r2 | % 84
-  r2 r8 \stemDown as,8 r8 \stemUp g8 ~ | % 85
-  \stemUp g2. r4 | % 86
-  R1 | % 87
-  R1 | % 88
-  R1 | % 89
   R1 | 
-  r4 r8 \stemUp as8 [ \stemUp g8 \stemUp f8 ] \stemUp g4 | % 91
-  R1 | % 92
-  r2 r8 \stemDown es'8 [ \stemDown f8 \stemDown g8 ] | % 93
-  r8 \stemDown es8 r8 \stemDown d8 r8 \stemDown c8 r8 \stemDown bes8 ~ | % 94
-  \stemDown bes4 r2 r4 | % 95
-  R1 | % 96
-  \stemDown c8 r8 \stemDown c8 [ \stemDown c8 ] r2 |\break % 97 
-  
-  
+  R1 | 
+  R1 | 
+  r2 r8 b8  c8 d8 | 
+  r8 b4 r8 r2 |
+  r2 r8 a8  b8 c8 ~ |
+  c4 r4 r2 |
+  R1 |
+  R1 | 
+  R1 |
+  R1 | 
+  r2 r4 r8 b8 | 
+  r8 d8 r4 r2 | 
+  r2 r8 b8 r8 a8 ~ | 
+  a2. r4 | 
+  R1 | 
+  R1 | 
+  R1 | 
+  R1 | 
+  r4 r8 c8  b8 a8  b4 | 
+  r8 gis8  g8 gis8 b8 gis8
+  b8 a8 | 
+  r8 c4 r4 c8  d8 e8 | 
+  e4. d4. r4 | 
+  d4. c4. r4 | 
+  R1 | 
+  c8 r8 c8  c8 r2 | \break 
  
   \label #'lastPage
   \bar "|."
@@ -373,7 +371,7 @@ Trumpet = \new Voice
     \consists "Volta_engraver"
   }
   {
-    \Trumpet
+    \Sax
   }
   \layout {
     \context {
@@ -385,7 +383,7 @@ Trumpet = \new Voice
 
 \score {
   \unfoldRepeats {
-    \transpose c bes,  \Trumpet 
+    \transpose e g, \Sax
   }
   \midi { } 
 } 

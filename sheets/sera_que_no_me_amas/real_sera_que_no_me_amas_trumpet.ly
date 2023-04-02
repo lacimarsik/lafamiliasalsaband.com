@@ -1,11 +1,13 @@
 \version "2.24.0"
 
+% Sheet revision 2022_09
+
 \header {
-  title = "Real Sera Que No Me Amas"
+  title = "Sera Que No Me Amas"
   instrument = "trumpet"
   composer = "by Tony Succar feat. Michael Stuart"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 15.2.2023"
+  opus = "version 27.3.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -163,7 +165,7 @@ repeatBracket = #(define-music-function
                   )
 
 Trumpet = \new Voice
-\transpose c d
+%\transpose c d
 \relative c'' {
   \set Staff.instrumentName = \markup {
     \center-align { "Tr. in Bb" }
@@ -185,21 +187,21 @@ Trumpet = \new Voice
   r4. c8 -. \accent \f r2 |
   r4. c,8  \mf \accent ~ c4 \bendAfter #-4 r4 |
   r8 c'8  \tenuto g \tenuto gis \tenuto  a \tenuto c \tenuto a \tenuto f' -. \accent  |
-  r2 r8 g,8 \f  \tenuto ~ g4 | \break
-  \mark \markup { \musicglyph "scripts.segno" }
+  r2 r8 g8 \f  \tenuto ~ g4 | \break
 
+  \mark \markup { \musicglyph "scripts.segno" }
   s1*0 ^\markup { "Verse 1 & 3" }
   \inst "B"
   a4 \accent  \bendAfter #-4  r2. | 
   \set Score.skipBars = ##t R1*2
-  r8 c8 -. \accent \f r2. |
+  r8 c,8 -. \accent \f r2. |
   \set Score.skipBars = ##t R1*2
-  f,2 \mf r4 c' \accent ~ |
-  c2 r2 | \break
+  f,4 ( \mf \tenuto g -. ) r4 c \f \accent ~ |
+  c8 r8 r2. | \break
 
   s1*0 ^\markup { "Salsa" }
   R1 |
-  r8 a ( g e g a -. ) r4  |
+  r8 a' ( g e g a -. ) r4  |
   \set Score.skipBars = ##t R1*2
   r4. f8 -. \accent \f r2 |
   r4. a8\tenuto \accent ~a8 \bendAfter #-4 r4. |

@@ -277,7 +277,7 @@ Trombone = \new Voice \relative c {
     \stemUp es8 r8 \stemUp es8 [ \stemUp es8 ] r4 \stemUp es4 ~ | \break % 65
               \inst "H"
     
-    \stemUp es4  r4 r2 | % 66
+    \stemUp es4 ^ "Coro y Pregón"  r4 r2 | % 66
     r2 r8 \stemUp b8 [ \stemUp c8 \stemUp d8 ] | % 67
     r8 \stemUp b4 r8 r2 | % 68
     r2 r8 \stemUp c8 r8 \stemUp c8 ~ | % 69
@@ -309,7 +309,69 @@ Trombone = \new Voice \relative c {
     \stemUp es4. \stemUp d4. r4 | % 94
     \stemUp d4. \stemUp c4. r4 | % 95
     R1 | % 96
-    \stemUp c8 r8 \stemUp c8 [ \stemUp c8 ] r2 | % 97
+    \stemUp c8 r8 \stemUp c8 [ \stemUp c8 ] r2 | \break % 97
+    
+    
+     \inst "I"
+  s1*0 \set Score.skipBars = ##t R1*8 ^\markup { "Piano solo introduction" }
+  s1*0 \set Score.skipBars = ##t R1*32 ^\markup { "Piano solo" }
+  s1*0 \set Score.skipBars = ##t R1*16 ^\markup { "Conga solo" } \break
+  
+  \inst "J"
+  r8 ^ "Brass + Solos" \stemUp es8 [ \stemUp d8 \stemUp es8 \stemUp g8 \stemUp es8 \stemUp
+    g8 \stemUp f8 ] | % 2
+    r8 \stemDown as8 r2 r4 | % 3
+    r8 \stemUp es8 [ \stemUp d8 \stemUp es8 \stemUp g8 \stemUp es8 \stemUp
+    g8 \stemUp f8 ] | % 4
+    r8 \stemUp d8 r2 r4 | % 5
+  
+  s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Solo Trombono" } \break
+  
+  r8 \stemUp es8 [ \stemUp d8 \stemUp es8 \stemUp g8 \stemUp es8 \stemUp
+    g8 \stemUp f8 ] | % 2
+    r8 \stemDown as8 r2 r4 | % 3
+    r8 \stemUp es8 [ \stemUp d8 \stemUp es8 \stemUp g8 \stemUp es8 \stemUp
+    g8 \stemUp f8 ] | % 4
+    r8 \stemUp d8 r2 r4 | % 5
+  
+  s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Solo Trumpet" } \break
+  
+    \inst "K"
+  R1  ^ "Coda (Coro y Pregón)" | % 66
+  r2 r8 \stemUp b8 [ \stemUp c8 \stemUp d8 ] | % 67
+    r8 \stemUp b4 r8 r2 | % 68
+    r2 r8 \stemUp c8 r8 \stemUp c8 ~ | % 69
+    \stemUp c2. r4 |
+    R1 | % 71
+    R1 | % 72
+    R1 | % 73
+    R1 | % 74
+    r2 r8 \stemUp b8 [ \stemUp c8 \stemUp d8 ] | % 75
+    r8 \stemUp b4 r8 r2 | % 76
+    r2 r8 \stemUp c8 [ \stemUp d8 \stemUp es8 ( ] | % 77
+    \stemUp es4 ) r4 r2 | % 78
+    R1 | % 79
+    R1 | 
+    R1 | % 81
+    R1 | % 82
+    r2 r4 r8 \stemUp b8 | % 83
+    r8 \stemUp d8 r4 r2 | % 84
+    r2 r8 \stemUp f8 r8 \stemUp es8 ~ | % 85
+    \stemUp es2. r4 | % 86
+    R1 | % 87
+    R1 | % 88
+    R1 | % 89
+    R1 | 
+    r4 r8 \stemUp as8 [ \stemUp g8 \stemUp f8 ] \stemUp g4 | % 91
+    r8 \stemUp d8 [ \stemUp des8 \stemUp d8 \stemUp f8 \stemUp d8 \stemUp
+    f8 \stemUp es8 ] | % 92
+    r8 \stemUp c4 r4 \stemUp es8 [ \stemUp f8 \stemUp g8 ] | % 93
+    \stemUp es4. \stemUp d4. r4 | % 94
+    \stemUp d4. \stemUp c4. r4 | % 95
+    R1 | % 96
+    \stemUp c8 r8 \stemUp c8 [ \stemUp c8 ] r2 | \break % 97
+    
+    
  
   \label #'lastPage
   \bar "|."

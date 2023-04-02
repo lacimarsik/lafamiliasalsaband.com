@@ -1,4 +1,4 @@
-\version "2.22.2"
+\version "2.24.0"
 
 % Sheet revision 2022_09
 
@@ -205,6 +205,13 @@ Chords = \chords {
   }
 }
 
+\score {
+  \unfoldRepeats {
+    \Bass
+  }
+  \midi { } 
+} 
+
 \paper {
   system-system-spacing =
   #'((basic-distance . 15)
@@ -221,7 +228,6 @@ Chords = \chords {
   oddFooterMarkup = \markup {
     \fill-line {
       \bold \fontsize #2
-      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
 
       \fontsize #-1
@@ -234,7 +240,6 @@ Chords = \chords {
       \concat { \fromproperty #'header:title " - " \fromproperty #'header:instrument ", " \fromproperty #'header:opus ", " \fromproperty #'header:copyright }
 
       \bold \fontsize #2
-      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
     }
   }
