@@ -87,18 +87,18 @@ Trombone = \new Voice \relative c' {
     \set Score.skipBars = ##t R1*15 ^\markup { "Ay mira Micaela" } \break
     
     \repeat volta 2 { r8 ^\markup { "Trumpets 2" } es ( d c ) d4 -. c4 -. |
-        c a ~ a r |
+        c ( a ) r2 |
         r8 es' ( d c ) d4 -. c4 -. |
-        c a ~ a r |
+        c ( a ) r2 |
     } \break
 
     \repeat volta 2 { r8 es'' ( d c ) d4 -. c4 -. |
-        c a ~ a r |
+        c ( a ) r2 |
     }
     \alternative {
         {
           r8 es' ( d c ) d4 -. c4 -. |
-        c a ~ a r |
+        c ( a ) r2 |
         }
         {
           r8 es' ( d c ) d4 -. c4 -. |

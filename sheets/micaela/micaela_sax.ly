@@ -16,7 +16,7 @@ tempoMark = #(define-music-function (parser location markp) (string?)
     \mark \markup { \bold $markp }
 #})
 
-Sax = \new Voice \transpose c d \relative c'  {
+Sax = \new Voice \transpose c a \relative c'  {
     \set Staff.instrumentName = \markup {
         \center-align { "Sax" }
     }
