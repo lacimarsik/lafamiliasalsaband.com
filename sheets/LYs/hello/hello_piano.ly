@@ -1,13 +1,13 @@
-\version "2.24.0"
+\version "2.22.2"
 
 % Sheet revision 2022_09
 
 \header {
-  title = "Ran Kan Kan"
-  instrument = "trumpet"
-  composer = "by Croma Latina"
-  arranger = "arr. Ladislav Maršík, Luca Colella"
-  opus = "version 27.4.2023"
+  title = "Hello"
+  instrument = "piano"
+  composer = "by Mandinga"
+  arranger = "arr. Ladislav Maršík"
+  opus = "version 16.11.2022"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,174 +164,122 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trumpet = \new Voice
-\transpose c d
-\relative c'' {
-  \set Staff.instrumentName = \markup {
-    \center-align { "Tr. in Bb" }
+upper = \new Voice \relative c'' {
+  \set PianoStaff.instrumentName = \markup {
+    \center-align { "Piano" }
   }
-  \set Staff.midiInstrument = "trumpet"
-  \set Staff.midiMaximumVolume = #1.0
+  \set Staff.midiInstrument = "piano"
+  \set Staff.midiMaximumVolume = #0.7
 
-  \key d \major
+  \clef treble
+  \key f \minor
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
-  
-  \inst "A"
-  s1*0 ^\markup { "Intro" }
-  d4 \f -> r d -> r |
-  d -> r8 c r e r c |
-  d4 -> r8 c r e r c |
-  d4 -> d -> d -> r |
-  R1 |
-  d4 -> d -> d -> r8 d -> |
-  r d -> r2. | \break
 
-  \inst "B"
-  s1*0 ^\markup { "Brass" }
-  \repeat volta 2 {
-    d4 \f ( d c e -. ) |
-    d4. \tenuto -> a8 ~ a \tenuto r4. |
-    d4 -> d -> d -> r8 d -> |
-    r d -> r2. | \break 
+  s1*0 ^\markup { "Intro Piano" }
+  <as' es>4 \mf c, \tenuto bes'8 c <es, bes'>4 \tenuto ~ |
+  <es bes'>2 g2\tenuto |
+  <des as'>4. \tenuto <des as'>4. \tenuto <des as'>4 ~ \tenuto |
+  <des as'>4 bes8 c des bes4 es8 | \break
+  <as es>8 c, es <es bes'> ~ <es bes'> c' <es, bes'>4 \tenuto ~ |
+  <es bes'>2 r8 <c g'>8 g c |
+  <des as'>4. \tenuto <des as'>4. \tenuto <des as'>4 ~ \tenuto |
+  <des as'>8 \tenuto <des as'>8 ~ <des as'>4 \tenuto <as f'>2 \tenuto | \break
+  
+   \inst "A"
+   s1*0 ^\markup { "Verse 1" }
+  <as' es>4 \mf c, \tenuto bes'8 c <es, bes'>4 \tenuto ~ |
+  <es bes'>2 g2\tenuto |
+  <des as'>4. \tenuto <des as'>4. \tenuto <des as'>4 ~ \tenuto |
+  <des as'>4 bes8 c des bes4 es8 | \break
+  <as es>8 c, es <es bes'> ~ <es bes'> c' <es, bes'>4 \tenuto ~ |
+  <es bes'>2 r8 <c g'>8 g c |
+  <des as'>4. \tenuto <des as'>4. \tenuto <des as'>4 ~ \tenuto |
+  <des as'>8 \tenuto <des as'>8 ~ <des as'>4 \tenuto <as f'>2 \tenuto | \break
+  
+  
+  
+  \bar "|."  
+}
+
+lower = \new Voice \relative c {
+  \set PianoStaff.instrumentName = \markup {
+    \center-align { "Piano" }
   }
-  d4 ( d c e -. ) |
-  d4. \tenuto -> a8 ~ a \tenuto r4. | \break
+  \set Staff.midiInstrument = "piano"
+  \set Staff.midiMaximumVolume = #0.7
 
-  \inst "C"
-  s1*0 ^\markup { "Verso" }
-  \set Score.skipBars = ##t R1*16 |
-
-  d4 \f -> d -> d -> r | 
-  r4. d8 -. r d e -. r | \break
-    
-  \inst "D"
-  s1*0 ^\markup { "Brass 2" }
-  \repeat volta 2 {
-    a4 \f -> a -> a -> \bendAfter #-4 r4 |
-    r4. d,8 -. r d e -. r | 
-    a4 \tenuto -> ( a8 a ) g a -. r8 a8 -> \bendAfter #-4 |
-    r4. d,8 -. \f r d e -. r | \break
-  }
-
-  \inst "E"
-  s1*0 ^\markup { "Ran Kan Kan" }
-  a2 \tenuto -> r2 |
-  \set Score.skipBars = ##t R1*15 |
+  \clef treble
+  \key f \minor
+  \time 4/4
+  f'2. \accent c4 \accent ~ |
+  c4 c2. |
+  bes1 \accent ~ |
+  bes1 |
+  f'2. \accent c4 \accent ~ |
+  c4 c2. |
+  bes1 \accent ~ |
+  bes1 |
   
-  \inst "F"
-  s1*0 ^\markup { "Puente" }
-  \repeat volta 2 {
-    \set Score.skipBars = ##t R1*4 |
-    a,8 -> \mp ( b fis a ~ a c d e \< -> \sp ~ |
-    e2 ) r2 \! \mf |
-  }
+  f'2. \accent c4 \accent ~ |
+  c4 c2. |
+  bes1 \accent ~ |
+  bes1 |
+  f'2. \accent c4 \accent ~ |
+  c4 c2. |
+  bes1 \accent ~ |
+  bes1 |
   
-  \alternative {
-    { 
-      fis8 -> \mf g e fis ~ fis g a gis ->  ~ |
-      gis4 r8 gis -> \f ~ gis4 ( a4 -. ) | 
-    }
-    {
-      fis8 -> \mf g e fis ~ fis g a gis ->  ~ |
-      gis4 a8 -> \f a -> a -> a -> r4 |
-    } 
-  } \break
-  
-  \set Score.skipBars = ##t R1*2 |
-  
-  e8 ( \mp \< c e g ~ g e g a ~ |
-  a1 ) \f -> | \break
-  
-  \inst "G"
-  s1*0 ^\markup { "Reggaeton" }
-  \set Score.skipBars = ##t R1*16 |  \break
-  
-  \inst "H"
-  s1*0 ^\markup { "Petas" }
-  \repeat volta 2 {
-    a2 \f -> fis8 ( \> d a  gis \sfz \< ) ~ |
-    gis1 |
-    r2. \! r8 gis8 -> \sfz ~ |
-    gis2. \<  r4 \! |
-  }
-  R1 |
-  r4. a8 -. \f r4 d4 \ff -> ~ | \break
-  \inst "I"
-  s1*0 ^\markup { "Coro Pregón 1 " }
-  d4 r2. |
-  \set Score.skipBars = ##t R1*9 |  \break
-  a4 \f -> r8 a8 a4 -> r |
-  r8 b8 -> \bendAfter #-4 r2. |
-  r2 a8 -> a -. r a8 -. |
-  r4. b8 -> r b8 -> \bendAfter #-4 r4 | 
-  r2 r8 a -> r gis ->  |
-  r4 r8 a -> r gis -> r4  |
-  R1*2 | \break
-  \repeat volta 2 {
-    d8 \mf \tenuto \< d \tenuto fis \tenuto a \tenuto c -> \f ( b ais a \tenuto ) \< ~  |
-    a1 |
-    R1 \! |
-    R1 |
-  }
-  b4 \f -> r a -> r |
-  g -> r2 f4 -> |
-  e4 -> r2. |
-  r4. d'4 -. d8 ( c -. ) r | \break
-
-  \inst "J = B"
-  s1*0 ^\markup { "Brass" }
-  \repeat volta 2 {
-    d4 \f ( d c e -. ) |
-    d4. \tenuto -> a8 ~ a \tenuto r4. |
-    d4 -> d -> d -> r8 d -> |
-    r d -> r2. | \break 
-  }
-  d4 ( d c e -. ) |
-  d4. \tenuto -> a8 ~ a \tenuto r4. | \break
-
-  \inst "K = C"
-  s1*0 ^\markup { "Verso" }
-  \set Score.skipBars = ##t R1*16 |
-
-  \inst "L"
-  s1*0 ^\markup { "Coda" }
-  \set Score.skipBars = ##t R1*2
-  a'4 \f -> a -> a -> a -> |
-  a4 \ff -> \bendAfter #-8 r2. ^\markup { "Timbales + snare" } |
-  r2 \fermata b,2 \mf \tenuto ( \< ~ _\markup { "sub. rit." } |
-  b1 \tenuto |
-  d4 ) ^\markup { "On signal" } \ff -> r2. |
-
   \label #'lastPage
-  \bar "|."
+  \bar "|."  
+}
+
+Chords = \chords {
+
+  f2.:m c4:min7 |
+  R1 |
+  bes1:min7 |
+  bes1:min7 |
+  f2.:m c4:min7 |
+  R1 |
+  bes1:min7 |
+  bes1:min7 |
+  
+  f2.:m c4:min7 |
+  R1 |
+  bes1:min7 |
+  bes1:min7 |
+  f2.:m c4:min7 |
+  R1 |
+  bes1:min7 |
+  bes1:min7 |
+  
 }
 
 \score {
-  \compressMMRests \new Staff \with {
-    \consists "Volta_engraver"
-  }
-  {
-    \Trumpet
-  }
+  <<
+    \Chords
+    \compressMMRests \new PianoStaff \with {
+      \consists "Volta_engraver"
+    }
+    {
+      <<
+        \new Staff = "upper" \upper
+        \new Staff = "lower" \lower
+      >>
+    }
+  >>
   \layout {
     \context {
       \Score
       \remove "Volta_engraver"
     }
   }
-} 
-
-\score {
-  \unfoldRepeats {
-      \transpose d c  \Trumpet 
-  }
-  \midi { } 
 }
 
 \paper {
   system-system-spacing =
-  #'((basic-distance . 14)
+  #'((basic-distance . 15)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))
@@ -345,6 +293,7 @@ Trumpet = \new Voice
   oddFooterMarkup = \markup {
     \fill-line {
       \bold \fontsize #2
+      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
 
       \fontsize #-1
@@ -357,6 +306,7 @@ Trumpet = \new Voice
       \concat { \fromproperty #'header:title " - " \fromproperty #'header:instrument ", " \fromproperty #'header:opus ", " \fromproperty #'header:copyright }
 
       \bold \fontsize #2
+      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
     }
   }

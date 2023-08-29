@@ -3,11 +3,11 @@
 % Sheet revision 2022_09
 
 \header {
-  title = "La Sabrosa"
-  instrument = "sax"
-  composer = "by Fernando Sosa & Massimo Scalici"
-  arranger = "arr. Luca Colella"
-  opus = "version 22.2.2023"
+  title = "Template"
+  instrument = "trumpet"
+  composer = "by Interpret"
+  arranger = "arr. Ladislav Maršík"
+  opus = "version XX.XX.XXXX"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,204 +164,22 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Sax = \new Voice
+Trumpet = \new Voice
+\transpose c d
 \relative c' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Sax in Eb" }
+    \center-align { "Tr. in Bb" }
   }
-  \set Staff.midiInstrument = "alto sax"
-  \set Staff.midiMaximumVolume = #0.9
+  \set Staff.midiInstrument = "trumpet"
+  \set Staff.midiMaximumVolume = #1.0
 
-  \key a \minor
+  \key c \major
   \time 4/4
-  \tempo "Slower Salsa" 4 = 180
- 
-  s1*0 \set Score.skipBars = ##t R1*18 ^\markup { "Intro piano" } \fermata
+  \tempo "Medium Fast Salsa" 4 = 190
+  
   \inst "A"
- 
-  s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Piano montuno" }
-  s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Salsa" }
-  s1*0 
-  ^\markup { "Brass" }
- 
-  \break
-  \inst "B"
-  R1 |
-  r8 fis gis a b c d e |
-  r c r2 r4 |
-  r8 gis g gis b gis b a |
-  r8 c r2 r4 |
-  r8 fis, gis a b c d e |
-  r c8 r2 r4 |
-  r8 gis g gis b gis b a | \break
- 
-  \inst "C"
-  c8 ^ "Trumpets" b c e r c r d | 
-  r8 c8 b8 a8 gis8 b8 
-  d4 ~ |
-  d4 r4 r2 |
-  r2 r8 c8  d8 r8 |
-  e4. d4. r4 |
-  d4. c4. r4 |
-  b'8 r8 e,8 r8 gis4. a8 |
-  r4. a4 r8 r4 | \break
- 
-  \inst "D"
-  r2 ^ "Coro 1" r4 r8 d,8 |
-  r8 b8 r8 f'8 e8 d8  e4 |
-  r8 d8  cis8 d8 f8 d8
-  f8 e8 | 
-  r8 c8 r4 r8 c8  d8 e8 |
-  e4. d4. r4 |
-  d4. c4. r4 |
-  R1 |
-  c8 r8 c8  c8 r2 | \break
+  c
 
-  \inst "E"
-  r2 ^ "Solo Cantante 1" r4 r8 b8 |
-  r8 b8 r8 c8  d8 b8 c8
-  d8 |
-  r8 b8 r2 r4 |
-  r8 c8  d8 e8 r8 c4 r8 |
-  e4. d4. r4 | 
-  d4. c4. r4 |
-  r8 e8  d8 c8 d8 e8 r8
-  c8 | 
-  r8 d8 r8 e8 r4 a4 ~ | 
-  a4 r4 r2 |
-  r8 b,8 r8 c8  d8 b8 c8
-  d8 |
-  r8 b8 r8 b2 r8 |
-  r8 c8  d8 e8 r8 c4 r8 |
-  e4. d4. r4 |
-  d4. c4. r4 |
-  r8 e8  d8 c8 d8 e8 r4 |
-  e8 r8 e8  e8 r4 e4 ~ | \break
-  \inst "F"
-  e4 ^ "Coro 2" r4 r2 |
-  r4 r8 c8 b8 a8 b4 |
-  r8 gis8  g8 gis8
-  b8 gis8 b8 a8 |
-  r8 c4 r4 c8  d8 e8 |
-  e4. d4. r4 |
-  d4. c4. r4 |
-  R1 |
-  c8 r8 c8  c8 r2 | \break
- 
-  \inst "G"
-  R1 ^ "Solo Cantante 2" | 
-  r8 b8 r8 c8  d8 b8 c8
-  d8 |
-  r8 b8 r2 r4 |
-  r8 c8  d8 e8 r8
-  c4 r8 |
-  e4. d4. r4 |
-  d4. c4. r4 |
-  r8 e8  d8 c8  d8 e8 r4 |
-  c8 r8 d8  e8 r4 c4 ~ | 
-  c4 r2 r4 |
-  r8 b8 r8 d8  b8 c8 d8 s8
-  | % 59
-  r8 b8 r8 b2 r8 |
-  r8 c8  d8 e8 r8 r4 r8 |
-  e4. d4. r4 | 
-  d4. c4. r4 |
-  r8 e8  d8 c8 d8 e8 r4 |
-  e8 r8 e8  e8 r4 e4 ~ | \break
-
-  \inst "H"
-  e4 ^ "Coro y Pregón" r4 r2 |
-  r2 r8 b8  c8 d8 |
-  r8 b4 r8 r2 | 
-  r2 r8 e8 r8 e8 ~ | 
-  e2. r4 | 
-  R1 |
-  R1 | 
-  R1 | 
-  R1 |
-  r2 r8 b8  c8 d8 | 
-  r8 b4 r8 r2 | 
-  r2 r8 a8  b8 c8 ~ | 
-  c4 r4 r2 | 
-  R1 | 
-  R1 | 
-  R1 | 
-  R1 | 
-  r2 r4 r8 b8 |
-  r8 d8 r4 r2 | 
-  r2 r8 b8 r8 a8 ~ | 
-  a2. r4 | 
-  R1 |
-  R1 | 
-  R1 | 
-  R1 | 
-  r4 r8 c8  b8 a8  b4 | 
-  r8 gis8  g8 gis8 b8 gis8
-  b8 a8 | 
-  r8 c4 r4 c8  d8 e8 | 
-  e4. d4. r4 | 
-  d4. c4. r4 | 
-  R1 |
-  c8 r8 c8  c8 r2 | \break
-  \inst "I"
-  s1*0 \set Score.skipBars = ##t R1*8 ^\markup { "Piano solo introduction" }
-  s1*0 \set Score.skipBars = ##t R1*32 ^\markup { "Piano solo" }
-  s1*0 \set Score.skipBars = ##t R1*16 ^\markup { "Conga solo" } \break
- 
-  \inst "J"
-  R1 ^ "Brass + Solos" |
-  r8   fis,8  gis8 a8 b8 c8
-  d8 e8 |
-  r8 c8 r2 r4 |
-  r8 gis8  g8 gis8 b8 gis8
-  b8 a8 |
- 
-  s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Solo Trombono" } \break
-
-  R1 | 
-  r8 fis8  gis8 a8 b8 c8
-  d8 e8 | 
-  r8 c8 r2 r4 |
-  r8 gis8  g8 gis8 b8 gis8
-  b8 a8 |
- 
-  s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Solo Trumpet" } \break
- 
-  \inst "K"
-  R1 ^ "Coda (Coro y Pregón)" | 
-  r2 r8 b8  c8 d8 | 
-  r8 b4 r8 r2 | 
-  r2 r8 e8 r8 e8 ~ | 
-  e2. r4 | 
-  R1 | 
-  R1 | 
-  R1 | 
-  R1 | 
-  r2 r8 b8  c8 d8 | 
-  r8 b4 r8 r2 |
-  r2 r8 a8  b8 c8 ~ |
-  c4 r4 r2 |
-  R1 |
-  R1 | 
-  R1 |
-  R1 | 
-  r2 r4 r8 b8 | 
-  r8 d8 r4 r2 | 
-  r2 r8 b8 r8 a8 ~ | 
-  a2. r4 | 
-  R1 | 
-  R1 | 
-  R1 | 
-  R1 | 
-  r4 r8 c8  b8 a8  b4 | 
-  r8 gis8  g8 gis8 b8 gis8
-  b8 a8 | 
-  r8 c4 r4 c8  d8 e8 | 
-  e4. d4. r4 | 
-  d4. c4. r4 | 
-  R1 | 
-  c8 r8 c8  c8 r2 | \break 
- 
   \label #'lastPage
   \bar "|."
 }
@@ -371,7 +189,7 @@ Sax = \new Voice
     \consists "Volta_engraver"
   }
   {
-    \Sax
+    \Trumpet
   }
   \layout {
     \context {
@@ -383,7 +201,7 @@ Sax = \new Voice
 
 \score {
   \unfoldRepeats {
-    \transpose e g, \Sax
+      \transpose d c  \Trumpet 
   }
   \midi { } 
 } 

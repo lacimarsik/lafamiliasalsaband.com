@@ -1,13 +1,13 @@
-\version "2.24.0"
+\version "2.22.2"
 
 % Sheet revision 2022_09
 
 \header {
-  title = "Ran Kan Kan"
-  instrument = "trumpet"
-  composer = "by Croma Latina"
-  arranger = "arr. Ladislav Maršík, Luca Colella"
-  opus = "version 27.4.2023"
+  title = "Hello"
+  instrument = "timbales"
+  composer = "by Mandinga"
+  arranger = "arr. Ladislav Maršík"
+  opus = "version 16.11.2022"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,169 +164,147 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trumpet = \new Voice
-\transpose c d
-\relative c'' {
+Timbales = \new DrumVoice \drummode {
   \set Staff.instrumentName = \markup {
-    \center-align { "Tr. in Bb" }
+    \center-align { "Timbales" }
   }
-  \set Staff.midiInstrument = "trumpet"
-  \set Staff.midiMaximumVolume = #1.0
 
-  \key d \major
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
-  
+
+  s1*0 ^\markup { "Intro Piano" }
+  \set Score.skipBars = ##t R1*8
+  s1*0 ^\markup { "Verse 1" }
   \inst "A"
-  s1*0 ^\markup { "Intro" }
-  d4 \f -> r d -> r |
-  d -> r8 c r e r c |
-  d4 -> r8 c r e r c |
-  d4 -> d -> d -> r |
-  R1 |
-  d4 -> d -> d -> r8 d -> |
-  r d -> r2. | \break
-
+  \set Score.skipBars = ##t R1*8
+  s1*0 ^\markup { "(bongos only)" }
+  \set Score.skipBars = ##t R1*6
+  cb4 cb cb cb \accent |
+  r2 r8 timh -. r4 | 
+  
+  s1*0 ^\markup { "Verse 2 (cascara 2-3)" }
   \inst "B"
-  s1*0 ^\markup { "Brass" }
-  \repeat volta 2 {
-    d4 \f ( d c e -. ) |
-    d4. \tenuto -> a8 ~ a \tenuto r4. |
-    d4 -> d -> d -> r8 d -> |
-    r d -> r2. | \break 
+  ^\markup { \bold { \fontsize #2 "8x clave" } }
+  \repeat volta 8 {
+    \makePercent s1*2
   }
-  d4 ( d c e -. ) |
-  d4. \tenuto -> a8 ~ a \tenuto r4. | \break
-
+  \break
+  
+  s1*0 ^\markup { \bold { \fontsize #2 "2x clave" } }
+  \repeat volta 2 {
+    \makePercent s1*2
+  }
+  timl4 timh timh timl |
+  timh timh cb2 -^ |
+  \makePercent s1 |
+  \makePercent s2 \tuplet 3/2 { timh8 timl timl } timl4 | \break
+  
+  s1*0 ^\markup { "Chorus" }
   \inst "C"
-  s1*0 ^\markup { "Verso" }
-  \set Score.skipBars = ##t R1*16 |
-
-  d4 \f -> d -> d -> r | 
-  r4. d8 -. r d e -. r | \break
-    
-  \inst "D"
-  s1*0 ^\markup { "Brass 2" }
-  \repeat volta 2 {
-    a4 \f -> a -> a -> \bendAfter #-4 r4 |
-    r4. d,8 -. r d e -. r | 
-    a4 \tenuto -> ( a8 a ) g a -. r8 a8 -> \bendAfter #-4 |
-    r4. d,8 -. \f r d e -. r | \break
+  <timl cb>4   <timl cb>4   <timl cb>4   <timl cb>4 |
+  <timl cb>4   <timl cb>4   <timl cb>4 cb -^
+  
+  s1*0 
+  ^\markup { "impro at the end" }
+  ^\markup { "(campana)" }
+  ^\markup { \bold { \fontsize #2 "7x clave" } }
+  \repeat volta 7 {
+    \makePercent s1*2
   }
-
+  s1*0 
+  \inst "D"
+  ^\markup { "(camp. + contrac.)" }
+  ^\markup { \bold { \fontsize #2 "8x clave" } }
+  \repeat volta 8 {
+    \makePercent s1*2
+  }
+  \break
+  
   \inst "E"
-  s1*0 ^\markup { "Ran Kan Kan" }
-  a2 \tenuto -> r2 |
-  \set Score.skipBars = ##t R1*15 |
+  ^\markup { "Puente (camp. + contrac.)" }
+  ^\markup { \bold { \fontsize #2 "3x clave" } }
+  \repeat volta 8 {
+    \makePercent s1*2
+  }
+  s1*0 ^\markup { "break" }
+  \makePercent s1  |
+  \makePercent s1 | \break
   
   \inst "F"
-  s1*0 ^\markup { "Puente" }
-  \repeat volta 2 {
-    \set Score.skipBars = ##t R1*4 |
-    a,8 -> \mp ( b fis a ~ a c d e \< -> \sp ~ |
-    e2 ) r2 \! \mf |
-  }
+  s1*0 ^\markup { "Verse 3" }
   
-  \alternative {
-    { 
-      fis8 -> \mf g e fis ~ fis g a gis ->  ~ |
-      gis4 r8 gis -> \f ~ gis4 ( a4 -. ) | 
-    }
-    {
-      fis8 -> \mf g e fis ~ fis g a gis ->  ~ |
-      gis4 a8 -> \f a -> a -> a -> r4 |
-    } 
-  } \break
-  
-  \set Score.skipBars = ##t R1*2 |
-  
-  e8 ( \mp \< c e g ~ g e g a ~ |
-  a1 ) \f -> | \break
-  
-  \inst "G"
-  s1*0 ^\markup { "Reggaeton" }
-  \set Score.skipBars = ##t R1*16 |  \break
-  
-  \inst "H"
-  s1*0 ^\markup { "Petas" }
-  \repeat volta 2 {
-    a2 \f -> fis8 ( \> d a  gis \sfz \< ) ~ |
-    gis1 |
-    r2. \! r8 gis8 -> \sfz ~ |
-    gis2. \<  r4 \! |
-  }
   R1 |
-  r4. a8 -. \f r4 d4 \ff -> ~ | \break
-  \inst "I"
-  s1*0 ^\markup { "Coro Pregón 1 " }
-  d4 r2. |
-  \set Score.skipBars = ##t R1*9 |  \break
-  a4 \f -> r8 a8 a4 -> r |
-  r8 b8 -> \bendAfter #-4 r2. |
-  r2 a8 -> a -. r a8 -. |
-  r4. b8 -> r b8 -> \bendAfter #-4 r4 | 
-  r2 r8 a -> r gis ->  |
-  r4 r8 a -> r gis -> r4  |
-  R1*2 | \break
+  r4 timl timh timl |
+  s1*0 ^\markup { "(cascara 2-3)" }
+  ^\markup { \bold { \fontsize #2 "2x clave" } }
   \repeat volta 2 {
-    d8 \mf \tenuto \< d \tenuto fis \tenuto a \tenuto c -> \f ( b ais a \tenuto ) \< ~  |
-    a1 |
-    R1 \! |
-    R1 |
+    \makePercent s1*2
   }
-  b4 \f -> r a -> r |
-  g -> r2 f4 -> |
-  e4 -> r2. |
-  r4. d'4 -. d8 ( c -. ) r | \break
-
-  \inst "J = B"
-  s1*0 ^\markup { "Brass" }
+  \makePercent s1 |
+  r4 cb8 cb8 cb8 cb8 r4 | 
+  s1*0 ^\markup { "(cascara 2-3)" }
+  ^\markup { \bold { \fontsize #2 "4x clave" } }
+  \repeat volta 4 {
+    \makePercent s1*2
+  } \break
+  s1*0 ^\markup { \bold { \fontsize #2 "2x clave" } }
   \repeat volta 2 {
-    d4 \f ( d c e -. ) |
-    d4. \tenuto -> a8 ~ a \tenuto r4. |
-    d4 -> d -> d -> r8 d -> |
-    r d -> r2. | \break 
+    \makePercent s1*2
   }
-  d4 ( d c e -. ) |
-  d4. \tenuto -> a8 ~ a \tenuto r4. | \break
-
-  \inst "K = C"
-  s1*0 ^\markup { "Verso" }
-  \set Score.skipBars = ##t R1*16 |
-
-  \inst "L"
-  s1*0 ^\markup { "Coda" }
-  \set Score.skipBars = ##t R1*2
-  a'4 \f -> a -> a -> a -> |
-  a4 \ff -> \bendAfter #-8 r2. ^\markup { "Timbales + snare" } |
-  r2 \fermata b,2 \mf \tenuto ( \< ~ _\markup { "sub. rit." } |
-  b1 \tenuto |
-  d4 ) ^\markup { "On signal" } \ff -> r2. |
-
+  timl4 timh timh timl |
+  timh timh cb2 -^ |
+  \makePercent s1 |
+  \makePercent s2 \tuplet 3/2 { timh8 timl timl } timl4 | \break
+  
+  s1*0 ^\markup { "Chorus" }
+  <timl cb>4   <timl cb>4   <timl cb>4   <timl cb>4 |
+  <timl cb>4   <timl cb>4   <timl cb>4 cb -^
+  
+  s1*0 
+  ^\markup { "(campana)" }
+  ^\markup { \bold { \fontsize #2 "6x clave" } }
+  \repeat volta 7 {
+    \makePercent s1*2
+  }
+  \makePercent s1 |
+  r4. cb4. -^ cb4 -^ | \break
+  s1*0 ^\markup { "Mambo (clave)" }
+  \inst "G"
+  ^\markup { \bold { \fontsize #2 "4x clave" } }
+  \repeat volta 4 {
+    \makePercent s1*2
+  }
+  s1*0 ^\markup { "(camp. + contrac.)" }
+  ^\markup { \bold { \fontsize #2 "7x clave" } }
+  \repeat volta 4 {
+    \makePercent s1*2
+  }
+  \makePercent s1 |
+  r8 cb cb r cb cb r cb |
+  cb \accent r r2. | 
+  
   \label #'lastPage
   \bar "|."
 }
 
 \score {
-  \compressMMRests \new Staff \with {
-    \consists "Volta_engraver"
-  }
-  {
-    \Trumpet
-  }
+  \compressMMRests \new StaffGroup <<
+    \new DrumStaff \with {
+      drumStyleTable = #timbales-style
+      \override StaffSymbol.line-count = #2
+      \override BarLine.bar-extent = #'(-1 . 1)
+      \consists "Volta_engraver"
+    }
+    <<
+      \Timbales
+    >>
+  >>
   \layout {
     \context {
       \Score
       \remove "Volta_engraver"
     }
   }
-} 
-
-\score {
-  \unfoldRepeats {
-      \transpose d c  \Trumpet 
-  }
-  \midi { } 
 }
 
 \paper {
@@ -345,6 +323,7 @@ Trumpet = \new Voice
   oddFooterMarkup = \markup {
     \fill-line {
       \bold \fontsize #2
+      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
 
       \fontsize #-1
@@ -357,6 +336,7 @@ Trumpet = \new Voice
       \concat { \fromproperty #'header:title " - " \fromproperty #'header:instrument ", " \fromproperty #'header:opus ", " \fromproperty #'header:copyright }
 
       \bold \fontsize #2
+      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
     }
   }
