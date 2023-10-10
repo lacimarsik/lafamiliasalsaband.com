@@ -4,7 +4,7 @@
 
 \header {
   title = "Would I Lie"
-  instrument = "sax"
+  instrument = "tenor sax"
   composer = "by Luis Enrique"
   arranger = "arr. Ladislav Maršík"
   opus = "version 7.9.2022"
@@ -165,14 +165,15 @@ repeatBracket = #(define-music-function
                   )
 
 Sax = \new Voice
-\transpose c a'
+\transpose c d
 \relative c {
   \set Staff.instrumentName = \markup {
-    \center-align { "Sax in Eb" }
+    \center-align { "Sax in Bb" }
   }
-  \set Staff.midiInstrument = "alto sax"
+  \set Staff.midiInstrument = "tenor sax"
   \set Staff.midiMaximumVolume = #0.9
 
+  \clef bass
   \key c \minor
   \time 4/4
   \tempo "Fast Salsa" 4 = 210
@@ -422,7 +423,7 @@ Sax = \new Voice
   oddFooterMarkup = \markup {
     \fill-line {
       \bold \fontsize #2
-      \on-the-fly #print-page-number-check-first
+      #\on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
 
       \fontsize #-1
@@ -435,7 +436,7 @@ Sax = \new Voice
       \concat { \fromproperty #'header:title " - " \fromproperty #'header:instrument ", " \fromproperty #'header:opus ", " \fromproperty #'header:copyright }
 
       \bold \fontsize #2
-      \on-the-fly #print-page-number-check-first
+      #\on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
     }
   }

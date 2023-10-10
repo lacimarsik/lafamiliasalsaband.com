@@ -1,13 +1,13 @@
-\version "2.22.2"
+\version "2.24.0"
 
 % Sheet revision 2022_09
 
 \header {
-  title = "Would I Lie"
-  instrument = "sax"
-  composer = "by Luis Enrique"
-  arranger = "arr. Ladislav Maršík"
-  opus = "version 7.9.2022"
+  title = "La Sabrosa"
+  instrument = "tenor sax"
+  composer = "by Fernando Sosa & Massimo Scalici"
+  arranger = "arr. Luca Colella"
+  opus = "version 22.2.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -165,227 +165,195 @@ repeatBracket = #(define-music-function
                   )
 
 Sax = \new Voice
-\transpose c a'
-\relative c {
+\transpose bes c
+\relative c' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Sax in Eb" }
+    \center-align { "Sax in Bb" }
   }
-  \set Staff.midiInstrument = "alto sax"
+  \set Staff.midiInstrument = "tenor sax"
   \set Staff.midiMaximumVolume = #0.9
 
-  \key c \minor
+  \clef bass
+  \key d \minor
   \time 4/4
-  \tempo "Fast Salsa" 4 = 210
-  
-  R1*14 ^\markup { "A Capella" }
-  
-  \tuplet 3/2 { c4 c c } \tuplet 3/2 { es es es} | 
-  g r8 c,8 c4 r | \break
-  
+  \tempo "Slower Salsa" 4 = 180
+ 
+  s1*0 \set Score.skipBars = ##t R1*18 ^\markup { "Intro piano" } \fermata
   \inst "A"
-  r4. ^\markup { "Chorus" } c4 r8 es4 ~ |
-  es2 r |
-  r4. c4 r8 f4 ~ |
-  f2 r |
-  r4. c8 c r es4 ~ |
-  es2 r |
-  r4. bes8 bes r es4 ~ |
-  es2 r | \break
-  
-  as,4 r8 c8 c r es4 ~ |
-  es2 r |
-  as,4 r8 c8 c r f4 ~ |
-  f2 r |
-  g,4 r8 c8 c r es4 ~ |
-  es4 r2. |
-  g4 r8 bes bes r es4 ~ |
-  es2. r4 | \break
-  
+ 
+  s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Piano montuno" }
+  s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Salsa" }
+  s1*0 
+  ^\markup { "Brass" }
+ 
+  \break
   \inst "B"
-  R1*11 ^\markup { "Verse 1" } 
-  
-  bes,4 bes4. r8 a4 ~ |
-  a1 |
   R1 |
-  R1 |
-  
-  r4 f2. \> |
-  R1*2 \! |
-  r4 es8 -. r r d -. r4 |
-  es8 -. r f8 -. r c' -> r -. b4 ~ -> \sp \< |
-  b1 ~ |
-  b2 \! r4 c4 ~ |
-  c1 | 
-  r2 bes8 -> bes -> r4 | \break
-  
+  r8 b cis d e f g a |
+  r f r2 r4 |
+  r8 cis c cis e cis e d |
+  r8 f r2 r4 |
+  r8 b, cis d e f g a |
+  r f8 r2 r4 |
+  r8 cis c cis e cis e d | \break
+ 
   \inst "C"
-  r4. ^\markup { "Chorus" } c4 r8 es4 ~ |
-  es2 r |
-  r4. c4 r8 f4 ~ |
-  f2 r |
-  r4. c8 c r es4 ~ |
-  es2 r |
-  r4. bes8 bes r es4 ~ |
-  es2 r | \break
-  
-  as,4 r8 c8 c r es4 ~ |
-  es2 r |
-  as,4 r8 c8 c r f4 ~ |
-  f2 r |
-  g,4 r8 c8 c r es4 ~ |
-  es4 r2. |
-  g4 r8 bes bes r es4 ~ |
-  es2. r4 | \break
-  
+  f8 ^ "Trumpets" e f a r f r g | 
+  r8 f8 e8 d8 cis8 e8 
+  g4 ~ |
+  g4 r4 r2 |
+  r2 r8 f8  g8 r8 |
+  a4. g4. r4 |
+  g4. f4. r4 |
+  e'8 r8 a,8 r8 cis4. d8 |
+  r4. d4 r8 r4 | \break
+ 
   \inst "D"
-  R1*11 ^\markup { "Verse 2" } 
-  
-  bes,4 bes4. r8 a4 ~ |
-  a1 |
-  \set Score.skipBars = ##t R1*3
+  r2 ^ "Coro 1" r4 r8 g,8 |
+  r8 e8 r8 bes'8 a8 g8  a4 |
+  r8 g8  fis8 g8 bes8 g8
+  bes8 a8 | 
+  r8 f8 r4 r8 f8  g8 a8 |
+  a4. g4. r4 |
+  g4. f4. r4 |
+  R1 |
+  f8 r8 f8  f8 r2 | \break
+
   \inst "E"
-  r8 ^\markup { "Swing!" } bes' \mf -. r4 bes -> r8 bes -. |
-  R1 |
-  r4 bes8 -. r r bes -. r4 |
-  a8 -. r a8 -. r r4 f8 -. r |
-  r8 f -. r4 f -> r8 f -. |
-  r2. es4 ~ -> \sp \< |
-  es1 ~ | 
-  es2 \! r4 as4 -> | \break
-  
-  r4. ^\markup { "Chorus" } c,4 r8 es4 ~ |
-  es2 r |
-  r4. c4 r8 f4 ~ |
-  f2 r |
-  r4. c8 c r es4 ~ |
-  es2 r |
-  r4. bes8 bes r es4 ~ |
-  es2 r | \break
-  
-  as,4 r8 c8 c r es4 ~ |
-  es2 r |
-  as,4 r8 c8 c r f4 ~ |
-  f2 r |
-  g,4 r8 c8 c r es4 ~ |
-  es4 r2. |
-  g4 r8 bes bes r es4 ~ |
-  es2. r4 |
-  
+  r2 ^ "Solo Cantante 1" r4 r8 e8 |
+  r8 e8 r8 f8  g8 e8 f8
+  g8 |
+  r8 e8 r2 r4 |
+  r8 f8  g8 a8 r8 f4 r8 |
+  a4. g4. r4 | 
+  g4. f4. r4 |
+  r8 a8  g8 f8 g8 a8 r8
+  f8 | 
+  r8 g8 r8 a8 r4 d4 ~ | 
+  d4 r4 r2 |
+  r8 e,8 r8 f8  g8 e8 f8
+  g8 |
+  r8 e8 r8 e2 r8 |
+  r8 f8  g8 a8 r8 f4 r8 |
+  a4. g4. r4 |
+  g4. f4. r4 |
+  r8 a8  g8 f8 g8 a8 r4 |
+  a8 r8 a8  a8 r4 a4 ~ | \break
   \inst "F"
-  \set Score.skipBars = ##t R1*4 ^\markup { "Trombone solo" }
-  
-  g,1 ~ ( \pp \< |
-  g2. ~ g8 g8 \mf ~ |
-  g1 \> ~ |
-  g4 \bendAfter #-2 es2 \p ) \bendAfter #-4 r4 |
-  
-  r8 b \f c es as as es c |
-  b c r es r as r as |
-  r b, c f as as f c |
-  b c r f r as r c ~ |
-  c2 \bendAfter #-3 r2 |
-  
-  \set Score.skipBars = ##t R1*3
-  
-  \set Score.skipBars = ##t R1*16 ^\markup { "Would I lie to you" }
-  
+  a4 ^ "Coro 2" r4 r2 |
+  r4 r8 f8 e8 d8 e4 |
+  r8 cis8  c8 cis8
+  e8 cis8 e8 d8 |
+  r8 f4 r4 f8  g8 a8 |
+  a4. g4. r4 |
+  g4. f4. r4 |
+  R1 |
+  f8 r8 f8  f8 r2 | \break
+ 
   \inst "G"
-  \set Score.skipBars = ##t R1*3 ^\markup { "Te digo" }
-  
-  r2. d,4 ~ -> \sp \< |
-  d1 ~ |
-  d2 \! r4 c4 ~ -> \sp \< |
-  c1 ~ |  
-  c2 \! r2 |
-  
-  as'8 -> as -> r4 as8 -> as -> r4 |
-  \tuplet 3/2 { as4 -> as -> as -> } as8 -> r4. |
-  
-  r4. ^\markup { "Chorus" } c,4 r8 es4 ~ |
-  es2 r |
-  r4. c4 r8 f4 ~ |
-  f2 r |
-  r4. c8 c r es4 ~ |
-  es2 r |
-  r4. bes8 bes r es4 ~ |
-  es2 r | \break
-  
-  as,4 r8 c8 c r es4 ~ |
-  es2 r |
-  as,4 r8 c8 c r f4 ~ |
-  f2 r |
-  g,4 r8 c8 c r es4 ~ |
-  es2 r4 a, -> ~ \< |
-  a1 ~ |
-  a2 \! r2 |
-  
-  \set Staff.midiMaximumVolume = #2.0
+  R1 ^ "Solo Cantante 2" | 
+  r8 e8 r8 f8  g8 e8 f8
+  g8 |
+  r8 e8 r2 r4 |
+  r8 f8  g8 a8 r8
+  f4 r8 |
+  a4. g4. r4 |
+  g4. f4. r4 |
+  r8 a8  g8 f8  g8 a8 r4 |
+  f8 r8 g8  a8 r4 f4 ~ | 
+  f4 r2 r4 |
+  r8 e8 r8 g8  e8 f8 g8 s8
+  | % 59
+  r8 e8 r8 e2 r8 |
+  r8 f8  g8 a8 r8 r4 r8 |
+  a4. g4. r4 | 
+  g4. f4. r4 |
+  r8 a8  g8 f8 g8 a8 r4 |
+  a8 r8 a8  a8 r4 a4 ~ | \break
+
   \inst "H"
-  r2 ^\markup { "Montuno - Petas" } r8 c \f es \tenuto f \tenuto |
-  as \tenuto -> g f \tenuto g -> \tenuto ~ g2 ~ |
-  g2 ~ g8 f \tenuto -> \> r es \tenuto |
-  d2 \tenuto \mf ~ d8 ( es \< f g -> \f ) ~ |
-  g1 \> |
-  r1 \mf | 
-  c4 \sf -> \bendAfter #-4 r bes4 \sf -> \bendAfter #-4 r | 
-  g4 \sf -> \bendAfter #-4 r f4 \sf -> \bendAfter #-4 r | 
-  
-  \set Staff.midiMaximumVolume = #1.0
-  
-  r2 r8 c \mf es \tenuto f \tenuto |
-  as \tenuto -> g f \tenuto g -> \tenuto ~ g2 ~ |
-  g2 ~ g8 f \tenuto -> \> r es \tenuto |
-  d2 \tenuto \mp ~ d8 ( es \< f es -> \mf ) ~ |
-  es1 \> ~ |
-  es2 \mp r2 | 
-  c1 -> \sp \< ~ |
-  c2 ~ c8 ( es c f -> \mf ~ |
+  a4 ^ "Coro y Pregón" r4 r2 |
+  r2 r8 e8  f8 g8 |
+  r8 e4 r8 r2 | 
+  r2 r8 a8 r8 a8 ~ | 
+  a2. r4 | 
+  s1*0 \set Score.skipBars = ##t R1*3 \break
+  R1 | 
+  r2 r8 e8  f8 g8 | 
+  r8 e4 r8 r2 | 
+  r2 r8 d8  e8 f8 ~ | 
+  f4 r4 r2 | 
+  s1*0 \set Score.skipBars = ##t R1*3 \break
+  R1 | 
+  r2 r4 r8 e8 |
+  r8 g8 r4 r2 | 
+  r2 r8 e8 r8 d8 ~ | 
+  d2. r4 | 
+  s1*0 \set Score.skipBars = ##t R1*3 \break
+  R1 | 
+  r4 r8 f8  e8 d8  e4 | 
+  r8 cis8  c8 cis8 e8 cis8
+  e8 d8 | 
+  r8 f4 r4 f8  g8 a8 | 
+  a4. g4. r4 | 
+  g4. f4. r4 | 
+  R1 |
+  f8 r8 f8  f8 r2 | \break
   \inst "I"
-  f4 ^\markup { "Coro Pregón" } ) r2. |
+  s1*0 \set Score.skipBars = ##t R1*8 ^\markup { "Piano solo introduction" }
+  s1*0 \set Score.skipBars = ##t R1*32 ^\markup { "Piano solo" }
+  s1*0 \set Score.skipBars = ##t R1*16 ^\markup { "Conga solo" } \break
+ 
+  \inst "J"
+  R1 ^ "Brass + Solos" |
+  r8   b,8  cis8 d8 e8 f8
+  g8 a8 |
+  r8 f8 r2 r4 |
+  r8 cis8  c8 cis8 e8 cis8
+  e8 d8 |
+ 
+  s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Solo Trombono" } \break
+
+  R1 | 
+  r8 b8  cis8 d8 e8 f8
+  g8 a8 | 
+  r8 f8 r2 r4 |
+  r8 cis8  c8 cis8 e8 cis8
+  e8 d8 |
+ 
+  s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Solo Trumpet" } \break
+ 
+  \inst "J"
+  f,8 ^ "Brass + Solos" e f g a f g a |
+  bes g a bes c d b cis -- |
+  r bes -- r a -- r g -- r f -- ~ |
+  f4 r8 g8 f4 r |
+  s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Solo Trombono" } \break
+
+  f8 e f g a f g a |
+  bes g a bes c d b cis -- |
+  r bes -- r a -- r g -- r f -- |
+  r4. g8 f4 r |
+ 
+  s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Solo Trumpet" } \break
+ 
+  \inst "K"
+  R1 ^ "Coda (Coro y Pregón)" | 
+  r2 r8 e8  f8 g8 | 
+  r8 e4 r8 r2 | 
+  r2 r8 a8 r8 a8 ~ | 
+  a2. r4 | 
+  s1*0 \set Score.skipBars = ##t R1*3 | \break
   R1 |
-  f1 ~ -> \sp \< |
-  f1 |
-  g1 ~ -> \! \sp \< |
-  g1 |
-  g1 -> \! \sp \< |
-  r2 \! c,8 \mf ( es c f -> \f ~ |
-  f4 ) r2. |
+  r4 r8 f'8  e8 d8  e4 | 
+  r8 cis8  c8 cis8 e8 cis8
+  e8 d8 | 
+  r8 f4 r4 f8  g8 a8 | 
+  a4. g4. r4 | 
+  g4. f4. r4 | 
   R1 |
-  f1 ~ -> \sp \< |
-  f1 |
-  g1 ~ -> \! \sp \< |
-  g1 |
-  c4 \sf -> \bendAfter #-4 r bes4 \sf -> \bendAfter #-4 r | 
-  g4 \sf -> \bendAfter #-4 r f4 \sf -> \bendAfter #-4 r | 
-  
-  R1 |
-  R1 |
-  f1 ~ -> \sp \< |
-  f1 |
-  g1 ~ -> \! \sp \< |
-  g1 |
-  g1 -> \! \sp \< |
-  r2 \! c,8 \mf ( es c f -> \f ~ |
-  f4 ) r2. |
-  R1 |
-  f1 ~ -> \sp \< |
-  f1 |
-  g1 ~ -> \! \sp \< |
-  g1 |
-  c4 \sf -> \bendAfter #-4 r bes4 \sf -> \bendAfter #-4 r | 
-  g4 \sf -> \bendAfter #-4 r f4 \sf -> \bendAfter #-4 r | 
-  
-  R1 ^\markup { "Fade out" } |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  g1 -> \! \sp \< |
-  r2 \! r8 \mf es ( c f -> \f ~ |
-  f4 ) ^\markup { "A Capella" } r2. |
-  \set Score.skipBars = ##t R1*7
-  
+  f8 r8 f8  f8 r2 | \break
+ 
   \label #'lastPage
   \bar "|."
 }
@@ -405,6 +373,12 @@ Sax = \new Voice
   }
 }
 
+\score {
+  \unfoldRepeats {
+    \transpose g bes, \Sax
+  }
+  \midi { } 
+} 
 
 \paper {
   system-system-spacing =
@@ -422,7 +396,6 @@ Sax = \new Voice
   oddFooterMarkup = \markup {
     \fill-line {
       \bold \fontsize #2
-      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
 
       \fontsize #-1
@@ -435,7 +408,6 @@ Sax = \new Voice
       \concat { \fromproperty #'header:title " - " \fromproperty #'header:instrument ", " \fromproperty #'header:opus ", " \fromproperty #'header:copyright }
 
       \bold \fontsize #2
-      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
     }
   }
