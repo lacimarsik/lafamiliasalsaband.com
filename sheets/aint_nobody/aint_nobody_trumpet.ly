@@ -5,7 +5,7 @@
 \header {
   title = "Ain't Nobody"
   instrument = "trumpet"
-  composer = "by Alex Wilson feat. AQuilla Fearon"
+  composer = "by Alex Wilson ft. AQuilla Fearon/Chaka Khan"
   arranger = "arr. Ladislav Maršík"
   opus = "version 4.10.2023"
   copyright = "© La Familia Salsa Band"
@@ -181,14 +181,14 @@ Trumpet = \new Voice
   
   \inst "A"
   
-  b'8 b a b r e, r e |
-  r e r2. |
+  b8 \ff -- b -- a -- b -- r e, -. r e -.  |
+  r e -. r2. |
   
   \set Score.skipBars = ##t R1*2
   
   
-  b'8 b a b r e, e e |
-  r e r2.  |
+  b'8 -- b -- a -- b -- r e, -. e -. e -. |
+  r e -. r2.  |
   
   \label #'lastPage
   \bar "|."  

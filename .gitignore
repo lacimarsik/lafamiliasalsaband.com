@@ -3,3 +3,5 @@
 *.mid
 *.log
 *~
+*_unity*
+sheets/PDFs/*

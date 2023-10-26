@@ -415,14 +415,12 @@ Sax = \new Voice
   between-system-padding = #2
   bottom-margin = 5\mm
 
-  print-page-number = ##t
   print-first-page-number = ##t
   oddHeaderMarkup = \markup \fill-line { " " }
   evenHeaderMarkup = \markup \fill-line { " " }
   oddFooterMarkup = \markup {
     \fill-line {
       \bold \fontsize #2
-      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
 
       \fontsize #-1

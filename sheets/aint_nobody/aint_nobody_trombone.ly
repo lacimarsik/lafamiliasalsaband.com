@@ -5,10 +5,10 @@
 
 \header {
   title = "Ain't Nobody"
-  instrument = "trumpet"
+  instrument = "trombone"
   composer = "by Alex Wilson feat. AQuilla Fearon"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 4.10.2023"
+  opus = "version 25.10.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -180,10 +180,10 @@ Trombone = \new Voice
    
   R1 ^\markup { "Timbales Roll" }
   
-  \inst "A"
+  \inst "in"
   
- e8 e d e r b r b |
-  r b r2. |
+ e8 -- \ff e -- d -- e -- r b -.  r b -.  |
+  r b -. r2. |
   
   e4. d8 e4. fis8  |
   g4. fis8 e4. d8 |
