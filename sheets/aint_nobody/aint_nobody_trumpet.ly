@@ -5,7 +5,7 @@
 \header {
   title = "Ain't Nobody"
   instrument = "trumpet"
-  composer = "by Alex Wilson ft. AQuilla Fearon/Chaka Khan"
+  composer = "by Alex Wilson feat. AQuilla Fearon"
   arranger = "arr. Ladislav Maršík"
   opus = "version 4.10.2023"
   copyright = "© La Familia Salsa Band"
@@ -179,16 +179,88 @@ Trumpet = \new Voice
   
   R1 ^\markup { "Timbales Roll" }
   
-  \inst "A"
+  \inst "in"
   
-  b8 \ff -- b -- a -- b -- r e, -. r e -.  |
-  r e -. r2. |
+  \repeat volta 2 { 
+    b'8 \ff -- b -- a -- b --  r e, -. r e -. |
+    r e -. r2. |
+    \set Score.skipBars = ##t R1*2
+    b'8 -- b -- a -- b -- r e, \< e e -. \! |
+    r e -. r2.  |
+    R1 |
+  }
+    \alternative { 
+    {
+      r2 r8 fis g a |
+    } 
+    {
+    }
+  }
+  \break
+  e,1 \p \< ~ |
+  e1 |
+  e'1 \! \mf \< ~ |
+  e1 |
+  e,1 \! \p \< ~ |
+  e1 \glissando |
+  e'1 ^\markup { "gliss." }  \! \f \< ~ |
+  e1 \! \ff |
+  \break
   
+  \inst "A1"
+  \set Score.skipBars = ##t R1*16 ^\markup { "Verse 1" }
+  
+  \inst "B1"
+  \set Score.skipBars = ##t R1*8 ^\markup { "Pre-Chorus" }
+  
+  \break
+  \inst "A2" 
+  e,1^\markup { "Verse 2" }  \p \< ~ |
+  e1 ~ |
+  e1 ~ |
+  e1 |
+  g1 \! \mp \< ~ |
+  g1 ~ |
+  g1 ~ |
+  g1 \! | \break
+  a1 \! \mp \< ~ |
+  a1 ~ |
+  a1 ~ |
+  a1 \! |
+  a1 \! \mp \< ~ |
+  a1 ~ |
+  a1 ~ |
+  a1 \! |
+  \break
+  \inst "B2"
+  a,1 ^\markup { "Pre-Chorus" } \mf \< ~ |
+  a1 |
+  d1 \! \mf \< ~ |
+  d1 |
+  e1 \mf \< ~ |
+  e1 |
+  \set Score.skipBars = ##t R1*2 \!
+  \break
+  \inst "C"
+  b'4 \accent \ff r2. |
   \set Score.skipBars = ##t R1*2
+  r2 r8 e,8 \ff -- e -- e -- |
+  b' -- b -- b -- r8 r2 |
+  r2 r8 b -. r a ~ |
+  a1 \< |
+  e8 \! -. r r e -. r r b'4 \accent \bendAfter #-4 |
+  \set Score.skipBars = ##t R1*4
   
+  \break
+  e,1 \p \< ~ |
+  e1 |
+  e'1 \! \mf \< ~ |
+  e1 \! |
+  \break
+
+  \inst "A3"
+  \set Score.skipBars = ##t R1*16 ^\markup { "Verse 3" }
   
-  b'8 -- b -- a -- b -- r e, -. e -. e -. |
-  r e -. r2.  |
   
   \label #'lastPage
   \bar "|."  
