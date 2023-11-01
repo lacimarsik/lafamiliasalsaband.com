@@ -7,7 +7,7 @@
   instrument = "trumpet"
   composer = "by Alex Wilson feat. AQuilla Fearon"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 4.10.2023"
+  opus = "version 1.11.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -182,7 +182,7 @@ Trumpet = \new Voice
   \inst "in"
   
   \repeat volta 2 { 
-    b'8 \ff -- b -- a -- b --  r e, -. r e -. |
+    b8 \ff -- b -- a -- b --  r e, -. r e -. |
     r e -. r2. |
     \set Score.skipBars = ##t R1*2
     b'8 -- b -- a -- b -- r e, \< e e -. \! |
@@ -194,17 +194,18 @@ Trumpet = \new Voice
       r2 r8 fis g a |
     } 
     {
+      R1 |
     }
   }
   \break
-  e,1 \p \< ~ |
+  e1 \p \< ~ |
   e1 |
-  e'1 \! \mf \< ~ |
+  \grace { d'8 \! dis } e1 \mf \< ~ |
   e1 |
-  e,1 \! \p \< ~ |
-  e1 \glissando |
-  e'1 ^\markup { "gliss." }  \! \f \< ~ |
-  e1 \! \ff |
+  e,1 \! \fp \< ~ |
+  e1 |
+  \grace { d'8 \! dis } e1  \! \mf \< ~ |
+  e1 \! \f |
   \break
   
   \inst "A1"
@@ -215,51 +216,71 @@ Trumpet = \new Voice
   
   \break
   \inst "A2" 
-  e,1^\markup { "Verse 2" }  \p \< ~ |
+  R1 * 5 ^\markup { "Verse 2" } 
+  fis,4 \mp -. g8 a -- ~ a b g -. g -. |
+  R1 |
+  a8 -> g -. r fis -. r e -. r g -. | \break
+  R1 * 2
+  g1 \! \fp \< ||
+  d4.\! \mp -- b4. -- e4 ~ \< ||
   e1 ~ |
-  e1 ~ |
-  e1 |
-  g1 \! \mp \< ~ |
-  g1 ~ |
-  g1 ~ |
-  g1 \! | \break
-  a1 \! \mp \< ~ |
-  a1 ~ |
-  a1 ~ |
-  a1 \! |
-  a1 \! \mp \< ~ |
-  a1 ~ |
-  a1 ~ |
-  a1 \! |
+  e1 \mf \! |
+  R1 * 2
   \break
   \inst "B2"
-  a,1 ^\markup { "Pre-Chorus" } \mf \< ~ |
+  a,1 ^\markup { "Pre-Chorus" } \fp \< ~ |
   a1 |
-  d1 \! \mf \< ~ |
+  d1 \! \fp \< ~ |
   d1 |
-  e1 \mf \< ~ |
+  e1 \p \< ~ |
   e1 |
-  \set Score.skipBars = ##t R1*2 \!
+  R1*2 \! \mf
   \break
-  \inst "C"
+  \inst "C1"
   b'4 \accent \ff r2. |
   \set Score.skipBars = ##t R1*2
   r2 r8 e,8 \ff -- e -- e -- |
   b' -- b -- b -- r8 r2 |
-  r2 r8 b -. r a ~ |
+  r2 r8 b -. \mf r a ~ |
   a1 \< |
-  e8 \! -. r r e -. r r b'4 \accent \bendAfter #-4 |
-  \set Score.skipBars = ##t R1*4
+  e8 \f \! -. r r e -. r r b'4 \ff \accent \bendAfter #-4 |
+  R1*4
   
   \break
   e,1 \p \< ~ |
   e1 |
-  e'1 \! \mf \< ~ |
-  e1 \! |
+  \grace { d'8 \! dis } e1 \! \mf \< ~ |
+  e1 \f \! |
   \break
 
   \inst "A3"
-  \set Score.skipBars = ##t R1*16 ^\markup { "Verse 3" }
+  R1 * 5 ^\markup { "Verse 3" } 
+  d4. \mp -- fis,8 -. r d' -. r  b -. |
+  R1 * 2 \break
+  R1 * 3
+  d,4.\! \mp -- b4. -- e4 ~ \< ||
+  e1 ~ |
+  e1 \mf \! |
+  R1 * 2 \break
+
+  \inst "B3"
+  a,1 ^\markup { "Pre-Chorus" } \fp \< ~ |
+  a1 |
+  d1 \! \fp \< ~ |
+  d1 |
+  e1 \p \< ~ |
+  e1 |
+  R1*2 \! \mf
+  
+  \inst "C2"
+  b'4 \accent \ff r2. |
+  \set Score.skipBars = ##t R1*2
+  r2 r8 e,8 \ff -- e -- e -- |
+  b' -- b -- b -- r8 r2 |
+  r2 r8 b -. \mf r a ~ |
+  a1 \< |
+  e8 \f \! -. r r e -. r r b'4 \ff \accent \bendAfter #-4 |
+  R1*4
   
   
   \label #'lastPage
