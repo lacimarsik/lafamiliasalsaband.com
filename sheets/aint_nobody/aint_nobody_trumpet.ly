@@ -7,7 +7,7 @@
   instrument = "trumpet"
   composer = "by Alex Wilson feat. AQuilla Fearon"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 1.11.2023"
+  opus = "version 7.11.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -182,16 +182,16 @@ Trumpet = \new Voice
   \inst "in"
   
   \repeat volta 2 { 
-    b8 \ff -- b -- a -- b --  r e, -. r e -. |
+    b8 ^\markup { "Intro" } \ff -- b -- a -- b --  r e, \mf -. r e -. |
     r e -. r2. |
     R1*2
-    b'8 -- b -- a -- b -- r e, \< e e -. \! |
-    r e -. r2.  |
+    b'8 \ff -- b -- a -- b -- r e, \mf \< e e -. |
+    r e -. \f r2.  |
     R1 |
   }
     \alternative { 
     {
-      r2 r8 fis g a |
+      r2 r8 fis \< g a |
     } 
     {
       R1 |
@@ -216,15 +216,17 @@ Trumpet = \new Voice
   
   \break
   \inst "A2" 
-  R1 * 5 ^\markup { "Verse 2" } 
-  fis,4 \mp -. g8 a -- ~ a b g -. g -. |
-  R1 |
-  a8 -> g -. r fis -. r e -. r g -. | \break
+  e,1 \p ^\markup { "Verse 2" }  ~ |
+  e1  |
+  e1 \< ~ |
+  e4.\mp --  d4. -- c4 -- ~ \> |
+  c1 |
+  R1 * 3 \pp \! | \break
   R1 * 2
-  g1 \! \fp \< ||
-  d4.\! \mp -- b4. -- e4 ~ \< ||
-  e1 ~ |
-  e1 \mf \! |
+  g'1 \! \fp \< ||
+  d4.\! \mp -- b4. -- e4 ~ \< |
+  e2 e4 -. e4 -. |
+  fis4. -- fis8 -. r g -. r g-. \mf \! |
   R1 * 2
   \break
   \inst "B2"
@@ -237,7 +239,7 @@ Trumpet = \new Voice
   R1*2 \! \mf
   \break
   \inst "C1"
-  b'4 \accent \ff r2. |
+  b'4 ^\markup { "Chorus 1" } \accent \ff r2. |
   \set Score.skipBars = ##t R1*2
   r2 r8 e,8 \ff -- e -- e -- |
   b' -- b -- b -- r8 r2 |
@@ -273,15 +275,15 @@ Trumpet = \new Voice
   R1*2 \! \mf \break
   
   \inst "C2"
-  b'4 \accent \ff r2. |
+  b'4 ^\markup { "Chorus 2" } \accent \ff r2. |
   fis4. -- \mf g4. -- a4 -- ~ \fp \< |
   a1 |
   r2 \! \mf r8 e8 \ff -- e -- e -- |
   b' -- b -- b -- r8 r2 |
   r2 r8 g -. \mp r fis ~ \< |
   fis2. r4 \! \mf |
-  e8 \f \! -. r r e -. r r b'4 \ff \accent \bendAfter #-4 |
-  R1 | \break
+  e8 \f \! -. r r e -. r r b'4 \ff \accent \bendAfter #-4 | \break
+  R1 |
   fis4. -- \mf g4. -- a4 -- ~ \fp \< |
   a1 |
   r2 \! \mf r8 e8 \ff -- e -- e -- |
@@ -290,38 +292,57 @@ Trumpet = \new Voice
   a2. r4 \! |
   e4. -- \mf d4. -- e4 -- \> ~ |
   e1 ~ |
-  e2 \p r2 | \break
+  e2 \p r2 |
+  R1 * 2 \break
   
   \inst "D/in"
   \repeat volta 2 { 
-    b'8 \ff -- b -- a -- b --  r e, -. r e -. |
+    b'8 ^\markup { "Intro + Singer" } \ff -- b -- a -- b --  r e, \mf -. r e -. |
     r e -. r2. |
     R1*2
-    b'8 -- b -- a -- b -- r e, \< e e -. \! |
-    r e -. r2.  |
+    b'8 \ff -- b -- a -- b -- r e, \mf \< e e -. |
+    r e -.\f r2.  |
     R1*2 | \break
-    b'8  -- b -- a -- b --  r e, -. r e -. |
+    b'8 \ff -- b -- a -- b --  r e, \mf -. r e -. |
     r e -. r2. |
     R1*6 \break
   }
   
   \inst "E"
-  r2 b'4 \f -. b |
-  a4. -- a2 -- a8 -- ~ |
+  r2 b'4 \f -. b -. |
+  a4. -- a4. -- r8 -- a8 -> ~ |
   a4 \bendAfter #-4 r2. |
-  r8 e -- g -- g -- a -- a -- b4 -> ~ | \break
+  r8 e \ff -- g -- g -- a -- a -- b4 -> ~ | \break
   
-  \inst "C3"
+  \inst "F"
   b1 ^\markup { "Petas - as Chorus" } |
   r2 r8 b \ff -- b -- b -- |
   b -- a -- a -- r r2 |
-  r8 e -. r fis -. r a -- a -- a -- | \break
+  r8 e -. r fis -. r fis -- a -- a -- | \break
   a -- b -- b -- r r2 |
   r2 r8 b -- b -- b -- |
   b -- a -- a -- r r2 |
-  r8 e -. r fis -. r a -- a -- a -- |
+  r8 e -. r fis -. r fis -- a -- a -- | \break
   a -- b -- b -- r r2 |
-  
+  r2 r8 b -- b -- b -- |
+  b -- a -- a -- r r2 |
+  r8 e -. r fis -. r fis -- a -- a -- | \break
+  a -- b -- b -- r r2 |
+  r2 r8 b -- b -- b -- |
+  b -- a -- a -- r r2 |
+  g4. -> a4. -> b4 -> ~ | \break
+   \inst "C3"
+  b2 \bendAfter #-4 ^\markup { "Chorus - No Brass" } r2 |
+  R1 * 15 | 
+  \inst "G"
+  R1 * 16 ^\markup { "Coro - Pregón" }  | \break
+  \inst "H"
+  R1 ^\markup { "Petas + Pregón" } |
+  r8 b \mf ( e fis g fis e d ) |
+  a' \f -- a -- a -- r8 r2 |
+  R1 * 2 |
+  r8 b, \mf ( e fis g fis e d ) |
+  a' \f -- a -- a -- r8 r2 |
   
   \label #'lastPage
   \bar "|."  

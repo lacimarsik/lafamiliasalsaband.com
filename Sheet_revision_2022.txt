@@ -1,0 +1,49 @@
+Sheets revision 2022
+========================
+
+2022_09 version:
+- lilypond versions: 2.22.2, 2.24.0
+- use Template sheets as basis
+- \midi { } included with unfold repeats and transpositions to check the music
+- usage of s1*0 ^\markup { "Intro" }
+- \inst "A", etc. for the rehearsals
+- revision system - git
+- adds version string to each sheet
+- reviews that the sheets are up to date how we play it
+- reindent
+- same format of headers
+- tempo from originals
+- adds chords for improvisation to each sheet
+- adds dynamics and articulation (not perfect though) to each sheet
+- adds parts (A, B, C, ... ) to each sheet
+
+fluidsynth - run for Frescobaldi:
+
+fluidsynth -a coreaudio -m coremidi -i -s -p FluidSynth -R 0 -C 0 -c 2 -z 512 -r 48000  ~/Documents/Laci/Audio/FluidR3_GM/FluidR3_GM.sf2 &
+
+Progress:
+
+Would I Lie
+=> almost done, only score
+Sera Que No Me Amas
+=> in progress, missing conga, timbales, piano
+Ran Kan Kan
+=> in progress, missing conga, timbales, piano
+Yo No Se Manana
+=> sax
+
+New songs:
+
+Ran Kan Kan (Croma Latina)
+=> working on it
+La Sabrosa (Francisco Sosa)
+=> working on it
+
+Rewrites:
+I Want You Back (Tony Succar)
+=> working on it
+Sera Que No Me Amas
+=> working on it
+
+
+
