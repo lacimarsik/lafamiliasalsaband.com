@@ -2,9 +2,10 @@
 
 % Sheet revision 2022_09
 
+
 \header {
   title = "Ain't Nobody"
-  instrument = "trumpet"
+  instrument = "sax"
   composer = "by Alex Wilson feat. AQuilla Fearon"
   arranger = "arr. Ladislav Maršík"
   opus = "version 1.11.2023"
@@ -164,48 +165,50 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trumpet = \new Voice
+Sax = \new Voice
+%\transpose c a'
 \transpose c d
-\relative c'' {
+\relative c' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Tr. in Bb" }
+    \center-align { "Sax in Bb" }
   }
-  \set Staff.midiInstrument = "trumpet"
-  \set Staff.midiMaximumVolume = #1.0
+  \set Staff.midiInstrument = "alto sax"
+  \set Staff.midiMaximumVolume = #0.9
 
   \key e \minor
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
-  
+
   R1 ^\markup { "Timbales Roll" }
   
   \inst "in"
   
   \repeat volta 2 { 
-    b8 \ff -- b -- a -- b --  r e, -. r e -. |
-    r e -. r2. |
-    R1*2
-    b'8 -- b -- a -- b -- r e, \< e e -. \! |
-    r e -. r2.  |
-    R1 |
+    d8 \f -- d -- cis -- d --  r b -. r b -. |
+    r b -. r2. |
+    e4. -- d8 e4. -- fis8  |
+    g4. -- fis8 e4. -- d8 |
+    c2 \p \< ~ c8 c -- c -- c -> \f |
+    r8 c -. r2.  |
+    e4. -- d8 e4. -- fis8  |
   }
     \alternative { 
     {
-      r2 r8 fis g a |
+      g4. -- fis8 e ( a, b c ) |
     } 
     {
-      R1 |
+      g'4. -- fis8 e4. -- d8 |
     }
   }
   \break
-  e1 \p \< ~ |
-  e1 |
-  \grace { d'8 \! dis } e1 \mf \< ~ |
-  e1 |
-  e,1 \! \fp \< ~ |
-  e1 |
-  \grace { d'8 \! dis } e1  \! \mf \< ~ |
-  e1 \! \f |
+  b1 \p \< ~ |
+  b1 |
+  b1 \p \< ~ |
+  b1 |
+  b1 \! \p \< ~ |
+  b1 |
+  b1  \! \mf \< ~ |
+  b1 \! \f |
   \break
   
   \inst "A1"
@@ -217,99 +220,102 @@ Trumpet = \new Voice
   \break
   \inst "A2" 
   R1 * 5 ^\markup { "Verse 2" } 
-  fis,4 \mp -. g8 a -- ~ a b g -. g -. |
+  d4 \mp -. e8 c -- ~ c d b -. c -. |
   R1 |
-  a8 -> g -. r fis -. r e -. r g -. | \break
+  c8 -> c -. r c -. r c -. r b -. | \break
   R1 * 2
-  g1 \! \fp \< ||
-  d4.\! \mp -- b4. -- e4 ~ \< ||
-  e1 ~ |
-  e1 \mf \! |
+  e1 \! \fp \< ||
+  e4.\! \mp -- fis4. -- a4 ~ \< ||
+  a1 ~ |
+  a1 \mf \! |
   R1 * 2
   \break
   \inst "B2"
-  a,1 ^\markup { "Pre-Chorus" } \fp \< ~ |
-  a1 |
-  d1 \! \fp \< ~ |
+  d,1 ^\markup { "Pre-Chorus" } \fp \< ~ |
   d1 |
-  e1 \p \< ~ |
-  e1 |
+  fis1 \! \fp \< ~ |
+  fis1 |
+  b,1 \p \< ~ |
+  b1 |
   R1*2 \! \mf
   \break
   \inst "C1"
-  b'4 \accent \ff r2. |
-  \set Score.skipBars = ##t R1*2
-  r2 r8 e,8 \ff -- e -- e -- |
-  b' -- b -- b -- r8 r2 |
-  r2 r8 g -. \mp r fis ~ \< |
-  fis2. r4 \! \mf |
-  e8 \f \! -. r r e -. r r b'4 \ff \accent \bendAfter #-4 |
+  e4 \accent \ff r2. |
+  fis,4. -- \mf g4. -- a4 -- ~ \fp \< |
+  a1 |
+  r2 r8 b8 \ff -- b -- b -- |
+  e -- e -- e -- r8 r2 |
+  r2 r8 b' -. \mp r a ~ \< |
+  a2. r4 \! \mf |
+  b,8 \f \! -. r r b -. r r e4 \ff \accent \bendAfter #-4 |
   R1*4
   
   \break
-  e,1 \p \< ~ |
-  e1 |
-  \grace { d'8 \! dis } e1 \! \mf \< ~ |
-  e1 \f \! |
+  b1 \p \< ~ |
+  b1 |
+  b1  \! \mf \< ~ |
+  b1 \! \f |
   \break
 
   \inst "A3"
   R1 * 5 ^\markup { "Verse 3" } 
-  d4. \mp -- fis,8 -. r d' -. r  b -. |
+  fis'4. \mp -- c8 -. r fis -. r  d -. |
   R1 * 2 \break
   R1 * 3
-  d,4.\! \mp -- b4. -- e4 ~ \< ||
-  e1 ~ |
-  e1 \mf \! |
+  e4.\! \mp -- fis4. -- a4 ~ \< ||
+  a1 ~ |
+  a1 \mf \! |
   R1 * 2 \break
 
   \inst "B3"
-  a,1 ^\markup { "Pre-Chorus" } \fp \< ~ |
-  a1 |
-  d1 \! \fp \< ~ |
+  d,1 ^\markup { "Pre-Chorus" } \fp \< ~ |
   d1 |
-  e1 \p \< ~ |
-  e1 |
+  fis1 \! \fp \< ~ |
+  fis1 |
+  b,1 \p \< ~ |
+  b1 |
   R1*2 \! \mf \break
   
   \inst "C2"
-  b'4 \accent \ff r2. |
-  fis4. -- \mf g4. -- a4 -- ~ \fp \< |
+  e4 \accent \ff r2. |
+  fis,4. -- \mf g4. -- a4 -- ~ \fp \< |
   a1 |
-  r2 \! \mf r8 e8 \ff -- e -- e -- |
-  b' -- b -- b -- r8 r2 |
-  r2 r8 g -. \mp r fis ~ \< |
-  fis2. r4 \! \mf |
-  e8 \f \! -. r r e -. r r b'4 \ff \accent \bendAfter #-4 |
+  r2 r8 b8 \ff -- b -- b -- |
+  e -- e -- e -- r8 r2 |
+  r2 r8 b' -. \mp r a ~ \< |
+  a2. r4 \! \mf |
+  b,8 \f \! -. r r b -. r r e4 |
   R1 | \break
-  fis4. -- \mf g4. -- a4 -- ~ \fp \< |
+  fis,4. -- \mf g4. -- a4 -- ~ \fp \< |
   a1 |
-  r2 \! \mf r8 e8 \ff -- e -- e -- |
-   b' -- b -- b -- r8 r2 |
-  r2 r8 b -. \f r a -- ~ |
+  r2 r8 b8 \ff -- b -- b -- |
+  e -- e -- e -- r8 r2 |
+  r2 r8 b' -. \mp r a ~ \< |
   a2. r4 \! |
-  e4. -- \mf d4. -- e4 -- \> ~ |
-  e1 ~ |
-  e2 \p r2 | \break
+  c,4. -- \mf b4. -- gis4 -- \> ~ |
+  gis1 ~ |
+  gis2 \p r2 | \break
   
   \inst "D/in"
   \repeat volta 2 { 
-    b'8 \ff -- b -- a -- b --  r e, -. r e -. |
-    r e -. r2. |
-    R1*2
-    b'8 -- b -- a -- b -- r e, \< e e -. \! |
-    r e -. r2.  |
-    R1*2 | \break
-    b'8  -- b -- a -- b --  r e, -. r e -. |
-    r e -. r2. |
+     d'8 \f -- d -- cis -- d --  r b -. r b -. |
+    r b -. r2. |
+    e4. -- d8 e4. -- fis8  |
+    g4. -- fis8 e4. -- d8 |
+    c2 \p \< ~ c8 c -- c -- c -> \f |
+    r8 c -. r2.  |
+    e4. -- d8 e4. -- fis8  |
+    g4. -- fis8 e4. -- fis8 |
+    d8 \f -- d -- cis -- d --  r b -. r b -. |
+    r b -. r2. |
     R1*6 \break
   }
   
   \inst "E"
-  r2 b'4 \f -. b |
-  a4. -- a2 -- a8 -- ~ |
-  a4 \bendAfter #-4 r2. |
-  r8 e -- g -- g -- a -- a -- b4 -> ~ | \break
+  r2 e4 \f -. e |
+  g4. -- d2 -- cis8 -- ~ |
+  cis4 \bendAfter #-4 r2. |
+  r8 b -- e -- e -- fis -- fis -- g4 -> ~ | \break
   
   \inst "C3"
   b1 ^\markup { "Petas - as Chorus" } |
@@ -325,15 +331,17 @@ Trumpet = \new Voice
   
   \label #'lastPage
   \bar "|."  
+  
+  \label #'lastPage
+  \bar "|."
 }
-
 
 \score {
   \compressMMRests \new Staff \with {
     \consists "Volta_engraver"
   }
   {
-    \Trumpet
+    \Sax
   }
   \layout {
     \context {
@@ -341,14 +349,8 @@ Trumpet = \new Voice
       \remove "Volta_engraver"
     }
   }
-} 
+}
 
-\score {
-  \unfoldRepeats {
-    \transpose c bes,  \Trumpet 
-  }
-  \midi { } 
-} 
 
 \paper {
   system-system-spacing =
@@ -359,7 +361,6 @@ Trumpet = \new Voice
   between-system-padding = #2
   bottom-margin = 5\mm
 
-  print-page-number = ##t
   print-first-page-number = ##t
   oddHeaderMarkup = \markup \fill-line { " " }
   evenHeaderMarkup = \markup \fill-line { " " }
