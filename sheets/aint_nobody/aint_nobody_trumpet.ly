@@ -181,7 +181,7 @@ Trumpet = \new Voice
   
   \inst "in"
   
-  \repeat volta 2 { 
+  \repeat volta 2 {
     b8 ^\markup { "Intro" } \ff -- b -- a -- b --  r e, \mf -. r e -. |
     r e -. r2. |
     R1*2
@@ -206,7 +206,6 @@ Trumpet = \new Voice
   e1 |
   \grace { d'8 \! dis } e1  \! \mf \< ~ |
   e1 \! \f |
-  \break
   
   \inst "A1"
   \set Score.skipBars = ##t R1*16 ^\markup { "Verse 1" }
@@ -231,7 +230,7 @@ Trumpet = \new Voice
   \break
   \inst "B2"
   a,1 ^\markup { "Pre-Chorus" } \fp \< ~ |
-  a1 |
+  a2. ~ a8 d ~ |
   d1 \! \fp \< ~ |
   d1 |
   e1 \p \< ~ |
@@ -331,23 +330,31 @@ Trumpet = \new Voice
   r2 r8 b -- b -- b -- |
   b -- a -- a -- r r2 |
   g4. -> a4. -> b4 -> ~ | \break
-   \inst "C3"
+  \inst "C4"
   b2 \bendAfter #-4 ^\markup { "Chorus - No Brass" } r2 |
   R1 * 15 | 
   \inst "G"
-  R1 * 16 ^\markup { "Coro - Pregón" }  | \break
+  R1 * 16 ^\markup { "Coro y Pregón" }  | \break
   \inst "H"
   R1 ^\markup { "Petas + Pregón" } |
   r8 b \mf ( e fis g fis e d ) |
   a' \f -- a -- a -- r8 r2 |
   R1 * 2 |
   r8 b, \mf ( e fis g fis e d ) |
+  a' \f -- a -- a -- e16 ( \< fis g8 -. ) fis16 ( g a8 -. ) g16 ( a |
+  b8 \ff -> \> g e a8 ) ~ a4 \bendAfter #-4 -> \f r4 | \break
+  R1 |
+  r8 b, \mf ( e fis g fis e d ) |
   a' \f -- a -- a -- r8 r2 |
+  R1 |
+  r8 b, \mf ( e fis g fis e ) a \< -- ~ |
+  a g fis b \f -- ~ b a16 g fis8 -. d -. |
+  e1 \sp \< -> |
+  b2. \f -> e4 -> \ff |
   
   \label #'lastPage
   \bar "|."  
 }
-
 
 \score {
   \compressMMRests \new Staff \with {

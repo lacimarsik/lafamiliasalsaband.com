@@ -4,11 +4,11 @@
 
 
 \header {
-  title = "Ain't Nobody"
+  title = "Via"
   instrument = "trombone"
-  composer = "by Alex Wilson feat. AQuilla Fearon"
-  arranger = "arr. Ladislav Maršík"
-  opus = "version 25.10.2023"
+  composer = "by Al De Lory"
+  arranger = "arr. Pavel Skalník & Ladislav Maršík"
+  opus = "version 15.11.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -166,198 +166,68 @@ repeatBracket = #(define-music-function
                   )
 
 Trombone = \new Voice
-\relative \relative c' {
+\relative c' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Trombone" }
+    \center-align { "Bone in C" }
   }
-  \set Staff.midiInstrument = "trombone"
+  \set Staff.midiInstrument = "Trombone"
   \set Staff.midiMaximumVolume = #1.0
-
-  \clef bass
-  \key e \minor
+  \key bes \major
   \time 4/4
-  \tempo "Medium Fast Salsa" 4 = 190
-   
-  R1 ^\markup { "Timbales Roll" }
-  
-  \inst "in"
-  
-  \repeat volta 2 { 
-    b8 \f -- b -- a -- b --  r e, -. r e -. |
-    r e -. r2. |
-    e4. -- d8 e4. -- fis8  |
-    g4. -- fis8 e4. -- b'8 |
-    c1 \sp \< ~ |
-    c2. r4 \f \! |
-    c4. -- b8 c4. -- d8  |
-  }
-    \alternative { 
-    {
-      e4. -- d8 c2 -- |
-    } 
-    {
-      e4. -- d8 c4. -- b8 |
-    }
-  }
-  \break
-  e,1 \p \< ~ |
-  e1 |
-  e1 \p \< ~ |
-  e1 |
-  e1 \! \p \< ~ |
-  e1 |
-  e1  \! \mf \< ~ |
-  e1 \! \f |
-  
-  \inst "A1"
-  \set Score.skipBars = ##t R1*16 ^\markup { "Verse 1" }
-  
-  \inst "B1"
-  \set Score.skipBars = ##t R1*8 ^\markup { "Pre-Chorus" }
-  
-  \break
-  \inst "A2" 
-  b'1 \p ^\markup { "Verse 2" }  ~ |
-  b1  |
-  b1 \< ~ |
-  b4.\mp -- fis4. -- g4 -- ~ \> |
-  g1 |
-  R1 * 3 \pp \! | \break
-  R1 * 2
-  d'1 \! \fp \< ||
-  b4.\! \mp -- fis4. -- c4 ~ \< |
-  c2 c4 -. c4 -. |
-  d4. -- d8 -. r e -. r e -. \mf \! |
-  R1 * 2
-  \break
-  \inst "B2"
-  a,1 ^\markup { "Pre-Chorus" } \fp \< ~ |
-  a2. ~ a8 d  \! \fp \< ~ |
-  d1 ~ |
-  d1 |
-  e1 \p \< ~ |
-  e1 |
-  R1*2 \! \mf
-  \break
-  \inst "C1"
-  e'4 \accent \ff r2. |
-  fis,,4. -- \mf g4. -- a4 -- ~ \fp \< |
-  a1 |
-  r2 r8 g'8 \ff -- g -- g -- |
-  e' -- e -- e -- r8 r2 |
-  r2 r8 b -. \mp r a ~ \< |
-  a2. r4 \! \mf |
-  g8 \f \! -. r r g -. r r e'4 \ff \accent |
-  R1*4
-  
-  \break
-  b,1 \p \< ~ |
-  b1 |
-  b1  \! \mf \< ~ |
-  b1 \! \f |
-  \break
+  \tempo "Medium Fast Instrumental Salsa" 4 = 190
+  \clef bass
 
-  \inst "A3"
-  R1 * 5 ^\markup { "Verse 3" } 
-  fis'4. \mp -- c8 -. r fis -. r  d -. |
-  R1 * 2 \break
-  R1 * 3
-  e4.\! \mp -- fis4. -- a4 ~ \< ||
-  a1 ~ |
-  a1 \mf \! |
-  R1 * 2 \break
+  
+  \inst "A"
+  
+R1*8 |
 
-  \inst "B3"
-  d,1 ^\markup { "Pre-Chorus" } \fp \< ~ |
-  d1 |
-  fis1 \! \fp \< ~ |
-  fis1 |
-  b,1 \p \< ~ |
-  b1 |
-  R1*2 \! \mf \break
-  
-  \inst "C2"
-  e4 \accent \ff r2. |
-  fis,4. -- \mf g4. -- a4 -- ~ \fp \< |
-  a1 |
-  r2 r8 b8 \ff -- b -- b -- |
-  e -- e -- e -- r8 r2 |
-  r2 r8 b' -. \mp r a ~ \< |
-  a2. r4 \! \mf |
-  b,8 \f \! -. r r b -. r r e4 |
-  R1 | \break
-  fis,4. -- \mf g4. -- a4 -- ~ \fp \< |
-  a1 |
-  r2 r8 b8 \ff -- b -- b -- |
-  e -- e -- e -- r8 r2 |
-  r2 r8 b' -. \mp r a ~ \< |
-  a2. r4 \! |
-  c,4. -- \mf b4. -- gis4 -- \> ~ |
-  gis1 ~ |
-  gis2 \p r2 | \break
-  
-  \inst "D/in"
-  \repeat volta 2 { 
-     d'8 \f -- d -- cis -- d --  r b -. r b -. |
-    r b -. r2. |
-    e4. -- d8 e4. -- fis8  |
-    g4. -- fis8 e4. -- d8 |
-    c2 \p \< ~ c8 c -- c -- c -> \f |
-    r8 c -. r2.  |
-    e4. -- d8 e4. -- fis8  |
-    g4. -- fis8 e4. -- fis8 |
-    d8 \f -- d -- cis -- d --  r b -. r b -. |
-    r b -. r2. |
-    R1*6 \break
-  }
-  
-  \inst "E"
-  r2 e4 \f -. e |
-  g4. -- d2 -- cis8 -- ~ |
-  cis4 \bendAfter #-4 r2. |
-  r8 b -- e -- e -- fis -- fis -- g4 -> ~ | \break
-  
-  \inst "C3"
-  g2 ^\markup { "Petas - as Chorus" } e4 -. \mf e -. |
-  e8 ( d b a' -. ) r a ( fis d -. ) |
-  r2 e4 -. e -. |
-  e8 ( d b a' -. ) r a ( fis d -. ) | \break
-  r2 e4 -. \mf e -. |
-  e8 ( d b a' -. ) r a ( fis d -. ) |
-  r2 e4 -. e -. |
-  e8 ( d b a' -. ) r a ( fis d -. ) |
-  r2 e4 -. e -. |
-  e8 ( d b a' -. ) r a ( fis d -. ) | \break
-  r2 e4 -. e -. |
-  e8 ( d b a' -. ) r a ( fis d -. ) |
-  r2 e4 -. e -. |
-  e8 ( d b a' -. ) r a ( fis d -. ) |
-  r2 e4 -. e -. |
-  e4. -- d4. -- e4 ~ -- | \break 
-  \inst "C4"
-  e2 ^\markup { "Chorus - No Brass" } r2 |
-  R1 * 15 | 
-  \inst "G"
-  R1 * 16 ^\markup { "Coro y Pregón" }  | \break
-  \inst "H"
-  r8 b \mf ~ ^\markup { "Petas + Pregón" } b8 b -. d ( e g e ~ ) |
-  e1 |
-  R1 * 2 |
-  r8 b ~ b8 b -. d ( e g e ~ ) |
-  e1 |
-  R1 * 2 | \break
-  r8 b ~ b8 b -. d ( e g e ~ ) |
-  e1 |
-  R1 * 2 |
-  r8 b ~ b8 b -. d ( e g e ~ ) |
-  e1 |
-  e1 \sp \< -> |
-  b2. \f -> e4 -> \ff |
-  
+\repeat volta 2 { r2 r4.g8~|g2.~g8g8~|g1~|g1}
+R1*16|
+es4 r2r8f8~| f8r8r2r8g8~| g8 r2.a8| r8g8r8f8r8es4r8|
+d4 r2r8es8~| es8r2.f8~| f8 r8r2r8g8| r8f8r8es8r8d4r8|
+c4 r2r8d8~| 8r2.es8~| es8 r2.f8| r8es8r8d8r8c4r8|      
+\repeat volta 2 { r2 r4.g'8~|g2.~g8g8~|g1~|g1}
+\inst "B"
+R1*16|
+es4 r2r8f8~| f8r8r2r8g8~| g8 r2.a8| r8g8r8f8r8es4r8|
+d4 r2r8es8~| es8r2.f8~| f8 r8r2r8g8| r8f8r8es8r8d4r8|
+c4 r2r8d8~| d8r2.es8~| es8 r8r4r2|r2 r4.g8~|g2.~g8g8~|g1
+\inst "C"
+R1*24
+\inst "D"
+\repeat volta 2 { r2 r4.g8~|g2.~g8g8~|g1~|g1}
+\key c \major
+\inst "E"
+\repeat volta 2 { r2 r4.a8~|a2.~a8a8~|a1~|a1}
+
+R1*7
+r8g8g8r8fis8g8r4| R1*7| g8r8fis8g8r8fis8r4|
+
+\transpose c d
+
+es4 r2r8f8~| f8r8r2r8g8~| g8 r2.a8| r8g8r8f8r8es4r8|
+d4 r2r8es8~| es8r2.f8~| f8 r8r2r8g8| r8f8r8es8r8d4r8|
+c4 r2r8d8~| 8r2.es8~| es8 r2.f8| r8es8r8d8r8c4r8|
+\inst "F"
+R1*6
+d'1|a4b4c4g8b8|r8a4r8r2|
+R1*7|
+r8g8r8fis8g8r8r4
+es4 r2r8f8~| f8r8r2r8g8~| g8 r2.a8| r8g8r8f8r8es4r8|
+d4 r2r8es8~| es8r2.f8~| f8 r8r2r8g8| r8f8r8es8r8d4r8|
+c4 r2r8d8~| d8r2.es8~| es8 r8r4r2|r2 r4.g8~|g2.~g8g8~|g1|
+\inst "G"
+R1*18|
+r2r8g8r8a8|R1*5|
+
+\inst "G"
+\repeat volta 3 { r2 r4.a8~|a2.~a8a8~|a1~|a1}
+r2 r4.a8~|a2.~a8a8~|a1~|r8c8r8c8r8b8r4|
+
   \label #'lastPage
-  \bar "|."  
+  \bar "|."
 }
-
 
 \score {
   \compressMMRests \new Staff \with {
@@ -372,14 +242,8 @@ Trombone = \new Voice
       \remove "Volta_engraver"
     }
   }
-} 
+}
 
-\score {
-  \unfoldRepeats {
-    \Trombone
-  }
-  \midi { } 
-} 
 
 \paper {
   system-system-spacing =
@@ -390,7 +254,6 @@ Trombone = \new Voice
   between-system-padding = #2
   bottom-margin = 5\mm
 
-  print-page-number = ##t
   print-first-page-number = ##t
   oddHeaderMarkup = \markup \fill-line { " " }
   evenHeaderMarkup = \markup \fill-line { " " }
@@ -413,6 +276,3 @@ Trombone = \new Voice
     }
   }
 }
-
-
-

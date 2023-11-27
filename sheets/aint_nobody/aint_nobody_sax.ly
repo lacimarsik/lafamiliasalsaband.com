@@ -166,8 +166,8 @@ repeatBracket = #(define-music-function
                   )
 
 Sax = \new Voice
-%\transpose c a'
-\transpose c d
+\transpose c a'
+%\transpose c d
 \relative c' {
   \set Staff.instrumentName = \markup {
     \center-align { "Sax in Bb" }
@@ -182,19 +182,18 @@ Sax = \new Voice
   R1 ^\markup { "Timbales Roll" }
   
   \inst "in"
-  
   \repeat volta 2 { 
-    d8 \f -- d -- cis -- d --  r b -. r b -. |
+    d,8 \f -- d -- cis -- d --  r b -. r b -. |
     r b -. r2. |
-    e4. -- d8 e4. -- fis8  |
+    e4. \mf -- d8 e4. -- fis8  |
     g4. -- fis8 e4. -- d8 |
-    c2 \p \< ~ c8 c -- c -- c -> \f |
-    r8 c -. r2.  |
-    e4. -- d8 e4. -- fis8  |
+    e1 \sp \< ~ |
+    e2. r4 \f \! |
+    e4. \mf -- d8 e4. -- fis8  |
   }
     \alternative { 
     {
-      g4. -- fis8 e ( a, b c ) |
+      g4. -- fis8 e ( a, \< b c \! ) |
     } 
     {
       g'4. -- fis8 e4. -- d8 |
@@ -209,7 +208,6 @@ Sax = \new Voice
   b1 |
   b1  \! \mf \< ~ |
   b1 \! \f |
-  \break
   
   \inst "A1"
   \set Score.skipBars = ##t R1*16 ^\markup { "Verse 1" }
@@ -219,39 +217,41 @@ Sax = \new Voice
   
   \break
   \inst "A2" 
-  R1 * 5 ^\markup { "Verse 2" } 
-  d4 \mp -. e8 c -- ~ c d b -. c -. |
-  R1 |
-  c8 -> c -. r c -. r c -. r b -. | \break
+  g'1 \p ^\markup { "Verse 2" }  ~ |
+  g1  |
+  g1 \< ~ |
+  g4.\mp -- fis4. -- e4 -- ~ \> |
+  e1 |
+  R1 * 3 \pp \! | \break
   R1 * 2
-  e1 \! \fp \< ||
-  e4.\! \mp -- fis4. -- a4 ~ \< ||
-  a1 ~ |
-  a1 \mf \! |
+  b'1 \! \fp \< ||
+  d,4.\! \mp -- e4. -- b'4 ~ \< |
+  b2 a4 -. a4 -. |
+  b4. -- b8 -. r c -. r c -. \mf \! |
   R1 * 2
   \break
   \inst "B2"
   d,1 ^\markup { "Pre-Chorus" } \fp \< ~ |
-  d1 |
-  fis1 \! \fp \< ~ |
+  d2. ~ d8 fis \! \fp \< ~ |
+  fis1 ~ |
   fis1 |
   b,1 \p \< ~ |
   b1 |
   R1*2 \! \mf
   \break
   \inst "C1"
-  e4 \accent \ff r2. |
+  g'4 \accent \ff r2. |
   fis,4. -- \mf g4. -- a4 -- ~ \fp \< |
   a1 |
   r2 r8 b8 \ff -- b -- b -- |
-  e -- e -- e -- r8 r2 |
-  r2 r8 b' -. \mp r a ~ \< |
+  g' -- g -- g -- r8 r2 |
+  r2 r8 b -. \mp r a ~ \< |
   a2. r4 \! \mf |
-  b,8 \f \! -. r r b -. r r e4 \ff \accent \bendAfter #-4 |
+  b,8 \f \! -. r r b -. r r g'4 \ff \accent |
   R1*4
   
   \break
-  b1 \p \< ~ |
+  b,1 \p \< ~ |
   b1 |
   b1  \! \mf \< ~ |
   b1 \! \f |
@@ -263,8 +263,8 @@ Sax = \new Voice
   R1 * 2 \break
   R1 * 3
   e4.\! \mp -- fis4. -- a4 ~ \< ||
-  a1 ~ |
-  a1 \mf \! |
+  a2 a4 -. a4 -. |
+  b4. -- b8 -. r c -. r c -. \mf \! |
   R1 * 2 \break
 
   \inst "B3"
@@ -277,15 +277,15 @@ Sax = \new Voice
   R1*2 \! \mf \break
   
   \inst "C2"
-  e4 \accent \ff r2. |
+   g'4 \accent \ff r2. |
   fis,4. -- \mf g4. -- a4 -- ~ \fp \< |
   a1 |
   r2 r8 b8 \ff -- b -- b -- |
-  e -- e -- e -- r8 r2 |
-  r2 r8 b' -. \mp r a ~ \< |
+  g' -- g -- g -- r8 r2 |
+  r2 r8 b -. \mp r a ~ \< |
   a2. r4 \! \mf |
-  b,8 \f \! -. r r b -. r r e4 |
-  R1 | \break
+  b,8 \f \! -. r r b -. r r g'4 \ff \accent | \break
+  R1 |
   fis,4. -- \mf g4. -- a4 -- ~ \fp \< |
   a1 |
   r2 r8 b8 \ff -- b -- b -- |
@@ -312,21 +312,52 @@ Sax = \new Voice
   }
   
   \inst "E"
-  r2 e4 \f -. e |
+  r2 e4 \f -. e -. |
   g4. -- d2 -- cis8 -- ~ |
   cis4 \bendAfter #-4 r2. |
   r8 b -- e -- e -- fis -- fis -- g4 -> ~ | \break
   
   \inst "C3"
-  b1 ^\markup { "Petas - as Chorus" } |
-  r2 r8 b \ff -- b -- b -- |
-  b -- a -- a -- r r2 |
-  r8 e -. r fis -. r a -- a -- a -- | \break
-  a -- b -- b -- r r2 |
-  r2 r8 b -- b -- b -- |
-  b -- a -- a -- r r2 |
-  r8 e -. r fis -. r a -- a -- a -- |
-  a -- b -- b -- r r2 |
+  g2 ^\markup { "Petas - as Chorus" } e4 -. \mf e -. |
+  e8 ( d b a' -. ) r a ( fis d -. ) |
+  r2 e4 -. e -. |
+  e8 ( d b a' -. ) r a ( fis d -. ) | \break
+  r2 e4 -. \mf e -. |
+  e8 ( d b a' -. ) r a ( fis d -. ) |
+  r2 e4 -. e -. |
+  e8 ( d b a' -. ) r a ( fis d -. ) |
+  r2 e4 -. e -. |
+  e8 ( d b a' -. ) r a ( fis d -. ) | \break
+  r2 e4 -. e -. |
+  e8 ( d b a' -. ) r a ( fis d -. ) |
+  r2 e4 -. e -. |
+  e8 ( d b a' -. ) r a ( fis d -. ) |
+  r2 e4 -. e -. |
+  e4. -- d4. -- e4 ~ -- | \break 
+   \inst "C4"
+  e2 ^\markup { "Chorus - No Brass" } r2 |
+  R1 * 15 | 
+  \inst "G"
+  R1 * 16 ^\markup { "Coro y Pregón" }  | \break
+  \inst "H"
+  R1 ^\markup { "Petas + Pregón" } |
+  r8 b \mf ( e fis g fis e d ) |
+  a' \f -- a -- a -- r8 r2 |
+  R1 * 2 |
+  r8 b, \mf ( e fis g fis e d ) |
+  a' \f -- a -- a -- e16 ( \< fis g8 -. ) fis16 ( g a8 -. ) g16 ( a |
+  b8 \ff -> \> g e a8 ) ~ a4 \bendAfter #-4 -> \f r4 | \break
+  R1 |
+  r8 b, \mf ( e fis g fis e d ) |
+  a' \f -- a -- a -- r8 r2 |
+  R1 |
+  r8 b, \mf ( e fis g fis e ) a \< -- ~ |
+  a g fis b \f -- ~ b a16 g fis8 -. d -. |
+  e1 \sp \< -> |
+  b2. \f -> e4 -> \ff |
+  
+  \label #'lastPage
+  \bar "|."  
   
   
   \label #'lastPage
