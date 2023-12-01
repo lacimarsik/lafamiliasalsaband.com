@@ -2,13 +2,12 @@
 
 % Sheet revision 2022_09
 
-
 \header {
   title = "Via"
   instrument = "sax"
-  composer = "by Al De Lory"
-  arranger = "arr. Pavel Skalník & Ladislav Maršík"
-  opus = "version 15.11.2023"
+  composer = "Al De Lory"
+  arranger = "arr. Pavel Skalník + Ladislav Maršík"
+  opus = "version 1.12.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -166,71 +165,120 @@ repeatBracket = #(define-music-function
                   )
 
 Sax = \new Voice
-\transpose c a'
-%\transpose c d
-\relative c' {
+%\transpose c a'
+\relative c'' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Sax in Bb" }
+    \center-align { "Sax in Eb" }
   }
-  \set Staff.midiInstrument = "alto sax"
-  \set Staff.midiMaximumVolume = #0.9
+  \set Staff.midiInstrument = "Trombone"
+  \set Staff.midiMaximumVolume = #1.0
 
-  \key bes \major
+  \key g \minor
   \time 4/4
-  \tempo "Medium Fast Instrumental Salsa" 4 = 190
+  \tempo "Medium Fast Instrumental Salsa" 4 = 180
 
-
-  
+  s1*0
+  ^\markup { "Piano intro" }
   \inst "in"
+  R1*8
   
-R1*8 ^\markup { "Piano intro 2va con bajo" } |
+  \repeat volta 2 { r2 ^\markup { "con bajo" } r4.g8 \fp \< ~|g2.~g8g8~|g1~|g1 \mf }
+  s1*0
+  ^\markup { "Verso 1" }
+  \inst "A1"
+  R1*16 \break
+  
+    s1*0
+  ^\markup { "Ritmo 1" }
+  \inst "B1"
+  g4  -. \mf r2r8a8 -. ~| a8 r8r2r8bes8 -. ~| bes8 r2.c8 -. | r8bes8 -. r8a8 -. r8g4 -- r8|
+  f4 -. r2r8g8 -. ~| g8 r2.a8 -. ~| a8 r2.bes8 -. | r8a8 -. r8g8 -. r8f4 -- r8|
+  es4 -. r2r8f8 -. ~| f8 r2.g8 -. ~| g8 r2.a8 -. | r8g8 -. r8f8 -. r8es4 -- r8| \break 
 
-\repeat volta 2 { r2 r4.g8~|g2.~g8g8~|g1~|g1}
-\inst "A"
-R1*16 ^\markup { "Verso 1" } |
-\inst "B"
-es4 ^\markup { "Ritmo" } r2r8f8~| f8r8r2r8g8~| g8 r2.a8| r8g8r8f8r8es4r8|
-d4 r2r8es8~| es8r2.f8~| f8 r8r2r8g8| r8f8r8es8r8d4r8|
-c4 r2r8d8~| 8r2.es8~| es8 r2.f8| r8es8r8d8r8c4r8|  
+   s1*0
+  ^\markup { "Bridge 1" }
+  \inst "C1"
+  \repeat volta 2 { r2 r4.g8 \mp \< ~|g2.~g8g8~|g1~|g1 \f }
 
-\inst "C1"
-\repeat volta 2 { r2 ^\markup { "Bridge" } r4.g'8~|g2.~g8g8~|g1~|g1}
-\inst "A"
-R1*16 ^\markup { "Verso 2" } | |
-\inst "B"
-es4 ^\markup { "Ritmo" } r2r8f8~| f8r8r2r8g8~| g8 r2.a8| r8g8r8f8r8es4r8|
-d4 r2r8es8~| es8r2.f8~| f8 r8r2r8g8| r8f8r8es8r8d4r8|
-c4 r2r8d8~| d8r2.es8~| es8 r8r4r2|r2 r4.g8~|g2.~g8g8~|g1
-\inst "C2"
-R1*24 ^\markup { "Bridge" }
-\repeat volta 2 { r2 r4.g8~|g2.~g8g8~|g1~|g1}
-\key c \major
-\inst "E"
-\repeat volta 2 { r2 r4.a8~|a2.~a8a8~|a1~|a1}
+  s1*0
+  ^\markup { "Verso 2" }
+  \inst "A2"
+  R1*16 
+  
+    s1*0
+  ^\markup { "Ritmo 2" }
+  \inst "B2"
+  g4 \mf -. r2r8a8 -. ~| a8 r8r2r8bes8 -. ~| bes8 r2.c8 -. | r8bes8 -. r8a8 -. r8g4 -. r8|
+  f4 -. r2r8g8 -. ~| g8 r2.a8 -. ~| a8 r2.bes8 -. | r8a8 -. r8g8 -. r8f4 -. r8|
+  es4 -. r2r8f8 -. ~| f8 r2.g8 -. ~| g8 r4. r2 | r2  ^\markup { "Buildup 1" } r4. f8 \mp ~|f1~|f1
+  s1*0 
+  ^\markup { "Chorus 1" }
+  \inst "D1"
+  R1*24 \break
+  s1*0 
+  ^\markup { "Bridge 2" }
+  \inst "C2"
+  \repeat volta 2 { r2 r4.g8 \mp \< ~|g1~|g1~|g1 \f }
+  s1*0 
+  ^\markup { "Modulation" }
+  \key a \minor
+  \inst "E"
+  \repeat volta 2 { r2 r4.a8~\mp \< |a1~|a1~|a1 \f }
+  
+    s1*0 
+  ^\markup { "Verso 3 (stop - piano solo)" }
+  \inst "A3"
+  R1*7
+  r8e8 -. \mp e8 -. r8d8 -. e8 -. r4| R1*7| e8 \mp -. r8d8 -. e8 -. r8d8 -. r4| \break
+  
+    s1*0
+  ^\markup { "Ritmo 3" }
+  \inst "B3"
+  a4 \mf -. r2r8b8 -. ~| b8r8r2r8c8 -. ~| c8 r2.d8 -. | r8c8 -. r8b8 -. r8a4 -- r8|
+  g4 -. r2r8a8 -. ~| a8r2.b8 -. ~| b8 r2.c8 -. | r8b8 -. r8a8 -. r8g4 -- r8|
+  f4 -. r2r8g8 -. ~| g8r2.a8 -. ~| a8 r4. r2 |
+  R1 | \break
+  s1*0 
+  ^\markup { "Verso 4 (attacca)" }
+  \inst "A3"
+  R1*5
+  d'1  \mp \< |a4 \mf -- b4 -- c4 -- e,8 -. b'8 --~  |b8 a8-- ~ a8 r8 r2|
+  R1*7|
+  r8e8 \mp -. r8d8 -. e4 -- r4 | \break
+  
+     s1*0
+  ^\markup { "Ritmo 4" }
+  \inst "B4"
+  a,4 \mf -. r2r8b8 -. ~| b8r8r2r8c8 -. ~| c8 r2.d8 -. | r8c8 -. r8b8 -. r8a4 -- r8|
+  g4 -. r2r8a8 -. ~| a8r2.b8 -. ~| b8 r2.c8 -. | r8b8 -. r8a8 -. r8g4 -- r8|
+  f4 -. r2r8g8 -. ~| g8r2.a8 -. ~| a8 r8 r4 r2| \break
+  
+  r2 ^\markup { "Buildup 2" }  r4.g8 \mp ~ |g1 ~|g1|
+  s1*0 
+  ^\markup { "Chorus 2" }
+  \inst "D2"
+  R1*12
+  R1 * 5
+  r2r8b8\mf -. r8c8 -.  |
+  R1*6| \break
+  
+  s1*0 
+  ^\markup { "Coda" }
+  \inst "E"
 
-R1*7
-r8g8g8r8fis8g8r4| R1*7| g8r8fis8g8r8fis8r4|
-
-\transpose c d
-
-es4 r2r8f8~| f8r8r2r8g8~| g8 r2.a8| r8g8r8f8r8es4r8|
-d4 r2r8es8~| es8r2.f8~| f8 r8r2r8g8| r8f8r8es8r8d4r8|
-c4 r2r8d8~| 8r2.es8~| es8 r2.f8| r8es8r8d8r8c4r8|
-\inst "F"
-R1*6
-d'1|a4b4c4g8b8|r8a4r8r2|
-R1*7|
-r8g8r8fis8g8r8r4
-es4 r2r8f8~| f8r8r2r8g8~| g8 r2.a8| r8g8r8f8r8es4r8|
-d4 r2r8es8~| es8r2.f8~| f8 r8r2r8g8| r8f8r8es8r8d4r8|
-c4 r2r8d8~| d8r2.es8~| es8 r8r4r2|r2 r4.g8~|g2.~g8g8~|g1|
-\inst "G"
-R1*18|
-r2r8g8r8a8|R1*5|
-
-\inst "G"
-\repeat volta 3 { r2 r4.a8~|a2.~a8a8~|a1~|a1}
-r2 r4.a8~|a2.~a8a8~|a1~|r8c8r8c8r8b8r4|
+  \repeat volta 4 {
+    
+    r2 r4.a8~ \mp \< |
+    
+    \alternative {
+      {
+    a1~|a1~|a1 \f
+      } 
+      {
+        a2. \< ~a8a8~|a1 |r8c8 \f -- r8c8 -- r8b8 --r4|
+      }
+    }
+  }
 
   \label #'lastPage
   \bar "|."
@@ -251,6 +299,13 @@ r2 r4.a8~|a2.~a8a8~|a1~|r8c8r8c8r8b8r4|
   }
 }
 
+\score {
+  \unfoldRepeats {
+    %\transpose a c
+    \Sax
+  }
+  \midi { } 
+}
 
 \paper {
   system-system-spacing =
@@ -261,6 +316,7 @@ r2 r4.a8~|a2.~a8a8~|a1~|r8c8r8c8r8b8r4|
   between-system-padding = #2
   bottom-margin = 5\mm
 
+  print-page-number = ##t
   print-first-page-number = ##t
   oddHeaderMarkup = \markup \fill-line { " " }
   evenHeaderMarkup = \markup \fill-line { " " }
