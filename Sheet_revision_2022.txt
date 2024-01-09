@@ -21,6 +21,10 @@ fluidsynth - run for Frescobaldi:
 
 fluidsynth -a coreaudio -m coremidi -i -s -p FluidSynth -R 0 -C 0 -c 2 -z 512 -r 48000  ~/Documents/Laci/Audio/FluidR3_GM/FluidR3_GM.sf2 &
 
+pdf merge:
+
+pdfunite baila_sax1.pdf baila_sax2.pdf baila_conmigo_sax.pdf
+
 Progress:
 
 Would I Lie
