@@ -197,7 +197,7 @@ Trombone = \new Voice \relative c' {
   c,4 ( \tenuto \mf g' -.  ) r4 e \accent \f ~ |
   e8 c -. r e -. r c ( b -. )  r | \break
   R1 |
-  r8 a' ( g e g a -. ) r4  |
+  r8 a ( g e g a -. ) r4  |
   r2 e4 \f \tenuto e -. |
   e4 \tenuto ( e8 g e4 -.  \tenuto ) r | 
   r4. f8 -. \accent \f r2 |

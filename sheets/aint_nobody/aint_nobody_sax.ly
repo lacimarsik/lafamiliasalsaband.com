@@ -294,7 +294,8 @@ Sax = \new Voice
   a2. r4 \! |
   c,4. -- \mf b4. -- gis4 -- \> ~ |
   gis1 ~ |
-  gis2 \p r2 | \break
+  gis2 \p r2 |
+  R1 * 2 \break
   
   \inst "D/in"
   \repeat volta 2 { 
@@ -313,7 +314,7 @@ Sax = \new Voice
   
   \inst "E"
   r2 e4 \f -. e -. |
-  g4. -- d2 -- cis8 -- ~ |
+  g4. -- d4. r8 -- cis8 -> ~ |
   cis4 \bendAfter #-4 r2. |
   r8 b -- e -- e -- fis -- fis -- g4 -> ~ | \break
   
@@ -340,21 +341,19 @@ Sax = \new Voice
   \inst "G"
   R1 * 16 ^\markup { "Coro y Pregón" }  | \break
   \inst "H"
-  R1 ^\markup { "Petas + Pregón" } |
+  r8 b \mf ~ ^\markup { "Petas + Pregón" } b8 b -. d ( e g e ~ ) |
+  e1 |
+  R1 * 3 |
   r8 b \mf ( e fis g fis e d ) |
-  a' \f -- a -- a -- r8 r2 |
-  R1 * 2 |
-  r8 b, \mf ( e fis g fis e d ) |
   a' \f -- a -- a -- e16 ( \< fis g8 -. ) fis16 ( g a8 -. ) g16 ( a |
   b8 \ff -> \> g e a8 ) ~ a4 \bendAfter #-4 -> \f r4 | \break
-  R1 |
-  r8 b, \mf ( e fis g fis e d ) |
-  a' \f -- a -- a -- r8 r2 |
-  R1 |
-  r8 b, \mf ( e fis g fis e ) a \< -- ~ |
+  r8 b, \mf ~ b8 b -. d ( e g e ~ ) |
+  e1 |
+  R1* 2  |
+  r8 b \mf ( e fis g fis e ) a \< -- ~ |
   a g fis b \f -- ~ b a16 g fis8 -. d -. |
   e1 \sp \< -> |
-  b2. \f -> e4 -> \ff |
+  c'2. \f -> b4 -> \ff |
   
   \label #'lastPage
   \bar "|."  

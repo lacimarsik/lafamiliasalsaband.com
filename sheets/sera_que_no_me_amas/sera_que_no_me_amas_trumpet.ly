@@ -165,7 +165,7 @@ repeatBracket = #(define-music-function
                   )
 
 Trumpet = \new Voice
-%\transpose c d
+\transpose c d
 \relative c'' {
   \set Staff.instrumentName = \markup {
     \center-align { "Tr. in Bb" }
@@ -201,7 +201,7 @@ Trumpet = \new Voice
 
   s1*0 ^\markup { "Salsa" }
   R1 |
-  r8 a' ( g e g a -. ) r4  |
+  r8 a ( g e g a -. ) r4  |
   \set Score.skipBars = ##t R1*2
   r4. f8 -. \accent \f r2 |
   r4. a8\tenuto \accent ~a8 \bendAfter #-4 r4. |

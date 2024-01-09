@@ -165,8 +165,8 @@ repeatBracket = #(define-music-function
                   )
 
 Sax = \new Voice
-%\transpose c a'
-\relative c'' {
+\transpose c a'
+\relative c' {
   \set Staff.instrumentName = \markup {
     \center-align { "Sax in Eb" }
   }

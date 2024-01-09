@@ -263,9 +263,9 @@ Trombone = \new Voice
   R1 * 2 \break
   R1 * 3
   e4.\! \mp -- fis4. -- a4 ~ \< ||
-  a1 ~ |
-  a1 \mf \! |
-  R1 * 2 \break
+  a2 c4 -. c -. |
+  d4. -- d8 -. r e -. r e -. \mf \! |
+  R1 * 2 \break 
 
   \inst "B3"
   d,1 ^\markup { "Pre-Chorus" } \fp \< ~ |
@@ -294,7 +294,8 @@ Trombone = \new Voice
   a2. r4 \! |
   c,4. -- \mf b4. -- gis4 -- \> ~ |
   gis1 ~ |
-  gis2 \p r2 | \break
+  gis2 \p r2 |
+  R1 * 2 \break
   
   \inst "D/in"
   \repeat volta 2 { 
@@ -313,7 +314,7 @@ Trombone = \new Voice
   
   \inst "E"
   r2 e4 \f -. e |
-  g4. -- d2 -- cis8 -- ~ |
+  g4. -- d4. -- r8 cis8 -> ~ |
   cis4 \bendAfter #-4 r2. |
   r8 b -- e -- e -- fis -- fis -- g4 -> ~ | \break
   
@@ -352,7 +353,7 @@ Trombone = \new Voice
   r8 b ~ b8 b -. d ( e g e ~ ) |
   e1 |
   e1 \sp \< -> |
-  b2. \f -> e4 -> \ff |
+  b2. \f -> e,4 -> \ff |
   
   \label #'lastPage
   \bar "|."  

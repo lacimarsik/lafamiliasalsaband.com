@@ -165,7 +165,7 @@ repeatBracket = #(define-music-function
                   )
 
 Trumpet = \new Voice
-%\transpose c d
+\transpose c d
 \relative c'' {
   \set Staff.instrumentName = \markup {
     \center-align { "Tr. in Bb" }
