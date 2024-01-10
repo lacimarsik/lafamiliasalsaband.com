@@ -240,6 +240,8 @@ Trombone = \new Voice
   R1*2 \! \mf
   \break
   \inst "C1"
+  s1*0
+  ^\markup { "Chorus 1" }
   e'4 \accent \ff r2. |
   fis,,4. -- \mf g4. -- a4 -- ~ \fp \< |
   a1 |
@@ -276,7 +278,8 @@ Trombone = \new Voice
   b1 |
   R1*2 \! \mf \break
   
-  \inst "C2"
+    \inst "C2"
+    s1*0 ^\markup { "Chorus 2" }
   e4 \accent \ff r2. |
   fis,4. -- \mf g4. -- a4 -- ~ \fp \< |
   a1 |

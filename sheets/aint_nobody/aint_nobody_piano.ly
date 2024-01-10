@@ -4,10 +4,10 @@
 
 \header {
   title = "Ain't Nobody"
-  instrument = "trumpet"
+  instrument = "piano"
   composer = "by Alex Wilson feat. AQuilla Fearon"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 7.11.2023"
+  opus = "version 1.12.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,228 +164,245 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trumpet = \new Voice
-\transpose c d
-\relative c'' {
-  \set Staff.instrumentName = \markup {
-    \center-align { "Tr. in Bb" }
+upper = \new Voice \relative c'' {
+  \set PianoStaff.instrumentName = \markup {
+    \center-align { "Piano" }
   }
-  \set Staff.midiInstrument = "trumpet"
-  \set Staff.midiMaximumVolume = #1.0
+  \set Staff.midiInstrument = "piano"
+  \set Staff.midiMaximumVolume = #0.7
 
+  \clef treble
   \key e \minor
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
-  
+   
   R1 ^\markup { "Timbales Roll" }
   
   \inst "in"
   
-  \repeat volta 2 {
-    b8 ^\markup { "Intro" } \ff -- b -- a -- b --  r e, \mf -. r e -. |
-    r e -. r2. |
-    R1*2
-    b'8 \ff -- b -- a -- b -- r e, \mf \< e e -. |
-    r e -. \f r2.  |
-    R1 |
+  \repeat volta 2 { 
+    \repeat percent 7 { \makePercent s1 }
   }
     \alternative { 
     {
-      r2 r8 fis \< g a |
+      \makePercent s1 |
     } 
     {
-      R1 |
+      \makePercent s1 |
     }
   }
   \break
-  e1 \p \< ~ |
-  e1 |
-  \grace { d'8 \! dis } e1 \mf \< ~ |
-  e1 |
-  e,1 \! \fp \< ~ |
-  e1 |
-  \grace { d'8 \! dis } e1  \! \mf \< ~ |
-  e1 \! \f |
+ R1*8
   
   \inst "A1"
-  \set Score.skipBars = ##t R1*16 ^\markup { "Verse 1" }
+  s1*0
+  ^\markup { "Verse 1" }
+  \set Score.skipBars = ##t R1*16 
   
   \inst "B1"
-  \set Score.skipBars = ##t R1*8 ^\markup { "Pre-Chorus" }
+  s1*0
+  ^\markup { "Pre-Chorus" }
+  \set Score.skipBars = ##t R1*8
   
   \break
-  \inst "A2" 
-  e,1 \p ^\markup { "Verse 2" }  ~ |
-  e1  |
-  e1 \< ~ |
-  e4.\mp --  d4. -- c4 -- ~ \> |
-  c1 |
-  R1 * 3 \pp \! | \break
-  R1 * 2
-  g'1 \! \fp \< ||
-  d4.\! \mp -- b4. -- e4 ~ \< |
-  e2 e4 -. e4 -. |
-  fis4. -- fis8 -. r g -. r g-. \mf \! |
-  R1 * 2
+    \inst "A2" 
+  s1*0
+  ^\markup { "Verse 2" }
+   R1*16
   \break
   \inst "B2"
-  a,1 ^\markup { "Pre-Chorus" } \fp \< ~ |
-  a2. ~ a8 d ~ |
-  d1 \! \fp \< ~ |
-  d1 |
-  e1 \p \< ~ |
-  e1 |
-  R1*2 \! \mf
+    s1*0
+  ^\markup { "Pre-Chorus" }
+  R1*8
   \break
   s1*0
-  ^\markup { "Chorus 1"}
+  ^\markup { "Chorus 1" }
   \inst "C1"
-  b'4 \accent \ff r2. |
-  \set Score.skipBars = ##t R1*2
-  r2 r8 e,8 \ff -- e -- e -- |
-  b' -- b -- b -- r8 r2 |
-  r2 r8 g -. \mp r fis ~ \< |
-  fis2. r4 \! \mf |
-  e8 \f \! -. r r e -. r r b'4 \ff \accent \bendAfter #-4 |
-  R1*4
-  
-  \break
-  e,1 \p \< ~ |
-  e1 |
-  \grace { d'8 \! dis } e1 \! \mf \< ~ |
-  e1 \f \! |
+    R1*16
   \break
 
   \inst "A3"
-  R1 * 5 ^\markup { "Verse 3" } 
-  d4. \mp -- fis,8 -. r d' -. r  b -. |
-  R1 * 2 \break
-  R1 * 3
-  d,4.\! \mp -- b4. -- e4 ~ \< ||
-  e2 e4 -. e -. |
-  fis4. -- fis8 -.  r g -. r g -. \mf \! |
-  R1 * 2 \break
+  s1*0 ^\markup { "Verse 3" } 
+    R1*16 \break 
 
   \inst "B3"
-  a,1 ^\markup { "Pre-Chorus" } \fp \< ~ |
-  a1 |
-  d1 \! \fp \< ~ |
-  d1 |
-  e1 \p \< ~ |
-  e1 |
-  R1*2 \! \mf \break
+  s1*0 ^\markup { "Pre-Chorus" }
+  R1*8 \break
   
   \inst "C2"
-  s1*0
-  ^\markup { "Chorus 2" }
-  b'4 \accent \ff r2. |
-  fis4. -- \mf g4. -- a4 -- ~ \fp \< |
-  a1 |
-  r2 \! \mf r8 e8 \ff -- e -- e -- |
-  b' -- b -- b -- r8 r2 |
-  r2 r8 g -. \mp r fis ~ \< |
-  fis2. r4 \! \mf |
-  e8 \f \! -. r r e -. r r b'4 \ff \accent \bendAfter #-4 | \break
-  R1 |
-  fis4. -- \mf g4. -- a4 -- ~ \fp \< |
-  a1 |
-  r2 \! \mf r8 e8 \ff -- e -- e -- |
-   b' -- b -- b -- r8 r2 |
-  r2 r8 b -. \f r a -- ~ |
-  a2. r4 \! |
-  e4. -- \mf d4. -- e4 -- \> ~ |
-  e1 ~ |
-  e2 \p r2 |
+    s1*0 ^\markup { "Chorus 2" }
+  
+  R1*16
+  gis1 ~ |
+  gis2 \p r2 |
   R1 * 2 \break
   
   \inst "D/in"
   \repeat volta 2 { 
-    b'8 ^\markup { "Intro + Singer" } \ff -- b -- a -- b --  r e, \mf -. r e -. |
-    r e -. r2. |
-    R1*2
-    b'8 \ff -- b -- a -- b -- r e, \mf \< e e -. |
-    r e -.\f r2.  |
-    R1*2 | \break
-    b'8 \ff -- b -- a -- b --  r e, \mf -. r e -. |
-    r e -. r2. |
-    R1*6 \break
+    R1*16 \break
   }
   
   \inst "E"
-  r2 b'4 \f -. b -. |
-  a4. -- a4. -- r8 -- a8 -> ~ |
-  a4 \bendAfter #-4 r2. |
-  r8 e \ff -- g -- g -- a -- a -- b4 -> ~ | \break
+  r2 e4 \f -. e |
+  g4. -- d4. -- r8 cis8 -> ~ |
+  cis4 r2. |
+  r8 b -- e -- e -- fis -- fis -- g4 -> ~ | \break
   
-  \inst "F"
-  b1 ^\markup { "Petas - as Chorus" } |
-  r2 r8 b \ff -- b -- b -- |
-  b -- a -- a -- r r2 |
-  r8 e -. r fis -. r fis -- a -- a -- | \break
-  a -- b -- b -- r r2 |
-  r2 r8 b -- b -- b -- |
-  b -- a -- a -- r r2 |
-  r8 e -. r fis -. r fis -- a -- a -- | \break
-  a -- b -- b -- r r2 |
-  r2 r8 b -- b -- b -- |
-  b -- a -- a -- r r2 |
-  r8 e -. r fis -. r fis -- a -- a -- | \break
-  a -- b -- b -- r r2 |
-  r2 r8 b -- b -- b -- |
-  b -- a -- a -- r r2 |
-  g4. -> a4. -> b4 -> ~ | \break
+  \inst "C3"
+  g2 ^\markup { "Petas - as Chorus" } r2 |
+  R1*15
   \inst "C4"
-  b2 \bendAfter #-4 ^\markup { "Chorus - No Brass" } r2 |
-  R1 * 15 | 
+  s1*0
+  ^\markup { "Chorus - No Brass" }
+  R1 * 16 | 
   \inst "G"
   R1 * 16 ^\markup { "Coro y Pregón" }  | \break
   \inst "H"
-  R1 ^\markup { "Petas + Pregón" } |
-  r8 b \mf ( e fis g fis e d ) |
-  a' \f -- a -- a -- r8 r2 |
-  R1 |
-  r8 b,, \mf ~ b8 b -. d ( e g e ~ ) |
-  e1 |
-  R1 |
-  r4. f'8 -> ~ f4 r |
-  R1 |
-  r8 b, \mf ( e fis g fis e d ) |
-  a' \f -- a -- a -- r8 r2 |
-  R1 |
-  r8 b,, \mf ~ b8 b -. d ( e g e ~ ) |
-  e1 |
-  e1 \sp \< -> |
-  b2. \f -> e4 -> \ff |
+  s1*0
+  ^\markup { "Petas + Pregón" }
+  R1*8
+  R1*6
+  e'1 |
+  b2. e,4 |
   
   \label #'lastPage
   \bar "|."  
 }
 
+lower = \new Voice \relative c {
+  \set PianoStaff.instrumentName = \markup {
+    \center-align { "Piano" }
+  }
+  \set Staff.midiInstrument = "piano"
+  \set Staff.midiMaximumVolume = #0.7
+
+  \clef bass
+  \key e \minor
+  \time 4/4
+  \tempo "Medium Fast Salsa" 4 = 190
+   
+  R1 ^\markup { "Timbales Roll" }
+  
+  \inst "in"
+  
+  \repeat volta 2 { 
+    \repeat percent 7 { \makePercent s1 }
+  }
+    \alternative { 
+    {
+      \makePercent s1 |
+    } 
+    {
+      \makePercent s1 |
+    }
+  }
+  \break
+ R1*8
+  
+  \inst "A1"
+  s1*0
+  ^\markup { "Verse 1" }
+  \set Score.skipBars = ##t R1*16 
+  
+  \inst "B1"
+  s1*0
+  ^\markup { "Pre-Chorus" }
+  \set Score.skipBars = ##t R1*8
+  
+  \break
+    \inst "A2" 
+  s1*0
+  ^\markup { "Verse 2" }
+   R1*16
+  \break
+  \inst "B2"
+    s1*0
+  ^\markup { "Pre-Chorus" }
+  R1*8
+  \break
+  s1*0
+  ^\markup { "Chorus 1" }
+  \inst "C1"
+    R1*16
+  \break
+
+  \inst "A3"
+  s1*0 ^\markup { "Verse 3" } 
+    R1*16 \break 
+
+  \inst "B3"
+  s1*0 ^\markup { "Pre-Chorus" }
+  R1*8 \break
+  
+  \inst "C2"
+    s1*0 ^\markup { "Chorus 2" }
+  
+  R1*16
+  gis1 ~ |
+  gis2 \p r2 |
+  R1 * 2 \break
+  
+  \inst "D/in"
+  \repeat volta 2 { 
+    R1*16 \break
+  }
+  
+  \inst "E"
+  r2 e4 \f -. e |
+  g4. -- d4. -- r8 cis8 -> ~ |
+  cis4 r2. |
+  r8 b -- e -- e -- fis -- fis -- g4 -> ~ | \break
+  
+  \inst "C3"
+  g2 ^\markup { "Petas - as Chorus" } r2 |
+  R1*15
+  \inst "C4"
+  s1*0
+  ^\markup { "Chorus - No Brass" }
+  R1 * 16 | 
+  \inst "G"
+  R1 * 16 ^\markup { "Coro y Pregón" }  | \break
+  \inst "H"
+  s1*0
+  ^\markup { "Petas + Pregón" }
+  R1*8
+  R1*6
+  e'1 |
+  b2. e,4 |
+  
+  \label #'lastPage
+  \bar "|."  
+}
+
+Chords = \chords {
+  R1*16
+
+}
+
 \score {
-  \compressMMRests \new Staff \with {
-    \consists "Volta_engraver"
-  }
-  {
-    \Trumpet
-  }
+  <<
+    \Chords
+    \compressMMRests \new PianoStaff \with {
+      \consists "Volta_engraver"
+    }
+    {
+      <<
+        \new Staff = "upper" \upper
+        \new Staff = "lower" \lower
+      >>
+    }
+  >>
   \layout {
     \context {
       \Score
       \remove "Volta_engraver"
     }
   }
-} 
-
-\score {
-  \unfoldRepeats {
-    \transpose c bes,  \Trumpet 
-  }
-  \midi { } 
-} 
+}
 
 \paper {
   system-system-spacing =
-  #'((basic-distance . 14)
+  #'((basic-distance . 15)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))

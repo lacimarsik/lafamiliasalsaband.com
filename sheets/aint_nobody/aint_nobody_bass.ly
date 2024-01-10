@@ -4,10 +4,10 @@
 
 \header {
   title = "Ain't Nobody"
-  instrument = "trumpet"
+  instrument = "bass"
   composer = "by Alex Wilson feat. AQuilla Fearon"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 4.10.2023"
+  opus = "version 1.12.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -174,20 +174,96 @@ Bass = \new Voice \relative c {
   \clef bass
   \key e \minor
   \time 4/4
-  \tempo "Medium Fast Salsa" 4 = 180
+  \tempo "Medium Fast Salsa" 4 = 190
+   
+  R1 ^\markup { "Timbales Roll" }
   
-  R1  ^\markup { "Timbal Roll" }
- 
-   \repeat volta 2 {
-    R1 |
-    R1 |
-    R1 |
-    R1 |
-    R1 |
-    R1 |
-    R1 |
-    R1 |
+  \inst "in"
+  
+  \repeat volta 2 { 
+    \repeat percent 7 { \makePercent s1 }
   }
+    \alternative { 
+    {
+      \makePercent s1 |
+    } 
+    {
+      \makePercent s1 |
+    }
+  }
+  \break
+ R1*8
+  
+  \inst "A1"
+  s1*0
+  ^\markup { "Verse 1" }
+  \set Score.skipBars = ##t R1*16 
+  
+  \inst "B1"
+  s1*0
+  ^\markup { "Pre-Chorus" }
+  \set Score.skipBars = ##t R1*8
+  
+  \break
+    \inst "A2" 
+  s1*0
+  ^\markup { "Verse 2" }
+   R1*16
+  \break
+  \inst "B2"
+    s1*0
+  ^\markup { "Pre-Chorus" }
+  R1*8
+  \break
+  s1*0
+  ^\markup { "Chorus 1" }
+  \inst "C1"
+    R1*16
+  \break
+
+  \inst "A3"
+  s1*0 ^\markup { "Verse 3" } 
+    R1*16 \break 
+
+  \inst "B3"
+  s1*0 ^\markup { "Pre-Chorus" }
+  R1*8 \break
+  
+  \inst "C2"
+    s1*0 ^\markup { "Chorus 2" }
+  
+  R1*16
+  gis1 ~ |
+  gis2 \p r2 |
+  R1 * 2 \break
+  
+  \inst "D/in"
+  \repeat volta 2 { 
+    R1*16 \break
+  }
+  
+  \inst "E"
+  r2 e4 \f -. e |
+  g4. -- d4. -- r8 cis8 -> ~ |
+  cis4 r2. |
+  r8 b -- e -- e -- fis -- fis -- g4 -> ~ | \break
+  
+  \inst "C3"
+  g2 ^\markup { "Petas - as Chorus" } r2 |
+  R1*15
+  \inst "C4"
+  s1*0
+  ^\markup { "Chorus - No Brass" }
+  R1 * 16 | 
+  \inst "G"
+  R1 * 16 ^\markup { "Coro y Pregón" }  | \break
+  \inst "H"
+  s1*0
+  ^\markup { "Petas + Pregón" }
+  R1*8
+  R1*6
+  e'1 |
+  b2. e,4 |
   
   \label #'lastPage
   \bar "|."  
@@ -196,14 +272,14 @@ Bass = \new Voice \relative c {
 Chords = \chords {
   R1 |
   \repeat volta 2 {
-    e1 |
-    e1 |
-    e1 |
-    e1 |
-    c1:m |
-    c1:m | 
-    c1:m |
-    c1:m | 
+    e1:m |
+    e1:m |
+    e1:m |
+    e1:m |
+    c1 |
+    c1 | 
+    c1 |
+    c1 | 
   }
 
   

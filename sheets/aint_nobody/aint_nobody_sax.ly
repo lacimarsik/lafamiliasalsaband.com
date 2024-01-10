@@ -239,6 +239,8 @@ Sax = \new Voice
   b1 |
   R1*2 \! \mf
   \break
+  s1 * 0
+  ^\markup { "Chorus 1" }
   \inst "C1"
   g'4 \accent \ff r2. |
   fis,4. -- \mf g4. -- a4 -- ~ \fp \< |
@@ -276,7 +278,8 @@ Sax = \new Voice
   b1 |
   R1*2 \! \mf \break
   
-  \inst "C2"
+    \inst "C2"
+    s1*0 ^\markup { "Chorus 2" }
    g'4 \accent \ff r2. |
   fis,4. -- \mf g4. -- a4 -- ~ \fp \< |
   a1 |
