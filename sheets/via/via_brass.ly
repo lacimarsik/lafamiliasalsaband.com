@@ -301,7 +301,7 @@ Trumpet = \new Voice
 
   s1*0 
   ^\markup { "Verso 4 (attacca)" }
-  \inst "A3"
+  \inst "A4"
   R1*5
   d'1 \mp \< | 
   a4 \mf -- b4 -- c4 -- e,8 -. b'8 -- ~ |
@@ -435,7 +435,7 @@ Sax = \new Voice
   R1 | \break
   s1*0 
   ^\markup { "Verso 4 (attacca)" }
-  \inst "A3"
+  \inst "A4"
   R1*5
   d'1  \mp \< |a4 \mf -- b4 -- c4 -- e,8 -. b'8 --~  |b8 a8-- ~ a8 r8 r2|
   R1*7|
@@ -555,7 +555,7 @@ f4 -. r2r8g8 -. ~| g8r2.a8 -. ~| a8 r4. r2 |
   R1 | \break
   s1*0 
   ^\markup { "Verso 4 (attacca)" }
-  \inst "A3"
+  \inst "A4"
 R1*5
 d'1 \mp \< |a4 \f -- b4 -- c4 -- e,8 -. b'8 -- ~| b8 a8 -- ~ a8 r8 r2|
 R1*7|

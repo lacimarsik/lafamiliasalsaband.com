@@ -295,7 +295,7 @@ Trumpet = \new Voice
 
   s1*0 
   ^\markup { "Verso 4 (attacca)" }
-  \inst "A3"
+  \inst "A4"
   R1*5
   d'1 \mp \< | 
   a4 \mf -- b4 -- c4 -- e,8 -. b'8 -- ~ |
