@@ -174,7 +174,7 @@ Trumpet = \new Voice
 \transpose c d
 \relative c'' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Tr. in Bb" }
+    \center-align { "Tr. in C" }
   }
   \set Staff.midiInstrument = "trumpet"
   \set Staff.midiMaximumVolume = #1.0
@@ -363,7 +363,7 @@ Sax = \new Voice
 \transpose c a'
 \relative c' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Sax in Eb" }
+    \center-align { "A. Sax in C" }
   }
   \set Staff.midiInstrument = "Trombone"
   \set Staff.midiMaximumVolume = #1.0

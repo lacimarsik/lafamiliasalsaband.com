@@ -1,16 +1,15 @@
-\version "2.22.2"
+\version "2.24.0"
 
 % Sheet revision 2022_09
 
 \header {
-  title = "Would I Lie"
+  title = "Via"
   instrument = "conga"
-  composer = "by Cubaneros"
-  arranger = "arr. Ladislav Maršík"
-  opus = "version 7.9.2022"
+  composer = "Al De Lory"
+  arranger = "arr. Pavel Skalník + Ladislav Maršík"
+  opus = "version 1.12.2023"
   copyright = "© La Familia Salsa Band"
 }
-
 
 inst =
 #(define-music-function
@@ -172,134 +171,109 @@ Congas = \new DrumVoice \drummode {
   }
 
   \time 4/4
-  \tempo "Fast Salsa" 4 = 210
+  \tempo "Medium Fast Instrumental Salsa" 4 = 180
+
+  s1*0
+  ^\markup { "Piano intro" }
+  \inst "in"
+  R1*8
+
+s1*0 ^\markup { "con bajo" }
+\repeat volta 2 {  \repeat percent 4 { \makePercent s1 } }
+  s1*0
+  ^\markup { "Verso 1" }
+  \inst "A1"
+  R1*16 \break
   
-  R1*14 ^\markup { "A Capella" }    
+      s1*0
+  ^\markup { "Ritmo 1" }
+  \inst "B1"
+\repeat percent 4 { \makePercent s1 }
+\repeat percent 4 { \makePercent s1 }
+\repeat percent 4 { \makePercent s1 } \break
+
+   s1*0
+  ^\markup { "Bridge 1" }
+  \inst "C1"
+\repeat volta 2 { s1*0  \repeat percent 4 { \makePercent s1 } }
+  s1*0
+  ^\markup { "Verso 2" }
+  \inst "A2"
+  R1*16 
   
-  \tuplet 3/2 { cgh4 cgh cgh } \tuplet 3/2 { cgh cgh cgh } | 
-  cgh r8 cgh8 cgh4 r |
-  \break
-  s1*0
-  ^\markup { \bold { \fontsize #2 "8x" } }
-  ^\markup { "Chorus (tumbao 3/2)" }
-  \inst "A"
-  \repeat volta 8 {
-    \makePercent s1*2 
-  }
-  s1*0
-  ^\markup { \bold { \fontsize #2 "8x" } }
-  ^\markup { "Verse 1 (tumbao + maracas)" }
-  \inst "B"
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  
-  s1*0
-  ^\markup { \bold { \fontsize #2 "4x" } }
-  ^\markup { "(tumbao + martillo + cascara 2-3)" }
-  \repeat volta 4 {
-    \makePercent s1*2
-  }
-  \break
-  s1*0
-  ^\markup { \bold { \fontsize #2 "8x" } }
-  ^\markup { "Chorus (tumbao 3/2)" }
-  \inst "C"
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  
-  s1*0
-  ^\markup { \bold { \fontsize #2 "8x" } }
-  ^\markup { "Verse 2 (tumbao + maracas)" }
-  \inst "D"
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  
-  s1*0
-  ^\markup { \bold { \fontsize #2 "4x" } }
-  ^\markup { "Swing!" }
+      s1*0
+  ^\markup { "Ritmo 2" }
+  \inst "B2"
+\repeat percent 4 { \makePercent s1 }
+\repeat percent 4 { \makePercent s1 }
+\repeat percent 4 { \makePercent s1 }
+
+s1*0
+^\markup { "Buildup" }
+\repeat percent 3 { \makePercent s1 }
+ s1*0 
+  ^\markup { "Chorus 1" }
+  \inst "D1"
+  R1*24 \break
+   s1*0
+  ^\markup { "Bridge 2" }
+  \inst "C1"
+\repeat volta 2 { s1*0  \repeat percent 4 { \makePercent s1 } }
+   s1*0
+  ^\markup { "Modulation" }
+
   \inst "E"
-  \repeat volta 4 {
-    \makePercent s1*2
-  }
-  \break
+\repeat volta 2 { s1*0  \repeat percent 4 { \makePercent s1 } }
+
+  
+    s1*0
+  ^\markup { "Verso 3" }
+  \inst "A3"
+  R1*16 
   s1*0
-  ^\markup { \bold { \fontsize #2 "8x" } }
-  ^\markup { "Chorus (tumbao 3/2)" }
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  
-  s1*0
-  ^\markup { \bold { \fontsize #2 "8x" } }
-  ^\markup { "Trombone solo (tumbao 3/2)" }
-  \inst "F"
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  
-  \break
-  s1*0
-  ^\markup { \bold { \fontsize #2 "6x" } }
-  ^\markup { "Would I lie to you (conga tumbao slaps + guiro)" }
-  \repeat volta 6 {
-    bol8 bolm ssh r r bolm cgho cgho |
-    bolm bolm ssh r r bolm cgho cgho |
-  }
-  
-  ssh -> r r2. |
-  \set Score.skipBars = ##t R1*3
-  
-  \break
-  s1*0
-  ^\markup { \bold { \fontsize #2 "4x" } }
-  ^\markup { "Te digo" }
-  \inst "G"
-  \repeat volta 4 {
-    cglo8 r cglo r cglo r cglo r |
-    cglo r cglo r cglo r cglo r |
-  }
-  cgho cgho cglo r cgho cgho cglo r |
-  \tuplet 3/2 { cgho4 cgho cgho } cgho8 cglo r4 |
-  
-  \break
-  
-  s1*0
-  ^\markup { \bold { \fontsize #2 "8x" } }
-  ^\markup { "Chorus (tumbao 3/2)" }
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  
-  \break
-  s1*0
-  ^\markup { \bold { \fontsize #2 "8x" } }
-  ^\markup { "Montuno - Petas (tumbao 3/2)" } 
-  \inst "H"
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  \break
-  s1*0
-  ^\markup { \bold { \fontsize #2 "16x" } }
-  ^\markup { "Coro Pregón (tumbao 3/2)" }
-  \inst "I"
-  \repeat volta 16 {
-    \makePercent s1*2
-  }
-  
-  \break
-  s1*0
-  ^\markup { \bold { \fontsize #2 "4x" } }
-  ^\markup { "Fade out (tumbao 3/2)" }
-  \repeat volta 4 {
-    \makePercent s1*2
-  }
-  
-  R1*8 ^\markup { "A Capella" } 
-  
+  ^\markup { "Ritmo 3" }
+  \inst "B3"
+\repeat percent 4 { \makePercent s1 }
+\repeat percent 4 { \makePercent s1 }
+\repeat percent 4 { \makePercent s1 }
+  R1 | \break
+  s1*0 
+  ^\markup { "Verso 4 (attacca)" }
+  \inst "A4"
+    R1*16 
+
+     s1*0
+  ^\markup { "Ritmo 4" }
+  \inst "B4"
+\repeat percent 4 { \makePercent s1 }
+\repeat percent 4 { \makePercent s1 }
+\repeat percent 4 { \makePercent s1 }
+s1*0
+^\markup { "Buildup 2" }
+\repeat percent 3 { \makePercent s1 }
+s1*0 
+  ^\markup { "Chorus 2" }
+  \inst "D2"
+  R1*24
+  s1*0 
+  ^\markup { "Coda" }
+  \inst "E"
+\repeat volta 4 {
+\makePercent s1 |
+                  \alternative { 
+                   {
+                      \makePercent s1 |
+                  \makePercent s1 |
+                 \makePercent s1 |
+                   }
+                   {
+                     \makePercent s1 |
+                     \makePercent s1 |
+                     r8cgh8 \f -- r8cgh8 -- r8cgh8 -- r4|
+                   }
+                  }
+}
+
   \label #'lastPage
   \bar "|."
 }

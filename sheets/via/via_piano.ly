@@ -1,16 +1,15 @@
-\version "2.22.2"
+\version "2.24.0"
 
 % Sheet revision 2022_09
 
 \header {
-  title = "Would I Lie"
-  instrument = "conga"
+  title = "Via"
+  instrument = "piano"
   composer = "by Cubaneros"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 7.9.2022"
+  opus = "version 1.12.2023"
   copyright = "© La Familia Salsa Band"
 }
-
 
 inst =
 #(define-music-function
@@ -165,156 +164,257 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Congas = \new DrumVoice \drummode {
-  
-  \set DrumStaff.instrumentName = \markup {
-    \center-align { "Conga" }
+upper = \new Voice \relative c'' {
+  \set PianoStaff.instrumentName = \markup {
+    \center-align { "Piano" }
   }
+  \set Staff.midiInstrument = "piano"
+  \set Staff.midiMaximumVolume = #0.7
 
+\clef treble
+  \key g \minor
   \time 4/4
-  \tempo "Fast Salsa" 4 = 210
+  \tempo "Medium Fast Instrumental Salsa" 4 = 180
+
+  s1*0
+  ^\markup { "Piano intro" }
+  \inst "in"
+  R1*8
+
+s1*0 ^\markup { "con bajo" }
+\repeat volta 2 {  \repeat percent 4 { \makePercent s1 } }
+  s1*0
+  ^\markup { "Verso 1" }
+  \inst "A1"
+  R1*16 \break
   
-  R1*14 ^\markup { "A Capella" }    
+      s1*0
+  ^\markup { "Ritmo 1" }
+  \inst "B1"
+g4 \mf -. r2r8a8 -. ~| a8r8r2r8bes8 -. ~| bes8 r2.c8 -. | r8bes8 -. r8a8 -. r8g4 -- r8|
+f4 -. r2r8g8 -. ~| g8r2.a8 -. ~| a8 r2.bes8 -. | r8a8 -. r8g8 -. r8f4 -- r8|
+es4 -. r2r8f8 -. ~| f8r2.g8 -. ~| g8 r2.a8 -. | r8g8 -. r8f8 -. r8es4 -- r8| \break
+
+   s1*0
+  ^\markup { "Bridge 1" }
+  \inst "C1"
+\repeat volta 2 { s1*0  \repeat percent 4 { \makePercent s1 } }
+  s1*0
+  ^\markup { "Verso 2" }
+  \inst "A2"
+  R1*16 
   
-  \tuplet 3/2 { cgh4 cgh cgh } \tuplet 3/2 { cgh cgh cgh } | 
-  cgh r8 cgh8 cgh4 r |
-  \break
-  s1*0
-  ^\markup { \bold { \fontsize #2 "8x" } }
-  ^\markup { "Chorus (tumbao 3/2)" }
-  \inst "A"
-  \repeat volta 8 {
-    \makePercent s1*2 
-  }
-  s1*0
-  ^\markup { \bold { \fontsize #2 "8x" } }
-  ^\markup { "Verse 1 (tumbao + maracas)" }
-  \inst "B"
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  
-  s1*0
-  ^\markup { \bold { \fontsize #2 "4x" } }
-  ^\markup { "(tumbao + martillo + cascara 2-3)" }
-  \repeat volta 4 {
-    \makePercent s1*2
-  }
-  \break
-  s1*0
-  ^\markup { \bold { \fontsize #2 "8x" } }
-  ^\markup { "Chorus (tumbao 3/2)" }
-  \inst "C"
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  
-  s1*0
-  ^\markup { \bold { \fontsize #2 "8x" } }
-  ^\markup { "Verse 2 (tumbao + maracas)" }
-  \inst "D"
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  
-  s1*0
-  ^\markup { \bold { \fontsize #2 "4x" } }
-  ^\markup { "Swing!" }
+      s1*0
+  ^\markup { "Ritmo 2" }
+  \inst "B2"
+g4 \mf -. r2r8a8 -. ~| a8r8r2r8bes8 -. ~| bes8 r2.c8 -. | r8bes8 -. r8a8 -. r8g4 -- r8|
+f4 -. r2r8g8 -. ~| g8r2.a8 -. ~| a8 r2.bes8 -. | r8a8 -. r8g8 -. r8f4 -- r8|
+es4 -. r2r8f8 -. ~| f8r2.g8 -. ~| g8 r8r4r2|
+
+s1*0
+^\markup { "Buildup" }
+\repeat percent 3 { \makePercent s1 }
+ s1*0 
+  ^\markup { "Chorus 1" }
+  \inst "D1"
+  R1*24 \break
+   s1*0
+  ^\markup { "Bridge 2" }
+  \inst "C1"
+\repeat volta 2 { s1*0  \repeat percent 4 { \makePercent s1 } }
+   s1*0
+  ^\markup { "Modulation" }
+  \key a \minor
   \inst "E"
-  \repeat volta 4 {
-    \makePercent s1*2
-  }
-  \break
+\repeat volta 2 { s1*0  \repeat percent 4 { \makePercent s1 } }
+
+  
+    s1*0
+  ^\markup { "Verso 3" }
+  \inst "A3"
+  R1*16 
   s1*0
-  ^\markup { \bold { \fontsize #2 "8x" } }
-  ^\markup { "Chorus (tumbao 3/2)" }
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  
-  s1*0
-  ^\markup { \bold { \fontsize #2 "8x" } }
-  ^\markup { "Trombone solo (tumbao 3/2)" }
-  \inst "F"
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  
-  \break
-  s1*0
-  ^\markup { \bold { \fontsize #2 "6x" } }
-  ^\markup { "Would I lie to you (conga tumbao slaps + guiro)" }
-  \repeat volta 6 {
-    bol8 bolm ssh r r bolm cgho cgho |
-    bolm bolm ssh r r bolm cgho cgho |
-  }
-  
-  ssh -> r r2. |
-  \set Score.skipBars = ##t R1*3
-  
-  \break
-  s1*0
-  ^\markup { \bold { \fontsize #2 "4x" } }
-  ^\markup { "Te digo" }
-  \inst "G"
-  \repeat volta 4 {
-    cglo8 r cglo r cglo r cglo r |
-    cglo r cglo r cglo r cglo r |
-  }
-  cgho cgho cglo r cgho cgho cglo r |
-  \tuplet 3/2 { cgho4 cgho cgho } cgho8 cglo r4 |
-  
-  \break
-  
-  s1*0
-  ^\markup { \bold { \fontsize #2 "8x" } }
-  ^\markup { "Chorus (tumbao 3/2)" }
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  
-  \break
-  s1*0
-  ^\markup { \bold { \fontsize #2 "8x" } }
-  ^\markup { "Montuno - Petas (tumbao 3/2)" } 
-  \inst "H"
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  \break
-  s1*0
-  ^\markup { \bold { \fontsize #2 "16x" } }
-  ^\markup { "Coro Pregón (tumbao 3/2)" }
-  \inst "I"
-  \repeat volta 16 {
-    \makePercent s1*2
-  }
-  
-  \break
-  s1*0
-  ^\markup { \bold { \fontsize #2 "4x" } }
-  ^\markup { "Fade out (tumbao 3/2)" }
-  \repeat volta 4 {
-    \makePercent s1*2
-  }
-  
-  R1*8 ^\markup { "A Capella" } 
-  
+  ^\markup { "Ritmo 3" }
+  \inst "B3"
+a4 \mf r2r8b8 -. ~| b8r8r2r8c8 -. ~| c8 r2.d8 -. | r8c8 -. r8b8 -. r8a4 -- r8|
+g4 -. r2r8a8 -. ~| a8r2.b8 -. ~| b8 r2.c8 -. | r8b8 -. r8a8 -. r8g4 -- r8|
+f4 -. r2r8g8 -. ~| g8r2.a8 -. ~| a8 r4. r2 |
+  R1 | \break
+  s1*0 
+  ^\markup { "Verso 4 (attacca)" }
+  \inst "A4"
+    R1*16 
+
+     s1*0
+  ^\markup { "Ritmo 4" }
+  \inst "B4"
+a4 \mf -. r2r8b8 -. ~| b8r8r2r8c8 -. ~| c8 r2.d8 -. | r8c8 -. r8b8 -. r8a4 -- r8|
+g4 -. r2r8a8 -. ~| a8r2.b8 -. ~| b8 r2.c8 -. | r8b8 -. r8a8 -. r8g4 -- r8|
+f4 -. r2r8g8 -. ~| g8r2.a8 -. ~| a8 r8 r4 r2|
+s1*0
+^\markup { "Buildup 2" }
+\repeat percent 3 { \makePercent s1 }
+s1*0 
+  ^\markup { "Chorus 2" }
+  \inst "D2"
+  R1*24
+  s1*0 
+  ^\markup { "Coda" }
+  \inst "E"
+\repeat volta 4 {
+\makePercent s1 |
+                  \alternative { 
+                   {
+                      \makePercent s1 |
+                  \makePercent s1 |
+                 \makePercent s1 |
+                   }
+                   {
+                     \makePercent s1 |
+                     \makePercent s1 |
+                     r8c8 \f -- r8c8 -- r8b8 -- r4|
+                   }
+                  }
+}
+
   \label #'lastPage
   \bar "|."
 }
 
+lower = \new Voice \relative c {
+  \set PianoStaff.instrumentName = \markup {
+    \center-align { "Piano" }
+  }
+  \set Staff.midiInstrument = "piano"
+  \set Staff.midiMaximumVolume = #0.7
+
+\clef bass
+  \key g \minor
+  \time 4/4
+  \tempo "Medium Fast Instrumental Salsa" 4 = 180
+
+  s1*0
+  ^\markup { "Piano intro" }
+  \inst "in"
+  R1*8
+
+s1*0 ^\markup { "con bajo" }
+\repeat volta 2 {  \repeat percent 4 { \makePercent s1 } }
+  s1*0
+  ^\markup { "Verso 1" }
+  \inst "A1"
+  R1*16 \break
+  
+      s1*0
+  ^\markup { "Ritmo 1" }
+  \inst "B1"
+g4 \mf -. r2r8a8 -. ~| a8r8r2r8bes8 -. ~| bes8 r2.c8 -. | r8bes8 -. r8a8 -. r8g4 -- r8|
+f4 -. r2r8g8 -. ~| g8r2.a8 -. ~| a8 r2.bes8 -. | r8a8 -. r8g8 -. r8f4 -- r8|
+es4 -. r2r8f8 -. ~| f8r2.g8 -. ~| g8 r2.a8 -. | r8g8 -. r8f8 -. r8es4 -- r8| \break
+
+   s1*0
+  ^\markup { "Bridge 1" }
+  \inst "C1"
+\repeat volta 2 { s1*0  \repeat percent 4 { \makePercent s1 } }
+  s1*0
+  ^\markup { "Verso 2" }
+  \inst "A2"
+  R1*16 
+  
+      s1*0
+  ^\markup { "Ritmo 2" }
+  \inst "B2"
+g4 \mf -. r2r8a8 -. ~| a8r8r2r8bes8 -. ~| bes8 r2.c8 -. | r8bes8 -. r8a8 -. r8g4 -- r8|
+f4 -. r2r8g8 -. ~| g8r2.a8 -. ~| a8 r2.bes8 -. | r8a8 -. r8g8 -. r8f4 -- r8|
+es4 -. r2r8f8 -. ~| f8r2.g8 -. ~| g8 r8r4r2|
+
+s1*0
+^\markup { "Buildup" }
+\repeat percent 3 { \makePercent s1 }
+ s1*0 
+  ^\markup { "Chorus 1" }
+  \inst "D1"
+  R1*24 \break
+   s1*0
+  ^\markup { "Bridge 2" }
+  \inst "C1"
+\repeat volta 2 { s1*0  \repeat percent 4 { \makePercent s1 } }
+   s1*0
+  ^\markup { "Modulation" }
+  \key a \minor
+  \inst "E"
+\repeat volta 2 { s1*0  \repeat percent 4 { \makePercent s1 } }
+
+  
+    s1*0
+  ^\markup { "Verso 3" }
+  \inst "A3"
+  R1*16 
+  s1*0
+  ^\markup { "Ritmo 3" }
+  \inst "B3"
+a4 \mf r2r8b8 -. ~| b8r8r2r8c8 -. ~| c8 r2.d8 -. | r8c8 -. r8b8 -. r8a4 -- r8|
+g4 -. r2r8a8 -. ~| a8r2.b8 -. ~| b8 r2.c8 -. | r8b8 -. r8a8 -. r8g4 -- r8|
+f4 -. r2r8g8 -. ~| g8r2.a8 -. ~| a8 r4. r2 |
+  R1 | \break
+  s1*0 
+  ^\markup { "Verso 4 (attacca)" }
+  \inst "A4"
+    R1*16 
+
+     s1*0
+  ^\markup { "Ritmo 4" }
+  \inst "B4"
+a4 \mf -. r2r8b8 -. ~| b8r8r2r8c8 -. ~| c8 r2.d8 -. | r8c8 -. r8b8 -. r8a4 -- r8|
+g4 -. r2r8a8 -. ~| a8r2.b8 -. ~| b8 r2.c8 -. | r8b8 -. r8a8 -. r8g4 -- r8|
+f4 -. r2r8g8 -. ~| g8r2.a8 -. ~| a8 r8 r4 r2|
+s1*0
+^\markup { "Buildup 2" }
+\repeat percent 3 { \makePercent s1 }
+s1*0 
+  ^\markup { "Chorus 2" }
+  \inst "D2"
+  R1*24
+  s1*0 
+  ^\markup { "Coda" }
+  \inst "E"
+\repeat volta 4 {
+\makePercent s1 |
+                  \alternative { 
+                   {
+                      \makePercent s1 |
+                  \makePercent s1 |
+                 \makePercent s1 |
+                   }
+                   {
+                     \makePercent s1 |
+                     \makePercent s1 |
+                     r8c8 \f -- r8c8 -- r8b8 -- r4|
+                   }
+                  }
+}
+
+  \label #'lastPage
+  \bar "|."
+}
+
+Chords = \chords {
+  R1*16
+
+}
+
 \score {
-  \compressMMRests \new StaffGroup <<
-    \new DrumStaff \with {
-      drumStyleTable = #congas-style
-      \override StaffSymbol.line-count = #2
-      \override BarLine.bar-extent = #'(-1 . 1)
+  <<
+    \Chords
+    \compressMMRests \new PianoStaff \with {
       \consists "Volta_engraver"
     }
-    <<
-      \Congas
-    >>
+    {
+      <<
+        \new Staff = "upper" \upper
+        \new Staff = "lower" \lower
+      >>
+    }
   >>
   \layout {
     \context {
@@ -326,7 +426,7 @@ Congas = \new DrumVoice \drummode {
 
 \paper {
   system-system-spacing =
-  #'((basic-distance . 14)
+  #'((basic-distance . 15)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))

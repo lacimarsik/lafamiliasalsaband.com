@@ -164,8 +164,7 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trombone = \new Voice
-\transpose c c
+Bass = \new Voice
 \relative c {
   \set Staff.instrumentName = \markup {
     \center-align { "Bass" }
@@ -288,7 +287,7 @@ s1*0
     \consists "Volta_engraver"
   }
   {
-    \Trombone
+    \Bass
   }
   \layout {
     \context {
@@ -299,7 +298,7 @@ s1*0
 }
 \score {
   \unfoldRepeats {
-    \Trombone
+    \Bass
   }
   \midi { } 
 }
