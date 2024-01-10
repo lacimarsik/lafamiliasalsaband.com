@@ -4,7 +4,7 @@
 
 \header {
   title = "Ain't Nobody"
-  instrument = "bass"
+  instrument = "timbales"
   composer = "by Alex Wilson feat. AQuilla Fearon"
   arranger = "arr. Ladislav Maršík"
   opus = "version 1.12.2023"
@@ -164,15 +164,11 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Bass = \new Voice \relative c {
+Timbales = \new DrumVoice \drummode {
   \set Staff.instrumentName = \markup {
-    \center-align { "Bass" }
+    \center-align { "Timbales" }
   }
-  \set Staff.midiInstrument = "acoustic bass"
-  \set Staff.midiMaximumVolume = #1.5
-
-  \clef bass
-  \key e \minor
+  
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
    
@@ -233,8 +229,8 @@ Bass = \new Voice \relative c {
     s1*0 ^\markup { "Chorus 2" }
   
   R1*16
-  gis1 ~ |
-  gis2 \p r2 |
+  cgh1 ~ |
+   cgh2 \p r2 |
   R1 * 2 \break
   
   \inst "D/in"
@@ -243,13 +239,13 @@ Bass = \new Voice \relative c {
   }
   
   \inst "E"
-  r2 e4 \f -. e |
-  g4. -- d4. -- r8 cis8 -> ~ |
-  cis4 r2. |
-  r8 b -- e -- e -- fis -- fis -- g4 -> ~ | \break
+  r2  cgh4 -.  cgh |
+   cgh4. --  cgh4. -- r8  cgh8 -> ~ |
+   cgh4 r2. |
+  r8  cgh --  cgh --  cgh --  cgh --  cgh --  cgh4 -> ~ | \break
   
   \inst "C3"
-  g2 ^\markup { "Petas - as Chorus" } r2 |
+   cgh2 ^\markup { "Petas - as Chorus" } r2 |
   R1*15
   \inst "C4"
   s1*0
@@ -262,38 +258,24 @@ Bass = \new Voice \relative c {
   ^\markup { "Petas + Pregón" }
   R1*8
   R1*6
-  e'1 |
-  b2. e,4 |
+   cgh1 |
+   cgh2.  cgh4 |
   
   \label #'lastPage
   \bar "|."  
 }
 
-Chords = \chords {
-  R1 |
-  \repeat volta 2 {
-    e1:m |
-    e1:m |
-    e1:m |
-    e1:m |
-    c1 |
-    c1 | 
-    c1 |
-    c1 | 
-  }
-
-  
-}
-
 \score {
-  <<
-    \Chords
-    \compressMMRests \new Staff \with {
+  \compressMMRests \new StaffGroup <<
+    \new DrumStaff \with {
+      drumStyleTable = #timbales-style
+      \override StaffSymbol.line-count = #2
+      \override BarLine.bar-extent = #'(-1 . 1)
       \consists "Volta_engraver"
     }
-    {
-      \Bass
-    }
+    <<
+      \Timbales
+    >>
   >>
   \layout {
     \context {
@@ -305,7 +287,7 @@ Chords = \chords {
 
 \paper {
   system-system-spacing =
-  #'((basic-distance . 15)
+  #'((basic-distance . 14)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))
