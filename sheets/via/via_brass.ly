@@ -8,7 +8,7 @@
 % - use simple page counter, only: \fromproperty #'page:page-number-string
 
 \header {
-  title = "Via"
+  title = "24. Via"
   instrument = "brass"
   composer = "Al De Lory"
   arranger = "arr. Pavel Skalník + Ladislav Maršík"

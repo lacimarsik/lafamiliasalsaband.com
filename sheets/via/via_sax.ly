@@ -3,7 +3,7 @@
 % Sheet revision 2022_09
 
 \header {
-  title = "Via"
+  title = "24. Via"
   instrument = "sax"
   composer = "Al De Lory"
   arranger = "arr. Pavel Skalník + Ladislav Maršík"
@@ -170,7 +170,7 @@ Sax = \new Voice
   \set Staff.instrumentName = \markup {
     \center-align { "Sax in Eb" }
   }
-  \set Staff.midiInstrument = "Trombone"
+  \set Staff.midiInstrument = "alto sax"
   \set Staff.midiMaximumVolume = #1.0
 
   \key g \minor
