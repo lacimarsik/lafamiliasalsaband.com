@@ -3,8 +3,8 @@
 % Sheet revision 2022_09
 
 \header {
-  title = "Ain't Nobody"
-  instrument = "timbales"
+  title = "23. Ain't Nobody"
+  instrument = "piano"
   composer = "by Alex Wilson feat. AQuilla Fearon"
   arranger = "arr. Ladislav Maršík"
   opus = "version 1.12.2023"
@@ -164,11 +164,15 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Timbales = \new DrumVoice \drummode {
-  \set Staff.instrumentName = \markup {
-    \center-align { "Timbales" }
+upper = \new Voice \relative c'' {
+  \set PianoStaff.instrumentName = \markup {
+    \center-align { "Piano" }
   }
-  
+  \set Staff.midiInstrument = "piano"
+  \set Staff.midiMaximumVolume = #0.7
+
+  \clef treble
+  \key e \minor
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
    
@@ -229,8 +233,8 @@ Timbales = \new DrumVoice \drummode {
     s1*0 ^\markup { "Chorus 2" }
   
   R1*16
-  cgh1 ~ |
-   cgh2 \p r2 |
+  gis1 ~ |
+  gis2 \p r2 |
   R1 * 2 \break
   
   \inst "D/in"
@@ -239,13 +243,13 @@ Timbales = \new DrumVoice \drummode {
   }
   
   \inst "E"
-  r2  cgh4 -.  cgh |
-   cgh4. --  cgh4. -- r8  cgh8 -> ~ |
-   cgh4 r2. |
-  r8  cgh --  cgh --  cgh --  cgh --  cgh --  cgh4 -> ~ | \break
+  r2 e4 \f -. e |
+  g4. -- d4. -- r8 cis8 -> ~ |
+  cis4 r2. |
+  r8 b -- e -- e -- fis -- fis -- g4 -> ~ | \break
   
   \inst "C3"
-   cgh2 ^\markup { "Petas - as Chorus" } r2 |
+  g2 ^\markup { "Petas - as Chorus" } r2 |
   R1*15
   \inst "C4"
   s1*0
@@ -258,24 +262,135 @@ Timbales = \new DrumVoice \drummode {
   ^\markup { "Petas + Pregón" }
   R1*8
   R1*6
-   cgh1 |
-   cgh2.  cgh4 |
+  e'1 |
+  b2. e,4 |
   
   \label #'lastPage
   \bar "|."  
 }
 
+lower = \new Voice \relative c {
+  \set PianoStaff.instrumentName = \markup {
+    \center-align { "Piano" }
+  }
+  \set Staff.midiInstrument = "piano"
+  \set Staff.midiMaximumVolume = #0.7
+
+  \clef bass
+  \key e \minor
+  \time 4/4
+  \tempo "Medium Fast Salsa" 4 = 190
+   
+  R1 ^\markup { "Timbales Roll" }
+  
+  \inst "in"
+  
+  \repeat volta 2 { 
+    \repeat percent 7 { \makePercent s1 }
+  }
+    \alternative { 
+    {
+      \makePercent s1 |
+    } 
+    {
+      \makePercent s1 |
+    }
+  }
+  \break
+ R1*8
+  
+  \inst "A1"
+  s1*0
+  ^\markup { "Verse 1" }
+  \set Score.skipBars = ##t R1*16 
+  
+  \inst "B1"
+  s1*0
+  ^\markup { "Pre-Chorus" }
+  \set Score.skipBars = ##t R1*8
+  
+  \break
+    \inst "A2" 
+  s1*0
+  ^\markup { "Verse 2" }
+   R1*16
+  \break
+  \inst "B2"
+    s1*0
+  ^\markup { "Pre-Chorus" }
+  R1*8
+  \break
+  s1*0
+  ^\markup { "Chorus 1" }
+  \inst "C1"
+    R1*16
+  \break
+
+  \inst "A3"
+  s1*0 ^\markup { "Verse 3" } 
+    R1*16 \break 
+
+  \inst "B3"
+  s1*0 ^\markup { "Pre-Chorus" }
+  R1*8 \break
+  
+  \inst "C2"
+    s1*0 ^\markup { "Chorus 2" }
+  
+  R1*16
+  gis1 ~ |
+  gis2 \p r2 |
+  R1 * 2 \break
+  
+  \inst "D/in"
+  \repeat volta 2 { 
+    R1*16 \break
+  }
+  
+  \inst "E"
+  r2 e4 \f -. e |
+  g4. -- d4. -- r8 cis8 -> ~ |
+  cis4 r2. |
+  r8 b -- e -- e -- fis -- fis -- g4 -> ~ | \break
+  
+  \inst "C3"
+  g2 ^\markup { "Petas - as Chorus" } r2 |
+  R1*15
+  \inst "C4"
+  s1*0
+  ^\markup { "Chorus - No Brass" }
+  R1 * 16 | 
+  \inst "G"
+  R1 * 16 ^\markup { "Coro y Pregón" }  | \break
+  \inst "H"
+  s1*0
+  ^\markup { "Petas + Pregón" }
+  R1*8
+  R1*6
+  e'1 |
+  b2. e,4 |
+  
+  \label #'lastPage
+  \bar "|."  
+}
+
+Chords = \chords {
+  R1*16
+
+}
+
 \score {
-  \compressMMRests \new StaffGroup <<
-    \new DrumStaff \with {
-      drumStyleTable = #timbales-style
-      \override StaffSymbol.line-count = #2
-      \override BarLine.bar-extent = #'(-1 . 1)
+  <<
+    \Chords
+    \compressMMRests \new PianoStaff \with {
       \consists "Volta_engraver"
     }
-    <<
-      \Timbales
-    >>
+    {
+      <<
+        \new Staff = "upper" \upper
+        \new Staff = "lower" \lower
+      >>
+    }
   >>
   \layout {
     \context {
@@ -287,7 +402,7 @@ Timbales = \new DrumVoice \drummode {
 
 \paper {
   system-system-spacing =
-  #'((basic-distance . 14)
+  #'((basic-distance . 15)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))

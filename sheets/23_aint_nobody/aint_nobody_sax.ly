@@ -2,12 +2,13 @@
 
 % Sheet revision 2022_09
 
+
 \header {
-  title = "Ain't Nobody"
-  instrument = "piano"
+  title = "23. Ain't Nobody"
+  instrument = "sax"
   composer = "by Alex Wilson feat. AQuilla Fearon"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 1.12.2023"
+  opus = "version 1.11.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,234 +165,217 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-upper = \new Voice \relative c'' {
-  \set PianoStaff.instrumentName = \markup {
-    \center-align { "Piano" }
+Sax = \new Voice
+\transpose c a'
+%\transpose c d
+\relative c' {
+  \set Staff.instrumentName = \markup {
+    \center-align { "Sax in Bb" }
   }
-  \set Staff.midiInstrument = "piano"
-  \set Staff.midiMaximumVolume = #0.7
+  \set Staff.midiInstrument = "alto sax"
+  \set Staff.midiMaximumVolume = #0.9
 
-  \clef treble
   \key e \minor
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
-   
+
   R1 ^\markup { "Timbales Roll" }
   
   \inst "in"
-  
   \repeat volta 2 { 
-    \repeat percent 7 { \makePercent s1 }
+    d,8 \f -- d -- cis -- d --  r b -. r b -. |
+    r b -. r2. |
+    e4. \mf -- d8 e4. -- fis8  |
+    g4. -- fis8 e4. -- d8 |
+    e1 \sp \< ~ |
+    e2. r4 \f \! |
+    e4. \mf -- d8 e4. -- fis8  |
   }
     \alternative { 
     {
-      \makePercent s1 |
+      g4. -- fis8 e ( a, \< b c \! ) |
     } 
     {
-      \makePercent s1 |
+      g'4. -- fis8 e4. -- d8 |
     }
   }
   \break
- R1*8
+  b1 \p \< ~ |
+  b1 |
+  b1 \p \< ~ |
+  b1 |
+  b1 \! \p \< ~ |
+  b1 |
+  b1  \! \mf \< ~ |
+  b1 \! \f |
   
   \inst "A1"
-  s1*0
-  ^\markup { "Verse 1" }
-  \set Score.skipBars = ##t R1*16 
+  \set Score.skipBars = ##t R1*16 ^\markup { "Verse 1" }
   
   \inst "B1"
-  s1*0
-  ^\markup { "Pre-Chorus" }
-  \set Score.skipBars = ##t R1*8
+  \set Score.skipBars = ##t R1*8 ^\markup { "Pre-Chorus" }
   
   \break
-    \inst "A2" 
-  s1*0
-  ^\markup { "Verse 2" }
-   R1*16
+  \inst "A2" 
+  g'1 \p ^\markup { "Verse 2" }  ~ |
+  g1  |
+  g1 \< ~ |
+  g4.\mp -- fis4. -- e4 -- ~ \> |
+  e1 |
+  R1 * 3 \pp \! | \break
+  R1 * 2
+  b'1 \! \fp \< ||
+  d,4.\! \mp -- e4. -- b'4 ~ \< |
+  b2 a4 -. a4 -. |
+  b4. -- b8 -. r c -. r c -. \mf \! |
+  R1 * 2
   \break
   \inst "B2"
-    s1*0
-  ^\markup { "Pre-Chorus" }
-  R1*8
+  d,1 ^\markup { "Pre-Chorus" } \fp \< ~ |
+  d2. ~ d8 fis \! \fp \< ~ |
+  fis1 ~ |
+  fis1 |
+  b,1 \p \< ~ |
+  b1 |
+  R1*2 \! \mf
   \break
-  s1*0
+  s1 * 0
   ^\markup { "Chorus 1" }
   \inst "C1"
-    R1*16
+  g'4 \accent \ff r2. |
+  fis,4. -- \mf g4. -- a4 -- ~ \fp \< |
+  a1 |
+  r2 r8 b8 \ff -- b -- b -- |
+  g' -- g -- g -- r8 r2 |
+  r2 r8 b -. \mp r a ~ \< |
+  a2. r4 \! \mf |
+  b,8 \f \! -. r r b -. r r g'4 \ff \accent |
+  R1*4
+  
+  \break
+  b,1 \p \< ~ |
+  b1 |
+  b1  \! \mf \< ~ |
+  b1 \! \f |
   \break
 
   \inst "A3"
-  s1*0 ^\markup { "Verse 3" } 
-    R1*16 \break 
+  R1 * 5 ^\markup { "Verse 3" } 
+  fis'4. \mp -- c8 -. r fis -. r  d -. |
+  R1 * 2 \break
+  R1 * 3
+  e4.\! \mp -- fis4. -- a4 ~ \< ||
+  a2 a4 -. a4 -. |
+  b4. -- b8 -. r c -. r c -. \mf \! |
+  R1 * 2 \break
 
   \inst "B3"
-  s1*0 ^\markup { "Pre-Chorus" }
-  R1*8 \break
+  d,1 ^\markup { "Pre-Chorus" } \fp \< ~ |
+  d1 |
+  fis1 \! \fp \< ~ |
+  fis1 |
+  b,1 \p \< ~ |
+  b1 |
+  R1*2 \! \mf \break
   
-  \inst "C2"
+    \inst "C2"
     s1*0 ^\markup { "Chorus 2" }
-  
-  R1*16
+   g'4 \accent \ff r2. |
+  fis,4. -- \mf g4. -- a4 -- ~ \fp \< |
+  a1 |
+  r2 r8 b8 \ff -- b -- b -- |
+  g' -- g -- g -- r8 r2 |
+  r2 r8 b -. \mp r a ~ \< |
+  a2. r4 \! \mf |
+  b,8 \f \! -. r r b -. r r g'4 \ff \accent | \break
+  R1 |
+  fis,4. -- \mf g4. -- a4 -- ~ \fp \< |
+  a1 |
+  r2 r8 b8 \ff -- b -- b -- |
+  e -- e -- e -- r8 r2 |
+  r2 r8 b' -. \mp r a ~ \< |
+  a2. r4 \! |
+  c,4. -- \mf b4. -- gis4 -- \> ~ |
   gis1 ~ |
   gis2 \p r2 |
   R1 * 2 \break
   
   \inst "D/in"
   \repeat volta 2 { 
-    R1*16 \break
+     d'8 \f -- d -- cis -- d --  r b -. r b -. |
+    r b -. r2. |
+    e4. -- d8 e4. -- fis8  |
+    g4. -- fis8 e4. -- d8 |
+    c2 \p \< ~ c8 c -- c -- c -> \f |
+    r8 c -. r2.  |
+    e4. -- d8 e4. -- fis8  |
+    g4. -- fis8 e4. -- fis8 |
+    d8 \f -- d -- cis -- d --  r b -. r b -. |
+    r b -. r2. |
+    R1*6 \break
   }
   
   \inst "E"
-  r2 e4 \f -. e |
-  g4. -- d4. -- r8 cis8 -> ~ |
-  cis4 r2. |
+  r2 e4 \f -. e -. |
+  g4. -- d4. r8 -- cis8 -> ~ |
+  cis4 \bendAfter #-4 r2. |
   r8 b -- e -- e -- fis -- fis -- g4 -> ~ | \break
   
   \inst "C3"
-  g2 ^\markup { "Petas - as Chorus" } r2 |
-  R1*15
-  \inst "C4"
-  s1*0
-  ^\markup { "Chorus - No Brass" }
-  R1 * 16 | 
+  g2 ^\markup { "Petas - as Chorus" } e4 -. \mf e -. |
+  e8 ( d b a' -. ) r a ( fis d -. ) |
+  r2 e4 -. e -. |
+  e8 ( d b a' -. ) r a ( fis d -. ) | \break
+  r2 e4 -. \mf e -. |
+  e8 ( d b a' -. ) r a ( fis d -. ) |
+  r2 e4 -. e -. |
+  e8 ( d b a' -. ) r a ( fis d -. ) |
+  r2 e4 -. e -. |
+  e8 ( d b a' -. ) r a ( fis d -. ) | \break
+  r2 e4 -. e -. |
+  e8 ( d b a' -. ) r a ( fis d -. ) |
+  r2 e4 -. e -. |
+  e8 ( d b a' -. ) r a ( fis d -. ) |
+  r2 e4 -. e -. |
+  e4. -- d4. -- e4 ~ -- | \break 
+   \inst "C4"
+  e2 ^\markup { "Chorus - No Brass" } r2 |
+  R1 * 15 | 
   \inst "G"
   R1 * 16 ^\markup { "Coro y Pregón" }  | \break
   \inst "H"
-  s1*0
-  ^\markup { "Petas + Pregón" }
-  R1*8
-  R1*6
-  e'1 |
-  b2. e,4 |
+  r8 b \mf ~ ^\markup { "Petas + Pregón" } b8 b -. d ( e g e ~ ) |
+  e1 |
+  R1 * 3 |
+  r8 b \mf ( e fis g fis e d ) |
+  a' \f -- a -- a -- e16 ( \< fis g8 -. ) fis16 ( g a8 -. ) g16 ( a |
+  b8 \ff -> \> g e a8 ) ~ a4 \bendAfter #-4 -> \f r4 | \break
+  r8 b, \mf ~ b8 b -. d ( e g e ~ ) |
+  e1 |
+  R1* 2  |
+  r8 b \mf ( e fis g fis e ) a \< -- ~ |
+  a g fis b \f -- ~ b a16 g fis8 -. d -. |
+  e1 \sp \< -> |
+  c'2. \f -> b4 -> \ff |
   
   \label #'lastPage
   \bar "|."  
-}
-
-lower = \new Voice \relative c {
-  \set PianoStaff.instrumentName = \markup {
-    \center-align { "Piano" }
-  }
-  \set Staff.midiInstrument = "piano"
-  \set Staff.midiMaximumVolume = #0.7
-
-  \clef bass
-  \key e \minor
-  \time 4/4
-  \tempo "Medium Fast Salsa" 4 = 190
-   
-  R1 ^\markup { "Timbales Roll" }
   
-  \inst "in"
-  
-  \repeat volta 2 { 
-    \repeat percent 7 { \makePercent s1 }
-  }
-    \alternative { 
-    {
-      \makePercent s1 |
-    } 
-    {
-      \makePercent s1 |
-    }
-  }
-  \break
- R1*8
-  
-  \inst "A1"
-  s1*0
-  ^\markup { "Verse 1" }
-  \set Score.skipBars = ##t R1*16 
-  
-  \inst "B1"
-  s1*0
-  ^\markup { "Pre-Chorus" }
-  \set Score.skipBars = ##t R1*8
-  
-  \break
-    \inst "A2" 
-  s1*0
-  ^\markup { "Verse 2" }
-   R1*16
-  \break
-  \inst "B2"
-    s1*0
-  ^\markup { "Pre-Chorus" }
-  R1*8
-  \break
-  s1*0
-  ^\markup { "Chorus 1" }
-  \inst "C1"
-    R1*16
-  \break
-
-  \inst "A3"
-  s1*0 ^\markup { "Verse 3" } 
-    R1*16 \break 
-
-  \inst "B3"
-  s1*0 ^\markup { "Pre-Chorus" }
-  R1*8 \break
-  
-  \inst "C2"
-    s1*0 ^\markup { "Chorus 2" }
-  
-  R1*16
-  gis1 ~ |
-  gis2 \p r2 |
-  R1 * 2 \break
-  
-  \inst "D/in"
-  \repeat volta 2 { 
-    R1*16 \break
-  }
-  
-  \inst "E"
-  r2 e4 \f -. e |
-  g4. -- d4. -- r8 cis8 -> ~ |
-  cis4 r2. |
-  r8 b -- e -- e -- fis -- fis -- g4 -> ~ | \break
-  
-  \inst "C3"
-  g2 ^\markup { "Petas - as Chorus" } r2 |
-  R1*15
-  \inst "C4"
-  s1*0
-  ^\markup { "Chorus - No Brass" }
-  R1 * 16 | 
-  \inst "G"
-  R1 * 16 ^\markup { "Coro y Pregón" }  | \break
-  \inst "H"
-  s1*0
-  ^\markup { "Petas + Pregón" }
-  R1*8
-  R1*6
-  e'1 |
-  b2. e,4 |
   
   \label #'lastPage
   \bar "|."  
-}
-
-Chords = \chords {
-  R1*16
-
+  
+  \label #'lastPage
+  \bar "|."
 }
 
 \score {
-  <<
-    \Chords
-    \compressMMRests \new PianoStaff \with {
-      \consists "Volta_engraver"
-    }
-    {
-      <<
-        \new Staff = "upper" \upper
-        \new Staff = "lower" \lower
-      >>
-    }
-  >>
+  \compressMMRests \new Staff \with {
+    \consists "Volta_engraver"
+  }
+  {
+    \Sax
+  }
   \layout {
     \context {
       \Score
@@ -400,16 +384,16 @@ Chords = \chords {
   }
 }
 
+
 \paper {
   system-system-spacing =
-  #'((basic-distance . 15)
+  #'((basic-distance . 14)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))
   between-system-padding = #2
   bottom-margin = 5\mm
 
-  print-page-number = ##t
   print-first-page-number = ##t
   oddHeaderMarkup = \markup \fill-line { " " }
   evenHeaderMarkup = \markup \fill-line { " " }

@@ -4,8 +4,8 @@
 
 
 \header {
-  title = "Ain't Nobody"
-  instrument = "sax"
+  title = "23. Ain't Nobody"
+  instrument = "tenor sax"
   composer = "by Alex Wilson feat. AQuilla Fearon"
   arranger = "arr. Ladislav Maršík"
   opus = "version 1.11.2023"
@@ -165,16 +165,16 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Sax = \new Voice
-\transpose c a'
-%\transpose c d
+TenorSax = \new Voice
+\transpose c d
 \relative c' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Sax in Bb" }
+    \center-align { "T. Sax in Bb" }
   }
-  \set Staff.midiInstrument = "alto sax"
+  \set Staff.midiInstrument = "tenor sax"
   \set Staff.midiMaximumVolume = #0.9
 
+  \clef bass
   \key e \minor
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
@@ -374,7 +374,7 @@ Sax = \new Voice
     \consists "Volta_engraver"
   }
   {
-    \Sax
+    \TenorSax
   }
   \layout {
     \context {
@@ -384,6 +384,13 @@ Sax = \new Voice
   }
 }
 
+\score {
+  \unfoldRepeats {
+    %\transpose d c
+    \TenorSax
+  }
+  \midi { } 
+}
 
 \paper {
   system-system-spacing =
