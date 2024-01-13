@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ID=13
+TITLE="Would I Lie"
+INTERPRET="Cubaneros"
+MP3=https://drive.google.com/file/d/1a-6r-31NiHhCe-1GsI3GN7QKZDi-rEaq/view
+TEXT=https://docs.google.com/document/d/12pch5WsU4NJ6uMUQvPIQO2QCdY9PQXjny8uZiz4GD3s/edit
+CHORD=https://docs.google.com/document/d/1mIk4-mncsQDt_SBb7PQWmKtkp85rwcRPOMUSFGzWq7E/edit
+TEMPO="FAST 190BPM"
+TEMPOCLASS="has-vivid-purple-color"
+INSTRUCTIONS="Exactly as YouTube, only a bit slower."
+YOUTUBE=https://www.youtube.com/embed/ZcN6RBc6h7g
+YOUTUBE_TITLE="Cubaneros- Would I Lie (Salsa Version & Flash Mob)"

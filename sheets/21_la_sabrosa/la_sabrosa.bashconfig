@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ID=21
+TITLE="La Sabrosa"
+INTERPRET="Fernando Sosa & Massimo Scalici"
+MP3=https://drive.google.com/file/d/1GpGkLtyaN9rvD9DsbE6kpU4uu6Ex9G3u/view
+TEXT=https://docs.google.com/document/d/1yGPGOozIk_UF7855ycsCD8V08iDNlPhCRJQB0GadaJQ/edit#heading=h.c2w31c25vueg
+CHORD=https://docs.google.com/document/d/1_lLcihxYGjJl8K3D0_5PCTgW2Ir7p_nLXZjGzZjkU7A/edit#heading=h.c2w31c25vueg
+TEMPO="SLOWER 175 BPM"
+TEMPOCLASS="has-light-green-cyan-color"
+INSTRUCTIONS="Exactly as YouTube, only a bit slower."
+YOUTUBE=https://www.youtube.com/embed/P4fsTLotn5c
+YOUTUBE_TITLE="La Sabrosa-Fernando Sosa (Salsa)"

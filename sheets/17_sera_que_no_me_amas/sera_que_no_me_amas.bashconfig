@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ID=17
+TITLE="Será Que No Me Amas"
+INTERPRET="Tony Succar feat. Michael Stuart"
+MP3=https://drive.google.com/file/d/1C_s4AWrXBiiJOfRoIIC7lU7MmsC3-3xW/view
+TEXT=https://docs.google.com/document/d/1I9uqNRdaBqfT64MayDSger-Ffi7eTkL9PZjjFtyQVm8/edit
+CHORD=https://docs.google.com/document/d/1gsxwwSVIb1fBk6K6-FHUd-XyflZAqR1oR-AOnARyAY4/edit
+TEMPO="MEDIUM 180 BPM"
+TEMPOCLASS="has-vivid-green-cyan-color"
+INSTRUCTIONS="Exactly as YouTube, only a bit slower"
+YOUTUBE=https://www.youtube.com/embed/99yIt8tFoXA
+YOUTUBE_TITLE="Sera Que No Me Amas EN VIVO/ LIVE (feat. Michael Stuart) - Tony Succar"

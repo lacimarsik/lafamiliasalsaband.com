@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ID=6
+TITLE="Wake Up Song"
+INTERPRET="La Familia Salsa Band"
+MP3=https://drive.google.com/file/d/1-XsYoTwQbn7QRruf4qZ2kio1MI2fkgEm/view
+TEXT=https://docs.google.com/document/d/1KrnfJEfJvCMPoIxQX9fuUc8abVbwKIx_zDRUoqrjpAI/edit
+CHORD=https://docs.google.com/document/d/11yqpqHtQsdYVNvTDO9zjK9Or2qtSIZQJtRzZJPxtfrQ/edit
+TEMPO="FASTER 185 BPM"
+TEMPOCLASS="has-pale-cyan-blue-color"
+INSTRUCTIONS="Exactly as YouTube."
+YOUTUBE=https://www.youtube.com/embed/BNYCoRLLgqw
+YOUTUBE_TITLE="La Familia Salsa Band - Lonely boy & Wake up Song (LIVE in Prague, Císařská louka, 17.9.2021)"

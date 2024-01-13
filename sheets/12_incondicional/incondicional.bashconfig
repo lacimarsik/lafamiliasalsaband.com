@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ID=12
+TITLE="Incondicional"
+INTERPRET="Prince Royce"
+MP3=https://drive.google.com/file/d/1qG2Xa2vVXWF8J9ZY4j_t7mYnnc0K0fyN/view
+TEXT=https://docs.google.com/document/d/1qez5LSOY48EkpfTwGovS9FfyPAfw5VQrnviCN8V8XbU/edit
+CHORD=https://docs.google.com/document/d/1aZhQ8fXn0Zj2aCW7xT032pAr6UeQ54i1FMsloiX5C1s/edit?usp=drive_link
+TEMPO="BACHATA 130 BPM"
+TEMPOCLASS="has-luminous-vivid-amber-color"
+INSTRUCTIONS="Exactly as YouTube."
+YOUTUBE=https://www.youtube.com/embed/hpzT6Wq6pKY
+YOUTUBE_TITLE="PRINCE ROYCE - Incondicional (Official Video HD)"

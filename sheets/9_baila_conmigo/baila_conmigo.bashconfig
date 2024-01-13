@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ID=9
+TITLE="Baila Conmigo"
+INTERPRET="Saned Rivera"
+MP3=https://drive.google.com/file/d/1lSpqDEy6U1ZlErnN3zjjU1Fi8sO1f1qW/view
+TEXT=https://docs.google.com/document/d/1N0vGEDG2u1qJWEAAFKkOsjfOENIiQJkxlQeXdGKkSig/edit
+CHORD=https://docs.google.com/document/d/1Ga1mya33rUEUmvFuEZ0NaIy_qLv1t--9YipnNoOldl4/edit
+TEMPO="SLOW 165 BPM"
+TEMPOCLASS="has-pale-pink-color"
+INSTRUCTIONS="Exactly as YouTube, but slow groove – it’s our song for beginner dancers."
+YOUTUBE=https://www.youtube.com/embed/Xp4kO_psRg0
+YOUTUBE_TITLE="Saned Rivera - Baila Conmigo"

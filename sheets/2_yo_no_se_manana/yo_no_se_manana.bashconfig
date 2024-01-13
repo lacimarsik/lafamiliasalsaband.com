@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ID=2
+TITLE="Yo No Se Mañana"
+INTERPRET="Luis Enrique"
+MP3=https://drive.google.com/file/d/1cDTUordRIzy6qzl9Whn3oCHosRAtgdG-/view?usp=drive_link
+TEXT=https://docs.google.com/document/d/1akBzB6CkIXvnb61UjRVmgrQJfRJ1-0qorYmLaoc0aKI/edit
+CHORD=https://docs.google.com/document/d/1pYb0bXLg1D5GWRmmCZtqHiAbGfeA7e6RcB7uHCkKi2E/edit
+TEMPO="MEDIUM 180 BPM"
+TEMPOCLASS="has-vivid-green-cyan-color"
+INSTRUCTIONS="Exactly as YouTube, only we play in F."
+YOUTUBE=https://www.youtube.com/embed/2PVi95J-FMo
+YOUTUBE_TITLE="LUIS ENRIQUE - Yo No Se Mañana (Video Oficial)"

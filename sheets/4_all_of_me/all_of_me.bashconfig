@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ID=4
+TITLE="All Of Me"
+INTERPRET="George Dice / John Legend"
+MP3=https://drive.google.com/file/d/1SqgguNIgK490qR_znQLq4XdawXkBGx_d/view
+TEXT=https://docs.google.com/document/d/0B01W1-h-uPggVWlwV1JKeFFmWjQ/edit?resourcekey=0-hGRXwCASllxKymB_aTgqDA
+CHORD=https://docs.google.com/document/d/0B01W1-h-uPggLUswSWl5Q1Jrb2M/edit?resourcekey=0-8-jtCQnD2i46IcJgkHEnQg
+TEMPO="SLOW BACHATA 120 BPM"
+TEMPOCLASS="has-luminous-vivid-amber-color"
+INSTRUCTIONS="Our own cut from YouTube + a bit slower. See MP3. No brass."
+YOUTUBE=https://www.youtube.com/embed/55iE_Tbq3JE
+YOUTUBE_TITLE="John Legend - All of Me (Bachata REMIX produced by GEORGE DICE)"

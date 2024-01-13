@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ID=1
+TITLE="Létám"
+INTERPRET="La Familia Salsa Band"
+MP3=https://drive.google.com/file/d/16mzTMbD-Dao7lgUB6pqOaLuW-s4K-igC/view
+TEXT=https://docs.google.com/document/d/1Dc4x7Bt1dN7DG0SOKoDrfqZTXkXfAiEBO3oXxKFgYB8/edit
+CHORD=https://docs.google.com/document/d/1ejbEYZTySIm0DhX6vMg0d4NYpOS9jA9oPWEq3Is7_0k/edit
+TEMPO="BACHATA 130 BPM"
+TEMPOCLASS="has-luminous-vivid-amber-color"
+INSTRUCTIONS="With brass. The song has changed a lot from the early version (MP3), now we use bachata guitar (samples), and breaks are (.xxxx.x.) before verse and (x.x…..) before chorus (counting eights, x denotes a hit)."
+YOUTUBE=https://www.youtube.com/embed/dM6p4wopQAo
+YOUTUBE_TITLE="La Familia Salsa Band - Létám (LIVE 16.6.2019 Radotín)"

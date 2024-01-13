@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ID=10
+TITLE="Brocoli"
+INTERPRET="La Familia Salsa Band"
+MP3=https://drive.google.com/file/d/1Y-sq2vsaXkt9cERI0hfWDJbnbXbo-_IS/view
+TEXT=https://docs.google.com/document/d/1MCaBWvglESFrsBS6Qj8PimNQDQo__fZbN2lt5vpYdDI/edit
+CHORD=https://docs.google.com/document/d/1xot0-ssJgDPvEOlfHy7hoiyigFRJt8PJL73qHGryjQg/edit
+TEMPO="MEDIUM 180 BPM"
+TEMPOCLASS="has-vivid-green-cyan-color"
+INSTRUCTIONS=
+YOUTUBE=https://www.youtube.com/embed/9iQL26d1nHA
+YOUTUBE_TITLE="La Familia Salsa Band - Brocoli (LIVE 16.6.2019 in Radotín)"

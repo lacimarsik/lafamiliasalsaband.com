@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ID=23
+TITLE="Ain’t Nobody"
+INTERPRET="Alex Wilson feat. AQuilla Fearon / Chaka Khan"
+MP3=https://drive.google.com/file/d/1HpPm_CPJtHxFw3a8Zgm1uUdksfpXOTcP/view
+TEXT=https://docs.google.com/document/d/1HKxKjvOT2fEO4YzwR8meVDyYMemrxs9Q_EhhrDKYJbg/edit
+CHORD=https://docs.google.com/document/d/1i3DQ6lKg9J4rKoXBeZoguYoOcqMc-ePWZr-cVUPNUFo/edit
+TEMPO="FASTER 185 BPM"
+TEMPOCLASS="has-pale-cyan-blue-color"
+INSTRUCTIONS="Exactly as YouTube, only a bit slower."
+YOUTUBE=https://www.youtube.com/embed/gMgN50wSnNc
+YOUTUBE_TITLE="Ain&#039;t Nobody (Salsa Version)-Alex Wilson"
