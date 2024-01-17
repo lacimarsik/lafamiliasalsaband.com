@@ -3,7 +3,7 @@
 % Sheet revision 2022_09
 
 \header {
-  title = "24. Via"
+  title = "#24 Via"
   instrument = "trumpet"
   composer = "Al De Lory"
   arranger = "arr. Pavel Skalník + Ladislav Maršík"
