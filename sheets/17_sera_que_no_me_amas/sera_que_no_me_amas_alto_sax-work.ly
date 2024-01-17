@@ -3,11 +3,11 @@
 % Sheet revision 2022_09
 
 \header {
-  title = "#20 Hello"
-  instrument = "timbales"
-  composer = "by Mandinga"
+  title = "Sera Que No Me Amas"
+  instrument = "sax"
+  composer = "by Tony Succar feat. Michael Stuart"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 16.11.2022"
+  opus = "version 15.2.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,141 +164,163 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Timbales = \new DrumVoice \drummode {
+Sax = \new Voice
+%\transpose c a
+\relative c' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Timbales" }
+    \center-align { "Sax in Eb" }
   }
+  \set Staff.midiInstrument = "alto sax"
+  \set Staff.midiMaximumVolume = #0.9
 
+  \key c \major
   \time 4/4
-  \tempo "Medium Fast Salsa" 4 = 190
-
-  s1*0 ^\markup { "Intro Piano" }
-  \set Score.skipBars = ##t R1*8
-  s1*0 ^\markup { "Verse 1" }
+  \tempo "Medium Fast Salsa" 4 = 190  
+    
+  s1*0 ^\markup { "Intro" }
   \inst "A"
-  \set Score.skipBars = ##t R1*8
-  s1*0 ^\markup { "(bongos only)" }
-  \set Score.skipBars = ##t R1*6
-  cb4 cb cb cb \accent |
-  r2 r8 timh -. r4 | 
-  
-  s1*0 ^\markup { "Verse 2 (cascara 2-3)" }
+  c4  c e, e |
+  r8 a r e r e d r |
+  r4. d8 d r r e |
+  r f r fis r g a g | \break
+  c4  c e, e |
+  r8 a r e r e d r |
+  r4. d8 d r r e |
+  r f r fis r g a g | \break
+  c4  c e, e |
+  r8 a r e r e d r |
+  r4. d8 d r r e |
+  r f r fis r g a g | \break
+  c4  c e, e |
+  r8 a r e r e d r |
+  r4. d8 d r r e |
+  r f r fis r g4. | \break
+
+  \mark \markup { \musicglyph "scripts.segno" }
+    s1*0 ^\markup { "Verse 1 & 3" }
   \inst "B"
-  ^\markup { \bold { \fontsize #2 "8x clave" } }
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  \break
-  
-  s1*0 ^\markup { \bold { \fontsize #2 "2x clave" } }
-  \repeat volta 2 {
-    \makePercent s1*2
-  }
-  timl4 timh timh timl |
-  timh timh cb2 -^ |
-  \makePercent s1 |
-  \makePercent s2 \tuplet 3/2 { timh8 timl timl } timl4 | \break
-  
-  s1*0 ^\markup { "Chorus" }
-  \inst "C"
-  <timl cb>4   <timl cb>4   <timl cb>4   <timl cb>4 |
-  <timl cb>4   <timl cb>4   <timl cb>4 cb -^
-  
-  s1*0 
-  ^\markup { "impro at the end" }
-  ^\markup { "(campana)" }
-  ^\markup { \bold { \fontsize #2 "7x clave" } }
-  \repeat volta 7 {
-    \makePercent s1*2
-  }
-  s1*0 
-  \inst "D"
-  ^\markup { "(camp. + contrac.)" }
-  ^\markup { \bold { \fontsize #2 "8x clave" } }
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  \break
-  
-  \inst "E"
-  ^\markup { "Puente (camp. + contrac.)" }
-  ^\markup { \bold { \fontsize #2 "3x clave" } }
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  s1*0 ^\markup { "break" }
-  \makePercent s1  |
-  \makePercent s1 | \break
-  
-  \inst "F"
-  s1*0 ^\markup { "Verse 3" }
-  
+  c4 \accent  \bendAfter #-4  r2. | 
+  \set Score.skipBars = ##t R1*2
+  r8 e8 -. \accent \f r2. |
+  \set Score.skipBars = ##t R1*2
+  f4 \mf \tenuto ( g -. ) r4 c \f \accent ~ |
+  c8 e -. r g -. r e ( d -. )  r | \break
   R1 |
-  r4 timl timh timl |
-  s1*0 ^\markup { "(cascara 2-3)" }
-  ^\markup { \bold { \fontsize #2 "2x clave" } }
-  \repeat volta 2 {
-    \makePercent s1*2
-  }
-  \makePercent s1 |
-  r4 cb8 cb8 cb8 cb8 r4 | 
-  s1*0 ^\markup { "(cascara 2-3)" }
-  ^\markup { \bold { \fontsize #2 "4x clave" } }
-  \repeat volta 4 {
-    \makePercent s1*2
-  } \break
-  s1*0 ^\markup { \bold { \fontsize #2 "2x clave" } }
-  \repeat volta 2 {
-    \makePercent s1*2
-  }
-  timl4 timh timh timl |
-  timh timh cb2 -^ |
-  \makePercent s1 |
-  \makePercent s2 \tuplet 3/2 { timh8 timl timl } timl4 | \break
+  r8 a' ( g e g a -. ) r4  |
+  r2 e4 \f \tenuto e -. |
+  e4 \tenuto ( e8 g e4 -.  \tenuto ) r | 
+  r4. f8 -. \accent \f r2 |
+  r4. c8 -. \accent ~ c8 \bendAfter #-4 r4. |
+  r4. g'8 ( g e g g -. ) |
+  r8  g, -. r2. | \break
+  r2 ^\markup { "Chorus " }  r8 g a -. r | 
+  c \f \tenuto \accent c \tenuto \accent r2. |
+  r4. \mf es8 r f r bes | 
+  r g8 ~ g r8 f f bes,8 r  | \break
+  r2. d8 ^\markup { "Sax D" }  -. \accent \f r |
+  r8 d8 -. \accent r2. |
+  r4. g8 \mf r a ~ a4 |
+  r8 g a -. r g a \tenuto ~ a r | \break
+  r2r8 g, a r | 
+  r c \tenuto \accent ~ c4 r2 |
+  r4. es8 r f r bes | 
+  r g ~ g r f f bes,8 r  | \break
+  r2. d8 ^\markup { "Sax D" } -. \accent \f r |
+  r8 d8 -. \accent r2. |
+  r8 g8 \mf  \tenuto d \tenuto dis \tenuto  e \tenuto g \tenuto e \tenuto a -. \accent  |
+  R1 | \break
+  c2^\markup { "Verse, Sax C" } \accent  \bendAfter #-4  r2 | 
+  \set Score.skipBars = ##t R1*2
+  r8 c8 -. \accent \f r2. |
+  \set Score.skipBars = ##t R1*2
+  f,2 \mf r4 e \accent ~ |
+  e8 e \tenuto \f r g \tenuto r e ( d )  r | \break
+  R1 |
+  r8 a' ( g e g a -. ) r4  |
+  r2 e4 \f \tenuto e -. |
+  e4 \tenuto ( e8 g e4 -.  \tenuto ) r | 
+  r4. f8 -. \accent \f r2 |
+  r4. c8 -. \accent ~ c8 \bendAfter #-4 r4. |
+  r4. g'8 ( g e g g -. ) |
+  r8  g, -. r2. | \break
+  r2 ^\markup { "Chorus " }  r8 g a -. r | 
+  c \f \tenuto \accent c \tenuto \accent r2. |
+  r4. \mf es8 r f r bes | 
+  r g8 ~ g r8 f f bes,8 r  | \break
+  r2. d8 ^\markup { "Sax D" }  -. \accent \f r |
+  r8 d8 -. \accent r2. |
+  r4. g8 \mf r a ~ a4 |
+  r8 g a -. r g a \tenuto ~ a r | \break
+  r2r8 g, a r | 
+  r c \tenuto \accent ~ c4 r2 |
+  r4. es8 r f r bes | 
+  r g ~ g r f f bes,8 r  | \break
+  r2. d8 ^\markup { "Sax D" } -. \accent \f r |
+  r8 d8 -. \accent r2. |
+  r4. g,8 \mf   r c r a' | 
+  r g ~ g r e d e  r  | \break
+  \set Score.skipBars = ##t R1*8 ^\markup { "Ya No Se" }
   
-  s1*0 ^\markup { "Chorus" }
-  <timl cb>4   <timl cb>4   <timl cb>4   <timl cb>4 |
-  <timl cb>4   <timl cb>4   <timl cb>4 cb -^
+  r2 r8 c'8 ~-. \accent \f c4 |
+  r2 r8 c,8  \mf \accent ~ c4 |
+  r4. a'8 \f -. r a g g \accent -. |
+  R1  | \break
   
-  s1*0 
-  ^\markup { "(campana)" }
-  ^\markup { \bold { \fontsize #2 "6x clave" } }
-  \repeat volta 7 {
-    \makePercent s1*2
-  }
-  \makePercent s1 |
-  r4. cb4. -^ cb4 -^ | \break
-  s1*0 ^\markup { "Mambo (clave)" }
-  \inst "G"
-  ^\markup { \bold { \fontsize #2 "4x clave" } }
+  r2 r8 c8 ~-. \accent \f c4 |
+  R1 |
+  d,,4 \mf ~ d8  \tenuto a'8 ~ a4 ~ a8 \tenuto bes ~ |
+  bes4 ~ bes8  g8 \f  ~ g2 | \break
+  \mark \markup { \musicglyph "scripts.coda" } 
+  a8 ^\markup { "Chorus" }  -. \accent  r4. r8 g a -. r | 
+  c \f \tenuto \accent c \tenuto \accent r2. |
+  r4. \mf es,8 r f r bes | 
+  r g8 ~ g r8 f f bes,8 r  | \break
+  r2. f'8 ^\markup { "Sax D" }  -. \accent \f r |
+  r8 f8 -. \accent r2. |
+  r4. g8 \mf r a ~ a4 |
+  r8 g a -. r g a \tenuto ~ a r | \break
+  r2r8 g a r | 
+  r c \tenuto \accent ~ c4 r2 |
+  r4. es8 r f r bes | 
+  r g ~ g r f f bes,8 r  | \break
+  r2. f'8 ^\markup { "Sax D" } -. \accent \f r |
+  r8 f8 -. \accent r2. |
+  r8 g8 \mf  \tenuto d \tenuto dis \tenuto  e \tenuto g \tenuto e \tenuto a -. \accent  |
+  R1 | \break
+  
+  \set Score.skipBars = ##t R1*16 ^\markup { "Solo Trombone (C, E, F, G)" }
+  \set Score.skipBars = ##t R1*16 ^\markup { "Solo Trumpet" }
+  \set Score.skipBars = ##t R1*16 ^\markup { "Solo Sax" }
+  \set Score.skipBars = ##t R1*16 ^\markup { "Solo Piano" } |
+  r1 \fermata ^\markup { "Wait for apel" } | |
+  
+  g8 \f g -. r g -. r g ~ g4 \tenuto  ^\markup { "D.S. al Coda" } | \break
+
   \repeat volta 4 {
-    \makePercent s1*2
+    \set Score.skipBars = ##t R1*2 ^\markup { "Coda1 4x" } |
+    c,8 c r a r c r d |
+    r es r e r g a g |   \break
   }
-  s1*0 ^\markup { "(camp. + contrac.)" }
-  ^\markup { \bold { \fontsize #2 "7x clave" } }
   \repeat volta 4 {
-    \makePercent s1*2
+    c,8  ^\markup { "Coda2 3x" } c r a r c r d \fermata ^\markup { "wait on D on 3rd" } |
+    r es r e r g a g |   \break 
   }
-  \makePercent s1 |
-  r8 cb cb r cb cb r cb |
-  cb \accent r r2. | 
+
+  c,8 c r a r c r d |
+  r es r e r g a g |   
+  c8 \accent r8 r2. |
   
   \label #'lastPage
-  \bar "|."
+  \bar "|."  
 }
 
 \score {
-  \compressMMRests \new StaffGroup <<
-    \new DrumStaff \with {
-      drumStyleTable = #timbales-style
-      \override StaffSymbol.line-count = #2
-      \override BarLine.bar-extent = #'(-1 . 1)
-      \consists "Volta_engraver"
-    }
-    <<
-      \Timbales
-    >>
-  >>
+  \compressMMRests \new Staff \with {
+    \consists "Volta_engraver"
+  }
+  {
+    \Sax
+  }
   \layout {
     \context {
       \Score
@@ -309,7 +331,7 @@ Timbales = \new DrumVoice \drummode {
 
 \paper {
   system-system-spacing =
-  #'((basic-distance . 14)
+  #'((basic-distance . 15)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))

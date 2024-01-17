@@ -1,9 +1,9 @@
-\version "2.22.2"
+\version "2.24.0"
 
 % Sheet revision 2022_09
 
 \header {
-  title = "Hello"
+  title = "#20 Hello"
   instrument = "sax"
   composer = "by Mandinga"
   arranger = "arr. Ladislav Maršík"
@@ -216,7 +216,6 @@ Sax = \new Voice
   oddFooterMarkup = \markup {
     \fill-line {
       \bold \fontsize #2
-      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
 
       \fontsize #-1
@@ -229,7 +228,6 @@ Sax = \new Voice
       \concat { \fromproperty #'header:title " - " \fromproperty #'header:instrument ", " \fromproperty #'header:opus ", " \fromproperty #'header:copyright }
 
       \bold \fontsize #2
-      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
     }
   }

@@ -4,7 +4,7 @@
 
 \header {
   title = "#20 Hello"
-  instrument = "timbales"
+  instrument = "tenor sax"
   composer = "by Mandinga"
   arranger = "arr. Ladislav Maršík"
   opus = "version 16.11.2022"
@@ -164,141 +164,34 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Timbales = \new DrumVoice \drummode {
+Sax = \new Voice
+\transpose c d
+\relative c {
   \set Staff.instrumentName = \markup {
-    \center-align { "Timbales" }
+    \center-align { "T. Sax in Bb" }
   }
+  \set Staff.midiInstrument = "tenor sax"
+  \set Staff.midiMaximumVolume = #0.9
 
+  \clef bass
+  \key f \minor
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
-
-  s1*0 ^\markup { "Intro Piano" }
-  \set Score.skipBars = ##t R1*8
-  s1*0 ^\markup { "Verse 1" }
+  
   \inst "A"
-  \set Score.skipBars = ##t R1*8
-  s1*0 ^\markup { "(bongos only)" }
-  \set Score.skipBars = ##t R1*6
-  cb4 cb cb cb \accent |
-  r2 r8 timh -. r4 | 
-  
-  s1*0 ^\markup { "Verse 2 (cascara 2-3)" }
-  \inst "B"
-  ^\markup { \bold { \fontsize #2 "8x clave" } }
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  \break
-  
-  s1*0 ^\markup { \bold { \fontsize #2 "2x clave" } }
-  \repeat volta 2 {
-    \makePercent s1*2
-  }
-  timl4 timh timh timl |
-  timh timh cb2 -^ |
-  \makePercent s1 |
-  \makePercent s2 \tuplet 3/2 { timh8 timl timl } timl4 | \break
-  
-  s1*0 ^\markup { "Chorus" }
-  \inst "C"
-  <timl cb>4   <timl cb>4   <timl cb>4   <timl cb>4 |
-  <timl cb>4   <timl cb>4   <timl cb>4 cb -^
-  
-  s1*0 
-  ^\markup { "impro at the end" }
-  ^\markup { "(campana)" }
-  ^\markup { \bold { \fontsize #2 "7x clave" } }
-  \repeat volta 7 {
-    \makePercent s1*2
-  }
-  s1*0 
-  \inst "D"
-  ^\markup { "(camp. + contrac.)" }
-  ^\markup { \bold { \fontsize #2 "8x clave" } }
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  \break
-  
-  \inst "E"
-  ^\markup { "Puente (camp. + contrac.)" }
-  ^\markup { \bold { \fontsize #2 "3x clave" } }
-  \repeat volta 8 {
-    \makePercent s1*2
-  }
-  s1*0 ^\markup { "break" }
-  \makePercent s1  |
-  \makePercent s1 | \break
-  
-  \inst "F"
-  s1*0 ^\markup { "Verse 3" }
-  
-  R1 |
-  r4 timl timh timl |
-  s1*0 ^\markup { "(cascara 2-3)" }
-  ^\markup { \bold { \fontsize #2 "2x clave" } }
-  \repeat volta 2 {
-    \makePercent s1*2
-  }
-  \makePercent s1 |
-  r4 cb8 cb8 cb8 cb8 r4 | 
-  s1*0 ^\markup { "(cascara 2-3)" }
-  ^\markup { \bold { \fontsize #2 "4x clave" } }
-  \repeat volta 4 {
-    \makePercent s1*2
-  } \break
-  s1*0 ^\markup { \bold { \fontsize #2 "2x clave" } }
-  \repeat volta 2 {
-    \makePercent s1*2
-  }
-  timl4 timh timh timl |
-  timh timh cb2 -^ |
-  \makePercent s1 |
-  \makePercent s2 \tuplet 3/2 { timh8 timl timl } timl4 | \break
-  
-  s1*0 ^\markup { "Chorus" }
-  <timl cb>4   <timl cb>4   <timl cb>4   <timl cb>4 |
-  <timl cb>4   <timl cb>4   <timl cb>4 cb -^
-  
-  s1*0 
-  ^\markup { "(campana)" }
-  ^\markup { \bold { \fontsize #2 "6x clave" } }
-  \repeat volta 7 {
-    \makePercent s1*2
-  }
-  \makePercent s1 |
-  r4. cb4. -^ cb4 -^ | \break
-  s1*0 ^\markup { "Mambo (clave)" }
-  \inst "G"
-  ^\markup { \bold { \fontsize #2 "4x clave" } }
-  \repeat volta 4 {
-    \makePercent s1*2
-  }
-  s1*0 ^\markup { "(camp. + contrac.)" }
-  ^\markup { \bold { \fontsize #2 "7x clave" } }
-  \repeat volta 4 {
-    \makePercent s1*2
-  }
-  \makePercent s1 |
-  r8 cb cb r cb cb r cb |
-  cb \accent r r2. | 
+  c
   
   \label #'lastPage
   \bar "|."
 }
 
 \score {
-  \compressMMRests \new StaffGroup <<
-    \new DrumStaff \with {
-      drumStyleTable = #timbales-style
-      \override StaffSymbol.line-count = #2
-      \override BarLine.bar-extent = #'(-1 . 1)
-      \consists "Volta_engraver"
-    }
-    <<
-      \Timbales
-    >>
-  >>
+  \compressMMRests \new Staff \with {
+    \consists "Volta_engraver"
+  }
+  {
+    \Sax
+  }
   \layout {
     \context {
       \Score
@@ -306,6 +199,7 @@ Timbales = \new DrumVoice \drummode {
     }
   }
 }
+
 
 \paper {
   system-system-spacing =
