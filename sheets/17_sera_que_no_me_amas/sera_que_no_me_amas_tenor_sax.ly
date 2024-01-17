@@ -4,10 +4,10 @@
 
 \header {
   title = "#17 Sera Que No Me Amas"
-  instrument = "trombone"
+  instrument = "tenor sax"
   composer = "by Tony Succar feat. Michael Stuart"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 27.3.2023"
+  opus = "version 15.2.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,63 +164,73 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trombone = \new Voice \relative c' {
+TenorSax = \new Voice
+\transpose c d
+\relative c' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Trombone" }
+    \center-align { "T. Sax in Bb" }
   }
-  \set Staff.midiInstrument = "trombone"
-  \set Staff.midiMaximumVolume = #1.0
+  \set Staff.midiInstrument = "alto sax"
+  \set Staff.midiMaximumVolume = #0.9
 
   \clef bass
   \key c \major
   \time 4/4
-  \tempo "Medium Fast Salsa" 4 = 190
-  
-    s1*0 ^\markup { "Intro" }
+  \tempo "Medium Fast Salsa" 4 = 190  
+    
+  s1*0 ^\markup { "Intro" }
   \inst "A"
-  \set Score.skipBars = ##t R1*8
-  \set Score.skipBars = ##t R1*2
-  r4 f4 -. \mf r2 |
-  R1 | \break
-  r4. c8 -. \accent \f r2 |
-  r4. c,8 ~ c4 \bendAfter #-4  \mf \accent r4 |
-  r8 c'8  \tenuto g \tenuto gis \tenuto  a \tenuto c \tenuto a \tenuto f' -. \accent  |
+  c4  c e, e |
+  r8 a r e r e d r |
+  r4. d8 d r r e |
+  r f r fis r g a g | \break
+  c4  c e, e |
+  r8 a r e r e d r |
+  r4. d8 d r r e |
+  r f r fis r g a g | \break
+  c4  c e, e |
+  r8 a r e r e d r |
+  r4. d8 d r r e |
+  r f r fis r g a g | \break
+  c4  c e, e |
+  r8 a r e r e d r |
+  r4. d8 d r r e |
+  r f r fis r g4. | \break
 
-  r2 r8 b,8 \f  \tenuto ~ b4 | \break
   \mark \markup { \musicglyph "scripts.segno" }
     s1*0 ^\markup { "Verse 1 & 3" }
   \inst "B"
   c4 \accent  \bendAfter #-4  r2. | 
   \set Score.skipBars = ##t R1*2
-  r8 g'8 -. \accent \f r2. |
+  r8 e8 -. \accent \f r2. |
   \set Score.skipBars = ##t R1*2
-  c,4 ( \tenuto \mf g' -.  ) r4 e \accent \f ~ |
-  e8 c -. r e -. r c ( b -. )  r | \break
+  f,,4 \mf \tenuto ( g -. ) r4 c \f \accent ~ |
+  c8 e -. r g -. r e ( d -. )  r | \break
   R1 |
-  r8 a ( g e g a -. ) r4  |
+  r8 a' ( g e g a -. ) r4  |
   r2 e4 \f \tenuto e -. |
   e4 \tenuto ( e8 g e4 -.  \tenuto ) r | 
   r4. f8 -. \accent \f r2 |
   r4. c8 -. \accent ~ c8 \bendAfter #-4 r4. |
   r4. g'8 ( g e g g -. ) |
   r8  g, -. r2. | \break
-  r2 ^\markup { "Chorus " }  r8 g' a -. r | 
+  r2 ^\markup { "Chorus " }  r8 g a -. r | 
   c \f \tenuto \accent c \tenuto \accent r2. |
-  r4. \mf es,8 r f r bes | 
+  r4. \mf es8 r f r bes | 
   r g8 ~ g r8 f f bes,8 r  | \break
-  r2. f'8 ^\markup { "Sax D" }  -. \accent \f r |
-  r8 f8 -. \accent r2. |
+  r2. d8 ^\markup { "Sax D" }  -. \accent \f r |
+  r8 d8 -. \accent r2. |
   r4. g8 \mf r a ~ a4 |
   r8 g a -. r g a \tenuto ~ a r | \break
-  r2r8 g a r | 
+  r2r8 g, a r | 
   r c \tenuto \accent ~ c4 r2 |
-  r4. es,8 r f r bes | 
+  r4. es8 r f r bes | 
   r g ~ g r f f bes,8 r  | \break
-  r2. f'8 ^\markup { "Sax D" } -. \accent \f r |
-  r8 f8 -. \accent r2. |
+  r2. d8 ^\markup { "Sax D" } -. \accent \f r |
+  r8 d8 -. \accent r2. |
   r8 g8 \mf  \tenuto d \tenuto dis \tenuto  e \tenuto g \tenuto e \tenuto a -. \accent  |
   R1 | \break
-  a2^\markup { "Verse, Sax C" } \accent  \bendAfter #-4  r2 | 
+  c2^\markup { "Verse, Sax C" } \accent  \bendAfter #-4  r2 | 
   \set Score.skipBars = ##t R1*2
   r8 c8 -. \accent \f r2. |
   \set Score.skipBars = ##t R1*2
@@ -234,23 +244,22 @@ Trombone = \new Voice \relative c' {
   r4. c8 -. \accent ~ c8 \bendAfter #-4 r4. |
   r4. g'8 ( g e g g -. ) |
   r8  g, -. r2. | \break
-  r2 ^\markup { "Chorus " }  r8 g' a -. r | 
+  r2 ^\markup { "Chorus " }  r8 g a -. r | 
   c \f \tenuto \accent c \tenuto \accent r2. |
-  r4. \mf es,8 r f r bes | 
+  r4. \mf es8 r f r bes | 
   r g8 ~ g r8 f f bes,8 r  | \break
-  r2. f'8 ^\markup { "Sax D" }  -. \accent \f r |
-  r8 f8 -. \accent r2. |
+  r2. d8 ^\markup { "Sax D" }  -. \accent \f r |
+  r8 d8 -. \accent r2. |
   r4. g8 \mf r a ~ a4 |
   r8 g a -. r g a \tenuto ~ a r | \break
-  r2r8 g a r | 
+  r2r8 g, a r | 
   r c \tenuto \accent ~ c4 r2 |
-  r4. es,8 r f r bes | 
+  r4. es8 r f r bes | 
   r g ~ g r f f bes,8 r  | \break
-  r2. f'8 ^\markup { "Sax D" } -. \accent \f r |
-  r8 f8 -. \accent r2. |
+  r2. d8 ^\markup { "Sax D" } -. \accent \f r |
+  r8 d8 -. \accent r2. |
   r4. g,8 \mf   r c r a' | 
   r g ~ g r e d e  r  | \break
-  
   \set Score.skipBars = ##t R1*8 ^\markup { "Ya No Se" }
   
   r2 r8 c'8 ~-. \accent \f c4 |
@@ -260,7 +269,7 @@ Trombone = \new Voice \relative c' {
   
   r2 r8 c8 ~-. \accent \f c4 |
   R1 |
-  d,4 \mf ~ d8  \tenuto a'8 ~ a4 ~ a8 \tenuto bes ~ |
+  d,,4 \mf ~ d8  \tenuto a'8 ~ a4 ~ a8 \tenuto bes ~ |
   bes4 ~ bes8  g8 \f  ~ g2 | \break
   \mark \markup { \musicglyph "scripts.coda" } 
   a8 ^\markup { "Chorus" }  -. \accent  r4. r8 g a -. r | 
@@ -273,7 +282,7 @@ Trombone = \new Voice \relative c' {
   r8 g a -. r g a \tenuto ~ a r | \break
   r2r8 g a r | 
   r c \tenuto \accent ~ c4 r2 |
-  r4. es,8 r f r bes | 
+  r4. es8 r f r bes | 
   r g ~ g r f f bes,8 r  | \break
   r2. f'8 ^\markup { "Sax D" } -. \accent \f r |
   r8 f8 -. \accent r2. |
@@ -306,13 +315,12 @@ Trombone = \new Voice \relative c' {
   \bar "|."  
 }
 
-
 \score {
   \compressMMRests \new Staff \with {
     \consists "Volta_engraver"
   }
   {
-    \Trombone
+    \TenorSax
   }
   \layout {
     \context {
@@ -322,16 +330,9 @@ Trombone = \new Voice \relative c' {
   }
 }
 
-\score {
-  \unfoldRepeats {
-      \Trombone
-  }
-  \midi { } 
-} 
-
 \paper {
   system-system-spacing =
-  #'((basic-distance . 14)
+  #'((basic-distance . 15)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))
