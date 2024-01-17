@@ -3,7 +3,7 @@
 % Sheet revision 2022_09
 
 \header {
-  title = "I Want You Back"
+  title = "#18 I Want You Back"
   instrument = "tenor sax"
   composer = "by Tony Succar feat. Tito Nieves"
   arranger = "arr. Ladislav Maršík, Pavel Skalník"
@@ -165,11 +165,11 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Sax = \new Voice
-\transpose es f
+TenorSax = \new Voice
+\transpose c d
 \relative c {
   \set Staff.instrumentName = \markup {
-    \center-align { "Sax in Bb" }
+    \center-align { "T. Sax in Bb" }
   }
   \set Staff.midiInstrument = "tenor sax"
   \set Staff.midiMaximumVolume = #1.0
@@ -368,7 +368,7 @@ r8  bes8 --  bes8 -- d8 -- r8  d8 -- r8  bes8 -- | \noBreak
     \consists "Volta_engraver"
   }
   {
-    \Sax
+    \TenorSax
   }
   \layout {
     \context {
@@ -380,7 +380,7 @@ r8  bes8 --  bes8 -- d8 -- r8  d8 -- r8  bes8 -- | \noBreak
 
 \score {
   \unfoldRepeats {
-    \Sax
+    \TenorSax
   }
   \midi { } 
 } 

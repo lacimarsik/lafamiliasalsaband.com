@@ -3,7 +3,7 @@
 % Sheet revision 2022_09
 
 \header {
-  title = "I Want You Back"
+  title = "#18 I Want You Back"
   instrument = "sax"
   composer = "by Tony Succar feat. Tito Nieves"
   arranger = "arr. Ladislav Maršík, Pavel Skalník"
@@ -166,10 +166,10 @@ repeatBracket = #(define-music-function
                   )
 
 Sax = \new Voice
-\transpose es c
-\relative c' {
+\transpose c a'
+\relative c, {
   \set Staff.instrumentName = \markup {
-    \center-align { "Sax" }
+    \center-align { "Sax in Eb" }
   }
   \set Staff.midiInstrument = "alto sax"
   \set Staff.midiMaximumVolume = #1.0

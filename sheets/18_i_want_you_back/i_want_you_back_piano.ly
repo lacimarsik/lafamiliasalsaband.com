@@ -4,13 +4,12 @@
 
 \header {
   title = "#18 I Want You Back"
-  instrument = "trombone"
+  instrument = "piano"
   composer = "by Tony Succar feat. Tito Nieves"
   arranger = "arr. Ladislav Maršík, Pavel Skalník"
   opus = "version 23.4.2023"
   copyright = "© La Familia Salsa Band"
 }
-
 
 inst =
 #(define-music-function
@@ -165,200 +164,70 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trombone = \new Voice
-\relative \relative c' {
-  \set Staff.instrumentName = \markup {
-    \center-align { "Trombone" }
+upper = \new Voice \relative c'' {
+  \set PianoStaff.instrumentName = \markup {
+    \center-align { "Piano" }
   }
-  \set Staff.midiInstrument = "trombone"
-  \set Staff.midiMaximumVolume = #1.0
+  \set Staff.midiInstrument = "piano"
+  \set Staff.midiMaximumVolume = #0.7
 
-  \clef bass
-  \key es \major
+  \clef treble
+  \key d \major
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
   
-  R1 ^\markup { "Piano Slide" }
-  
   \inst "A"
-  es,4 -> -. \f r4 r2  |
-    R1*7 ^\markup { "Guitar + Sax Intro" }
-  es4 -> -. ^\markup { "Brass Intro" } r2. |
-  r4. es8 -- \mf g8 -- bes8 -- c8 -- as8 -- |
-  R1 |
-  r8 f8 -- g8 -- as8 -- r8 a8 -- bes8 -- ces8 -- | 
-  c2 -- g2 -- | 
-  as4. -- es4. -- r4 | 
-  f2 -- bes4. -- es,8 -. | 
-  R1 | \break
+  d
   
-  \inst "A"
-  es'8 --  \f ^\markup { "Brass 1" } es8 -. r8 es8 ( d8  es8 c8 bes8 ~  | 
-  bes4 ) bes4 -. bes4 -. r4 | 
-  r8 c8 \mf -- es8 -- c8  -- es8 -- es8 -- c8 -- es8 ~  | 
-  es8 --  es8 -- fes8 -- f8 -- es4 -. r4  | 
-  r2 bes8 -- c8 -- es8 -- f8 ~  |
-  f4 es4 -- c4 -- bes4 -- |
-  f2 -- bes4. -> es,8 -. |
-  R1 | \break
+  \bar "|."  
+}
 
-  R1*8 ^\markup { "Verse" } \segno
-  es4 \f -. -> r2. |
-  r4. es8 -- \mf g8 -- bes8 -- c8 -- as8 -.  | 
-  R1 | 
-  r8 f8 -- g8 -- as8 --  r8 a8 --  bes8 -- ces8 --  | 
-  c2 -- g2 -- | 
-  as4. -- es4. -- r4 |
-  f2 -- bes4. -- es,8 -. |
-  R1 | \break
-  
-  \inst "B"
-  es'4 -> \f \bendAfter #-4 ^\markup { "Chorus" } r4 d8 -- es8 -- d8 -- es8 -- ~  |
-  es4 c4 -. c4 -. r4  |
-    \set Score.skipBars = ##t R1*2
-  r4 c4 -. r4 c4 -. | 
-  r8 c8 -. r8 c8 -- bes8 --  c8 -- bes4 -- |
-  \override Staff.BreathingSign.text = \markup { \musicglyph "scripts.rvarcomma" }
-  \set breathMarkType = #'tickmark
-  r4 f4 -.  \breathe bes4. -- es,8 -. |
-  R1 |
-  r2 es'4 -> \f \bendAfter #-4 r4 |
-  r4 r8 g8 -. r8 g8 -. r8 g8 -. | 
-  f4 -- f4 -. r2 | 
-  R1 | 
-  r4 c4 -. r4 c4 -. |  \noBreak
-  r8 c8 -. r8 c8 --  bes8 --  c8 --  bes4 -- | 
-  r4 f4 -. \breathe bes4. -- es,8 -.  ^\markup { "to " \musicglyph "scripts.coda" } |
-  R1 | \break
-  
-  \inst "C" 
-  \set Score.skipBars = ##t R1*8 ^\markup { "I want you back" } -\tweak self-alignment-X #-7 ^\markup { "Dal " \musicglyph "scripts.segno" " al " \musicglyph "scripts.coda" } \break
-  
-  \mark \markup { \musicglyph "scripts.coda" }
-  R1 | \noBreak
-  \inst "D"
-  es'8 --  \mf ^\markup { "Brass 2" }  es8 -. r8 es8 ( d8  es8 c8 bes8 ~  | \noBreak
-  bes4 ) bes4 -. bes4 -. r4 | \noBreak
-  r8 c8 -- es8 -- c8 -- es8 -- es8 -- c8 -- es8 ~  | 
-  es8 -- es8 -- fes8 -- f8 es4 -. r4  | 
-  r8 es8 -- f8 -- g8 -- \tuplet 3/2 { as8 ( bes8 as8 }  g8  ges8  ) | 
-  f4 -. f4 -. g8 -- f8 --  es4 -. | 
-  r8 c8 \< -- es8 -- g8 \breathe bes2 -> \f  | 
-  a4. -^ as8 -. r8 es8 -> \bendAfter #-4 r4 | \break
-  
-  \inst "E"   
-  \set Score.skipBars = ##t R1*2  ^\markup { "Coro y Pregón 1" }
-  r4 r8 f8 -- \mp ^\markup { "(laid back)" } \tuplet 3/2 { g4 -- as4 -- a4 -- } ~  | 
-  a2.. \prallprall r8  |
-  \set Score.skipBars = ##t R1*3
-  r2 r4 bes,8 \mf -> c8 ->  es4 -^ bes8 -> c8 -> es4 -^ r4 | 
-  r2 r4 c8 -> es8 ->  | 
-  f4 -^ c8 -> es8 -> f4 -^ r4 | 
-    \set Score.skipBars = ##t R1*5
-    \break
- \repeat volta 2 {
-    \set Score.skipBars = ##t R1*2
-    r4 r8 f8 -- \mp ^\markup { "(laid back)" } \tuplet 3/2 { g4 -- as4 -- a4 -- } ~  | 
-    a2.. \prallprall r8  |
-    \set Score.skipBars = ##t R1*4
- }
+lower = \new Voice \relative c {
+  \set PianoStaff.instrumentName = \markup {
+    \center-align { "Piano" }
+  }
+  \set Staff.midiInstrument = "piano"
+  \set Staff.midiMaximumVolume = #0.7
 
-  \break
-  
-  \inst "F"     
-    \set Score.currentBarNumber = #107
-  \set Score.skipBars = ##t R1*7 ^\markup { "Sax Mambo" } |
-  r2 r8 es,8 \f --  g8 -- bes8 -- |
-    \inst "G" 
-  \repeat volta 2 {
-  c4 --  ^\markup { "Brass 3" }  bes4 -. c4 -- r8 f,8 ~ -- | 
-  f4. f8 -. r8 as8 -- c4 ~ -- |
-  c4 bes4 -. c4 -- r8 es,8 -- ~ | 
-  es4 r8 es8 -. r8 es8 -- g8 -- bes8 -- | 
-  c4 -- bes4 -. c4 -- r8 f,8 ~ -- | 
-  f4. f8 -. r8 as8 -- c4 ~ --  | 
-  }
-  \alternative {
-  {
-  c4 bes4 -. c4 -- r8 es,8 -- ~ |
-  es4 r8 es8 -. r8 es8 -- g8 -- bes8 -- | 
-  }
-  {
-  c4 -- bes4 -. c4 -- r8 e8 -> -- ~ |
-  e1 |
-  }
-  }
-  \break
-  
-  \inst "H"    
-  \set Score.skipBars = ##t R1*32  ^\markup { "Coro y Pregón 2" }
-  \break
-  
-  \inst "I"     
-  \repeat volta 2 {
-  es,8 \mf -- ^\markup { "Petas" } g8 -. r8 as8 -. bes4 -- \bendAfter #-4 r4 |  \noBreak
-  r8 f8 -- f8 -- as8 -- r8 bes8 -- r8 as8 --  | \noBreak
-  r8 as8 -- r8 as8 -- bes4 -- \bendAfter #-4 r8 es,8 -. | \noBreak
-  r8 \breathe g4.-- r8 es8 --  es8 -- es8 -- | \break
-  es8 -- g8 -. r8 as8 -. bes4 -- \bendAfter #-4 r4 |  \noBreak
-  r8 f8 -- f8 -- as8 -- r8 bes8 -- r8 as8 --  | \noBreak
-  r8 as8 -- r8 as8 -- bes4 -- \bendAfter #-4 r8 es,8 -. | 
-  }
-  \alternative {
-    {
-   r8 g8 -. r8 bes8 -> ~ bes4 r4 | \noBreak
-    }
-    {
-        r8 g8 -. r8 \breathe bes8 -> ~ bes2  | 
-    }
-  }
-  \break
-  
-    \inst "J"
-     
-  \set Score.skipBars = ##t R1*23  ^\markup { "Coro y Pregón 3" }
-  \break
-
-  r4. bes8 \f -- c8 -- d8 -- es8 -- f8 --  | \noBreak
-    \inst "K"
-  es8 ^\markup { "Coda" } -- es8 -- d8 -- es8 -- r8 fes8 -. r8 f8 -. |  \noBreak
-  r8 f8 -- es4 -. es4 -- f4 -. | \noBreak
-  r8 c8 \bendAfter #-4 -- r8 bes8 \bendAfter #-4 -- r8 \breathe as8 -- r8 g8 ~ -- | 
-  g2 r2  | 
-  r8 c8 -. r8 c8 -. g8 -- g8 -.  r8 as8 -- ~ | 
-  as4 r8  as8 -. r8 as8 -- g8  -- ges8 --  | 
-  f2  ->bes4. -> es,8 -^ \ff |
+  \clef bass
+  \key d \major
+  \time 4/4
+  d
   
   \label #'lastPage
   \bar "|."  
 }
 
+Chords = \chords {
+
+  d
+  
+}
 
 \score {
-  \compressMMRests \new Staff \with {
-    \consists "Volta_engraver"
-  }
-  {
-    \Trombone
-  }
+  <<
+    \Chords
+    \compressMMRests \new PianoStaff \with {
+      \consists "Volta_engraver"
+    }
+    {
+      <<
+        \new Staff = "upper" \upper
+        \new Staff = "lower" \lower
+      >>
+    }
+  >>
   \layout {
     \context {
       \Score
       \remove "Volta_engraver"
     }
   }
-} 
-
-\score {
-  \unfoldRepeats {
-    \Trombone
-  }
-  \midi { } 
-} 
+}
 
 \paper {
   system-system-spacing =
-  #'((basic-distance . 14)
+  #'((basic-distance . 15)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))
@@ -388,6 +257,3 @@ Trombone = \new Voice
     }
   }
 }
-
-
-
