@@ -3,14 +3,13 @@
 % Sheet revision 2022_09
 
 \header {
-  title = "#21 La Sabrosa"
-  instrument = "sax"
+  title =  "#21 La Sabrosa"
+  instrument = "bass"
   composer = "by Fernando Sosa & Massimo Scalici"
   arranger = "arr. Luca Colella"
-  opus = "version 22.2.2023"
+  opus = "version 15.3.2023"
   copyright = "© La Familia Salsa Band"
 }
-
 inst =
 #(define-music-function
   (string)
@@ -164,187 +163,89 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Sax = \new Voice
-\transpose bes, g
-\relative c' {
+Bass = \new Voice \relative c {
   \set Staff.instrumentName = \markup {
-    \center-align { "Sax in Eb" }
+    \center-align { "Bass" }
   }
-  \set Staff.midiInstrument = "alto sax"
-  \set Staff.midiMaximumVolume = #0.9
+  \set Staff.midiInstrument = "acoustic bass"
+  \set Staff.midiMaximumVolume = #1.5
 
+  \clef bass
   \key d \minor
   \time 4/4
-  \tempo "Slower Salsa" 4 = 180
- 
-  s1*0 \set Score.skipBars = ##t R1*18 ^\markup { "Intro piano" } \fermata
+  \tempo "Medium Fast Salsa" 4 = 190
+     s1*0 \set Score.skipBars = ##t R1*18 ^\markup { "Intro piano" } \fermata
   \inst "A"
- 
+  
   s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Piano montuno" }
   s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Salsa" }
   s1*0 
   ^\markup { "Brass" }
- 
+  
   \break
-  \inst "B"
-  R1 |
-  r8 b cis d e f g a |
-  r f r2 r4 |
-  r8 cis c cis e cis e d |
-  r8 f r2 r4 |
-  r8 b, cis d e f g a |
-  r f8 r2 r4 |
-  r8 cis c cis e cis e d | \break
- 
-  \inst "C"
-  f8 ^ "Trumpets" e f a r f r g | 
-  r8 f8 e8 d8 cis8 e8 
-  g4 ~ |
-  g4 r4 r2 |
-  r2 r8 f8  g8 r8 |
-  a4. g4. r4 |
-  g4. f4. r4 |
-  e'8 r8 a,8 r8 cis4. d8 |
-  r4. d4 r8 r4 | \break
- 
-  \inst "D"
-  r2 ^ "Coro 1" r4 r8 g,8 |
-  r8 e8 r8 bes'8 a8 g8  a4 |
-  r8 g8  fis8 g8 bes8 g8
-  bes8 a8 | 
-  r8 f8 r4 r8 f8  g8 a8 |
-  a4. g4. r4 |
-  g4. f4. r4 |
-  R1 |
-  f8 r8 f8  f8 r2 | \break
-
-  \inst "E"
-  r2 ^ "Solo Cantante 1" r4 r8 e8 |
-  r8 e8 r8 f8  g8 e8 f8
-  g8 |
-  r8 e8 r2 r4 |
-  r8 f8  g8 a8 r8 f4 r8 |
-  a4. g4. r4 | 
-  g4. f4. r4 |
-  r8 a8  g8 f8 g8 a8 r8
-  f8 | 
-  r8 g8 r8 a8 r4 d4 ~ | 
-  d4 r4 r2 |
-  r8 e,8 r8 f8  g8 e8 f8
-  g8 |
-  r8 e8 r8 e2 r8 |
-  r8 f8  g8 a8 r8 f4 r8 |
-  a4. g4. r4 |
-  g4. f4. r4 |
-  r8 a8  g8 f8 g8 a8 r4 |
-  a8 r8 a8  a8 r4 a4 ~ | \break
-  \inst "F"
-  a4 ^ "Coro 2" r4 r2 |
-  r4 r8 f8 e8 d8 e4 |
-  r8 cis8  c8 cis8
-  e8 cis8 e8 d8 |
-  r8 f4 r4 f8  g8 a8 |
-  a4. g4. r4 |
-  g4. f4. r4 |
-  R1 |
-  f8 r8 f8  f8 r2 | \break
- 
-  \inst "G"
-  R1 ^ "Solo Cantante 2" | 
-  r8 e8 r8 f8  g8 e8 f8
-  g8 |
-  r8 e8 r2 r4 |
-  r8 f8  g8 a8 r8
-  f4 r8 |
-  a4. g4. r4 |
-  g4. f4. r4 |
-  r8 a8  g8 f8  g8 a8 r4 |
-  f8 r8 g8  a8 r4 f4 ~ | 
-  f4 r2 r4 |
-  r8 e8 r8 g8  e8 f8 g8 s8
-  | % 59
-  r8 e8 r8 e2 r8 |
-  r8 f8  g8 a8 r8 r4 r8 |
-  a4. g4. r4 | 
-  g4. f4. r4 |
-  r8 a8  g8 f8 g8 a8 r4 |
-  a8 r8 a8  a8 r4 a4 ~ | \break
-
-  \inst "H"
-  a4 ^ "Coro y Pregón" r4 r2 |
-  r2 r8 e8  f8 g8 |
-  r8 e4 r8 r2 | 
-  r2 r8 a8 r8 a8 ~ | 
-  a2. r4 | 
-  s1*0 \set Score.skipBars = ##t R1*3 \break
-  R1 | 
-  r2 r8 e8  f8 g8 | 
-  r8 e4 r8 r2 | 
-  r2 r8 d8  e8 f8 ~ | 
-  f4 r4 r2 | 
-  s1*0 \set Score.skipBars = ##t R1*3 \break
-  R1 | 
-  r2 r4 r8 e8 |
-  r8 g8 r4 r2 | 
-  r2 r8 e8 r8 d8 ~ | 
-  d2. r4 | 
-  s1*0 \set Score.skipBars = ##t R1*3 \break
-  R1 | 
-  r4 r8 f8  e8 d8  e4 | 
-  r8 cis8  c8 cis8 e8 cis8
-  e8 d8 | 
-  r8 f4 r4 f8  g8 a8 | 
-  a4. g4. r4 | 
-  g4. f4. r4 | 
-  R1 |
-  f8 r8 f8  f8 r2 | \break
-  \inst "I"
+  
+    \inst "B"
+  \repeat percent 8 { \makePercent s1 }
+        \inst "C"
+        s1*0
+          ^\markup { "Trumpets" }
+ \repeat percent 8 { \makePercent s1 } \break
+        \inst "D"
+          s1*0
+                    ^\markup { "Coro" }
+  \repeat percent 8 { \makePercent s1 }
+          \inst "E"
+                    s1*0
+                    ^\markup { "Solo Cantante" }
+  R1*16  \break
+            \inst "F"
+                      s1*0
+                    ^\markup { "Coro 2" }
+   \repeat percent 8 { \makePercent s1 }
+            \inst "G"
+  
+                     s1*0
+                    ^\markup { "Solo Cantante 2" }
+                                   R1*16  \break
+                                                 \inst "H"
+                        s1*0
+                    ^\markup { "Coro y Pregón" }
+                       R1*32
+     \inst "I"
   s1*0 \set Score.skipBars = ##t R1*8 ^\markup { "Piano solo introduction" }
   s1*0 \set Score.skipBars = ##t R1*32 ^\markup { "Piano solo" }
   s1*0 \set Score.skipBars = ##t R1*16 ^\markup { "Conga solo" } \break
- 
+  
   \inst "J"
-  f,8 ^ "Brass + Solos" e f g a f g a |
-  bes g a bes c d b cis -- |
-  r bes -- r a -- r g -- r f -- ~ |
-  f4 r8 g8 f4 r |
-  s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Solo Trombono" } \break
-
-  f8 e f g a f g a |
-  bes g a bes c d b cis -- |
-  r bes -- r a -- r g -- r f -- |
-  r4. g8 f4 r |
- 
-  s1*0 \set Score.skipBars = ##t R1*4 ^\markup { "Solo Trumpet" } \break
- 
-  \inst "K"
-  R1 ^ "Coda (Coro y Pregón)" | 
-  r2 r8 e8  f8 g8 | 
-  r8 e4 r8 r2 | 
-  r2 r8 a8 r8 a8 ~ | 
-  a2. r4 | 
-  s1*0 \set Score.skipBars = ##t R1*3 | \break
-  R1 |
-  r4 r8 f'8  e8 d8  e4 | 
-  r8 cis8  c8 cis8 e8 cis8
-  e8 d8 | 
-  r8 f4 r4 f8  g8 a8 | 
-  a4. g4. r4 | 
-  g4. f4. r4 | 
-  R1 |
-  f8 r8 f8  f8 r2 | \break
- 
+                       s1*0
+                    ^\markup { "Brass + Solos" }
+R1*16
+    \inst "K"
+         s1*0
+                    ^\markup { "Coda (Coro y Pregón)" }
+R1*16
+  
   \label #'lastPage
-  \bar "|."
+  \bar "|."  
+}
+
+Chords = \chords {
+  R1 |
+
+
+  
 }
 
 \score {
-  \compressMMRests \new Staff \with {
-    \consists "Volta_engraver"
-  }
-  {
-    \Sax
-  }
+  <<
+    \Chords
+    \compressMMRests \new Staff \with {
+      \consists "Volta_engraver"
+    }
+    {
+      \Bass
+    }
+  >>
   \layout {
     \context {
       \Score
@@ -353,16 +254,9 @@ Sax = \new Voice
   }
 }
 
-\score {
-  \unfoldRepeats {
-    \transpose g bes, \Sax
-  }
-  \midi { } 
-} 
-
 \paper {
   system-system-spacing =
-  #'((basic-distance . 14)
+  #'((basic-distance . 15)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))
