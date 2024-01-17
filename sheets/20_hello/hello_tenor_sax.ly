@@ -164,7 +164,7 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Sax = \new Voice
+TenorSax = \new Voice
 \transpose c d
 \relative c {
   \set Staff.instrumentName = \markup {
@@ -190,7 +190,7 @@ Sax = \new Voice
     \consists "Volta_engraver"
   }
   {
-    \Sax
+    \TenorSax
   }
   \layout {
     \context {

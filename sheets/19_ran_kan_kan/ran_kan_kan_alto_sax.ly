@@ -1,9 +1,9 @@
-\version "2.22.2"
+\version "2.24.0"
 
 % Sheet revision 2022_09
 
 \header {
-  title = "Ran Kan Kan"
+  title = "#19 Ran Kan Kan"
   instrument = "sax"
   composer = "by Croma Latina"
   arranger = "arr. Ladislav Maršík"
@@ -165,8 +165,8 @@ repeatBracket = #(define-music-function
                   )
 
 Sax = \new Voice
-\transpose c a
-\relative c' {
+\transpose c a'
+\relative c {
   \set Staff.instrumentName = \markup {
     \center-align { "Sax in Eb" }
   }

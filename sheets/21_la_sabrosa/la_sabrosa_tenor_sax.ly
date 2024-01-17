@@ -164,11 +164,11 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Sax = \new Voice
+TenorSax = \new Voice
 \transpose bes c
 \relative c' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Sax in Bb" }
+    \center-align { "T. Sax in Bb" }
   }
   \set Staff.midiInstrument = "tenor sax"
   \set Staff.midiMaximumVolume = #0.9
@@ -363,7 +363,7 @@ Sax = \new Voice
     \consists "Volta_engraver"
   }
   {
-    \Sax
+    \TenorSax
   }
   \layout {
     \context {
@@ -375,7 +375,7 @@ Sax = \new Voice
 
 \score {
   \unfoldRepeats {
-    \transpose g bes, \Sax
+    \transpose g bes, \TenorSax
   }
   \midi { } 
 } 
