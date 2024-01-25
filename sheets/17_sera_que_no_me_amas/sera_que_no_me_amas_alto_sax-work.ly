@@ -7,7 +7,7 @@
   instrument = "sax"
   composer = "by Tony Succar feat. Michael Stuart"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 15.2.2023"
+  opus = "version 22.1.2024"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -165,13 +165,15 @@ repeatBracket = #(define-music-function
                   )
 
 Sax = \new Voice
-%\transpose c a
+\transpose c a
 \relative c' {
   \set Staff.instrumentName = \markup {
     \center-align { "Sax in Eb" }
   }
   \set Staff.midiInstrument = "alto sax"
   \set Staff.midiMaximumVolume = #0.9
+  \override Staff.BreathingSign.text = \markup { \musicglyph "scripts.rvarcomma" }
+  \set breathMarkType = #'tickmark
 
   \key c \major
   \time 4/4
@@ -179,136 +181,106 @@ Sax = \new Voice
     
   s1*0 ^\markup { "Intro" }
   \inst "A"
-  c4  c e, e |
-  r8 a r e r e d r |
-  r4. d8 d r r e |
-  r f r fis r g a g | \break
-  c4  c e, e |
-  r8 a r e r e d r |
-  r4. d8 d r r e |
-  r f r fis r g a g | \break
-  c4  c e, e |
-  r8 a r e r e d r |
-  r4. d8 d r r e |
-  r f r fis r g a g | \break
-  c4  c e, e |
-  r8 a r e r e d r |
-  r4. d8 d r r e |
-  r f r fis r g4. | \break
+  c4 -- \mf  c -. e, -- e -. |
+  r8 a -. r e -. r e d -. r |
+  r4. d8 -- d -. r r e -. |
+  r f -. r fis -. r g a g | \break
+  c4 -- c -. e, -- e -. |
+  r8 a -. r e -. r e d -. r |
+  r4. d8 -- d -. r r e -. |
+  r f -. r fis -. r g a g | \break
+  c4 -- c -. e, -- e -. |
+  r8 a -. r e -. r e d -. r |
+  r4. d8 -- d -. r r e -. |
+  r f -. r fis -. r g a g | \break
+  c4  -- c -. e, -- e -. |
+  r8 a -. r e -. r e d -. r |
+  r4. d8 -- d -. r r e -. |
+  r f -. r fis -. r as4. -- | \break
 
   \mark \markup { \musicglyph "scripts.segno" }
-    s1*0 ^\markup { "Verse 1 & 3" }
-  \inst "B"
-  c4 \accent  \bendAfter #-4  r2. | 
-  \set Score.skipBars = ##t R1*2
-  r8 e8 -. \accent \f r2. |
-  \set Score.skipBars = ##t R1*2
-  f4 \mf \tenuto ( g -. ) r4 c \f \accent ~ |
-  c8 e -. r g -. r e ( d -. )  r | \break
-  R1 |
-  r8 a' ( g e g a -. ) r4  |
-  r2 e4 \f \tenuto e -. |
-  e4 \tenuto ( e8 g e4 -.  \tenuto ) r | 
-  r4. f8 -. \accent \f r2 |
-  r4. c8 -. \accent ~ c8 \bendAfter #-4 r4. |
-  r4. g'8 ( g e g g -. ) |
-  r8  g, -. r2. | \break
-  r2 ^\markup { "Chorus " }  r8 g a -. r | 
-  c \f \tenuto \accent c \tenuto \accent r2. |
-  r4. \mf es8 r f r bes | 
-  r g8 ~ g r8 f f bes,8 r  | \break
-  r2. d8 ^\markup { "Sax D" }  -. \accent \f r |
-  r8 d8 -. \accent r2. |
-  r4. g8 \mf r a ~ a4 |
-  r8 g a -. r g a \tenuto ~ a r | \break
-  r2r8 g, a r | 
-  r c \tenuto \accent ~ c4 r2 |
-  r4. es8 r f r bes | 
-  r g ~ g r f f bes,8 r  | \break
-  r2. d8 ^\markup { "Sax D" } -. \accent \f r |
-  r8 d8 -. \accent r2. |
-  r8 g8 \mf  \tenuto d \tenuto dis \tenuto  e \tenuto g \tenuto e \tenuto a -. \accent  |
-  R1 | \break
-  c2^\markup { "Verse, Sax C" } \accent  \bendAfter #-4  r2 | 
-  \set Score.skipBars = ##t R1*2
-  r8 c8 -. \accent \f r2. |
-  \set Score.skipBars = ##t R1*2
-  f,2 \mf r4 e \accent ~ |
-  e8 e \tenuto \f r g \tenuto r e ( d )  r | \break
-  R1 |
-  r8 a' ( g e g a -. ) r4  |
-  r2 e4 \f \tenuto e -. |
-  e4 \tenuto ( e8 g e4 -.  \tenuto ) r | 
-  r4. f8 -. \accent \f r2 |
-  r4. c8 -. \accent ~ c8 \bendAfter #-4 r4. |
-  r4. g'8 ( g e g g -. ) |
-  r8  g, -. r2. | \break
-  r2 ^\markup { "Chorus " }  r8 g a -. r | 
-  c \f \tenuto \accent c \tenuto \accent r2. |
-  r4. \mf es8 r f r bes | 
-  r g8 ~ g r8 f f bes,8 r  | \break
-  r2. d8 ^\markup { "Sax D" }  -. \accent \f r |
-  r8 d8 -. \accent r2. |
-  r4. g8 \mf r a ~ a4 |
-  r8 g a -. r g a \tenuto ~ a r | \break
-  r2r8 g, a r | 
-  r c \tenuto \accent ~ c4 r2 |
-  r4. es8 r f r bes | 
-  r g ~ g r f f bes,8 r  | \break
-  r2. d8 ^\markup { "Sax D" } -. \accent \f r |
-  r8 d8 -. \accent r2. |
-  r4. g,8 \mf   r c r a' | 
-  r g ~ g r e d e  r  | \break
-  \set Score.skipBars = ##t R1*8 ^\markup { "Ya No Se" }
+  s1*0 ^\markup { "Verse 1 & 2" }
+  \inst "B1,2"
   
-  r2 r8 c'8 ~-. \accent \f c4 |
-  r2 r8 c,8  \mf \accent ~ c4 |
-  r4. a'8 \f -. r a g g \accent -. |
+  \repeat volta 2 { 
+  c4 \accent  \bendAfter #-4  r4 r8 e -. r a -.  |
+  r8 g -. r d -. r e -- c4 -. | 
+  r4. bes8 -- bes4 -. r4  |
+  r8 c8 \accent r4 g2 --  |
+  a8 -- a -. r4 g8 -- a -. r4 |
+  r4. d,8 -- ~ d2  |
+  f4 \tenuto ( as -. ) r4 c \f \accent ~ |
+  c8 e -. r g -. r e -- d4 -. | \break
+  R1 |
+  r8 a' \mf ( g e g a -. ) r4  |
+  R1*2 ^\markup { "Trombone" }
+  r4. f,8 -^ \f r2 |
+  r4. c'8 \accent ~ c4 \bendAfter #-4 r4 |
+  r4. g'8 ( g e g c -^ ) |
+  r8  b -^ r2. | \break
+  
+  s1*0 ^\markup { "Chorus 1 & 2" }
+  \inst "C1,2"
+  r2 r8 g, -- a -. r | 
+  c -^ c -^ r2. |
+  r2 r8 f -. \mf r bes -. | 
+  r g4. -- f8 bes, bes4 -.  |
+  r2.bes4 -^ \f |
+  r8 bes8 -^ r2. |
+  r4. g8 -. \mf r a -- ~ a g |
+  c4 -. r8 c c4 -. r | \break
+  r2 r8 g \f a4 -. | 
+  r8 c \accent ~ c4 \bendAfter #-4 r2 |
+  r2 r8 f -. \mf r \breathe bes -. | 
+  r g4. -- f8 bes, bes4 -. | \break
+    r2.bes4 -^ \f |
+  r8 bes8 -^ r2. |
+   \alternative {
+     {
+        r8 g'8 \mf  \tenuto d \tenuto es \tenuto  e \tenuto g \tenuto e \tenuto a -^  |
+        R1 |
+     }
+     {
+       r4. g,8 -. \mf   r c -. r a' -. | 
+       r g4.\turn e8 d e4 -. | \break
+     }
+   }
+  }
+ 
+ s1*0 ^\markup { "Ya No Se" }
+ \inst "D"
+ R1*8 
+
+  r2 r8 c'4. \accent \f |
+  r2 r8 c,4.  \mf \accent |
+  r4. a'8 \f -. r a -- g -. g -. -. |
   R1  | \break
   
-  r2 r8 c8 ~-. \accent \f c4 |
+  r2 r8 c4. \accent |
+  r2 r4. g,8 \mf \< |
+  c4. d8 ~ d4.es8 ~ |
+  es4.  f8 \f  g f g4 -^ | \break
+  
+   s1*0 ^\markup { "Chorus" } 
+   \inst "C3"
+  a8  -. \accent  r4. r8 g, -- a -. r \breathe | 
+  c -^ c -^ r2. |
+  r2 r8 f -. \mf r \breathe bes -. | 
+  r g4. -- f8 bes, bes4 -. |
+    r2.bes4 -^ \f |
+  r8 bes8 -^ r2. |
+  r4. g8 \mf r a4 -- g8 |
+  c4 -. r8 c c4 -. r |
+  r2 r8 g \f a4 -. | 
+  r8 c \accent ~ c4 \bendAfter #-4 r2 |
+  r4. c8 \mf g' g fis g | 
+  es f g4 -^ r2 |
+  as,4. -> g8 -^ r f' d bes |
+  r g -> \f r es' -> r es ( d c |
+  d c ~ c2 ) r8 bes -> |
   R1 |
-  d,,4 \mf ~ d8  \tenuto a'8 ~ a4 ~ a8 \tenuto bes ~ |
-  bes4 ~ bes8  g8 \f  ~ g2 | \break
-  \mark \markup { \musicglyph "scripts.coda" } 
-  a8 ^\markup { "Chorus" }  -. \accent  r4. r8 g a -. r | 
-  c \f \tenuto \accent c \tenuto \accent r2. |
-  r4. \mf es,8 r f r bes | 
-  r g8 ~ g r8 f f bes,8 r  | \break
-  r2. f'8 ^\markup { "Sax D" }  -. \accent \f r |
-  r8 f8 -. \accent r2. |
-  r4. g8 \mf r a ~ a4 |
-  r8 g a -. r g a \tenuto ~ a r | \break
-  r2r8 g a r | 
-  r c \tenuto \accent ~ c4 r2 |
-  r4. es8 r f r bes | 
-  r g ~ g r f f bes,8 r  | \break
-  r2. f'8 ^\markup { "Sax D" } -. \accent \f r |
-  r8 f8 -. \accent r2. |
-  r8 g8 \mf  \tenuto d \tenuto dis \tenuto  e \tenuto g \tenuto e \tenuto a -. \accent  |
-  R1 | \break
   
-  \set Score.skipBars = ##t R1*16 ^\markup { "Solo Trombone (C, E, F, G)" }
-  \set Score.skipBars = ##t R1*16 ^\markup { "Solo Trumpet" }
-  \set Score.skipBars = ##t R1*16 ^\markup { "Solo Sax" }
-  \set Score.skipBars = ##t R1*16 ^\markup { "Solo Piano" } |
-  r1 \fermata ^\markup { "Wait for apel" } | |
   
-  g8 \f g -. r g -. r g ~ g4 \tenuto  ^\markup { "D.S. al Coda" } | \break
-
-  \repeat volta 4 {
-    \set Score.skipBars = ##t R1*2 ^\markup { "Coda1 4x" } |
-    c,8 c r a r c r d |
-    r es r e r g a g |   \break
-  }
-  \repeat volta 4 {
-    c,8  ^\markup { "Coda2 3x" } c r a r c r d \fermata ^\markup { "wait on D on 3rd" } |
-    r es r e r g a g |   \break 
-  }
-
-  c,8 c r a r c r d |
-  r es r e r g a g |   
-  c8 \accent r8 r2. |
   
   \label #'lastPage
   \bar "|."  

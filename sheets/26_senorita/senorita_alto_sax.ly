@@ -3,11 +3,11 @@
 % Sheet revision 2022_09
 
 \header {
-  title = "#20 Hello"
+  title = "#26 Señorita"
   instrument = "sax"
-  composer = "by Mandinga"
+  composer = "by Shawn Mendes feat. Camila Cabello"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 25.1.2024"
+  opus = "version 24.1.2024"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -172,129 +172,36 @@ Sax = \new Voice
   }
   \set Staff.midiInstrument = "alto sax"
   \set Staff.midiMaximumVolume = #0.9
-    \override Staff.BreathingSign.text = \markup { \musicglyph "scripts.rvarcomma" }
-  \set breathMarkType = #'tickmark
 
-  \key f \minor
+  \key g \minor
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
   
-   s1*0 ^\markup { "Intro PIano" }
- R1*8 
-    s1*0 ^\markup { "Verse 1" }
- \inst "A"
- R1*14
- bes4 -- \mp bes -- bes -- c -- ~ \< |
- c1 |
- R1 \mf \! |
- 
-  s1*0 ^\markup { "Verse 2" }
-   \inst "B"
+    s1*0 ^\markup { "Piano Intro" }
+  \inst "A"
+  R1*7 
+  
+  s1*0 ^\markup { "Brass Intro" }
+  \inst "B"
+  
  R1 |
- r8 es -. \mp r bes -- ~ bes2 |
-  r2 c8 ( es f4 ~ |
-  f1 ) |
-  R1*5
-  r2 es'8 \mp c -. r bes ~ |
-  bes2. as8 c ~ |
-  c2 ~ c8 as c bes ~ |
-  bes2. as8 g ~ |
-  g4. es8 ~ es4. c8 ~ |
-  c1 |
-  R1 |  \break
-  
-  \segno 
-    s1*0 ^\markup { "Bridge" }
-   \inst "C"
-  r2 r8 f -- \mp \< r g -- |
-  r es -- ~ es2 c'4 \mf -- ~ |
-  c2 r8 es, -. r es -. \bendAfter #-4 |
-  R1 |
-  des2. \mp -- c4 -- ~ |
-  c2 bes -- ~ |
-  bes1 |
-  \breathe as'2 \mf g4 -- r | \break
-  
-   s1*0 ^\markup { "Chorus Part 1" }
-   \inst "D"
-  c,4 \p \< -- c -- c -- c -- |
-  des -- des -- des -- es \f -> |
-  r8 f -. \mp r as -. r bes -. r bes -- ~ |
-  bes4. as8 -. r bes8 c4 -- |
-  R1*2 
-  r4 as8 \mf g -. r es -. r4 |
-  c'8 -> \f es ~ es2. |
-  R1 | \break
-  R1 |
-  r2 r4. c16 \mp des |
-  c4 -- des -- es -- bes -- \< ~ | 
-  bes1 |
-  R1 \mf |
-  r4 as8 \mp f -. r es -. r4 |
-  c8 ( des c4 ) r8 as' ( as g ) |
-  r c \mf \< ( bes g bes c ) r c | \break
-  
-  s1*0 ^\markup { "Chorus Part 2" }
-  \inst "E"
-  c4 -> \f r2. |
-  R1 |
-  r4. c,8 \mf -. r es -. r c -. |
-  es4 -- f -- r2 |
-  R1*2 
-  r8 bes, -. r c -. r es -. r c -. |
-  es4 -- f -- r2 |
-  R1*7
-  r4. \coda ^\markup { "to coda" } es8 -. \mf r f -. r as -> ~ | \break
-  
-    s1*0 ^\markup { "Puente" }
-  \inst "F"
-  as4 f8 -. r8 r f -. r as -. |
-  r f -. r es -. r f -. r as ->  ~ |
-  as4 f8 -. r r f -. \< r bes \f -> |
-  r as -. r g -. r es -. r es -> ~ |
-  es4 f8 r r es \> ( c es ) ~ |
-  es4 c -. bes -. as -. \mp |
-  es' -. as8 -> g -. r es -. r c -. |
-  es1 -> \> | \break
-  
-  s1*0 ^\markup { "Verse 3" }
-  \inst "G"
-  R1*3 \! 
-  r2 c8 \mf ( des c es ) ~ |
-  es4 bes'8 ( as ) ~ as4 as8 ( g ) ~ |
-  g2. es8 ( f ) ~ |
-  f1 |
-  r4 c8 \f -> c -> c -> c -> r4 |
-  r2 r8 es \mf ( c bes' ) |
-  r as -- ~ as2. |
-  bes2. -- c8 ( as ) ~ |
-  as1 |
-  R1*4 ^\markup { "Dal " \musicglyph "scripts.segno" " al " \musicglyph "scripts.coda" }
-  \break
-  
-    \mark \markup { \musicglyph "scripts.coda" }
-    s1*0 ^\markup { "Coda - Mambo" }
-  \inst "H"
-  R1 | 
-  \repeat volta 3 {
-  c8 \mf -- c --  r4 des8 -- des -- r4 |
-  r8 c -- r4 des8 -- des -- r4 |
-  c8  -- c --  r4 des8 -- c -- r4 |
-    r8 bes -- r4 c8 -- bes -- r4 |
-  c8 -- c --  r4 des8 -- des -- r4 |
-  r8 c -- r4 des8 -- des -- r4 |
-  c8  -- c --  r4 des8 -- des -- r4 |
-   \alternative {
-     \volta 1,2 {
-        r8 bes -- r4 c8 -- bes -- r4 |
-     }
-     \volta 3 {
-       r8 c \f ( bes g bes c -. ) r c -- |
-     }
-   }
-   c4 -> \ff r2. |
-   
-  }
+ g4 \mf r8 d' d4. g,8 ~  |
+ g4. g8 -. g' ( f ) d -. c -. |
+ bes4 r8 f' f4. bes,8 ~ |
+ bes4. bes8 g' ( f ) d -. c -. |
+ es,4  r8 bes' bes4. es,8 ~  |
+ es4. bes'8 es ( d ) bes -. g -. | 
+ d4 r8 d a' ( g ) a f ~ |
+ f f ~ f f -. d'8 -> \f ( c bes c ) |
+  d4 -> bes -- g -- d'8 ( c ) |
+  r a -- ~ a r d8 ( c bes c ) |
+  d4 -- bes -- f -- d'8 ( c ) |
+  r a -- ~ a c d8 ( c bes a ) |
+  \tuplet 3/2 { g4 -- es' -- es -- } es -- r |
+  \tuplet 3/2 { g,4 -- es' -- es -- } es -- r8 f -> ~ |
+  f ( g ) f ( g ) f ( d ) r f -> ~ |
+  f ( g ) f ( g ) f ( d ) r8 d 
+  g2 r2  |
   
   \label #'lastPage
   \bar "|."

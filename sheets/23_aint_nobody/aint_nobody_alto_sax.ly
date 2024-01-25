@@ -170,7 +170,7 @@ Sax = \new Voice
 %\transpose c d
 \relative c' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Sax in Bb" }
+    \center-align { "Sax in Eb" }
   }
   \set Staff.midiInstrument = "alto sax"
   \set Staff.midiMaximumVolume = #0.9
