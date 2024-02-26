@@ -173,7 +173,7 @@ Sax = \new Voice
   \set Staff.midiInstrument = "alto sax"
   \set Staff.midiMaximumVolume = #0.9
 
-  \key g \minor
+  \key a \minor
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
   
@@ -184,24 +184,55 @@ Sax = \new Voice
   s1*0 ^\markup { "Brass Intro" }
   \inst "B"
   
- R1 |
- g4 \mf r8 d' d4. g,8 ~  |
- g4. g8 -. g' ( f ) d -. c -. |
- bes4 r8 f' f4. bes,8 ~ |
- bes4. bes8 g' ( f ) d -. c -. |
- es,4  r8 bes' bes4. es,8 ~  |
- es4. bes'8 es ( d ) bes -. g -. | 
- d4 r8 d a' ( g ) a f ~ |
- f f ~ f f -. d'8 -> \f ( c bes c ) |
-  d4 -> bes -- g -- d'8 ( c ) |
-  r a -- ~ a r d8 ( c bes c ) |
-  d4 -- bes -- f -- d'8 ( c ) |
-  r a -- ~ a c d8 ( c bes a ) |
-  \tuplet 3/2 { g4 -- es' -- es -- } es -- r |
-  \tuplet 3/2 { g,4 -- es' -- es -- } es -- r8 f -> ~ |
-  f ( g ) f ( g ) f ( d ) r f -> ~ |
-  f ( g ) f ( g ) f ( d ) r8 d 
-  g2 r2  |
+  r2 e8 -> \f ( d c d ) |
+  e4 -> c -- a -- e'8 ( d ) |
+  r b -- ~ b r e8 ( d c d ) |
+  e4 -- c -- g -- e'8 ( d ) |
+  r b -- ~ b d e8 ( d c b ) |
+  \tuplet 3/2 { a4 -- f' -- f -- } f -- r |
+  \tuplet 3/2 { a,4 -- f' -- f -- } f -- r8 g -> ~ |
+  g ( a ) g ( a ) g ( e ) r g -> ~ |
+  g ( a ) g ( a ) e'8 ( d c d ) |
+  e4 -> c -- a -- e'8 ( d ) |
+  r b -- ~ b r e8 ( d c d ) |
+  e4 -- c -- g -- e'8 ( d ) |
+  r b -- ~ b d e8 ( d c b ) |
+  \tuplet 3/2 { a4 -- f' -- f -- } f -- r |
+  \tuplet 3/2 { a,4 -- f' -- f -- } f -- r8 g -> ~ |
+  g ( a ) g ( a ) g ( e ) r g -> ~ |
+  g ( a ) g ( a ) g ( e ) r8 e 
+  a2 r2  |
+  
+  
+    s1*0 ^\markup { "Chorus 1" }
+  \inst "C1"
+  R1*7 
+  
+    s1*0 ^\markup { "Verse 1" }
+  \inst "D1"
+  
+  
+    R1*16 
+    
+    s1*0 ^\markup { "Chorus 2" }
+  \inst "C2"
+  R1*7 
+   r2 e,8 -> \mf ( d c d ) |
+  e4 -> c -- a -- e'8 ( d ) |
+  r b -- ~ b r e8 ( d c d ) |
+  e4 -- c -- g -- e'8 ( d ) |
+  r b -- ~ b d e8 ( d c b ) |
+  \tuplet 3/2 { a4 -- f' -- f -- } f -- r |
+  \tuplet 3/2 { a,4 -- f' -- f -- } f -- r8 g -> ~ |
+  g ( a ) g ( a ) g ( e ) r g -> ~ |
+  g ( a ) g ( a ) g8 -- e -- r d -- |
+  e4 -> r2. |
+  
+      s1*0 ^\markup { "Verse 2" }
+  \inst "D2"
+      R1*7
+      
+      a2 \mf -> r2 |
   
   \label #'lastPage
   \bar "|."
@@ -220,6 +251,7 @@ Sax = \new Voice
       \remove "Volta_engraver"
     }
   }
+  \midi { }
 }
 
 

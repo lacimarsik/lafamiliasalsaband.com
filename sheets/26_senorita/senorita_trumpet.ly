@@ -165,7 +165,7 @@ repeatBracket = #(define-music-function
                   )
 
 Trumpet = \new Voice
-\transpose c d
+%\transpose c d
 \relative c'' {
   \set Staff.instrumentName = \markup {
     \center-align { "Tr. in Bb" }
@@ -173,7 +173,7 @@ Trumpet = \new Voice
   \set Staff.midiInstrument = "trumpet"
   \set Staff.midiMaximumVolume = #1.0
 
-  \key g \minor
+  \key a \minor
   \time 4/4
   \tempo "Slow Bachata" 4 = 120
   
@@ -184,24 +184,55 @@ Trumpet = \new Voice
   s1*0 ^\markup { "Brass Intro" }
   \inst "B"
     
-  r2 bes8 -> \f ( a g a ) |
-  bes4 -> g -- d -- bes'8 ( a ) |
-  r f -- ~ f r bes8 ( a g a ) |
-  bes4 -- g -- d -- bes'8 ( a ) |
-  r f -- ~ f a ( bes8 a g f ) |
-  \tuplet 3/2 { es4 -- bes' -- bes -- } bes -- r |
-  \tuplet 3/2 { es,4 -- bes' -- bes -- } bes -- r8 a -> ~ |
-  a ( bes ) a ( bes ) a ( f ) r a -> ~ |
-  a ( bes ) a ( bes ) bes8 -> ( a g a ) | \break
-  bes4 -- g -- d -- bes'8 ( a ) |
-  r f -- ~ f a ( bes8 a g a ) |
-  bes4 -- g -- d -- bes'8 ( a ) |
-  r f -- ~ f r bes8 ( a g f ) |
-  \tuplet 3/2 { es4 -- bes' -- bes -- } bes -- r |
-  \tuplet 3/2 { es,4 -- bes' -- bes -- } bes -- r8 a -> ~ |
-  a ( bes ) a ( bes ) a ( f ) r a -> ~ |
-  a ( bes ) a ( bes ) \tuplet 3/2 { a4 -- g4 -- f4 -- } |
-  g2 -- r2 |
+  r2 c8 -> \f ( b a b ) |
+  c4 -> a -- e -- c'8 ( b ) |
+  r g -- ~ g r c8 ( b a b ) |
+  c4 -- g -- e -- c'8 ( b ) |
+  r g -- ~ g b ( c8 b a g ) |
+  \tuplet 3/2 { f4 -- c' -- c -- } c -- r |
+  \tuplet 3/2 { f,4 -- c' -- c -- } c -- r8 b -> ~ |
+  b ( c ) b ( c ) b ( g ) r b -> ~ |
+  b ( c ) b ( c ) c8 -> ( b a b ) | \break
+  c4 -- a -- e -- c'8 ( b ) |
+  r g -- ~ g b ( c8 b a b ) |
+  c4 -- g -- e -- c'8 ( b ) |
+  r g -- ~ g r c8 ( b a g ) |
+  \tuplet 3/2 { f4 -- c' -- c -- } c -- r |
+  \tuplet 3/2 { f,4 -- c' -- c -- } c -- r8 b -> ~ |
+  b ( c ) b ( c ) b ( g ) r b -> ~ |
+  b ( c ) b ( c ) \tuplet 3/2 { b4 -- a4 -- g4 -- } |
+  a2 -- r2 |
+  
+    s1*0 ^\markup { "Chorus 1" }
+  \inst "C1"
+  R1*7 
+  
+    s1*0 ^\markup { "Verse 1" }
+  \inst "D1"
+  
+  
+    R1*16 
+    
+    s1*0 ^\markup { "Chorus 2" }
+  \inst "C2"
+  R1*7 
+   r2 c8 -> \mf ( b a b ) |
+  c4 -> a -- e -- c'8 ( b ) |
+  r g -- ~ g r c8 ( b a b ) |
+  c4 -- g -- e -- c'8 ( b ) |
+  r g -- ~ g b ( c8 b a g ) |
+  \tuplet 3/2 { f4 -- c' -- c -- } c -- r |
+  \tuplet 3/2 { f,4 -- c' -- c -- } c -- r8 b -> ~ |
+  b ( c ) b ( c ) b ( g ) r b -> ~ |
+  b ( c ) b ( c ) b8 -- a  --  r g --
+  a4 -> r2. |
+  
+      s1*0 ^\markup { "Verse 2" }
+  \inst "D2"
+      R1*7
+      
+      e2 \f -> r2 |
+  
 
   \label #'lastPage
   \bar "|."
@@ -220,6 +251,7 @@ Trumpet = \new Voice
       \remove "Volta_engraver"
     }
   }
+  \midi { }
 }
 
 \paper {
