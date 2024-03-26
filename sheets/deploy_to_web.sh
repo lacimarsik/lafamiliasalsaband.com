@@ -3,7 +3,7 @@ mkdir -p PDFs
 #echo "[Deploy PDFs] Removing previous PDFs"
 rm -rf ./PDFs
 
-songs=(24_via 23_aint_nobody 21_la_sabrosa 20_hello 19_ran_kan_kan 18_i_want_you_back 17_sera_que_no_me_amas 15_star_gees 13_would_i_lie 10_brocoli 9_baila_conmigo 7_lonely_boy 3_los_campeones_de_la_salsa 2_yo_no_se_manana 26_senorita 25_lamento_boliviano 22_perfect 14_canalla 12_incondicional 4_all_of_me 1_letam 16_yo_no_tengo_soledad 11_sunshine 8_oye_como_va 6_wake_up_song 5_micaela)
+songs=(27_conga 26_senorita 25_lamento_boliviano 24_via 23_aint_nobody 22_perfect 21_la_sabrosa 20_hello 19_ran_kan_kan 18_i_want_you_back 17_sera_que_no_me_amas 15_star_gees 14_canalla 13_would_i_lie 12_incondicional 10_brocoli 9_baila_conmigo 7_lonely_boy 4_all_of_me 3_los_campeones_de_la_salsa 2_yo_no_se_manana 1_letam 16_yo_no_tengo_soledad 11_sunshine 8_oye_como_va 6_wake_up_song 5_micaela)
 #for d in `find . -maxdepth 1 -type d \( ! -name . ! -name PDFs ! -name templates ! -name inactive \) | sort -Vr`
 for d in ${songs[@]}
 do
@@ -27,13 +27,19 @@ do
 		#for instrument in ${instruments[@]}; do echo $instrument; done
 		source ${songname}.bashconfig
 		#echo "[Deploy PDFs] Loaded bashconfig file with id: $ID and title: $TITLE"
+		statusinfo=""
+		statusclass="has-vivid-red-color"
+		if [ "$STATUS" = "PASSIVE" ]; then
+            statusinfo=" (Passive)"
+            statusclass="has-white-color"
+		fi
 		sheets_dir="https://github.com/lacimarsik/lafamiliasalsaband.com/blob/main/sheets"
 		sheet_links=""
 		for instrument in ${instruments[@]}; do sheet_links+="<a rel=\"noreferrer noopener\" href=\"${sheets_dir}/${d}/${songname}_${instrument}.pdf\" target=\"_blank\">${instrument}</a> "; done
 		
 		#echo "[Deploy PDFs] Creating HTML for web"
 		echo ""
-		echo "<p class=\"has-vivid-red-color has-text-color\"><strong>#${ID} ${TITLE} (${INTERPRET})</strong></p>"
+		echo "<p class=\"${statusclass} has-text-color\"><strong>#${ID}${statusinfo} ${TITLE} (${INTERPRET})</strong></p>"
 	    echo ""
 	    echo "<details class=\"wp-block-details ${TEMPOCLASS} has-text-color\"><summary>Instructions: ${TEMPO}</summary>"
 		echo "<p class=\"has-cyan-bluish-gray-color has-text-color\">${INSTRUCTIONS}</p>"

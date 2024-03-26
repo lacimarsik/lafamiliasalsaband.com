@@ -181,10 +181,9 @@ Sax = \new Voice
   \inst "A"
   R1*7 
   
-  s1*0 ^\markup { "Brass Intro" }
-  \inst "B"
-  
   r2 e8 -> \f ( d c d ) |
+    s1*0 ^\markup { "Brass Intro" }
+  \inst "B"
   e4 -> c -- a -- e'8 ( d ) |
   r b -- ~ b r e8 ( d c d ) |
   e4 -- c -- g -- e'8 ( d ) |
@@ -232,7 +231,48 @@ Sax = \new Voice
   \inst "D2"
       R1*7
       
-      a2 \mf -> r2 |
+      c2 \< \mf r2 \! |
+            c2 \< r2 \! |
+                        c2 \< r2 \! |
+                        g4 -- g4 -- r2 |
+                       s1*0 ^\markup { "Chorus 3 - Trombone solo base" }
+  \inst "C3"
+  R1*7 
+   r2 e'8 -> \mf ( d c d ) | \break
+  e4 ^\markup { "tutti" }   -> c -- a -- e'8 ( d ) |
+  r b -- ~ b r e8 ( d c d ) |
+  e4 -- c -- g -- e'8 ( d ) |
+  r b -- ~ b d e8 ( d c b ) |
+  \tuplet 3/2 { a4 -- f' -- f -- } f -- r |
+  \tuplet 3/2 { a,4 -- f' -- f -- } f -- r8 g -> ~ |
+  g ( a ) g ( a ) g ( e ) r g -> ~ |
+  g ( a ) g ( a ) g8 -- e -- r d -- | \break
+        s1*0 ^\markup { "Vocals" }
+  \inst "E"
+  e1 |  
+  r2 e2 |
+  e2. e8 f  |
+  \tuplet 3/2 { g4 a g f e d } |
+  c2. c8 d |
+    \tuplet 3/2 { e4 f e d c b } |
+                        b2 r2 |
+                        b2 r2 | \break
+                 \inst "F"
+  R1*5 ^\markup { "Solo sax" }
+  r2. r8 g -> ~ |
+  g ( a ) g ( a ) g ( e ) r g -> ~ |
+  g ( a ) g ( a ) g8 -- e -- r d -- |
+  e4 -> r2. |
+    R1*5 ^\markup { "Solo trombone" }
+  r2. r8 g -> ~ |
+  g ( a ) g ( a ) g ( e ) r g -> ~ |
+  g ( a ) g ( a ) g8 -- e -- r d -- |
+  e4 -> r2. |
+      R1*5 ^\markup { "Solo trumpet" }
+  r2. r8 g -> ~ |
+  g ( a ) g ( a ) g ( e ) r g -> ~ |
+  g ( a ) g ( a ) g8 -- e -- r d -- |
+  e4 -> r2. |
   
   \label #'lastPage
   \bar "|."

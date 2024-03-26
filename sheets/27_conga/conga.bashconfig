@@ -1,0 +1,14 @@
+#!/bin/bash
+
+ID=27
+TITLE="Conga"
+INTERPRET="Gloria Estefan"
+STATUS="ACTIVE"
+MP3=https://drive.google.com/file/d/1UcBL-8yYErUc-nw1rjbZAli2p0wr84WF/view?usp=drive_link
+TEXT=https://docs.google.com/document/d/1zbsBeCaVv0Ia9RY_k4qupVX7zsAC1uKbM7ll9goSb4o/edit?usp=drive_link
+CHORD=https://docs.google.com/document/d/15hnXiWmcptyPG2v1UMQR94d6Doz09ljOfxROmJfDVE0/edit?usp=drive_link
+TEMPO="VERY FAST 220 BPM"
+TEMPOCLASS="has-pale-pink-color"
+INSTRUCTIONS="Exactly as YouTube, but slower and we make it 'our' with the tumbaos and rhythms that we feel fit the song." 
+YOUTUBE=https://www.youtube.com/watch?v=5SXX-pWzOY8
+YOUTUBE_TITLE="Conga"

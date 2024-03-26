@@ -165,7 +165,7 @@ repeatBracket = #(define-music-function
                   )
 
 Trumpet = \new Voice
-%\transpose c d
+\transpose c d
 \relative c'' {
   \set Staff.instrumentName = \markup {
     \center-align { "Tr. in Bb" }
@@ -180,11 +180,11 @@ Trumpet = \new Voice
   s1*0 ^\markup { "Piano Intro" }
   \inst "A"
   R1*7 
-  
-  s1*0 ^\markup { "Brass Intro" }
-  \inst "B"
     
   r2 c8 -> \f ( b a b ) |
+  
+    s1*0 ^\markup { "Brass Intro" }
+  \inst "B"
   c4 -> a -- e -- c'8 ( b ) |
   r g -- ~ g r c8 ( b a b ) |
   c4 -- g -- e -- c'8 ( b ) |
@@ -231,8 +231,49 @@ Trumpet = \new Voice
   \inst "D2"
       R1*7
       
-      e2 \f -> r2 |
-  
+      
+      e2 \< \mf r2 \! |
+            e2 \< r2 \! |
+                        e2 \< r2 \! |
+                        b4 -- b4 -- r2 | 
+     s1*0 ^\markup { "Chorus 3 - Trombone solo base" }
+  \inst "C3"
+  R1*7
+   r2 c'8 -> \mf ( b a b ) | \break
+  c4 -> ^\markup { "tutti" } a -- e -- c'8 ( b ) |
+  r g -- ~ g r c8 ( b a b ) |
+  c4 -- g -- e -- c'8 ( b ) |
+  r g -- ~ g b ( c8 b a g ) |
+  \tuplet 3/2 { f4 -- c' -- c -- } c -- r |
+  \tuplet 3/2 { f,4 -- c' -- c -- } c -- r8 b -> ~ |
+  b ( c ) b ( c ) b ( g ) r b -> ~ |
+  b ( c ) b ( c ) b8 -- a  --  r g -- | \break
+  s1*0 ^\markup { "Vocals" }
+  \inst "E"
+  a1 |
+  r2 g2 |
+  g1 |
+  r2 f2 |
+  e2. e8 f  |
+  \tuplet 3/2 { g4 a g f e d } |
+  d2 r2 |
+  d2 r2 | \break
+    \inst "F"
+  R1*5 ^\markup { "Solo sax" }
+  r2. r8 b' -> ~ |
+  b ( c ) b ( c ) b ( g ) r b -> ~ |
+  b ( c ) b ( c ) b8 -- a  --  r g --
+  a4 -> r2. |
+    R1*5 ^\markup { "Solo trombone" }
+  r2. r8 b -> ~ |
+  b ( c ) b ( c ) b ( g ) r b -> ~ |
+  b ( c ) b ( c ) b8 -- a  --  r g --
+  a4 -> r2. |
+      R1*5 ^\markup { "Solo trumpet" }
+  r2. r8 b -> ~ |
+  b ( c ) b ( c ) b ( g ) r b -> ~ |
+  b ( c ) b ( c ) b8 -- a  --  r g --
+  a4 -> r2. |
 
   \label #'lastPage
   \bar "|."

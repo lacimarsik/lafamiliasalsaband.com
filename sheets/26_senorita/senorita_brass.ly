@@ -2,12 +2,17 @@
 
 % Sheet revision 2022_09
 
+% for score rendering
+% - comment \repeatBracket command
+% - comment markups that denote percussion repeats, e.g. ^\markup { \bold { \fontsize #2 "8x" } }
+% - use simple page counter, only: \fromproperty #'page:page-number-string
+
 \header {
-  title = "#26 Señorita"
-  instrument = "trombone"
-  composer = "by Shawn Mendes feat. Camila Cabello"
-  arranger = "arr. Ladislav Maršík"
-  opus = "version 24.1.2024"
+  title = "#26 Senorita"
+  instrument = "brass"
+  composer = "Al De Lory"
+  arranger = "arr. Pavel Skalník + Ladislav Maršík"
+  opus = "version 1.12.2023"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,6 +169,237 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
+
+Trumpet = \new Voice
+\transpose c d
+\relative c'' {
+  \set Staff.instrumentName = \markup {
+    \center-align { "Tr. in Bb" }
+  }
+  \set Staff.midiInstrument = "trumpet"
+  \set Staff.midiMaximumVolume = #1.0
+
+  \key a \minor
+  \time 4/4
+  \tempo "Slow Bachata" 4 = 120
+  
+  s1*0 ^\markup { "Piano Intro" }
+  \inst "A"
+  R1*7 
+    
+  r2 c8 -> \f ( b a b ) |
+    
+  s1*0 ^\markup { "Brass Intro" }
+  \inst "B"
+  c4 -> a -- e -- c'8 ( b ) |
+  r g -- ~ g r c8 ( b a b ) |
+  c4 -- g -- e -- c'8 ( b ) |
+  r g -- ~ g b ( c8 b a g ) |
+  \tuplet 3/2 { f4 -- c' -- c -- } c -- r |
+  \tuplet 3/2 { f,4 -- c' -- c -- } c -- r8 b -> ~ |
+  b ( c ) b ( c ) b ( g ) r b -> ~ |
+  b ( c ) b ( c ) c8 -> ( b a b ) | \break
+  c4 -- a -- e -- c'8 ( b ) |
+  r g -- ~ g b ( c8 b a b ) |
+  c4 -- g -- e -- c'8 ( b ) |
+  r g -- ~ g r c8 ( b a g ) |
+  \tuplet 3/2 { f4 -- c' -- c -- } c -- r |
+  \tuplet 3/2 { f,4 -- c' -- c -- } c -- r8 b -> ~ |
+  b ( c ) b ( c ) b ( g ) r b -> ~ |
+  b ( c ) b ( c ) \tuplet 3/2 { b4 -- a4 -- g4 -- } |
+  a2 -- r2 |
+  
+    s1*0 ^\markup { "Chorus 1" }
+  \inst "C1"
+  R1*7 
+  
+    s1*0 ^\markup { "Verse 1" }
+  \inst "D1"
+  
+  
+    R1*16 
+    
+    s1*0 ^\markup { "Chorus 2" }
+  \inst "C2"
+  R1*7 
+   r2 c8 -> \mf ( b a b ) |
+  c4 -> a -- e -- c'8 ( b ) |
+  r g -- ~ g r c8 ( b a b ) |
+  c4 -- g -- e -- c'8 ( b ) |
+  r g -- ~ g b ( c8 b a g ) |
+  \tuplet 3/2 { f4 -- c' -- c -- } c -- r |
+  \tuplet 3/2 { f,4 -- c' -- c -- } c -- r8 b -> ~ |
+  b ( c ) b ( c ) b ( g ) r b -> ~ |
+  b ( c ) b ( c ) b8 -- a  --  r g --
+  a4 -> r2. |
+  
+      s1*0 ^\markup { "Verse 2" }
+  \inst "D2"
+      R1*7
+      
+      
+      e2 \< \mf r2 \! |
+            e2 \< r2 \! |
+                        e2 \< r2 \! |
+                        b4 -- b4 -- r2 | 
+     s1*0 ^\markup { "Chorus 3 - Trombone solo base" }
+  \inst "C3"
+  R1*7
+   r2 c'8 -> \mf ( b a b ) | \break
+  c4 -> ^\markup { "tutti" } a -- e -- c'8 ( b ) |
+  r g -- ~ g r c8 ( b a b ) |
+  c4 -- g -- e -- c'8 ( b ) |
+  r g -- ~ g b ( c8 b a g ) |
+  \tuplet 3/2 { f4 -- c' -- c -- } c -- r |
+  \tuplet 3/2 { f,4 -- c' -- c -- } c -- r8 b -> ~ |
+  b ( c ) b ( c ) b ( g ) r b -> ~ |
+  b ( c ) b ( c ) b8 -- a  --  r g -- | \break
+  s1*0 ^\markup { "Vocals" }
+  \inst "E"
+  a1 |
+  r2 g2 |
+  g1 |
+  r2 f2 |
+  e2. e8 f  |
+  \tuplet 3/2 { g4 a g f e d } |
+  d2 r2 |
+  d2 r2 | \break
+    \inst "F"
+  R1*5 ^\markup { "Solo sax" }
+  r2. r8 b' -> ~ |
+  b ( c ) b ( c ) b ( g ) r b -> ~ |
+  b ( c ) b ( c ) b8 -- a  --  r g --
+  a4 -> r2. |
+    R1*5 ^\markup { "Solo trombone" }
+  r2. r8 b -> ~ |
+  b ( c ) b ( c ) b ( g ) r b -> ~ |
+  b ( c ) b ( c ) b8 -- a  --  r g --
+  a4 -> r2. |
+      R1*5 ^\markup { "Solo trumpet" }
+  r2. r8 b -> ~ |
+  b ( c ) b ( c ) b ( g ) r b -> ~ |
+  b ( c ) b ( c ) b8 -- a  --  r g --
+  a4 -> r2. |
+
+  \label #'lastPage
+  \bar "|."
+}
+
+Sax = \new Voice
+\transpose c a'
+\relative c {
+  \set Staff.instrumentName = \markup {
+    \center-align { "Sax in Eb" }
+  }
+  \set Staff.midiInstrument = "alto sax"
+  \set Staff.midiMaximumVolume = #0.9
+
+  \key a \minor
+  \time 4/4
+  \tempo "Medium Fast Salsa" 4 = 190
+  
+    s1*0 ^\markup { "Piano Intro" }
+  \inst "A"
+  R1*7 
+ 
+  
+  r2 e8 -> \f ( d c d ) |
+    s1*0 ^\markup { "Brass Intro" }
+  \inst "B"
+  e4 -> c -- a -- e'8 ( d ) |
+  r b -- ~ b r e8 ( d c d ) |
+  e4 -- c -- g -- e'8 ( d ) |
+  r b -- ~ b d e8 ( d c b ) |
+  \tuplet 3/2 { a4 -- f' -- f -- } f -- r |
+  \tuplet 3/2 { a,4 -- f' -- f -- } f -- r8 g -> ~ |
+  g ( a ) g ( a ) g ( e ) r g -> ~ |
+  g ( a ) g ( a ) e'8 ( d c d ) |
+  e4 -> c -- a -- e'8 ( d ) |
+  r b -- ~ b r e8 ( d c d ) |
+  e4 -- c -- g -- e'8 ( d ) |
+  r b -- ~ b d e8 ( d c b ) |
+  \tuplet 3/2 { a4 -- f' -- f -- } f -- r |
+  \tuplet 3/2 { a,4 -- f' -- f -- } f -- r8 g -> ~ |
+  g ( a ) g ( a ) g ( e ) r g -> ~ |
+  g ( a ) g ( a ) g ( e ) r8 e 
+  a2 r2  |
+  
+  
+    s1*0 ^\markup { "Chorus 1" }
+  \inst "C1"
+  R1*7 
+  
+    s1*0 ^\markup { "Verse 1" }
+  \inst "D1"
+  
+  
+    R1*16 
+    
+    s1*0 ^\markup { "Chorus 2" }
+  \inst "C2"
+  R1*7 
+   r2 e,8 -> \mf ( d c d ) |
+  e4 -> c -- a -- e'8 ( d ) |
+  r b -- ~ b r e8 ( d c d ) |
+  e4 -- c -- g -- e'8 ( d ) |
+  r b -- ~ b d e8 ( d c b ) |
+  \tuplet 3/2 { a4 -- f' -- f -- } f -- r |
+  \tuplet 3/2 { a,4 -- f' -- f -- } f -- r8 g -> ~ |
+  g ( a ) g ( a ) g ( e ) r g -> ~ |
+  g ( a ) g ( a ) g8 -- e -- r d -- |
+  e4 -> r2. |
+  
+      s1*0 ^\markup { "Verse 2" }
+  \inst "D2"
+      R1*7
+      
+      c2 \< \mf r2 \! |
+            c2 \< r2 \! |
+                        c2 \< r2 \! |
+                        g4 -- g4 -- r2 |
+                       s1*0 ^\markup { "Chorus 3 - Trombone solo base" }
+  \inst "C3"
+  R1*7 
+   r2 e'8 -> \mf ( d c d ) | \break
+  e4 ^\markup { "tutti" }   -> c -- a -- e'8 ( d ) |
+  r b -- ~ b r e8 ( d c d ) |
+  e4 -- c -- g -- e'8 ( d ) |
+  r b -- ~ b d e8 ( d c b ) |
+  \tuplet 3/2 { a4 -- f' -- f -- } f -- r |
+  \tuplet 3/2 { a,4 -- f' -- f -- } f -- r8 g -> ~ |
+  g ( a ) g ( a ) g ( e ) r g -> ~ |
+  g ( a ) g ( a ) g8 -- e -- r d -- | \break
+        s1*0 ^\markup { "Vocals" }
+  \inst "E"
+  e1 |  
+  r2 e2 |
+  e2. e8 f  |
+  \tuplet 3/2 { g4 a g f e d } |
+  c2. c8 d |
+    \tuplet 3/2 { e4 f e d c b } |
+                        b2 r2 |
+                        b2 r2 | \break
+                 \inst "F"
+  R1*5 ^\markup { "Solo sax" }
+  r2. r8 g -> ~ |
+  g ( a ) g ( a ) g ( e ) r g -> ~ |
+  g ( a ) g ( a ) g8 -- e -- r d -- |
+  e4 -> r2. |
+    R1*5 ^\markup { "Solo trombone" }
+  r2. r8 g -> ~ |
+  g ( a ) g ( a ) g ( e ) r g -> ~ |
+  g ( a ) g ( a ) g8 -- e -- r d -- |
+  e4 -> r2. |
+      R1*5 ^\markup { "Solo trumpet" }
+  r2. r8 g -> ~ |
+  g ( a ) g ( a ) g ( e ) r g -> ~ |
+  g ( a ) g ( a ) g8 -- e -- r d -- |
+  e4 -> r2. |
+  
+  \label #'lastPage
+  \bar "|."
+}
+
 Trombone = \new Voice \relative c' {
   \set Staff.instrumentName = \markup {
     \center-align { "Trombone" }
@@ -286,11 +522,14 @@ Trombone = \new Voice \relative c' {
 }
 
 \score {
-  \compressMMRests \new Staff \with {
-    \consists "Volta_engraver"
-  }
-  {
-    \Trombone
+  \compressMMRests \unfoldRepeats {
+    \new StaffGroup \with {
+      \consists "Volta_engraver"
+    }<<
+      \new Staff << \transpose d c \Trumpet >>
+      \new Staff << \transpose a c \Sax >>
+      \new Staff << \Trombone >>
+    >>
   }
   \layout {
     \context {
@@ -298,12 +537,22 @@ Trombone = \new Voice \relative c' {
       \remove "Volta_engraver"
     }
   }
-  \midi { }
+}
+
+\score {
+  \unfoldRepeats {
+    <<
+      \transpose d c  \Trumpet 
+      \transpose a c \Sax 
+      \Trombone
+    >>
+  }
+  \midi { } 
 }
 
 \paper {
   system-system-spacing =
-  #'((basic-distance . 14)
+  #'((basic-distance . 15)
      (minimum-distance . 10)
      (padding . 1)
      (stretchability . 60))
@@ -317,7 +566,8 @@ Trombone = \new Voice \relative c' {
   oddFooterMarkup = \markup {
     \fill-line {
       \bold \fontsize #2
-      \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
+      %\concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
+      \fromproperty #'page:page-number-string 
 
       \fontsize #-1
       \concat { \fromproperty #'header:title " - " \fromproperty #'header:instrument ", " \fromproperty #'header:opus ", " \fromproperty #'header:copyright }
@@ -329,7 +579,8 @@ Trombone = \new Voice \relative c' {
       \concat { \fromproperty #'header:title " - " \fromproperty #'header:instrument ", " \fromproperty #'header:opus ", " \fromproperty #'header:copyright }
 
       \bold \fontsize #2
-      \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
+      %\concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
+      \fromproperty #'page:page-number-string
     }
   }
 }
