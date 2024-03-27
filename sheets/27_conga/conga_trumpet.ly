@@ -29,13 +29,14 @@ Trumpet = \new Voice
     d2 \ff -> dis4. -> e8 -. -> |
     
     
-    \set Score.skipBars = ##t R\breve*4 ^\markup { "Chorus" }
-    \set Score.skipBars = ##t R\breve*4 ^\markup { "Piano" }
-    \set Score.skipBars = ##t R\breve*4 ^\markup { "Percussions" }
+    R1*8 ^\markup { "Chorus" }
+    R1*7 ^\markup { "Piano" }
+    r2. r8 e -^ \ff \bendAfter -4|
+    R1*8 ^\markup { "Percussions" }
     
-    \set Score.skipBars = ##t R\breve*4 ^\markup { "Chorus" }
-    \set Score.skipBars = ##t R\breve*7 ^\markup { "Percussions" }
-    r1 d2 -> dis4. -> e8 -. -> | \break
+    R1*8 ^\markup { "Chorus" }
+    R1*15 ^\markup { "Percussions" }
+    d2 -> dis4. -> e8 -. -> | \break
     \repeat volta 2 {
         r1 ^\markup { "Brass" } r2 r8 e -. -> r d -. -> |
         r1 r2 r4. d8 -. -> |
@@ -147,11 +148,14 @@ R1*6
 }
 
 \score {
-    \new Staff {
+    \compressMMRests \new Staff \with {
+    \consists "Volta_engraver"
+  }
+
 	  \new Voice = "Trumpet" {
 		  \Trumpet			
 	  }
-    }
+    
     \layout {
     }
 }
