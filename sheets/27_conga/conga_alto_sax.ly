@@ -4,7 +4,7 @@
 
 \header {
     title = "#27 Conga"
-        instrument = "sax"
+        instrument = "alto sax"
     composer = "Gloria Estefan"
       arranger = "arr. Ladislav Maršík"
   opus = "version 27.3.2024"
@@ -169,7 +169,7 @@ AltoSax = \new Voice
 \transpose c a
 \relative c' {
     \set Staff.instrumentName = \markup {
-        \center-align { "Sass. in Eb" }
+        \center-align { "Sax in Eb" }
     }
 
     \key e \minor
@@ -238,8 +238,8 @@ R1*6
     r1 r2 r8 e -. -> r d -. -> |
     r1 r2 r8 d -. -> r e -. -> | \break
     
-            s1*0 ^\markup { "Brass 1" }
-  \inst "B1"
+            s1*0 ^\markup { "Brass 2" }
+  \inst "B2"
     r1  r2 r8 e \ff -. -> r d -. -> |
     r1 r2 r4. d8 -. -> |
     r1 d8 -. -> r e fis -. -> r d -. -> r e -. -> |
@@ -313,6 +313,15 @@ R1*6
     
     s1*0 ^\markup { "Solo Brass (Trumpet + Trombone)" }
     R1*32 \break
+    
+                    s1*0 ^\markup { "Chorus 6 + Brass" }
+  \inst "C6"
+    \repeat volta 2 {
+        r1  r2 r8 e -. -> r d -. -> |
+        r1 r2 r4. e8 -. -> |
+        r1 r2 r8 e -. -> r d -. -> |
+        r1 r2 r4. e8 -. -> |
+    } \break
 
             s1*0 ^\markup { "Brass 3 + Piano" }
   \inst "B3"
