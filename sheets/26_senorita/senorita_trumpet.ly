@@ -7,7 +7,7 @@
   instrument = "trumpet"
   composer = "by Shawn Mendes feat. Camila Cabello"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 24.1.2024"
+  opus = "version 3.4.2024"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -173,7 +173,7 @@ Trumpet = \new Voice
   \set Staff.midiInstrument = "trumpet"
   \set Staff.midiMaximumVolume = #1.0
 
-  \key a \minor
+  \key g \minor
   \time 4/4
   \tempo "Slow Bachata" 4 = 120
   
@@ -181,27 +181,27 @@ Trumpet = \new Voice
   \inst "A"
   R1*7 
     
-  r2 c8 -> \f ( b a b ) |
+  r2 bes8 -> \f ( a g a ) |
   
     s1*0 ^\markup { "Brass Intro" }
   \inst "B"
-  c4 -> a -- e -- c'8 ( b ) |
-  r g -- ~ g r c8 ( b a b ) |
-  c4 -- g -- e -- c'8 ( b ) |
-  r g -- ~ g b ( c8 b a g ) |
-  \tuplet 3/2 { f4 -- c' -- c -- } c -- r |
-  \tuplet 3/2 { f,4 -- c' -- c -- } c -- r8 b -> ~ |
-  b ( c ) b ( c ) b ( g ) r b -> ~ |
-  b ( c ) b ( c ) c8 -> ( b a b ) | \break
-  c4 -- a -- e -- c'8 ( b ) |
-  r g -- ~ g b ( c8 b a b ) |
-  c4 -- g -- e -- c'8 ( b ) |
-  r g -- ~ g r c8 ( b a g ) |
-  \tuplet 3/2 { f4 -- c' -- c -- } c -- r |
-  \tuplet 3/2 { f,4 -- c' -- c -- } c -- r8 b -> ~ |
-  b ( c ) b ( c ) b ( g ) r b -> ~ |
-  b ( c ) b ( c ) \tuplet 3/2 { b4 -- a4 -- g4 -- } |
-  a2 -- r2 |
+  bes4 -> g -- d -- bes'8 ( a ) |
+  r f -- ~ f r bes8 ( a g a ) |
+  bes4 -- f -- d -- bes'8 ( a ) |
+  r f -- ~ f a ( bes8 a g f ) |
+  \tuplet 3/2 { es4 -- bes' -- bes -- } bes -- r |
+  \tuplet 3/2 { es,4 -- bes' -- bes -- } bes -- r8 a -> ~ |
+  a ( bes ) a ( bes ) a ( f ) r a -> ~ |
+  a ( bes ) a ( bes ) bes8 -> ( a g a ) | \break
+  bes4 -- g -- d -- bes'8 ( a ) |
+  r f -- ~ f a ( bes8 a g a ) |
+  bes4 -- f -- d -- bes'8 ( a ) |
+  r f -- ~ f r bes8 ( a g f ) |
+  \tuplet 3/2 { es4 -- bes' -- bes -- } bes -- r |
+  \tuplet 3/2 { es,4 -- bes' -- bes -- } bes -- r8 a -> ~ |
+  a ( bes ) a ( bes ) a ( f ) r a -> ~ |
+  a ( bes ) a ( bes ) \tuplet 3/2 { a4 -- g4 -- f4 -- } |
+  g2 -- r2 |
   
     s1*0 ^\markup { "Chorus 1" }
   \inst "C1"
@@ -216,64 +216,64 @@ Trumpet = \new Voice
     s1*0 ^\markup { "Chorus 2" }
   \inst "C2"
   R1*7 
-   r2 c8 -> \mf ( b a b ) |
-  c4 -> a -- e -- c'8 ( b ) |
-  r g -- ~ g r c8 ( b a b ) |
-  c4 -- g -- e -- c'8 ( b ) |
-  r g -- ~ g b ( c8 b a g ) |
-  \tuplet 3/2 { f4 -- c' -- c -- } c -- r |
-  \tuplet 3/2 { f,4 -- c' -- c -- } c -- r8 b -> ~ |
-  b ( c ) b ( c ) b ( g ) r b -> ~ |
-  b ( c ) b ( c ) b8 -- a  --  r g --
-  a4 -> r2. |
+   r2 bes8 -> \mf ( a g a ) |
+  bes4 -> g -- d -- bes'8 ( a ) |
+  r f -- ~ f r bes8 ( a g a ) |
+  bes4 -- f -- d -- bes'8 ( a ) |
+  r f -- ~ f a ( bes8 a g f ) |
+  \tuplet 3/2 { es4 -- bes' -- bes -- } bes -- r |
+  \tuplet 3/2 { es,4 -- bes' -- bes -- } bes -- r8 a -> ~ |
+  a ( bes ) a ( bes ) a ( f ) r a -> ~ |
+  a ( bes ) a ( bes ) a8 -- g  --  r f --
+  g4 -> r2. |
   
       s1*0 ^\markup { "Verse 2" }
   \inst "D2"
       R1*7
       
       
-      e2 \< \mf r2 \! |
-            e2 \< r2 \! |
-                        e2 \< r2 \! |
-                        b4 -- b4 -- r2 | 
+      d2 \< \mf r2 \! |
+            d2 \< r2 \! |
+                        d2 \< r2 \! |
+                        a4 -- a4 -- r2 | 
      s1*0 ^\markup { "Chorus 3 - Trombone solo base" }
   \inst "C3"
   R1*7
-   r2 c'8 -> \mf ( b a b ) | \break
-  c4 -> ^\markup { "tutti" } a -- e -- c'8 ( b ) |
-  r g -- ~ g r c8 ( b a b ) |
-  c4 -- g -- e -- c'8 ( b ) |
-  r g -- ~ g b ( c8 b a g ) |
-  \tuplet 3/2 { f4 -- c' -- c -- } c -- r |
-  \tuplet 3/2 { f,4 -- c' -- c -- } c -- r8 b -> ~ |
-  b ( c ) b ( c ) b ( g ) r b -> ~ |
-  b ( c ) b ( c ) b8 -- a  --  r g -- | \break
+   r2 bes'8 -> \mf ( a g a ) | \break
+  bes4 -> ^\markup { "tutti" } g -- d -- bes'8 ( a ) |
+  r f -- ~ f r bes8 ( a g a ) |
+  bes4 -- f -- d -- bes'8 ( a ) |
+  r f -- ~ f a ( bes8 a g f ) |
+  \tuplet 3/2 { es4 -- bes' -- bes -- } bes -- r |
+  \tuplet 3/2 { es,4 -- bes' -- bes -- } bes -- r8 a -> ~ |
+  a ( bes ) a ( bes ) a ( f ) r a -> ~ |
+  a ( bes ) a ( bes ) a8 -- g  --  r f -- | \break
   s1*0 ^\markup { "Vocals" }
   \inst "E"
-  a1 |
-  r2 g2 |
   g1 |
   r2 f2 |
-  e2. e8 f  |
-  \tuplet 3/2 { g4 a g f e d } |
-  d2 r2 |
-  d2 r2 | \break
+  f1 |
+  r2 es2 |
+  d2. d8 es  |
+  \tuplet 3/2 { f4 g f es d c } |
+  c2 r2 |
+  c2 r2 | \break
     \inst "F"
   R1*5 ^\markup { "Solo sax" }
-  r2. r8 b' -> ~ |
-  b ( c ) b ( c ) b ( g ) r b -> ~ |
-  b ( c ) b ( c ) b8 -- a  --  r g --
-  a4 -> r2. |
+  r2. r8 a' -> ~ |
+  a ( bes ) a ( bes ) a ( f ) r a -> ~ |
+  a ( bes ) a ( bes ) a8 -- g  --  r f --
+  g4 -> r2. |
     R1*5 ^\markup { "Solo trombone" }
-  r2. r8 b -> ~ |
-  b ( c ) b ( c ) b ( g ) r b -> ~ |
-  b ( c ) b ( c ) b8 -- a  --  r g --
-  a4 -> r2. |
+  r2. r8 a -> ~ |
+  a ( bes ) a ( bes ) a ( f ) r a -> ~ |
+  a ( bes ) a ( bes ) a8 -- g  --  r f --
+  g4 -> r2. |
       R1*5 ^\markup { "Solo trumpet" }
-  r2. r8 b -> ~ |
-  b ( c ) b ( c ) b ( g ) r b -> ~ |
-  b ( c ) b ( c ) b8 -- a  --  r g --
-  a4 -> r2. |
+  r2. r8 a -> ~ |
+  a ( bes ) a ( bes ) a ( f ) r a -> ~ |
+  a ( bes ) a ( bes ) a8 -- g  --  r f --
+  g4 -> r2. |
 
   \label #'lastPage
   \bar "|."
