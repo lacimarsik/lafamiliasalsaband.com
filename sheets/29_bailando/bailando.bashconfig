@@ -1,0 +1,14 @@
+#!/bin/bash
+
+ID=29
+TITLE="Bailando"
+INTERPRET="Issac Delgado"
+STATUS="PASSIVE"
+MP3=https://drive.google.com/file/d/1k97S_MEUN8i06scaGlM_Uw10D9utuSIR/view?usp=drive_link
+TEXT=https://docs.google.com/document/d/1U_TB6L3y6o2LpLoJKPfygJgJ4FHJr1yprZFCf3yEcQY/edit?usp=drive_link
+CHORD=https://docs.google.com/document/d/1q0I1fcWylRRfddkGVJC965NAzr7-kwsQkVFgmwPSCSA/edit?usp=drive_link
+TEMPO="FASTER 185 BPM"
+TEMPOCLASS="has-pale-cyan-blue-color"
+INSTRUCTIONS="Exactly as YouTube, less repetitions in the end." 
+YOUTUBE=https://www.youtube.com/embed/eEVwF-GrD7U
+YOUTUBE_TITLE="ISSAC DELGADO, GENTE DE ZONA & DESCEMER BUENO - Bailando (Salsa Version) [NEW Official Video 2015]"

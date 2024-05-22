@@ -7,7 +7,7 @@
         instrument = "alto sax"
     composer = "Gloria Estefan"
       arranger = "arr. Ladislav Maršík"
-  opus = "version 27.3.2024"
+  opus = "version 10.4.2024"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -227,9 +227,10 @@ R1*6
      }
     }
     
-    \set Score.skipBars = ##t R\breve*3 ^\markup { "Percussions 3" }
+    s1*0 ^\markup { "Percussions 3" }
+   R1*7 
     
-    r1 b'8 \ff -. -> a -. g -. e -. a -. -> g -. e -. e -> -. | 
+   b'8 \ff -. -> a -. g -. e -. a -. -> g -. e -. e -> -. | 
     
         s1*0 ^\markup { "Chorus 3 + Brass" }
   \inst "C3"
@@ -264,8 +265,9 @@ R1*6
             r1 r2. r8 e -. -> | \break
         }
     }
+    s1*0 ^\markup { "Intro Piano + Bass + Brass" } 
     \repeat volta 2 {
-        r1 ^\markup { "Intro Piano + Bass + Brass" } r2 r8 e \ff -. -> r d -. -> |
+        r1 r2 r8 e \ff -. -> r d -. -> |
         r1 r2 r4. d8 -. -> |
         r1 d8 -. -> r e fis -. -> r d -. -> r e -. -> |
     }
@@ -278,8 +280,9 @@ R1*6
         }
     }
     
-    \set Score.skipBars = ##t R\breve*7 ^\markup { "Piano solo" }
-    r1 b8 -. -> a -. g -. e -. a -. -> g -. e -. e -> -. |
+    s1*0 ^\markup { "Piano solo" }
+    R1*15 
+    b8 -. -> a -. g -. e -. a -. -> g -. e -. e -> -. |
     
             s1*0 ^\markup { "Chorus 4 + Brass" }
   \inst "C4"
@@ -289,39 +292,75 @@ R1*6
     R\breve | \break
     
                 s1*0 ^\markup { "Brass Bridge" }
-  \inst "D"
+                  \inst "D1"
     r8 d, ( \f \< e g a b d e -. -> ) \ff r2 r4 b'8 \tenuto b \tenuto |
     b4 \> -> -. a8 a \tenuto -. r fis -. r d -. \mf r1 |
     r8 e, ( \< eis fis ~ \tenuto ) fis a ( b  d ~ \tenuto ) d4 r8 a ( b \tenuto d dis e \tenuto -. \f ) |
     r2 a4 -. -> c4 -. -> d4 \tenuto -> ~ d8 ( a -. ) r2 | \break
     r4. b,8 ( \mf \< e -. ->  ) r fis -. -> r g \f -. -> r fis ( e -. -> ) r d -. -> r fis -. -> |
-    r d -. -> r4 r8 a -. \mf d -. fis -. \tuplet 3/2 { g4 ( [ \tenuto \ff fis \tenuto f \tenuto \> ] } e8 d -. \f ) r fis -. -> |
+    r d -. -> r4 r8 a -. \mf d -. fis -. \tuplet 3/2 { g4 ( \tenuto \ff fis \tenuto f \tenuto \> } e8 d -. \f ) r fis -. -> |
     r d -. -> r b ( d4 -. -> ) r d8 -. -> r e fis -. -> r d -. -> r e \sff -! -^ |
     r4. e8 -! -^ r4. e8 -! -^ e -! -^ e -! -^ e -! -^ r r4. e'8 \fff \bendAfter #-8 -! -^ | 
     
-    \set Score.skipBars = ##t R\breve*7 ^\markup { "Solo Sax" }
-    r1 d,2 \f -> dis4. -> e8 -. -> | \break
+        s1*0 ^\markup { "Sax solo" }
+    R1*15 
+    d,2 \f -> dis4. -> e8 -. -> | \break
     
-                s1*0 ^\markup { "Chorus 5 + Brass" }
+                s1*0 ^\markup { "Chorus 5 + Brass with change" }
   \inst "C5"
     \repeat volta 2 {
-        r1  r2 r8 e -. -> r d -. -> |
-        r1 r2 r4. e8 -. -> |
+        r1 r2 r8 e -. -> r d -. -> |
+        r1 |
+    }
+    \alternative {
+    {
+      
+        r2 r4. e8 -. -> |
         r1 r2 r8 e -. -> r d -. -> |
         r1 r2 r4. e8 -. -> |
     }
+    {
+      
+        r2 r4. c8 -. -> |
+        r1 r2 r8 c -. -> r b -. -> |
+        R1*2  | \break
+    }
+    }
     
-    s1*0 ^\markup { "Solo Brass (Trumpet + Trombone)" }
-    R1*32 \break
-    
-                    s1*0 ^\markup { "Chorus 6 + Brass" }
-  \inst "C6"
+    s1*0 ^\markup { "2x Brass start" }
+                      \inst "D1"
     \repeat volta 2 {
-        r1  r2 r8 e -. -> r d -. -> |
-        r1 r2 r4. e8 -. -> |
+    r8  b \f -. r e -.  \tuplet 3/2 { g4 ( -- fis --  g --  ) } |
+    r2 r8 g -. r fis -. |
+        R1 |
+    } 
+    \alternative {
+      {
+         \tuplet 3/2 { fis4 -. dis -. fis -. } a4. -- -> g8 -. | 
+      }
+      {
+        d8 -. -> r e fis -. -> r d -. -> r e -. -> | \break
+      }
+    }
+
+  \repeat volta 2 {
+        r1 ^\markup { "Chorus 5 + Brass variation" } r2 r8 e -. -> r d -. -> |
+        r1 |
+    }
+    \alternative {
+    {
+      
+        r2 r4. e8 -. -> |
         r1 r2 r8 e -. -> r d -. -> |
         r1 r2 r4. e8 -. -> |
-    } \break
+    }
+    {
+      
+        r2 r4. c8 -. -> |
+        r1 r2 r8 c -. -> r b -. -> |
+        r1 r1  | \break
+    }
+    }
 
             s1*0 ^\markup { "Brass 3 + Piano" }
   \inst "B3"
