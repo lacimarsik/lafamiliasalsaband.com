@@ -5,8 +5,9 @@ TITLE="Via"
 INTERPRET="Al Delory"
 STATUS="ACTIVE"
 MP3=https://drive.google.com/file/d/1PppsBMVHiWq-kjqlx-EGpLugrcXa8kxV/view
-TEXT=https://docs.google.com/document/d/1atQhGQ7sCfWKuZSA8QnlLeOT_cpW3D60LJlCLsaEQv4/edit?usp=drive_link
-CHORD=https://docs.google.com/document/d/1xA3QSqPPIYJA6U8E_12Y5fZiffIygXTgqPaQmPhrIAc/edit?usp=drive_link
+TEXT=https://docs.google.com/document/d/1atQhGQ7sCfWKuZSA8QnlLeOT_cpW3D60LJlCLsaEQv4/edit
+CHORD=https://docs.google.com/document/d/1xA3QSqPPIYJA6U8E_12Y5fZiffIygXTgqPaQmPhrIAc/edit
+VOCALS=https://docs.google.com/document/d/1t_gd7ngFHnS9TlS1-pWot6A56w3XIRrVoLzfLIAAddQ/edit
 TEMPO="MEDIUM 180 BPM"
 TEMPOCLASS="has-vivid-green-cyan-color"
 INSTRUCTIONS="Exactly as YouTube, only a bit slower."

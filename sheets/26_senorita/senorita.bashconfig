@@ -4,9 +4,10 @@ ID=26
 TITLE="Señorita"
 INTERPRET="Shawn Mendes feat. Camila Cabello, DJ Tronky"
 STATUS="ACTIVE"
-MP3=https://www.youtube.com/watch?v=t0Ti70q7RUw
-TEXT=https://docs.google.com/document/d/1tGn68FS-Eeri-HdW8devcbuEgGqVo69uEPYPZ6WF8pY/edit?usp=drive_link
-CHORD=https://docs.google.com/document/d/1rDT9-bNTmjB4rpXAwaAJBf5iZDPTKbEDvskMFlLwCt8/edit?usp=drive_link
+MP3=https://drive.google.com/file/d/1BjknMRMap72_j1LFZAgRioK633BgRvYT/view
+TEXT=https://docs.google.com/document/d/1tGn68FS-Eeri-HdW8devcbuEgGqVo69uEPYPZ6WF8pY/edit
+CHORD=https://docs.google.com/document/d/1rDT9-bNTmjB4rpXAwaAJBf5iZDPTKbEDvskMFlLwCt8/edit
+VOCALS=https://docs.google.com/document/d/1gwC7tLt49BpGgGjA7y4xlghIvmahVHilEADJB6OkMD8/edit
 TEMPO="SLOW BACHATA 120 BPM"
 TEMPOCLASS="has-luminous-vivid-amber-color"
 INSTRUCTIONS="In Gmi, and in the end we do solos of each brass instrument ended by 'Oh I should be running...'. Other than that exactly as YouTube."

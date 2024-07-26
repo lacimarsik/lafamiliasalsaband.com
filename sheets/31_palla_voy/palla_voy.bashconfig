@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ID=31
+TITLE="Pa'lla Voy"
+INTERPRET="Marc Anthony"
+STATUS="PASSIVE"
+MP3=https://drive.google.com/file/d/1jfILqbuR0RnUvaHkVhsPiMLVqaXcmG_N/view
+TEXT=https://docs.google.com/document/d/1sLB3TtjK8rTaEzmFn9gpQil333uEWVgccTQKNFiy9bQ/edit
+CHORD=https://docs.google.com/document/d/1FGOmUNR1mXE-cmId4VI3PO64SEgixAr98XYBE-_P_IA/edit
+VOCALS=https://docs.google.com/document/d/1NAIoaFHRACqQWL_h5jVNvCNJFU6oa_BbeaUZytUAv5w/edit
+TEMPO="FASTER 185 BPM"
+TEMPOCLASS="has-pale-cyan-blue-color"
+INSTRUCTIONS="Exactly as YouTube" 
+YOUTUBE=https://www.youtube.com/watch?v=1EarnVR8_Og
+YOUTUBE_TITLE="Marc Anthony - Pa'lla Voy (Official Video)"

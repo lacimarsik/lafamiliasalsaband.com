@@ -7,6 +7,7 @@ STATUS="PASSIVE"
 MP3=https://drive.google.com/file/d/1-XsYoTwQbn7QRruf4qZ2kio1MI2fkgEm/view
 TEXT=https://docs.google.com/document/d/1KrnfJEfJvCMPoIxQX9fuUc8abVbwKIx_zDRUoqrjpAI/edit
 CHORD=https://docs.google.com/document/d/11yqpqHtQsdYVNvTDO9zjK9Or2qtSIZQJtRzZJPxtfrQ/edit
+VOCALS=https://docs.google.com/document/d/1rY91_GBLvsvogq2x3mFdh88TNldVieUe2sxZVhklt6A/edit
 TEMPO="FASTER 185 BPM"
 TEMPOCLASS="has-pale-cyan-blue-color"
 INSTRUCTIONS="Exactly as YouTube."

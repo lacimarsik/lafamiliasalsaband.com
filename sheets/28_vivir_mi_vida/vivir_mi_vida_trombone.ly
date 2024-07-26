@@ -4,7 +4,7 @@
 
 \header {
   title = "Vivir Mi Vida"
-  instrument = "alto sax"
+  instrument = "trombone"
   composer = "by Marc Anthony"
   arranger = "arr. Ladislav Maršík"
   opus = "version 17.7.2024"
@@ -164,16 +164,16 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Sax = \new Voice
-%\transpose c e % Ivar transposition c g, + c a' = c e
-%\transpose c a
+Trombone = \new Voice
+%\transpose c g, % Ivar transposition c g,
 \relative c {
   \set Staff.instrumentName = \markup {
-    \center-align { "Sax in Eb" }
+    \center-align { "Trombone" }
   }
   \set Staff.midiInstrument = "alto sax"
   \set Staff.midiMaximumVolume = #0.9
 
+\clef bass
   \key c \minor
   \time 4/4
   \tempo "Fast Salsa" 4 = 190
@@ -184,22 +184,21 @@ Sax = \new Voice
   
     s1*0 ^\markup { "Voy A Reír Salsa" }
    \inst "A2"
-   g'4 \accent \f r2. | \break
+   es'4 \accent \bendAfter #-8 \f r2. | \break
    R1*7 
-  
-    r4. g8 \mf ~ g f g4 ~ |
+r4. es,8 ~ es d es4 ~ |
+ es2 r2 |
+  r4. es8 ~ es d es4 ~ |
+  es2 r2 |
+  r4. g8 ~ g f g4 ~ |
   g2 r2 |
-  r4. as8 ~ as g as4 ~ |
-  as2 r2 |
-  r4. bes8 ~ bes as bes4 ~ |
-  bes2 r2 |
-  r4. bes8 ~ bes as bes4 ~ |
-  bes2 f2 | \break
+  r4. f8 ~ f es f4 ~ |
+  f2 d2 | \break
   
    s1*0 ^\markup { "Verso 1" }
    \inst "B"
     \segno
-   g4 -- r2. |
+   es4 -- r2. |
      R1*15
      
    s1*0 ^\markup { "Y Para Qué" }
@@ -209,12 +208,12 @@ Sax = \new Voice
   c2 r2 |
   r4. c8 ~ c bes c4 ~ |
   c2 r2 |
-  r4. bes8 ~ bes as bes4 ~ |
-  bes2 r2 |
+  r4. es8 ~ es d es4 ~ |
+  es2 r2 |
     r4. d8 ~ d c d4 ~ |
   d2 r2 | \break
   
-  r2 g4 \accent \f  r |
+  r2 g'4 \accent \f  r |
     r2 g4 \accent  r |
       r2 as4 \accent  r |
   R1*3
@@ -228,7 +227,7 @@ Sax = \new Voice
        s1*0 ^\markup { "Interlude" }
      \inst "D"
   
-  r2. g,4 \f |
+  r2. g,,4 \f |
   c2 es |
   es4 r r as, |
   c2 es |
@@ -236,7 +235,7 @@ Sax = \new Voice
   bes2 es |
   d4 r r d |
   \tuplet 3/2 { d2 c bes }
-  c2 ^\markup { "Trombones" } d |
+  c'2 ^\markup { "Trombones" } d |
   es g, |
   as es' ~ |
   es r |
@@ -250,11 +249,11 @@ Sax = \new Voice
     \mark \markup { \musicglyph "scripts.coda" }
     
     \repeat volta 2 {
-    r8 es,4 \mf es8 g4 g4 |
-    g2. r4 |
-        r8 es4 es8 as4 as4 |
-    as2. r4 |
-            r8 es4 es8 g4 g4 |
+    r8 c4 \mf c8 es4 es4 |
+    es2. r4 |
+    r8 c4 \mf c8 es4 es4 |
+    es2. r4 |
+            r8 bes4 bes8 d4 d4 |
     g2. r4 |
     }
     \alternative { 
@@ -263,7 +262,7 @@ Sax = \new Voice
     f2. r4 |
 }
     {
-              d'4 \f \accent r d \accent  r |
+              d4 \f \accent r d \accent  r |
     \tuplet 3/2 { f4 \accent f \accent f \accent } f4 \accent r \break
     }
     }
@@ -275,7 +274,7 @@ Sax = \new Voice
         s1*0 ^\markup { "Interlude 3" }
      \inst "F"
   \repeat volta 2 {
-  r4. g8 \f ~ g4 bes ~ |
+  r4. g,8 \f ~ g4 bes ~ |
   bes8 c4. g2 |
     r4. as8 ~ as4 bes ~ |
   bes8 c4. as2 |
@@ -293,13 +292,12 @@ Sax = \new Voice
   \bar "|."
 }
 
-
 \score {
   \compressMMRests \new Staff \with {
     \consists "Volta_engraver"
   }
   {
-    \Sax
+    \Trombone
   }
   \layout {
     \context {

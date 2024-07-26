@@ -3,11 +3,11 @@
 % Sheet revision 2022_09
 
 \header {
-  title = "Vivir Mi Vida"
-  instrument = "alto sax"
-  composer = "by Marc Anthony"
+  title = "Lonely Boy"
+  instrument = "vocals"
+  composer = "Williamsburg Salsa Orchestra"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 17.7.2024"
+  opus = "version 19.6.2024"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,151 +164,100 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Sax = \new Voice
-%\transpose c e % Ivar transposition c g, + c a' = c e
-%\transpose c a
-\relative c {
+Soprano = \new Voice \relative c'' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Sax in Eb" }
+    \center-align { "Soprano" }
   }
-  \set Staff.midiInstrument = "alto sax"
-  \set Staff.midiMaximumVolume = #0.9
+  \set Staff.midiInstrument = "choir aahs"
+  \set Staff.midiMaximumVolume = #1.0
 
-  \key c \minor
+  \key g \minor
   \time 4/4
-  \tempo "Fast Salsa" 4 = 190
+  \tempo "Faster Salsa" 4 = 185
   
-  s1*0 ^\markup { "Voy A Reír" }
-     \inst "A1"
-  R1*16 
-  
-    s1*0 ^\markup { "Voy A Reír Salsa" }
-   \inst "A2"
-   g'4 \accent \f r2. | \break
-   R1*7 
-  
-    r4. g8 \mf ~ g f g4 ~ |
-  g2 r2 |
-  r4. as8 ~ as g as4 ~ |
-  as2 r2 |
-  r4. bes8 ~ bes as bes4 ~ |
-  bes2 r2 |
-  r4. bes8 ~ bes as bes4 ~ |
-  bes2 f2 | \break
-  
-   s1*0 ^\markup { "Verso 1" }
-   \inst "B"
-    \segno
-   g4 -- r2. |
-     R1*15
-     
-   s1*0 ^\markup { "Y Para Qué" }
-   \inst "C"
-  
-  r4. c8 ~ c bes c4 ~ |
-  c2 r2 |
-  r4. c8 ~ c bes c4 ~ |
-  c2 r2 |
-  r4. bes8 ~ bes as bes4 ~ |
-  bes2 r2 |
-    r4. d8 ~ d c d4 ~ |
-  d2 r2 | \break
-  
-  r2 g4 \accent \f  r |
-    r2 g4 \accent  r |
-      r2 as4 \accent  r |
-  R1*3
-  d,4 \accent r d \accent r|
-   \tuplet 3/2 { f4 \accent f \accent f \accent } f4 \accent  r  |
-  
-    s1*0 ^\markup { "Voy A Reír     to " \musicglyph "scripts.coda" }
-     \inst "A3"
-  R1*16 \break
-  
-       s1*0 ^\markup { "Interlude" }
-     \inst "D"
-  
-  r2. g,4 \f |
-  c2 es |
-  es4 r r as, |
-  c2 es |
-  es4 r r g, |
-  bes2 es |
-  d4 r r d |
-  \tuplet 3/2 { d2 c bes }
-  c2 ^\markup { "Trombones" } d |
-  es g, |
-  as es' ~ |
-  es r |
-  es f |
-  g es |
-  bes f'   ^\markup { "Dal " \musicglyph "scripts.segno" " al " \musicglyph "scripts.coda" } |  \break
-  
-      s1*0 ^\markup { "Interlude 2" }
-     \inst "E"
-  
-    \mark \markup { \musicglyph "scripts.coda" }
-    
-    \repeat volta 2 {
-    r8 es,4 \mf es8 g4 g4 |
-    g2. r4 |
-        r8 es4 es8 as4 as4 |
-    as2. r4 |
-            r8 es4 es8 g4 g4 |
-    g2. r4 |
-    }
-    \alternative { 
-   {   
-          r8 d4 d8 f4 f4 |
-    f2. r4 |
-}
-    {
-              d'4 \f \accent r d \accent  r |
-    \tuplet 3/2 { f4 \accent f \accent f \accent } f4 \accent r \break
-    }
-    }
-    
-        s1*0 ^\markup { "Voy A Reír" }
-     \inst "A4"
-  R1*16 \break
-  
-        s1*0 ^\markup { "Interlude 3" }
-     \inst "F"
-  \repeat volta 2 {
-  r4. g8 \f ~ g4 bes ~ |
-  bes8 c4. g2 |
-    r4. as8 ~ as4 bes ~ |
-  bes8 c4. as2 |
-      r4. g8 ~ g4 bes ~ |
-  bes8 bes4. g2 |
-      r4. f8 ~ f4 bes ~ |
-  bes8 bes4. g2 |
-  }
-    
-  s1*0 ^\markup { "Voy A Reír" }
-     \inst "A5"
-  R1*24 
+  d2 g4 f8 d8 ~ |
+  d1 |
+  R1*2 
+  d2. c8 d8 ~ | 
+  d1 |
+  R1*2
   
   \label #'lastPage
-  \bar "|."
+  \bar "|."  
 }
 
+Alto = \new Voice \relative c'' {
+  \set Staff.instrumentName = \markup {
+    \center-align { "Alto" }
+  }
+  \set Staff.midiInstrument = "choir aahs"
+  \set Staff.midiMaximumVolume = #1.0
+
+  \key g \minor
+  \time 4/4
+  \tempo "Faster Salsa" 4 = 185
+  
+  R1*8
+  
+  \label #'lastPage
+  \bar "|."  
+}
+
+Tenor = \new Voice \relative c'' {
+  \set Staff.instrumentName = \markup {
+    \center-align { "Tenor" }
+  }
+  \set Staff.midiInstrument = "choir aahs"
+  \set Staff.midiMaximumVolume = #1.0
+
+  \key g \minor
+  \time 4/4
+  \tempo "Faster Salsa" 4 = 185
+  
+  bes2 d4 c8 bes8 ~ |
+  bes1 |
+  R1*2 
+  bes2. a8 bes8 ~ |
+  bes1 |
+  R1*2
+  
+  \label #'lastPage
+  \bar "|."  
+}
+
+Bass = \new Voice \relative c'' {
+  \set Staff.instrumentName = \markup {
+    \center-align { "Bass" }
+  }
+  \set Staff.midiInstrument = "choir aahs"
+  \set Staff.midiMaximumVolume = #1.0
+
+  \key g \minor
+  \time 4/4
+  \tempo "Faster Salsa" 4 = 185
+  
+  g2 bes4 a8 g8 ~ |
+  g1 |
+  R1*2
+  g2. f8 g8 ~ |
+  g1 |
+  R1*2
+  
+  \label #'lastPage
+  \bar "|."  
+}
 
 \score {
-  \compressMMRests \new Staff \with {
-    \consists "Volta_engraver"
-  }
-  {
-    \Sax
-  }
-  \layout {
-    \context {
-      \Score
-      \remove "Volta_engraver"
-    }
-  }
+  <<
+  \compressMMRests \new ChoirStaff
+  <<
+    \Soprano
+    \Alto
+    \Tenor
+    \Bass
+  >>
+  >>
 }
-
 
 \paper {
   system-system-spacing =
@@ -319,6 +268,7 @@ Sax = \new Voice
   between-system-padding = #2
   bottom-margin = 5\mm
 
+  print-page-number = ##t
   print-first-page-number = ##t
   oddHeaderMarkup = \markup \fill-line { " " }
   evenHeaderMarkup = \markup \fill-line { " " }

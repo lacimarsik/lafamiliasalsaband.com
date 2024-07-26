@@ -7,7 +7,7 @@
   instrument = "trumpet"
   composer = "by Marc Anthony"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 22.5.2024"
+  opus = "version 17.7.2024"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,7 +164,9 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
+
 Trumpet = \new Voice
+%\transpose c a, % Ivar transposition c g, + c d = c a,
 %\transpose c d
 \relative c' {
   \set Staff.instrumentName = \markup {
@@ -195,10 +197,101 @@ Trumpet = \new Voice
   r4. d8 ~ d c d4 ~ |
   d2 bes2 | \break
   
-     s1*0 ^\markup { "Verso 1" }
-   \inst "C"
+   
+   s1*0 ^\markup { "Verso 1" }
+   \inst "B"
+    \segno
    c4 -- r2. |
+     R1*15
+     
+   s1*0 ^\markup { "Y Para Qué" }
+   \inst "C"
   
+  r4. c8 ~ c bes c4 ~ |
+  c2 r2 |
+  r4. c8 ~ c bes c4 ~ |
+  c2 r2 |
+  r4. bes8 ~ bes as bes4 ~ |
+  bes2 r2 |
+    r4. d8 ~ d c d4 ~ |
+  d2 r2 | \break
+  
+  r2 c'4 \accent \f  r |
+    r2 c4 \accent  r |
+      r2 c4 \accent  r |
+  R1*3
+  d,4 \accent r d \accent r|
+   \tuplet 3/2 { f4 \accent f \accent f \accent } f4 \accent  r  |
+  
+    s1*0 ^\markup { "Voy A Reír     to " \musicglyph "scripts.coda" }
+     \inst "A3"
+  R1*16 \break
+  
+       s1*0 ^\markup { "Interlude" }
+     \inst "D"
+  
+  r2. c'4 \f |
+  es2 g |
+  as4 r r c, |
+  es2 as |
+  g4 r r bes, |
+  es2 g |
+  f2. f4 |
+  \tuplet 3/2 { f2 es d }
+ r2. ^\markup { "Trombones" } c4 \f |
+  es2 g |
+  as4 r r c, |
+  es2 as |
+  g4 r r bes, |
+  es2 g |
+  f2. f4 |
+  \tuplet 3/2 { f2 es d } ^\markup { "Dal " \musicglyph "scripts.segno" " al " \musicglyph "scripts.coda" } |  \break
+  
+      s1*0 ^\markup { "Interlude 2" }
+     \inst "E"
+  
+    \mark \markup { \musicglyph "scripts.coda" }
+    
+    \repeat volta 2 {
+    r1 |
+    r2 bes4 g8 as ~ |
+    as1 |
+    r2 bes4 as8 g ~ |
+    g1 |
+    r2 as4 g8 f ~ |
+
+    }
+    \alternative { 
+   {   
+          f1 |
+    r8 d r d f r d g |
+}
+    {
+              d'4 \f \accent r d \accent  r |
+    \tuplet 3/2 { f4 \accent f \accent f \accent } f4 \accent r \break
+    }
+    }
+    
+        s1*0 ^\markup { "Voy A Reír" }
+     \inst "A4"
+  R1*16 \break
+  
+        s1*0 ^\markup { "Interlude 3" }
+     \inst "F"
+  \repeat volta 2 {
+  r4. c8 \f ~ c4 d ~ |
+  d8 es4. c2 |
+    r4. c8 ~ c4 d ~ |
+  d8 es4. bes2 |
+      r4. bes8 ~ bes4 d ~ |
+  d8 es4. bes2 |
+      r4. bes8 ~ bes4 d ~ |
+  d8 es4. d2 |
+  }
+    
+  s1*0 ^\markup { "Voy A Reír" }
+     \inst "A5"
+  R1*24 
   
   \label #'lastPage
   \bar "|."
