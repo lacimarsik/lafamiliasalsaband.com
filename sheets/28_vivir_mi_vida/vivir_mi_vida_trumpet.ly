@@ -170,7 +170,7 @@ Trumpet = \new Voice
 %\transpose c d
 \relative c' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Tr. in Bb" }
+    \center-align { "Tr. in C" }
   }
   \set Staff.midiInstrument = "trumpet"
   \set Staff.midiMaximumVolume = #1.0
