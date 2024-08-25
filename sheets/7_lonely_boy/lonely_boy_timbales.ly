@@ -3,7 +3,7 @@
 % Sheet revision 2022_09
 
 \header {
-  title = "Lonely Boy"
+  title = "#7 Lonely Boy"
   instrument = "timbales"
   composer = "by Williamsburg Salsa Orchestra"
   arranger = "arr. Ladislav Maršík"
@@ -326,7 +326,6 @@ Timbales = \new DrumVoice \drummode {
   oddFooterMarkup = \markup {
     \fill-line {
       \bold \fontsize #2
-      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
 
       \fontsize #-1
@@ -339,7 +338,6 @@ Timbales = \new DrumVoice \drummode {
       \concat { \fromproperty #'header:title " - " \fromproperty #'header:instrument ", " \fromproperty #'header:opus ", " \fromproperty #'header:copyright }
 
       \bold \fontsize #2
-      \on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
     }
   }

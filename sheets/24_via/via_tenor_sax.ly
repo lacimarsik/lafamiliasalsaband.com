@@ -6,8 +6,8 @@
   title = "#24 Via"
   instrument = "tenor sax"
   composer = "Al De Lory"
-  arranger = "arr. Pavel Skalník + Ladislav Maršík"
-  opus = "version 1.12.2023"
+  arranger = "arr. Pavel Skalník & Ladislav Maršík"
+  opus = "version 25.8.2024"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -165,15 +165,15 @@ repeatBracket = #(define-music-function
                   )
 
 TenorSax = \new Voice
-\transpose c d
-\relative c' {
+\transpose c d'
+\relative c {
   \set Staff.instrumentName = \markup {
     \center-align { "T. Sax in Bb" }
   }
   \set Staff.midiInstrument = "tenor sax"
   \set Staff.midiMaximumVolume = #1.0
 
-  \clef bass
+  \clef treble
   \key g \minor
   \time 4/4
   \tempo "Medium Fast Instrumental Salsa" 4 = 180
@@ -183,7 +183,7 @@ TenorSax = \new Voice
   \inst "in"
   R1*8
   
-  \repeat volta 2 { r2 ^\markup { "con bajo" } r4.g8 \fp \< ~|g2.~g8g8~|g1~|g1 \mf }
+  \repeat volta 2 { r2 ^\markup { "con bajo" } r4.g'8 \fp \< ~|g2.~g8g8~|g1~|g1 \mf }
   s1*0
   ^\markup { "Verso 1" }
   \inst "A1"
@@ -230,7 +230,7 @@ TenorSax = \new Voice
   ^\markup { "Verso 3 (stop - piano solo)" }
   \inst "A3"
   R1*7
-  r8e8 -. \mp e8 -. r8d8 -. e8 -. r4| R1*7| e8 \mp -. r8d8 -. e8 -. r8d8 -. r4| \break
+  r8e'8 -. \mp e8 -. r8d8 -. e8 -. r4| R1*7| e8 \mp -. r8d8 -. e8 -. r8d8 -. r4| \break
   
     s1*0
   ^\markup { "Ritmo 3" }

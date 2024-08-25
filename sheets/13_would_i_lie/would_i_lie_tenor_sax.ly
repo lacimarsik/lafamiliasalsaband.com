@@ -1,13 +1,13 @@
-\version "2.22.2"
+\version "2.24.4"
 
 % Sheet revision 2022_09
 
 \header {
   title = "Would I Lie"
   instrument = "tenor sax"
-  composer = "by Luis Enrique"
+  composer = "by Cubaneros"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 7.9.2022"
+  opus = "version 25.8.2024"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,23 +164,23 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Sax = \new Voice
-\transpose c d
+TenorSax = \new Voice
+\transpose c d'
 \relative c {
   \set Staff.instrumentName = \markup {
-    \center-align { "Sax in Bb" }
+    \center-align { "T. Sax in Bb" }
   }
   \set Staff.midiInstrument = "tenor sax"
   \set Staff.midiMaximumVolume = #0.9
 
-  \clef bass
+  \clef treble
   \key c \minor
   \time 4/4
-  \tempo "Fast Salsa" 4 = 210
+  \tempo "Medium Salsa" 4 = 180
   
   R1*14 ^\markup { "A Capella" }
   
-  \tuplet 3/2 { c4 c c } \tuplet 3/2 { es es es} | 
+  \tuplet 3/2 { c'4 c c } \tuplet 3/2 { es es es} | 
   g r8 c,8 c4 r | \break
   
   \inst "A"
@@ -396,7 +396,7 @@ Sax = \new Voice
     \consists "Volta_engraver"
   }
   {
-    \Sax
+    \TenorSax
   }
   \layout {
     \context {
@@ -423,7 +423,6 @@ Sax = \new Voice
   oddFooterMarkup = \markup {
     \fill-line {
       \bold \fontsize #2
-      #\on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
 
       \fontsize #-1
@@ -436,7 +435,6 @@ Sax = \new Voice
       \concat { \fromproperty #'header:title " - " \fromproperty #'header:instrument ", " \fromproperty #'header:opus ", " \fromproperty #'header:copyright }
 
       \bold \fontsize #2
-      #\on-the-fly #print-page-number-check-first
       \concat { \fromproperty #'page:page-number-string "/" \page-ref #'lastPage "0" "?" }
     }
   }

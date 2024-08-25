@@ -4,7 +4,7 @@
     title = "Incondicional"
     composer = "Prince Royce"
     arranger = "Ladislav Maršík"
-    instrument = "saxophone"
+    instrument = "alto sax"
     copyright = "© La Familia Salsa Band 2019"
 }
 
@@ -16,9 +16,11 @@ tempoMark = #(define-music-function (parser location markp) (string?)
     \mark \markup { \bold $markp }
 #})
 
-Saxophone = \new Voice \transpose es c \relative c' {
+AltoSax = \new Voice
+\transpose c a'
+\relative c {
     \set Staff.instrumentName = \markup {
-	\center-align { "Saxophone" }
+	\center-align { "A. Sax in Eb" }
     }
 
     \clef treble
@@ -128,7 +130,7 @@ Saxophone = \new Voice \transpose es c \relative c' {
 \score {
     \new Staff {
         \new Voice = "Saxophone" {
-            \Saxophone			
+            \AltoSax	
         }
     }
     
@@ -141,7 +143,7 @@ Saxophone = \new Voice \transpose es c \relative c' {
     \unfoldRepeats {
         \new Staff {
             \new Voice = "Saxophone" {
-                \Saxophone
+                \AltoSax
             }
         }
     }

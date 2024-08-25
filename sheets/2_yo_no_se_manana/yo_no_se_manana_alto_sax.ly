@@ -1,13 +1,13 @@
-\version "2.22.2"
+\version "2.24.4"
 
 % Sheet revision 2022_09
 
 \header {
-  title = "Yo No Se Mañana"
-  instrument = "sax"
+  title = "#2 Yo No Se Mañana"
+  instrument = "alto sax"
   composer = "by Luis Enrique"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 7.9.2022"
+  opus = "version 25.8.2024"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,17 +164,17 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Sax = \new Voice
+AltoSax = \new Voice
 \transpose c a'
 \relative c {
   \set Staff.instrumentName = \markup {
-    \center-align { "Sax in Eb" }
+    \center-align { "A. Sax in Eb" }
   }
 
   \clef treble
   \key f \major
   \time 4/4
-  \tempo "Medium-Fast Salsa" 4 = 190
+  \tempo "Medium Salsa" 4 = 180
 
   R1 ^\markup { "Piano" } |
   \inst "A"
@@ -338,7 +338,7 @@ Sax = \new Voice
     \consists "Volta_engraver"
   }
   {
-    \Sax
+    \AltoSax
   }
   \layout {
     \context {

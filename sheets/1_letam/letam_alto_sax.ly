@@ -1,9 +1,9 @@
-\version "2.22.2"
+\version "2.24.4"
 
 % Sheet revision 2022_09
 
 \header {
-  title = "Létám"
+  title = "#1 Létám"
   instrument = "alto sax"
   composer = "by Elinor"
   arranger = "arr. Ladislav Maršík"
@@ -168,7 +168,7 @@ AltoSax = \new Voice
 \transpose c a'
 \relative c {
     \set Staff.instrumentName = \markup {
-	\center-align { "A.Sax in Eb" }
+	\center-align { "A. Sax in Eb" }
     }
     \set Staff.midiInstrument = "alto sax"
     \set Staff.midiMaximumVolume = #1.0

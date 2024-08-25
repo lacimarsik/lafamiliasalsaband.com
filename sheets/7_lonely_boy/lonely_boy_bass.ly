@@ -1,7 +1,7 @@
 \version "2.18.2"
 
 \header {
-    title = "3. Lonely Boy"
+    title = "#7 Lonely Boy"
     composer = "Williamsburg Salsa Orchestra"
     arranger = "Ladislav Maršík"
     instrument = "bass"

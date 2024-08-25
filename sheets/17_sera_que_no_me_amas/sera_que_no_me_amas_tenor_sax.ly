@@ -1,4 +1,4 @@
-\version "2.24.0"
+\version "2.24.4"
 
 % Sheet revision 2022_09
 
@@ -7,7 +7,7 @@
   instrument = "tenor sax"
   composer = "by Tony Succar feat. Michael Stuart"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 15.2.2023"
+  opus = "version 25.8.2024"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -165,22 +165,22 @@ repeatBracket = #(define-music-function
                   )
 
 TenorSax = \new Voice
-\transpose c d
-\relative c' {
+\transpose c d'
+\relative c {
   \set Staff.instrumentName = \markup {
     \center-align { "T. Sax in Bb" }
   }
   \set Staff.midiInstrument = "alto sax"
   \set Staff.midiMaximumVolume = #0.9
 
-  \clef bass
+  \clef treble
   \key c \major
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190  
     
   s1*0 ^\markup { "Intro" }
   \inst "A"
-  c4  c e, e |
+  c'4  c e, e |
   r8 a r e r e d r |
   r4. d8 d r r e |
   r f r fis r g a g | \break
@@ -204,7 +204,7 @@ TenorSax = \new Voice
   \set Score.skipBars = ##t R1*2
   r8 e8 -. \accent \f r2. |
   \set Score.skipBars = ##t R1*2
-  f,,4 \mf \tenuto ( g -. ) r4 c \f \accent ~ |
+  f,4 \mf \tenuto ( g -. ) r4 c \f \accent ~ |
   c8 e -. r g -. r e ( d -. )  r | \break
   R1 |
   r8 a' ( g e g a -. ) r4  |

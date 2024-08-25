@@ -7,7 +7,7 @@
   instrument = "tenor sax"
   composer = "by Fernando Sosa & Massimo Scalici"
   arranger = "arr. Luca Colella"
-  opus = "version 22.2.2023"
+  opus = "version 25.8.2024"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -165,15 +165,15 @@ repeatBracket = #(define-music-function
                   )
 
 TenorSax = \new Voice
-\transpose bes c
-\relative c' {
+\transpose c d'
+\relative c {
   \set Staff.instrumentName = \markup {
     \center-align { "T. Sax in Bb" }
   }
   \set Staff.midiInstrument = "tenor sax"
   \set Staff.midiMaximumVolume = #0.9
 
-  \clef bass
+  \clef treble
   \key d \minor
   \time 4/4
   \tempo "Slower Salsa" 4 = 180

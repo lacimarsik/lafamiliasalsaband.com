@@ -1,4 +1,4 @@
-\version "2.24.0"
+\version "2.24.4"
 
 % Sheet revision 2022_09
 
@@ -7,7 +7,7 @@
   instrument = "tenor sax"
   composer = "by Tony Succar feat. Tito Nieves"
   arranger = "arr. Ladislav Maršík, Pavel Skalník"
-  opus = "version 23.4.2023"
+  opus = "version 25.8.2024"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -166,7 +166,7 @@ repeatBracket = #(define-music-function
                   )
 
 TenorSax = \new Voice
-\transpose c d
+\transpose c d'
 \relative c {
   \set Staff.instrumentName = \markup {
     \center-align { "T. Sax in Bb" }
@@ -174,7 +174,7 @@ TenorSax = \new Voice
   \set Staff.midiInstrument = "tenor sax"
   \set Staff.midiMaximumVolume = #1.0
 
-  \clef bass
+  \clef treble
   \key es \major
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190

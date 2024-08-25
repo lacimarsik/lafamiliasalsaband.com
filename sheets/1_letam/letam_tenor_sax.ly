@@ -1,9 +1,9 @@
-\version "2.22.2"
+\version "2.24.4"
 
 % Sheet revision 2022_09
 
 \header {
-  title = "Létám"
+  title = "#1 Létám"
   instrument = "tenor sax"
   composer = "by Elinor"
   arranger = "arr. Ladislav Maršík"
@@ -165,7 +165,7 @@ repeatBracket = #(define-music-function
                   )
 
 TenorSax = \new Voice
-\transpose c bes
+\transpose c d'
 \relative c {
     \set Staff.instrumentName = \markup {
 	\center-align { "T. Sax in Bb" }

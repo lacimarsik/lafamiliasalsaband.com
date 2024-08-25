@@ -1,4 +1,4 @@
-\version "2.24.0"
+\version "2.24.4"
 
 % Sheet revision 2022_09
 
@@ -8,7 +8,7 @@
   instrument = "tenor sax"
   composer = "by Alex Wilson feat. AQuilla Fearon"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 1.11.2023"
+  opus = "version 25.8.2024"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -166,15 +166,15 @@ repeatBracket = #(define-music-function
                   )
 
 TenorSax = \new Voice
-\transpose c d
-\relative c' {
+\transpose c d'
+\relative c {
   \set Staff.instrumentName = \markup {
     \center-align { "T. Sax in Bb" }
   }
   \set Staff.midiInstrument = "tenor sax"
   \set Staff.midiMaximumVolume = #0.9
 
-  \clef bass
+  \clef treble
   \key e \minor
   \time 4/4
   \tempo "Medium Fast Salsa" 4 = 190
@@ -183,7 +183,7 @@ TenorSax = \new Voice
   
   \inst "in"
   \repeat volta 2 { 
-    d,8 \f -- d -- cis -- d --  r b -. r b -. |
+    d'8 \f -- d -- cis -- d --  r b -. r b -. |
     r b -. r2. |
     e4. \mf -- d8 e4. -- fis8  |
     g4. -- fis8 e4. -- d8 |
