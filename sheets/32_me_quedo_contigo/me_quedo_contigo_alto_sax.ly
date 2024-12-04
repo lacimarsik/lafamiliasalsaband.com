@@ -1,13 +1,13 @@
-\version "2.22.2"
+\version "2.24.2"
 
 % Sheet revision 2022_09
 
 \header {
-  title = "El Cantante"
-  instrument = "trombone"
-  composer = "by Hector Lavoe y Ruben Blades"
+  title = "#32 Me Quedo Contigo (Ami)"
+  instrument = "alto sax"
+  composer = "by Leoni Torres"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 17.7.2024"
+  opus = "version 20.11.2024"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,192 +164,72 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trombone = \new Voice
-%\transpose c e % Ami: La Familia
-\relative c {
+Sax = \new Voice
+\transpose c a
+\transpose c d
+\relative c' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Trombone" }
+    \center-align { "Sax in Eb" }
   }
-  \set Staff.midiInstrument = "trombone"
-  \set Staff.midiMaximumVolume = #1.0
+  \set Staff.midiInstrument = "alto sax"
+  \set Staff.midiMaximumVolume = #0.9
 
-  \clef bass
   \key g \minor
   \time 4/4
-  \tempo "Medium Salsa" 4 = 180
+  \tempo "Faster Salsa" 4 = 185
   
-  s1*0 ^\markup { "Intro" }
+    s1*0 ^\markup { "Intro Guitar + Piano (rubato)" }
+  \inst "in"
+      R1*7
+      
+      r2 bes'8 a g f | 
+      
+          s1*0 ^\markup { "Intro Sax (rubato)" }
+      g4. bes d4~ |
+      d8 bes4. bes8 a g f | 
+      g4. bes es4~ |
+      es8 bes4. bes8 a g f | 
+      f4. bes d4~ |
+      d8 bes4. bes8 a g f | 
+      f4. a c4~ |
+      c8 a4.  d,8 c bes a | \break
+      
+                s1*0 ^\markup { "Intro Trumpet + Sax (a tempo)" }
+      bes4. d g4~ |
+      g8 d4. d8 c bes a | 
+      bes4. es g4~ |
+      g8 es4. es8 d c bes | 
+      bes4. d f4~ |
+      f8 d4. d8 c bes a | 
+      a4. c f4~ |
+      f8 c4. d8 c bes a | \break
+     s1*0 ^\markup { "Verso 1 (rhythm)" }
      \inst "A"
-     
-     bes'1 \mf ~ |
-     bes1 |
-     as1 ~ |
-     as1 |
-     c,4 -. f8 e r c r f |
-     r e r c ~ c2 |
-          c'4 -. f8 e r c r f |
-     r e r c ~ c2 |
-          c,4 -. f8 e r c r f |
-     r e r c ~ c2 | \break
-     g4 \f -. a8 bes r c d4 -. |
-     r2 d -> |
-       s1*0 ^\markup { "Accents" }
-          \inst "B1"
-     g4 \mf -. r8 des4 -. r8 c4 -- ~  |
-     c1 |
-          g'4  -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-          g'4 -. r8 des4 -. r8 c4--  ~  |
-     c1 |
-          g'4  -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-     \break
-     
-            s1*0 ^\markup { "Verso 1" }
-          \inst "C1"
-     R1*14 \!
-     
-    r4. bes8 \mf r c r bes |
-    c2. r4 |
-    s1*0 ^\markup { "Y canto a la vida" }
-    g1 \mp |
-    f1 |
-    f1 |
-    es1 |
-    a2 r2 |
-    R1*2
-    
-    as4(  \mf g -. ) es' ( d -. ) |
-        c1 \mp |
-    c |
-    bes |
-    g2 r2 |
-        R1*2 |
-           s1*0 ^\markup { "Accents" }
-          \inst "B2"
-     g'4 \mf -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-          g'4  -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-          g'4 -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-          g'4 -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-     \break
-     
-       s1*0 ^\markup { "Verso 2" }
-     \inst "C2"
-     R1*3 \!
-     
-     r2 e \mf |
-     g1 |
-     fis1 |
-     r2 bes,8 \mf ( c des d ) |
-     r d' -. r4 es ( d -. ) |
-     
-     bes1 ~ |
-     bes1 |
-     des1 ~ |
-     des1 |
-     c1 ( |
-     d1 |
-     d |
-     d ) |
-     s1*0 ^\markup { "Y nadie pregunta" }
-    R1*7 |
-    as,4 ( \mf g -. ) es' ( d -. ) |
-    R1*3 
-    bes8 \mf bes r bes es4 ( d -. ) |
-    R1*2 
-               s1*0 ^\markup { "Accents" }
-          \inst "B3"
-        g4 \mf -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-          g'4  -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-          g'4 -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-          g'4 -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-          
-       s1*0 ^\markup { "Verso 3 con Piano" }
-     \inst "C3"
-     R1*32 \break
-                    s1*0 ^\markup { "Accents" }
-               \inst "B4"
-        g4 \mf -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-          g'4  -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-          g'4 -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-          g'4 -. r8 des4 -. r8 c4 --  ~  |
-     c1 | \break
-     
-                              s1*0 ^\markup { "Intro Del Coro" }
-          \inst "D1, 2"
-          \segno
-     \tuplet 3/2 { c'4 -> \f c c } cis4. d8 ~ |
-     d2 r |
-     s1*0 ^\markup { "Trumpet" }
-     R1*2 
-     
-          \tuplet 3/2 { g,4 -> \f g g } gis4. a8 ~ |
-     a2 r2 |
-          s1*0 ^\markup { "Sax" }
-    R1*2 \break
-     
-                                  s1*0 ^\markup { "Coro y Metales" }
-                                        \inst "E1, 2"
-     R1*3
-          s1*0 ^\markup { "Sax (2va Trombono)" }
-     r4. d8 \< r g r bes \f |
-     d4 -> c2. -> |
-     R1*3   ^\markup { "y solo impr." }
-         
-     R1*4 
-          s1*0 ^\markup { "Trumpet" }
-     R1*4
-     
-                                        s1*0 ^\markup { "Coro y Pregón, cue: cantar, cantar" }
-                                        \inst "F1, 2"
-     R1*40
-     s1*0 ^\markup { "El ultimo coro     to " \musicglyph "scripts.coda" }
-          R1*4  \break
-                                                  s1*0 ^\markup { "Bridge" }
-                                        \inst "G1"
-                                        
-                                        \repeat volta 2 {
-          g1 \mf ( |
-          f2 bes |
-          es,1 ~ |
-          es1 ) |
-          d1 ~ |
-          d1 | \break
-                                        }
-                     s1*0 ^\markup { "Piano solo, on cue" }
-                                                            \inst "F"
-     R1*24
-                                                            s1*0 ^\markup { "Cue = slide" }
-                                       
-          R1 ^\markup { "       Dal " \musicglyph "scripts.segno" " al " \musicglyph "scripts.coda" } | \break 
-              s1*0 ^\markup { "Coda = Accents" } \coda
-          \inst "B4"
-  g4 \mf -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-          g'4  -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-          g'4 -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-          g'4 -. r8 des4 -. r8 c4 --  ~  |
-     c1 |
-                g'4 \f -> r8 des4 -> r8 c4 -> ~ |
+      bes4 r2. | 
 
-          
+     R1*7 
+    s1*0 ^\markup { "Piano accents" }
+     R1*7
      
+           
+           r4. d8 bes' a g f | \break
+         s1*0 ^\markup { "Pre-Chorus" }
+        \inst "B"
+           g8 -> r r2. |
+           
+           
+           
+           
+           
+     r2. r8 
      
-     
-     
+     d'8 r  bes r  g4. r4 |
+     r8 d g bes d4. |
+     es8 r bes r g4. r4 |
+     r8 es g bes es d c d |
+     d8 r bes  r f4. r4 |
+     r8 f8 f f bes4 d8 c |
+     r a r f4. r4 |
   
   \label #'lastPage
   \bar "|."
@@ -360,7 +240,7 @@ Trombone = \new Voice
     \consists "Volta_engraver"
   }
   {
-    \Trombone
+    \Sax
   }
   \layout {
     \context {

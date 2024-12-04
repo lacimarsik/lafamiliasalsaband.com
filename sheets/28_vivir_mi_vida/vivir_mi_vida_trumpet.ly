@@ -167,10 +167,10 @@ repeatBracket = #(define-music-function
 
 Trumpet = \new Voice
 %\transpose c a, % Ivar transposition c g, + c d = c a,
-%\transpose c d
+\transpose c d
 \relative c' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Tr. in C" }
+    \center-align { "Tr. in Bb" }
   }
   \set Staff.midiInstrument = "trumpet"
   \set Staff.midiMaximumVolume = #1.0
