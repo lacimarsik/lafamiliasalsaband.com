@@ -216,7 +216,23 @@ Sax = \new Voice
          s1*0 ^\markup { "Pre-Chorus" }
         \inst "B"
            g8 -> r r2. |
+           R1*15 \break
+                 s1*0 ^\markup { "Chorus" }
+        \inst "C"
+        R1*16
+           s1*0 ^\markup { "Intro Trumpet + Sax (a tempo)" }
+           R1*16 \break
+                s1*0 ^\markup { "Verso 1 (rhythm)" }
+           R1*3
+           r4 c,2. |
+           d1 |
+           R1*11 |
+                    s1*0 ^\markup { "Pre-Chorus" }
+           R1*16
            
+                               s1*0 ^\markup { "Chorus" }
+           R1*16
+         
            
            
            

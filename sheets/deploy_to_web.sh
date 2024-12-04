@@ -3,7 +3,7 @@ mkdir -p PDFs
 #echo "[Deploy PDFs] Removing previous PDFs"
 rm -rf ./PDFs
 
-songs=(31_palla_voy 30_el_cantante 29_bailando 28_vivir_mi_vida 27_conga 26_senorita 25_lamento_boliviano 24_via 23_aint_nobody 22_perfect 21_la_sabrosa 20_hello 19_ran_kan_kan 18_i_want_you_back 17_sera_que_no_me_amas 16_yo_no_tengo_soledad 15_star_gees 14_canalla 13_would_i_lie 12_incondicional 11_sunshine 10_brocoli 9_baila_conmigo 8_oye_como_va 7_lonely_boy 6_wake_up_song 5_micaela 4_all_of_me 3_los_campeones_de_la_salsa 2_yo_no_se_manana 1_letam)
+songs=(32_me_quedo_contigo 31_palla_voy 30_el_cantante 29_bailando 28_vivir_mi_vida 27_conga 26_senorita 25_lamento_boliviano 24_via 23_aint_nobody 22_perfect 21_la_sabrosa 20_hello 19_ran_kan_kan 18_i_want_you_back 17_sera_que_no_me_amas 16_yo_no_tengo_soledad 15_star_gees 14_canalla 13_would_i_lie 12_incondicional 11_sunshine 10_brocoli 9_baila_conmigo 8_oye_como_va 7_lonely_boy 6_wake_up_song 5_micaela 4_all_of_me 3_los_campeones_de_la_salsa 2_yo_no_se_manana 1_letam)
 #for d in `find . -maxdepth 1 -type d \( ! -name . ! -name PDFs ! -name templates ! -name inactive \) | sort -Vr`
 for d in ${songs[@]}
 do

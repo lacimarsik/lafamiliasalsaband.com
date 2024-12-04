@@ -178,10 +178,13 @@ Trumpet = \new Voice
   \time 4/4
   \tempo "Medium Salsa" 4 = 180
   
-  s1*0 ^\markup { "Intro" }
-     \inst "A"
-     
-           r2 bes8 a g f | 
+    s1*0 ^\markup { "Intro Guitar + Piano (rubato)" }
+  \inst "in"
+      R1*7
+      
+      r2 bes8 a g f | 
+      
+          s1*0 ^\markup { "Intro Sax (rubato)" }
       g4. bes d4~ |
       d8 bes4. bes8 a g f | 
       g4. bes es4~ |
@@ -189,9 +192,9 @@ Trumpet = \new Voice
       f4. bes d4~ |
       d8 bes4. bes8 a g f | 
       f4. a c4~ |
-      c8 a4. bes8 a g f |  \break
+      c8 a4.  d,8 c bes a | \break
       
-      r2 d8 c bes a | 
+                s1*0 ^\markup { "Intro Trumpet + Sax (a tempo)" }
       bes4. d g4~ |
       g8 d4. d8 c bes a | 
       bes4. es g4~ |
@@ -199,9 +202,41 @@ Trumpet = \new Voice
       bes4. d f4~ |
       f8 d4. d8 c bes a | 
       a4. c f4~ |
-      f8 c4. d8 c bes a | 
+      f8 c4. d8 c bes a | \break
+     s1*0 ^\markup { "Verso 1 (rhythm)" }
+     \inst "A"
+      bes4 r2. | 
+
+     R1*7 
+    s1*0 ^\markup { "Piano accents" }
+     R1*7
      
-     R1*15 
+           
+           r4. d8 bes' a g f | \break
+         s1*0 ^\markup { "Pre-Chorus" }
+        \inst "B"
+           g8 -> r r2. |
+           R1*15 \break
+                 s1*0 ^\markup { "Chorus" }
+        \inst "C"
+        R1*16
+           s1*0 ^\markup { "Intro Trumpet + Sax (a tempo)" }
+           R1*16 \break
+                s1*0 ^\markup { "Verso 1 (rhythm)" }
+           R1*3
+           r4 a,2. |
+           bes1 |
+           R1*11 |
+                    s1*0 ^\markup { "Pre-Chorus" }
+           R1*16
+           
+                               s1*0 ^\markup { "Chorus" }
+           R1*16
+         
+           
+           
+           
+           
      r2. r8 
      
      d'8 r  bes r  g4. r4 |
