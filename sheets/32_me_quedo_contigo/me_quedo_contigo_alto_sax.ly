@@ -7,7 +7,7 @@
   instrument = "alto sax"
   composer = "by Leoni Torres"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 20.11.2024"
+  opus = "version 15.1.2025"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -179,73 +179,111 @@ Sax = \new Voice
   \tempo "Faster Salsa" 4 = 185
   
     s1*0 ^\markup { "Intro Guitar + Piano (rubato)" }
-  \inst "in"
+  \inst "in1"
       R1*7
       
-      r2 bes'8 a g f | 
+      r2 bes8 a g f | 
       
           s1*0 ^\markup { "Intro Sax (rubato)" }
+            \inst "in2"
       g4. bes d4~ |
       d8 bes4. bes8 a g f | 
       g4. bes es4~ |
-      es8 bes4. bes8 a g f | 
+      es8 bes4. bes8 a g f ~ | 
       f4. bes d4~ |
-      d8 bes4. bes8 a g f | 
+      d8 bes4. bes8 a g f ~ | 
       f4. a c4~ |
-      c8 a4.  d,8 c bes a | \break
-      
+      c8 a4.  \breathe d8 c bes a | \break
+        \inst "in3"
                 s1*0 ^\markup { "Intro Trumpet + Sax (a tempo)" }
       bes4. d g4~ |
       g8 d4. d8 c bes a | 
       bes4. es g4~ |
-      g8 es4. es8 d c bes | 
+      g8 es4. es8 d c bes ~ | 
       bes4. d f4~ |
-      f8 d4. d8 c bes a | 
+      f8 d4. d8 c bes a ~ | 
       a4. c f4~ |
       f8 c4. d8 c bes a | \break
-     s1*0 ^\markup { "Verso 1 (rhythm)" }
-     \inst "A"
+     s1*0 ^\markup { "Verso 1 (rytmo)" }
+     \inst "A1"
       bes4 r2. | 
 
      R1*7 
     s1*0 ^\markup { "Piano accents" }
+
      R1*7
      
            
-           r4. d8 bes' a g f | \break
-         s1*0 ^\markup { "Pre-Chorus" }
-        \inst "B"
-           g8 -> r r2. |
+           r4. f8 d' c bes a | \break
+         s1*0 ^\markup { "Chorus 1 & 2 " }
+         \segno
+        \inst "B1,2"
+           bes8 -> r r2. |
            R1*15 \break
-                 s1*0 ^\markup { "Chorus" }
-        \inst "C"
-        R1*16
-           s1*0 ^\markup { "Intro Trumpet + Sax (a tempo)" }
-           R1*16 \break
-                s1*0 ^\markup { "Verso 1 (rhythm)" }
+                 s1*0 ^\markup { "Oh oh oh 1 & 2" }
+        \inst "C1,2"
+        R1*7
+        ^\markup { "                                   to coda" }
+          r4. f8 d' c bes a | \break
+          
+            \inst "in4"
+                s1*0 ^\markup { "Intro Trumpet + Sax" }
+      bes4. d g4~ |
+      g8 d4. d8 c bes a | 
+      bes4. es g4~ |
+      g8 es4. es8 d c bes ~ | 
+      bes4. d f4~ |
+      f8 d4. d8 c bes a ~ | 
+      a4. c f4~ |
+      f8 c4. d8 c bes a | \break
+          
+          s1*0 ^\markup { "Verso 2 (suave)" }
+                  \inst "A2"
            R1*3
-           r4 c,2. |
-           d1 |
-           R1*11 |
-                    s1*0 ^\markup { "Pre-Chorus" }
-           R1*16
-           
-                               s1*0 ^\markup { "Chorus" }
-           R1*16
-         
-           
-           
-           
-           
-     r2. r8 
-     
-     d'8 r  bes r  g4. r4 |
-     r8 d g bes d4. |
-     es8 r bes r g4. r4 |
+           r4 c2. |
+                             d1 |
+                             R1 | 
+                             a4. \accent g \accent f4 ~ |
+                             f4.        f8 d' c bes a | \break
+                             
+                                 s1*0 ^\markup { "Piano accents" }
+bes8 r r2. |
+     R1*6
+               r4. f8 d' c bes a    ^\markup { " D.S. Al Coda" } | \break
+   
+                             
+         s1*0 ^\markup { "Play if no trumpet" }
+         \coda        
+        r2. r8   d'8 |
+        
+                \repeat volta 2 {
+        r  bes r  g4. r4 |
+     r8 d g bes d4. es8 |
+     r bes r g4. r4 |
      r8 es g bes es d c d |
-     d8 r bes  r f4. r4 |
-     r8 f8 f f bes4 d8 c |
-     r a r f4. r4 |
+     r8 bes  r f4. r4 |
+                }
+                
+                \alternative {
+                  {
+     r8 f8 f f bes4 -- d8 c |
+     r a4 \accent c4 \accent c8 c4 -- |
+     r8 bes4 \accent c8 d4 -- r8 d |
+                  }{ 
+                  r8 f,8 f f bes4 -- d4 -- |
+                  f \accent r8 f4 \accent  f8 f4 \accent
+                  r f \accent ges \accent r |
+                  r g4 \bendAfter #-4 r2 ^\markup { "FINE" } |
+                  }
+        }
+           
+                    s1*0 ^\markup { "Bomba" }
+           R1*7
+           
+                               s1*0 ^\markup { "Y Si Tu Me Quieres" }
+           R1*15 ^\markup { "                   Dal Coda Al FINE" }
+           
+           
   
   \label #'lastPage
   \bar "|."

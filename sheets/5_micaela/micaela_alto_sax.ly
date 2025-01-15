@@ -183,11 +183,11 @@ AltoSax = \new Voice
     \set Score.skipBars = ##t R1*4 ^\markup { "Percussions" } \break
 
     r4 c8 ^\markup { "Trumpets" } \p \< c c4 \tenuto c8 \! \mf c |
-    b8 -. r b ( d -. ) r e -. r c \> \accent ~ |
+    bes8 -. r bes ( d -. ) r e -. r c \> \accent ~ |
     c8 \mp r r2. |
     R1 |
     r8 c16 \mp c c8 c  \< c4 \tenuto c8 \! \mf c |
-    b8 -. r b ( d -. ) r e -. r c \> \accent ~ |
+    bes8 -. r bes ( d -. ) r e -. r c \> \accent ~ |
     c8 \mp r r2. |
     R1 | \break
     
