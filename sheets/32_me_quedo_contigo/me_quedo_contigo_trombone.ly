@@ -4,10 +4,10 @@
 
 \header {
   title = "#32 Me Quedo Contigo (Ami)"
-  instrument = "trumpet"
+  instrument = "trombone"
   composer = "by Leoni Torres"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 20.11.2024"
+  opus = "version 15.1.2025"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -164,30 +164,36 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trumpet = \new Voice
+Sax = \new Voice
 \transpose c d
-\transpose c d % We play in Ami
-\relative c'' {
+\relative c {
   \set Staff.instrumentName = \markup {
-    \center-align { "Tr. in Bb" }
+    \center-align { "Trimbone" }
   }
-  \set Staff.midiInstrument = "trumpet"
-  \set Staff.midiMaximumVolume = #1.0
+  \set Staff.midiInstrument = "trombone"
+  \set Staff.midiMaximumVolume = #0.9
 
+  \clef bass
   \key g \minor
   \time 4/4
-  \tempo "Medium Salsa" 4 = 180
+  \tempo "Faster Salsa" 4 = 185
   
     s1*0 ^\markup { "Intro Guitar + Piano (rubato)" }
   \inst "in1"
-      R1*8
-      
-      
-        \inst "in2"
-          s1*0 ^\markup { "Intro Sax (rubato)" }
       R1*7
       
-      r2 d,8 c bes a  \break
+      r2 bes8 a g f | 
+      
+          s1*0 ^\markup { "Intro Sax (rubato)" }
+            \inst "in2"
+      g4. bes d4~ |
+      d8 bes4. bes8 a g f | 
+      g4. bes es4~ |
+      es8 bes4. bes8 a g f ~ | 
+      f4. bes d4~ |
+      d8 bes4. bes8 a g f ~ | 
+      f4. a c4~ |
+      c8 a4.  \breathe d8 c bes a | \break
         \inst "in3"
                 s1*0 ^\markup { "Intro Brass (a tempo)" }
       bes4. d g4~ |
@@ -198,16 +204,17 @@ Trumpet = \new Voice
       f8 d4. d8 c bes a ~ | 
       a4. c f4~ |
       f8 c4. d8 c bes a | \break
-     s1*0 ^\markup { "Verso 1 (rhythm)" }
-     \inst "A"
+     s1*0 ^\markup { "Verso 1 (rytmo)" }
+     \inst "A1"
       bes4 r2. | 
 
      R1*7 
     s1*0 ^\markup { "Piano accents" }
+
      R1*7
      
            
-           r4. d8 bes' a g f | \break
+           r4. f8 d' c bes a | \break
          s1*0 ^\markup { "Chorus 1 & 2 " }
          \segno
         \inst "B1,2"
@@ -277,6 +284,7 @@ bes8 r r2. |
            R1*15 ^\markup { "                   Dal Coda Al FINE" }
            
            
+  
   \label #'lastPage
   \bar "|."
 }
@@ -286,7 +294,7 @@ bes8 r r2. |
     \consists "Volta_engraver"
   }
   {
-    \Trumpet
+    \Sax
   }
   \layout {
     \context {

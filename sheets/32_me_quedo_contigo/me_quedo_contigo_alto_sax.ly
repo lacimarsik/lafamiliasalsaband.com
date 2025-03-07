@@ -195,7 +195,7 @@ Sax = \new Voice
       f4. a c4~ |
       c8 a4.  \breathe d8 c bes a | \break
         \inst "in3"
-                s1*0 ^\markup { "Intro Trumpet + Sax (a tempo)" }
+                s1*0 ^\markup { "Intro Brass (a tempo)" }
       bes4. d g4~ |
       g8 d4. d8 c bes a | 
       bes4. es g4~ |
@@ -227,7 +227,7 @@ Sax = \new Voice
           r4. f8 d' c bes a | \break
           
             \inst "in4"
-                s1*0 ^\markup { "Intro Trumpet + Sax" }
+                s1*0 ^\markup { "Intro Brass" }
       bes4. d g4~ |
       g8 d4. d8 c bes a | 
       bes4. es g4~ |
