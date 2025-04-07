@@ -3,13 +3,13 @@
 ID=3
 TITLE="Los Campeones De La Salsa"
 INTERPRET="Willy Chirino"
-STATUS="ACTIVE"
+STATUS="inactive"
 MP3=https://drive.google.com/file/d/1or1AUIGYjWPlf4vDaCEhHO1Z92yEKR3M/view
 TEXT=https://docs.google.com/document/d/1ShQ7o6OyDvxvBprRy_DXcQaf8_QMeVEjnnbZT38q8lQ/edit
 CHORD=https://docs.google.com/document/d/1Abewbg3o-hDBsnrREgxQMkUaD-5pi9BRzaE45JusDMI/edit
 VOCALS=https://docs.google.com/document/d/1K3ps_JIxl0QjhcQfxZnHuiA8ITyc0jW6GkSLS7uEJe4/edit
-TEMPO="FASTER 185 BPM"
-TEMPOCLASS="has-pale-cyan-blue-color"
+TEMPO="FAST SALSA 190 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
 INSTRUCTIONS="We add improvisation solos for each player, then 2 choruses (start with “a capella”, end with accents) and then Coda."
 YOUTUBE=https://www.youtube.com/embed/eAZwTN_gdZo
 YOUTUBE_TITLE="Los Campeones De La Salsa"

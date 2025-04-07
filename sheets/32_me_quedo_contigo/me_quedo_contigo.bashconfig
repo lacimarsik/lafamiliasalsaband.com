@@ -3,13 +3,13 @@
 ID=32
 TITLE="Me Quedo Contigo"
 INTERPRET="Leoni Torres"
-STATUS="PASSIVE"
+STATUS="ACTIVE"
 MP3=https://drive.google.com/file/d/1uAonSdihq3e3VTTsO_0Z1ECUpMHMUdBw/view
 TEXT=https://docs.google.com/document/d/18KS3RxZlFm-Jr10I_-56rBj8hkWYYQKgC9bVwjCrNKw/edit
 CHORD=https://docs.google.com/document/d/1uTfFhUT3jsdbdkREOwIEzGRcU6ayhXOOMITqqZddLCQ/edit
 VOCALS=https://docs.google.com/document/d/1TQjKR813NflktKe1jEaf0AUkEdJA2FA12Tbxg9Bc6T8/edit
-TEMPO="FASTER 185 BPM"
-TEMPOCLASS="has-pale-cyan-blue-color"
+TEMPO="SALSA 180 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
 INSTRUCTIONS="Exactly as YouTube" 
 YOUTUBE=https://www.youtube.com/embed/GpsUvHDOSfs
 YOUTUBE_TITLE="Leoni Torres - Me Quedo Contigo (Video Oficial)"

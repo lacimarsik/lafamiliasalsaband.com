@@ -3,7 +3,7 @@ mkdir -p PDFs
 #echo "[Deploy PDFs] Removing previous PDFs"
 rm -rf ./PDFs
 
-songs=(32_me_quedo_contigo 31_palla_voy 30_el_cantante 29_bailando 28_vivir_mi_vida 27_conga 26_senorita 25_lamento_boliviano 24_via 23_aint_nobody 22_perfect 21_la_sabrosa 20_hello 19_ran_kan_kan 18_i_want_you_back 17_sera_que_no_me_amas 16_yo_no_tengo_soledad 15_star_gees 14_canalla 13_would_i_lie 12_incondicional 11_sunshine 10_brocoli 9_baila_conmigo 8_oye_como_va 7_lonely_boy 6_wake_up_song 5_micaela 4_all_of_me 3_los_campeones_de_la_salsa 2_yo_no_se_manana 1_letam)
+songs=(42_slow_son 41_bailando_bachata 40_caramelo_con_picante 39_carnaval 38_fragilidad 37_stand_by_me 36_nossa 35_lambada 34_chan_chan 33_bachata 32_me_quedo_contigo 31_palla_voy 30_el_cantante 29_bailando 28_vivir_mi_vida 27_conga 26_senorita 25_lamento_boliviano 24_via 23_aint_nobody 22_perfect 21_la_sabrosa 20_hello 19_ran_kan_kan 18_i_want_you_back 17_sera_que_no_me_amas 16_yo_no_tengo_soledad 15_star_gees 14_canalla 13_would_i_lie 12_incondicional 11_sunshine 10_brocoli 9_baila_conmigo 8_oye_como_va 7_lonely_boy 6_wake_up_song 5_micaela 4_all_of_me 3_los_campeones_de_la_salsa 2_yo_no_se_manana 1_letam)
 #for d in `find . -maxdepth 1 -type d \( ! -name . ! -name PDFs ! -name templates ! -name inactive \) | sort -Vr`
 for d in ${songs[@]}
 do
@@ -28,10 +28,22 @@ do
 		source ${songname}.bashconfig
 		#echo "[Deploy PDFs] Loaded bashconfig file with id: $ID and title: $TITLE"
 		statusinfo=""
-		statusclass="has-vivid-red-color"
-		if [ "$STATUS" = "PASSIVE" ]; then
-            statusinfo=" (Passive)"
+		statusclass="has-vivid-green-cyan-color"
+		if [ "$STATUS" = "inactive" ]; then
+            statusinfo=" (inactive)"
             statusclass="has-cyan-bluish-gray-color"
+		fi
+		if [ "$STATUS" = "?" ]; then
+            statusinfo=" (?)"
+            statusclass="has-vivid-cyan-blue-color"
+		fi
+		if [ "$STATUS" = "miniband" ]; then
+            statusinfo=" (miniband)"
+            statusclass="has-vivid-purple-color"
+		fi
+		if [ "$STATUS" = "considering" ]; then
+            statusinfo=" (considering)"
+            statusclass="has-luminous-vivid-amber-color"
 		fi
 		sheets_dir="https://github.com/lacimarsik/lafamiliasalsaband.com/blob/main/sheets"
 		sheet_links=""
@@ -41,7 +53,7 @@ do
 		echo ""
 		echo "<p class=\"${statusclass} has-text-color\"><strong>#${ID}${statusinfo} ${TITLE} (${INTERPRET})</strong></p>"
 	    echo ""
-	    echo "<details class=\"wp-block-details ${TEMPOCLASS} has-text-color\"><summary>Instructions: ${TEMPO}</summary>"
+	    echo "<details class=\"wp-block-details ${TEMPOCLASS} has-text-color\"><summary>Instructions: ${TEMPO} (click to expand)</summary>"
 		echo "<p class=\"has-cyan-bluish-gray-color has-text-color\">${INSTRUCTIONS}</p>"
 		echo "</details>"
 		echo ""

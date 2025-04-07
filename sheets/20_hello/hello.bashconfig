@@ -3,13 +3,13 @@
 ID=20
 TITLE="Hello"
 INTERPRET="Mandinga"
-STATUS="ACTIVE"
+STATUS="inactive"
 MP3=https://drive.google.com/file/d/1oNkgBLi4Frw4Wfi20q98vv6yNYR6d8uw/view
 TEXT=https://docs.google.com/document/d/1JZAgBoimKJd3938LsSe1hxPHP1LMAssRqIX9Jl7j-mA/edit
 CHORD=https://docs.google.com/document/d/1iBjxpTkIS9X321M6jT6vUHQsyNkaVLqHZfhtQhFcUBY/edit
 VOCALS=https://docs.google.com/document/d/1QJjSLoPG3YQTGoQy3k31-QfZ5-Sd4NymqSChcN8vihs/edit
-TEMPO="SLOWER 175 BPM"
-TEMPOCLASS="has-light-green-cyan-color"
+TEMPO="SLOW SALSA 170 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
 INSTRUCTIONS="Exactly as YouTube, only a bit slower."
 YOUTUBE=https://www.youtube.com/embed/MOysl6rVBdM
 YOUTUBE_TITLE="MANDINGA - Hello (Salsa Version)"

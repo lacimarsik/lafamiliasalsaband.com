@@ -3,13 +3,13 @@
 ID=28
 TITLE="Vivir Mi Vida"
 INTERPRET="Marc Anthony"
-STATUS="PASSIVE"
+STATUS="ACTIVE"
 MP3=https://drive.google.com/file/d/1QgwkIV4suhIquTjvOIIrP1QAzd3fHImX/view
 TEXT=https://docs.google.com/document/d/1n4dRgYP2RzGl3sOVvPrj0U64v4aQm43uzCDz9WHLSRE/edit
 CHORD=https://docs.google.com/document/d/1l2C_vDXp04KxCxqt3cLC7WX6z0sG5MPgw93ZxwSa-14/edit
 VOCALS=https://docs.google.com/document/d/1fYJCVX794C1pXSu-Sus1TaY_UXlYuwDvi0qnHfD5amw/edit
-TEMPO="FAST 190 BPM"
-TEMPOCLASS="has-vivid-purple-color"
+TEMPO="FAST SALSA 190 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
 INSTRUCTIONS="Exactly as YouTube, but if we sing with Ivar, we play in Gmi." 
 YOUTUBE=https://www.youtube.com/watch?v=kMNPv_HXffQ
 YOUTUBE_TITLE="Marc Anthony - Vivir Mi Vida (Audio)"

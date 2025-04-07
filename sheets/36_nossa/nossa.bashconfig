@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ID=36
+TITLE="Nossa"
+INTERPRET="Cangaia de Jegue / Michel Teló"
+STATUS="miniband"
+MP3=
+TEXT=
+CHORD=
+VOCALS=
+TEMPO="REAGGAETON 100 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
+INSTRUCTIONS="In E. Play as Michel Teló we add instrumental solo at 2:00." 
+YOUTUBE=https://www.youtube.com/embed/hcm55lU9knw
+YOUTUBE_TITLE="Michel Teló - Ai Se Eu Te Pego - Video Oficial (Assim você me mata)"

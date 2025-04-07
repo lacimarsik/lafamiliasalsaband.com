@@ -3,13 +3,13 @@
 ID=29
 TITLE="Bailando"
 INTERPRET="Issac Delgado"
-STATUS="PASSIVE"
+STATUS="ACTIVE"
 MP3=https://drive.google.com/file/d/1k97S_MEUN8i06scaGlM_Uw10D9utuSIR/view
 TEXT=https://docs.google.com/document/d/1U_TB6L3y6o2LpLoJKPfygJgJ4FHJr1yprZFCf3yEcQY/edit
 CHORD=https://docs.google.com/document/d/1q0I1fcWylRRfddkGVJC965NAzr7-kwsQkVFgmwPSCSA/edit
 VOCALS=https://docs.google.com/document/d/1O33WBJOzV5EPigPEz5Fh35fyzyzGwWQ6reGbok0l9QE/edit
-TEMPO="FASTER 185 BPM"
-TEMPOCLASS="has-pale-cyan-blue-color"
+TEMPO="FAST SALSA 190 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
 INSTRUCTIONS="Exactly as YouTube, less repetitions in the end." 
 YOUTUBE=https://www.youtube.com/embed/eEVwF-GrD7U
 YOUTUBE_TITLE="ISSAC DELGADO, GENTE DE ZONA & DESCEMER BUENO - Bailando (Salsa Version) [NEW Official Video 2015]"

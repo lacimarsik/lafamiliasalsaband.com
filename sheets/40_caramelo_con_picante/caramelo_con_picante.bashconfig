@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ID=40
+TITLE="Caramelo Con Picante"
+INTERPRET="Bamboleo"
+STATUS="considering"
+MP3=
+TEXT=
+CHORD=
+VOCALS=
+TEMPO="TIMBA 180 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
+INSTRUCTIONS="No resources yet - we will work on them if we decide to play the song" 
+YOUTUBE=https://www.youtube.com/embed/Lg2p-JyHBXM
+YOUTUBE_TITLE="Caramelo Con Picante"

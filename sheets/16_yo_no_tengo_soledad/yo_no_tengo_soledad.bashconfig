@@ -3,13 +3,13 @@
 ID=16
 TITLE="Yo No Tengo Soledad"
 INTERPRET="La Familia Salsa Band"
-STATUS="PASSIVE"
+STATUS="inactive"
 MP3=https://drive.google.com/file/d/1HC6n9vThmKZYE9H6BEu9ZJ2S-UiJ5fHI/view
 TEXT=https://docs.google.com/document/d/1LEgaxePedxfnjsEEkFMvFhiA5OUkxqTlkJFGooBmCh4/edit
 CHORD=https://docs.google.com/document/d/1CjMacd-a79dLk84UZYUp4C2rLLlwrazOH5ZKfSC4XlE/edit
 VOCALS=https://docs.google.com/document/d/19CnsVT5wI2hapxOQEXjmnM7RTIW0SvoUHzmMYMIXoNg/edit
-TEMPO="FASTER 185 BPM"
-TEMPOCLASS="has-pale-cyan-blue-color"
+TEMPO="FAST SALSA 190 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
 INSTRUCTIONS="Exactly as YouTube."
 YOUTUBE=https://www.youtube.com/embed/Vgwl9dAWyXM&t=47s
 YOUTUBE_TITLE="La Familia Salsa Band - Yo No Tengo (LIVE 17.9.2021 Praha-Císařská louka)"

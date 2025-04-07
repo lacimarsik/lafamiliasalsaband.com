@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ID=39
+TITLE="Carnaval"
+INTERPRET="Celia Cruz"
+STATUS="miniband"
+MP3=
+TEXT=
+CHORD=
+VOCALS=
+TEMPO="FAST SALSA 190 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
+INSTRUCTIONS="In Cmi. Play as Celia Cruz version but instead of 2nd brass we sing coro" 
+YOUTUBE=https://www.youtube.com/embed/7Ho86ggAVrY
+YOUTUBE_TITLE="Celia Cruz - La Vida Es Un Carnaval (Audio)"

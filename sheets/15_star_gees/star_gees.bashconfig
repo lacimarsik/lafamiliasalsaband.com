@@ -3,13 +3,13 @@
 ID=15
 TITLE="Star Gees"
 INTERPRET="La Familia Salsa Band – Cover mix"
-STATUS="ACTIVE"
+STATUS="inactive"
 MP3=https://drive.google.com/file/d/1YM8RocqazN0Q9JUdcvwTRwdDw5dDsoHY/view
 TEXT=https://docs.google.com/document/d/1I5LLheZHWd3sUWVR2c3nvocd0sJVz8SmUgqoVp7P4s0/edit
 CHORD=https://docs.google.com/document/d/1cmHR0D7RvAvSllxbPvEqRBKgyaaIKhVfb7fhU6SWerM/edit
 VOCALS=https://docs.google.com/document/d/1Cx453BJi_Xq0QUhCIbhJQUz2R69j9t5KFfmKm7-FhN0/edit
-TEMPO="SLOWER 175 BPM"
-TEMPOCLASS="has-light-green-cyan-color"
+TEMPO="SALSA 180 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
 INSTRUCTIONS="Exactly as YouTube, only the video starts a few seconds late."
 YOUTUBE=https://www.youtube.com/embed/uFns6OdrVm0
 YOUTUBE_TITLE="La Familia Salsa Band - Star Gees [4K] (LIVE in Prague, Císařská louka, 2.7.2022)"

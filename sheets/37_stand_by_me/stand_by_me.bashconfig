@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ID=37
+TITLE="Stand By Me"
+INTERPRET="Ben E King"
+STATUS="miniband"
+MP3=
+TEXT=
+CHORD=
+VOCALS=
+TEMPO="SLOW BACHATA 120 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
+INSTRUCTIONS="In Bb. Play as Ben E King but we add a Bridge part and 2nd Coro in the end." 
+YOUTUBE=https://www.youtube.com/embed/pKtLNYNWbBw
+YOUTUBE_TITLE="Stand By Me"

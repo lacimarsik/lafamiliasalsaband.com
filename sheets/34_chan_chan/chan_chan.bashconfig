@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ID=34
+TITLE="Chan Chan"
+INTERPRET="Buena Vista Social Club"
+STATUS="ACTIVE"
+MP3=
+TEXT=
+CHORD=
+VOCALS=
+TEMPO="SON 160 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
+INSTRUCTIONS="In Dmi. As Buena Vista version." 
+YOUTUBE=https://www.youtube.com/embed/tGbRZ73NvlY
+YOUTUBE_TITLE="Buena Vista Social Club - Chan Chan (Official HD Video)"

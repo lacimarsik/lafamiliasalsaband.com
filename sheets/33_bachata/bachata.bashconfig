@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ID=33
+TITLE="Bachata"
+INTERPRET="Kay One feat. Cristobal"
+STATUS="ACTIVE"
+MP3=
+TEXT=
+CHORD=
+VOCALS=
+TEMPO="BACHATA 130 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
+INSTRUCTIONS="In C#mi. As original, but we add one more verse+chorus+brass after first chorus, then go to rap." 
+YOUTUBE=https://www.youtube.com/embed/C1m64RYBUFw
+YOUTUBE_TITLE="Kay One feat. Cristobal - Bachata (prod. by Stard Ova)"

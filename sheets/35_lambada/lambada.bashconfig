@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ID=35
+TITLE="Lambada"
+INTERPRET="Los Kjarkas / Kaoma"
+STATUS="miniband"
+MP3=
+TEXT=
+CHORD=
+VOCALS=
+TEMPO="LAMBADA 120 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
+INSTRUCTIONS="In Dmi. Play as Kaoma. We add short instrumental solo in the end and end with 4x pada pada." 
+YOUTUBE=https://www.youtube.com/embed/iyLdoQGBchQ
+YOUTUBE_TITLE="Kaoma - Lambada (Official Video) 1989 HD"

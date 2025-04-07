@@ -3,13 +3,13 @@
 ID=1
 TITLE="Létám"
 INTERPRET="La Familia Salsa Band"
-STATUS="ACTIVE"
+STATUS="inactive"
 MP3=https://drive.google.com/file/d/1ZxwlRwj6Ejy5O1iHQFYqIvrp0e7KzbT3/view
 TEXT=https://docs.google.com/document/d/1Dc4x7Bt1dN7DG0SOKoDrfqZTXkXfAiEBO3oXxKFgYB8/edit
 CHORD=https://docs.google.com/document/d/1ejbEYZTySIm0DhX6vMg0d4NYpOS9jA9oPWEq3Is7_0k/edit
 VOCALS=https://docs.google.com/document/d/1-D-kmaOkgc2ZnrtsyXIDITrKJuGIZyOVyO03dgZwz_Y/edit
 TEMPO="BACHATA 130 BPM"
-TEMPOCLASS="has-luminous-vivid-amber-color"
+TEMPOCLASS="has-cyan-bluish-gray-color"
 INSTRUCTIONS="The bridge changed from the youtube version (starts 1 bar earlier)"
 YOUTUBE=https://www.youtube.com/embed/uRDA1Omx4CA
 YOUTUBE_TITLE="La Familia - Letam, 2.7.22 Císařská louka"

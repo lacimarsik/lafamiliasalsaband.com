@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ID=41
+TITLE="Bailando Bachata"
+INTERPRET="Lirow"
+STATUS="considering"
+MP3=
+TEXT=
+CHORD=
+VOCALS=
+TEMPO="BACHATA 130 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
+INSTRUCTIONS="No resources yet - we will work on them if we decide to play the song" 
+YOUTUBE=https://www.youtube.com/embed/k1rQ5lU9U58
+YOUTUBE_TITLE="Lirow - Bailando Bachata"

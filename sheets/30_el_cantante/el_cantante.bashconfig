@@ -3,13 +3,13 @@
 ID=30
 TITLE="El Cantante"
 INTERPRET="Héctor Lavoe"
-STATUS="PASSIVE"
+STATUS="inactive"
 MP3=https://drive.google.com/file/d/14m_zUgJRcnlAqK8HLySjrpRYt5cg8uo9/view
 TEXT=https://docs.google.com/document/d/1n0R9egoLmHt9ZhQc-rwIfKL6e80e2I2SI46yKgaUOqs/edit
 CHORD=https://docs.google.com/document/d/1Ogf4sGQ2u8D5mFUCInbhtc0gpxHdQajBlXO6oU12o84/edit
 VOCALS=https://docs.google.com/document/d/1JTEzD3AfTQYRlOqW9uORwBZqTaAcEb6kHWionqwB7iI/edit
-TEMPO="MEDIUM 180 BPM"
-TEMPOCLASS="has-vivid-green-cyan-color"
+TEMPO="SALSA 180 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
 INSTRUCTIONS="As YouTube until 2:45 then skip 7s, at 4:44 we start ad lib pno solo finished by brass melody 5:20-5:25, then from 6:05. We end with pregon 'Cantando olvido las penas y también los sinsabores' then 9:40 and 5 times accents." 
 YOUTUBE=https://www.youtube.com/embed/bT-3s4ZQEhs
 YOUTUBE_TITLE="El Cantante"

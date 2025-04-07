@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ID=38
+TITLE="Fragilidad"
+INTERPRET="Sting / RDM"
+STATUS="ACTIVE"
+MP3=
+TEXT=
+CHORD=
+VOCALS=
+TEMPO="SLOW SALSA 170 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
+INSTRUCTIONS="Hmi. Play as RDM version" 
+YOUTUBE=https://www.youtube.com/embed/ifankCJdLSo
+YOUTUBE_TITLE="Rhythms Del Mundo - Cuba - Fragilidad - 2006"
