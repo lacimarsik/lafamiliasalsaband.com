@@ -174,9 +174,14 @@ Trombone = \new Voice \relative c {
   \clef bass
   \key e \minor
   \time 4/4
-  \tempo "Fast Salsa" 4 = 210
+  \tempo "Fast Salsa" 4 = 190
   
- \repeat volta 2 { e4. d8 r4 e8 r |
+    s1*0 ^\markup { "Brass Intro, 2va with band" }
+  \inst "in"
+  
+  
+ \repeat volta 2 {
+   e4. d8 r4 e8 r |
  g4. e8 r g r e |
  r8 g4. e8 r r d' |
 cis4. b8 r4. cis8 |
@@ -185,19 +190,106 @@ g g e g e g e g |
 d' r d cis r b4. ~ |
 b1 | \break
  } 
- s1*0 ^\markup { "Piano Bomba" }
- R1*16 \break
+
+e,1 ~ |
+e |
+e' ~ |
+e |
+e ~ |
+e ~ | 
+e ~ |
+e4 \bendAfter #-4 r2. |
+
+    s1*0 ^\markup { "Piano montuno" }
+  
+R1*8 \break
+    s1*0 ^\markup { "Baila La Familia" }
+  \inst "A"
+
+
+\repeat volta 2 {
+  
+
  
- e,4. e4. -- ~ e4 ~ |
- e2 e4 -. e -. |
- g8 g r g r g 8 g r |
- g r r2.  |
- 
+ e,4. g4. -- ~ g4 ~ |
+ g2 e4 -. g -. |
+ d'8 d r d r4 d 8 d |
+ r d r2.  |
  b8 a g a ~ a g bes a |
- g a ~ a g r e g a |
- b a g b ~ b2 | \break
-  s1*0 ^\markup { "Salsa La Familia" }
- R1*16 \break
+ g a ~ a4 r g |
+ b8 a g b ~ b2 ~ |
+ b2 b8 a g fis | \break
+ 
+}
+
+    s1*0 ^\markup { "Rap" }
+    \inst "B"
+R1*8 \break
+\repeat volta 2 {
+    s1*0 ^\markup { "Bum-Bum" }
+    \inst "C"
+b8 r4 b8 r2 |
+r2. c8 r |
+b8 r4 b8 r4 b8 b ~ |
+b2 r4 c8 r  |
+b8 r4 b8 r2 | 
+r2. c8 r |
+b8 r4 b8 r4 b4 ~ |
+b2 r2 | \break
+}
+  s1*0 ^\markup { "Carnaval" }
+    \inst "D"
+\repeat volta 2 {
+  e8 e r4 c8 c r b  |
+  r b, r dis r fis r a |
+  b c b c b c b c |
+  b c b e ~ e4 r | 
+}
+
+    s1*0 ^\markup { "Hua" }
+    \inst "E"
+R1*8 \break
+
+  s1*0 ^\markup { "La Candela" }
+    \inst "F"
+e,4 r g r8 c, | 
+  r e r g r c, cis r | 
+  d4 r fis4 r8 e |
+  r e r g r e r4 | 
+  e4 r g r8 c, | 
+  r e r g r c, cis r | 
+  d4 r fis4 r8 e |
+  r e r g r e r4 | \break
+
+
+  s1*0 ^\markup { "Rumba break 1" }
+
+
+  d4 r8 c4 r8 b4 ~ |
+  b1 |
+  dis1 |
+  b'1 | \break
+  
+  s1*0 ^\markup { "Aqui se encende la candela" }
+    \inst "G"
+  
+R1*8 \break
+
+s1*0 ^\markup { "La Candela 2" }
+    \inst "H"
+\repeat volta 2 {
+\grace {g8 a  bes } c8 c r c g g r e |
+r e r  a  r bes  a4 ~ |
+a2 g4 r  |
+R1 | \break
+}
+
+  s1*0 ^\markup { "Rumba break 2" }
+  d4 r8 c4 r8 b4 ~ |
+  b1 ~ |
+  b |
+  b |
+  e4 e4 r2 |
  
   
   \label #'lastPage
