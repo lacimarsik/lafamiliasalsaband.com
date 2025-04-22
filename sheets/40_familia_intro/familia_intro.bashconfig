@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ID=40
+TITLE="Familia Intro"
+INTERPRET="La Familia Salsa Band"
+STATUS="ACTIVE"
+MP3=https://drive.google.com/file/d/142_1ezsowcfO_hdIR-ZZ_TxzDV4WvtSK/view
+TEXT=
+CHORD=
+VOCALS=
+TEMPO="FAST SALSA 190 BPM"
+TEMPOCLASS="has-cyan-bluish-gray-color"
+INSTRUCTIONS="Follow Luca's instructions" 
+YOUTUBE=
+YOUTUBE_TITLE=""
