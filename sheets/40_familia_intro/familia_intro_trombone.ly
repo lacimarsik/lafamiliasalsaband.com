@@ -3,11 +3,11 @@
 % Sheet revision 2022_09
 
 \header {
-  title = "Intro (Familia)"
+  title = "#40 Familia Intro"
   instrument = "trombone"
   composer = "by Luca Colella"
   arranger = "arr. Ladislav Maršík"
-  opus = "version 9.4.2025"
+  opus = "version 22.4.2025"
   copyright = "© La Familia Salsa Band"
 }
 
@@ -176,14 +176,14 @@ Trombone = \new Voice \relative c {
   \time 4/4
   \tempo "Fast Salsa" 4 = 210
   
- \repeat volta 2 { e2 d4 -. e |
- g8 e d e r2 |
- r8 e d e g4 -. e -. |
- bes'4. -- a8 r g r e ~ | \break
- e2 d4 -. e |
- g8 e d e r2 |
- r8 e d e g4 -. e -. |
- d'1 -- | \break
+ \repeat volta 2 { e4. d8 r4 e8 r |
+ g4. e8 r g r e |
+ r8 g4. e8 r r d' |
+cis4. b8 r4. cis8 |
+b4. a8 r4. e8 |
+g g e g e g e g |
+d' r d cis r b4. ~ |
+b1 | \break
  } 
  s1*0 ^\markup { "Piano Bomba" }
  R1*16 \break
