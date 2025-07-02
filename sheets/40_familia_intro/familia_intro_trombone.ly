@@ -164,7 +164,9 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
-Trombone = \new Voice \relative c {
+Trombone = \new Voice 
+\transpose d c
+\relative c {
   \set Staff.instrumentName = \markup {
     \center-align { "Trombone" }
   }
@@ -181,9 +183,9 @@ Trombone = \new Voice \relative c {
   
   
  \repeat volta 2 {
-   e4. d8 r4 e8 r |
- g4. e8 r g r e |
- r8 g4. e8 r r d' |
+   r8 e4. d8 r e8 r |
+ g4. e8 r e r e |
+ r8. g16 ~ g4 e8 r4 d'8 |
 cis4. b8 r4. cis8 |
 b4. a8 r4. e8 |
 g g e g e g e g |
@@ -191,10 +193,11 @@ d' r d cis r b4. ~ |
 b1 | \break
  } 
 
-e,1 ~ |
+
+e,1 -> ~ |
 e |
-e' ~ |
-e |
+e ~ |
+e ~ |
 e ~ |
 e ~ | 
 e ~ |
@@ -216,8 +219,8 @@ R1*8 \break
  d'8 d r d r4 d 8 d |
  r d r2.  |
  b8 a g a ~ a g bes a |
- g a ~ a4 r g |
- b8 a g b ~ b2 ~ |
+ g a ~ a2 g4 -. |
+ b8 r4 b8 ~ b2 ~ |
  b2 b8 a g fis | \break
  
 }
@@ -278,7 +281,7 @@ R1*8 \break
 s1*0 ^\markup { "La Candela 2" }
     \inst "H"
 \repeat volta 2 {
-\grace {g8 a  bes } c8 c r c g g r e |
+\grace {g8 a  bes } b8 b r b g g r e |
 r e r  a  r bes  a4 ~ |
 a2 g4 r  |
 R1 | \break
@@ -309,6 +312,7 @@ R1 | \break
       \remove "Volta_engraver"
     }
   }
+    \midi { }
 }
 
 \paper {

@@ -1,13 +1,11 @@
 \version "2.24.4"
 
-% Sheet revision 2022_09
-
 \header {
-  title = "#39 Fragilidad (La Familia: Hmi)"
-  instrument = "sax as trumpet"
-  composer = "by Sting / RDM cover"
-  arranger = "Ladislav Maršík"
-  opus = "version 25.8.2024"
+    title = "#17 Baila Mi Gente (Latin Soul: Ami)"
+        instrument = "trumpet"
+    composer = "by Poncho Sanchez"
+      arranger = "arr. Lisa Nosková & Ladislav Maršík"
+  opus = "version 28.8.2024"
     copyright = "© Latin Soul 2024"
 }
 
@@ -164,95 +162,122 @@ repeatBracket = #(define-music-function
                   #}
                   )
 
+
 Trumpet = \new Voice
-\transpose c g \transpose c a,
+\transpose c d
 \relative c'' {
   \set Staff.instrumentName = \markup {
-    \center-align { "Sax as trumpet" }
+    \center-align { "Tr. in Bb" }
   }
   \set Staff.midiInstrument = "trumpet"
-  \set Staff.midiMaximumVolume = #1.0
+  \set Staff.midiMaximumVolume = #0.9
 
-  \key e \minor
+  \key a \minor
   \time 4/4
-  \tempo "Salsa" 4 = 180
+  \tempo "Cha Cha" 4 = 120
+
+    s1*0 ^\markup { "Intro Piano + Bass" }
+    \inst "in1"
+    R1*8 \break
+   
+   s1*0 ^\markup { "Trumpet start" } 
+    \inst "in2"
+   
+    d1 ~ |
+    d4. e8 d c a d ~ |
+    d4. e8 d c a c ~ |
+    c4 r4 r8 a b c |
+    d1 ~ |
+    d4. e8 d c a d ~ |
+        d4. e8 d c a c ~ |
+        c4 r2. | \break
+        
+    s1*0 ^\markup { "Coro 1: Baila Mi Gente (no trumpet)" } 
+    \inst "A1"
+        R1*8 
+      s1*0 ^\markup { "Verso 1" } 
+    \inst "B1"
+   R1*8 \break
+   
+       s1*0 ^\markup { "Coro 2: Baila Mi Gente (with trumpet)" } 
+    \inst "A2"
+   R1 |
+   r8 a b c ~ c e, g a |
+   gis4. g2 b8 ~ |
+   b4. a8 ~ a2 |
+    R1*2 
+    
+    g4 g r8 f8 ~ f e ~ |
+    e4 r2. |
+          s1*0 ^\markup { "Verso 2" } 
+    \inst "B2"
+    R1*8 \break
+           s1*0 ^\markup { "Coro 3: Baila Mi Gente (with trumpet)" } 
+    \inst "A3"
+    R1 |
+    r8 a b c ~ c e, g a |
+    gis 4. g2 b8 ~ |
+    b4. a8 ~ a2 |
+    R1*2 
+    g4 g r8 f8 ~ f e ~ |
+    e4 r2 .|
+    R1 ^\markup { "Break 1" } |
+    r2. r8 e8 ~ | \break
+    
+               s1*0 ^\markup { "Trumpet Interlude" } 
+    \inst "C"
+    e8 a b c b a ~ a c, ~ |
+    c f g a g f ~ f e ~ |
+    e a b c b a ~ a c, ~ |
+    c f g a g f ~ f e ~ |
+    e a b c b a ~ a c, ~ |
+    c f g a g f ~ f e ~ |
+    e a b c b a ~ a c, ~ |
+    c f g a g f ~ f r | \break
   
-       \inst "in"
-       \repeat volta 2 {
-  s1*0 ^\markup { "Intro (usually Guitar / Piano)" }
-b2 ~ b8 a ~ a g ~ |
-g g ~ g b ~ b b ~ b r8 |
-g2 ~ g8 fis ~ fis e ~ |
-e e ~ e g ~ g g ~ g r8 |
-g2 ~ g8 fis ~ fis e ~ |
-e e ~ e dis ~ dis dis ~ dis r8 |
-       }
-\alternative { {
-fis2 ~ fis8 e ~ e g ~ |
-g r8 r2. |
-} {
-  fis2 ~ fis8 g ~ g e ~ |
-e r8 r2. | 
-\break
-} }
-        \inst "A1,2"
-    s1*0 ^\markup { "Verse 1 & 2" }
-      R1*16 \break
-            \inst "B1,2"
-          s1*0 ^\markup { "Pre-Chorus 1 & 2" }
-      R1*16 \break
-            \inst "C1,2"
-                s1*0 ^\markup { "Chorus 1 & 2" } 
-    \repeat volta 2 {
-    R1
-     r8 g' -> r e -> r c -> r a |
-     b4 -> d c4. g'8 -> ~ \< |
-     g1 |
-     fis8 -. \sp r r4 r8 b,8 r4 |
-     d8 -> r c b r g fis e |
-     r2 e2 ( \< |
-     g b ) \! ^\markup { "2va D.C. Al Fine" } |
+  \repeat volta 2 {
+          \chordmode {
+   a2:m _\markup { "Solos ad lib." }  g2   |
+      f2 e2 | \break
+      }
+  }
+      
+    R1*16 \fermata ^\markup { \column { \line { "Forma: Vacila Mi Tambor, opt. SOLO 2, Vacila Mi Tambor" } } } \break
+    
+    s1*0 ^\markup { "Outro: Coro" } 
+\inst "out = A"
 
-      \break 
-    }
-      R1*32 \fermata ^\markup { "Forma: SOLO, Coro Pregón (Open), 4x Que Fragilidad" } \break
-   \break
-                    
+\repeat volta 2 {
+  R1 |
+r8 a b c ~ c e, g a |
+   gis4. g2 b8 ~ |
+   b4. a8 ~ a2 |
+    R1*2 
+    
+    g4 g r8 f8 ~ f e ~ |
+    e4 r2. |
 
-   \chordmode {
-   R1 _\markup { "CORO --> SOLO" } |
-   r2. a8:m a8:m |
-   }
-
-\chordmode {
-   R1 _\markup { "Start solo" } |
-   a4.:m a4.:m b4 ~ |
-   b1 ~ |
-   b1 |
-   e1:m ~ |
-   e1:m  |
-   e1:m ~ |
-   e1:m |
 }
 
+e4 e8 e r e e e |
+e e e e e r e e | r4 a
+    
   \label #'lastPage
+  \bar "|."
 }
 
 Chords =
-\transpose c es
+\transpose c d'
 \chords {
   \set noChordSymbol = ""
-  R1*90
-    e1:m |
-   e2.:m a4:m | 
-     a1:m |
-    a4.:m a4.:m b4 ~ |
-b1 ~ |
-   b1 |
-   e1:m ~ |
-   e1:m  |
-   e1:m ~ |
-   e1:m |
+
+  R1*65
+
+   a2:m g2 |
+      f2 e2 |
+
+      
+     
 }
 
 \score {
@@ -272,6 +297,7 @@ b1 ~ |
     }
   }
 }
+
 
 \paper {
   system-system-spacing =

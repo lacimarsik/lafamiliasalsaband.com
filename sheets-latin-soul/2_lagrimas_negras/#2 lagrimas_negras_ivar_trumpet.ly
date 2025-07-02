@@ -209,7 +209,7 @@ Trumpet = \new Voice
     
     \break
    
-   R1*32 \fermata ^\markup { \line { "Forma: A + Part 2, in Brass (trumpet), A Part 2," }  \line { "changes to son: 3 Coro 2 Pregón, SOLO, 3 Coro 2 Pregón, SOLO, Coro2 adlib, 2 Coro" } } \break
+   R1*32 \fermata ^\markup { \line { "Forma:A+Part 2,in Brass (trp),A Part 2" }  \line { "change->son:3 Coro 2 Pregón,SOLO,3 Coro 2 Pregón,SOLO,Coro2 adl,2Coro" } } \break
    
       \chordmode {
    R1*6 _\markup { "CORO --> SOLO" }
@@ -236,7 +236,7 @@ Chords =
 \transpose c d'
 \chords {
   \set noChordSymbol = ""
-  R1*89
+  R1*93
   
 
   e1 |
