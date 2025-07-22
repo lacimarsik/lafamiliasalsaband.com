@@ -304,24 +304,24 @@ Sax = \new Voice
      r4. d,8 \< r g r bes \f |
      d4 -> c2. -> |
      
-     R1*3 ^\markup { "y solo impr." } \break
+     R1*3 ^\markup { "y solo impr." } 
      
-                                        s1*0 ^\markup { "Coro y Pregón" }
+                                        s1*0 ^\markup { "Coro y Pregón" } 
                                         \inst "F"
-     R1*28  \fermata ^\markup { \column { \line { "Forma: 4 Coro 3 Pregón, SOLO PIANO (possibly percussions or other)" } \line { "Intro Del Coro D2 = D1, 4 Coro 3 Pregón, Accents B4" } } } \break
+     R1*28  \fermata ^\markup { \column { \line { "Forma:4Coro3Pregón,SOLO" } \line { "Intro Del Coro D2 = D1" } \line { "4 Coro 3 Pregón, Accents B4" } } } \break
    
             \chordmode {
-   R1*3 _\markup { "CORO --> SOLO" }
+   R1*3 _\markup { "PUENTE" }
    r2.
- c8:m c:m 
+ c'8:m c':m 
    R1 _\markup { "Start solo" } |
-d4. d4. d4 ~ |
-d1  |
-g1:m  |
-c1:m |
-d1 |
-d1 |
-g1:m |
+d'4. d'4. d'4 ~ |
+d'1  |
+g'1:m  |
+c'1:m |
+d'1 |
+d'1 |
+g'1:m |
       }
       
       
@@ -352,7 +352,6 @@ Chords =
 \chords {
   \set noChordSymbol = ""
   R1*183
-  
 
   c1:m |
   d1 |
